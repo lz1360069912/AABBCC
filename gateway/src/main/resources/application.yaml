@@ -5,6 +5,17 @@ server:
 spring:
   application:
     name: gateway-client
+  cloud:
+    #gateway配置
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 开启从注册中心动态创建路由的功能，利用微服务名进行路由
+      routes:
+        - id: system # 路由的ID，没有固定规则，但要求唯一，建议配合服务名
+          uri: http://localhost:9001  # 匹配后提供服务的路由地址 没有进行负载均衡
+          predicates:
+            - Path=/system/**
 
 #eureka配置
 eureka:
@@ -14,3 +25,4 @@ eureka:
   instance:
     instance-id: gateway-9000 # 重点，和client平级
     prefer-ip-address: true # true访问路径可以显示IP地址
+
