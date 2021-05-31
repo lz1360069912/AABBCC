@@ -1,13 +1,18 @@
 server:
   port: 8761
 
-#Eureka配置
+#spring配置
+spring:
+  application:
+    name: eureka-server
+
+#eureka配置
 eureka:
   instance:
-    hostname: eureka7001.com #eureka服务端的实例名称
+    hostname: eureka8761.com #eureka服务端的实例名称
   client:
     register-with-eureka: false # 是否将自己注册到Eureka服务器中，本身是服务器，无需注册
     fetch-registry: false # false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
     service-url:
-      defaultZone: http://eureka7001.com:7001/eureka/
+      defaultZone: http://localhost:8761/eureka/
       # 设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个defaultZone地址

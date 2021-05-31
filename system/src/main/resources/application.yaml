@@ -1,0 +1,16 @@
+server:
+  port: 9001
+
+#spring配置
+spring:
+  application:
+    name: system-client
+
+#eureka配置
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instance-id: system-8001 # 重点，和client平级
+    prefer-ip-address: true # true访问路径可以显示IP地址

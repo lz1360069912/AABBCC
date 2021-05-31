@@ -1,7 +1,12 @@
 server:
   port: 8761
 
-#Eureka配置
+#spring配置
+spring:
+  application:
+    name: eureka-server
+
+#eureka配置
 eureka:
   instance:
     hostname: eureka7001.com #eureka服务端的实例名称
