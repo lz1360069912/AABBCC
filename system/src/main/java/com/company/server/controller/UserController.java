@@ -1,7 +1,7 @@
-package com.company.system.controller;
+package com.company.server.controller;
 
-import com.company.system.domain.User;
-import com.company.system.mapper.UserMapper;
+import com.company.server.domain.User;
+import com.company.server.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

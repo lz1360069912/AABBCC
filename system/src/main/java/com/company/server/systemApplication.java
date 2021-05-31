@@ -1,14 +1,18 @@
-package com.company.system;
+package com.company.server;
 
 import lombok.extern.slf4j.Slf4j;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
-@SpringBootApplication
-@EnableEurekaClient
 @Slf4j
+@EnableEurekaClient
+@SpringBootApplication
+@ComponentScan("com.company")
+@MapperScan("com.company.server.mapper")
 public class systemApplication {
 
     public static void main(String[] args) {

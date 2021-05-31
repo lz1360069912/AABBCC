@@ -1,6 +1,6 @@
-package com.company.system.mapper;
+package com.company.server.mapper;
 
-import com.company.system.domain.User;
+import com.company.server.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
