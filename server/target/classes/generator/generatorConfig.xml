@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <context id="Mysql" targetRuntime="Mybatis3" defaultModelType="flat">
+        <!--表名列名前后加单引号-->
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!--覆盖生成XML文件 1.3.7版本才可以-->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin"/>
+
+        <!--生成的实例类添加toString()方法-->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+
+        <!--不生成注解-->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/mooc"
+                        userId="moocuser"
+                        password="123456">
+        </jdbcConnection>
+
+        <!--domain类的位置-->
+        <javaModelGenerator targetProject="src\main\java"
+                            targetPackage="com.company.server.domain"/>
+
+        <!--mapper xml的位置-->
+        <sqlMapGenerator targetProject="src\main\resources"
+                         targetPackage="mybatis.mapper"/>
+
+        <!--mapper类的位置--> <!--XMLMAPPER将java和sql完全分离-->
+        <javaClientGenerator targetProject="src\main\java"
+                             targetPackage="com.company.server.mapper"
+                             type="XMLMAPPER"/>
+
+        <!--将表user实例化为Test类并添加对应的mapper与sql-->
+        <table tableName="user" domainObjectName="Test"/>
+    </context>
+</generatorConfiguration>
