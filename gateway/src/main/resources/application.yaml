@@ -1,10 +1,10 @@
 server:
-  port: 9001
+  port: 9000
 
 #spring配置
 spring:
   application:
-    name: system-client
+    name: gateway-client
 
 #eureka配置
 eureka:
@@ -12,5 +12,5 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
   instance:
-    instance-id: system-9001 # 重点，和client平级
+    instance-id: gateway-9000 # 重点，和client平级
     prefer-ip-address: true # true访问路径可以显示IP地址
