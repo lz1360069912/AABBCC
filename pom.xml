@@ -32,7 +32,7 @@
                 <scope>import</scope>
             </dependency>
 
-            <!--数据库mysql+druid-->
+            <!--数据库mysql+druid+mybatis-->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
@@ -81,6 +81,12 @@
                 <version>2.2.8.RELEASE</version>
             </dependency>
 
+            <!--热部署-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-devtools</artifactId>
+                <version>2.3.5.RELEASE</version>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
