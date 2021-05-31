@@ -4,9 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.company</groupId>
-    <artifactId>firstatmpt</artifactId>
+    <artifactId>mooc</artifactId>
+    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
-    <name>firstatmpt</name>
+    <modules>
+        <module>eureka</module>
+    </modules>
 
     <dependencyManagement>
         <dependencies>
