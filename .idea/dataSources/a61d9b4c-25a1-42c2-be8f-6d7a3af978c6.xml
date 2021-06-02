@@ -876,22 +876,48 @@
       <ObjectGrants>ALL PRIVILEGES|mooc!
 </ObjectGrants>
     </user>
-    <table id="277" parent="3" name="user"/>
-    <column id="278" parent="277" name="id">
+    <table id="277" parent="3" name="chapter">
+      <Comment>大章</Comment>
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </table>
+    <table id="278" parent="3" name="test">
+      <Comment>测试</Comment>
+      <Collation>utf8mb4_0900_ai_ci</Collation>
+    </table>
+    <column id="279" parent="277" name="id">
       <Position>1</Position>
-      <DataType>int|0s</DataType>
+      <Comment>id</Comment>
+      <DataType>char(8)|0s</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="279" parent="277" name="name">
+    <column id="280" parent="277" name="course_id">
       <Position>2</Position>
-      <DataType>varchar(20)|0s</DataType>
+      <Comment>课程id</Comment>
+      <DataType>char(8)|0s</DataType>
     </column>
-    <column id="280" parent="277" name="pwd">
+    <column id="281" parent="277" name="name">
       <Position>3</Position>
-      <DataType>varchar(20)|0s</DataType>
+      <Comment>名称</Comment>
+      <DataType>varchar(50)|0s</DataType>
     </column>
-    <key id="281" parent="277" name="PRIMARY">
+    <key id="282" parent="277" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="283" parent="278" name="id">
+      <Position>1</Position>
+      <Comment>id</Comment>
+      <DataType>char(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="284" parent="278" name="name">
+      <Position>2</Position>
+      <Comment>名称</Comment>
+      <DataType>varchar(50)|0s</DataType>
+    </column>
+    <key id="285" parent="278" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

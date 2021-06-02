@@ -3,8 +3,6 @@ package com.company.server.mapper;
 import com.company.server.domain.Test;
 import com.company.server.domain.TestExample;
 import java.util.List;
-
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -14,7 +12,7 @@ public interface TestMapper {
 
     int deleteByExample(TestExample example);
 
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(String id);
 
     int insert(Test record);
 
@@ -22,7 +20,7 @@ public interface TestMapper {
 
     List<Test> selectByExample(TestExample example);
 
-    Test selectByPrimaryKey(Integer id);
+    Test selectByPrimaryKey(String id);
 
     int updateByExampleSelective(@Param("record") Test record, @Param("example") TestExample example);
 

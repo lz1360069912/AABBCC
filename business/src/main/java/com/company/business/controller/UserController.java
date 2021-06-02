@@ -1,10 +1,5 @@
 package com.company.business.controller;
 
-import com.company.server.domain.Test;
-import com.company.server.domain.TestExample;
-import com.company.server.domain.User;
-import com.company.server.mapper.TestMapper;
-import com.company.server.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
