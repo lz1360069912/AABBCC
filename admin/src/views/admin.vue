@@ -410,7 +410,6 @@
                   <i class="menu-icon fa fa-caret-right"></i>
                   大章管理
                 </router-link>
-                <b class="arrow"></b>
               </li>
             </ul>
           </li>
@@ -473,8 +472,23 @@
 export default {
   name: "admin",
   mounted: function () {
+    let _this = this;
     $("body").removeClass("login-layout light-login");
     $("body").attr("class", "no-skin");
+    // sidebar激活样式方法二
+    _this.activeSidebar(_this.$route.name.replace("/", "-") + "-sidebar");
+  },
+  watch: {
+    $route: {
+      handler: function (val, oldVal) {
+        console.log("--->页面跳转", val, oldVal);
+        let _this = this;
+        _this.$nextTick(function () {
+          // sidebar激活样式方法二
+          _this.activeSidebar(_this.$route.name.replace("/", "-") + "-sidebar");
+        })
+      }
+    }
   },
   methods: {
     /**

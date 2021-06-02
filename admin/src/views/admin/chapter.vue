@@ -978,12 +978,12 @@
 </template>
 
 <script>
-  export default {
+export default {
   name: "chapter",
   mounted: function () {
-  this.$parent.activeSidebar("business-chapter-sidebar");
-},
-  methods: {
-}
+    //// sidebar激活样式方法一
+    //this.$parent.activeSidebar("business-chapter-sidebar");
+  },
+  methods: {}
 }
 </script>

@@ -22,6 +22,7 @@ export default new Router({
     }, {
         path: "/",
         name: "admin",
+        mode: "history",
         component: Admin,
         children: [{
             path: "welcome",
