@@ -39,7 +39,8 @@
                              type="XMLMAPPER"/>
 
         <!--将表user实例化为Test类并添加对应的mapper与sql-->
-        <table tableName="test" domainObjectName="Test"/>
-        <table tableName="chapter" domainObjectName="Chapter"/>
+        <!--<table tableName="test" domainObjectName="Test"/>-->
+        <!--<table tableName="chapter" domainObjectName="Chapter"/>-->
+
     </context>
 </generatorConfiguration>

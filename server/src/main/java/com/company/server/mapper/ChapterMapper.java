@@ -4,7 +4,9 @@ import com.company.server.domain.Chapter;
 import com.company.server.domain.ChapterExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface ChapterMapper {
     long countByExample(ChapterExample example);
 
