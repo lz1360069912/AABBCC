@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     Login() {//一点击登录按钮，这个方法就会执行
-      this.$router.push("/admin");
+      this.$router.push("/welcome");
     }
   }
 }
