@@ -10,16 +10,13 @@
                 <span class="red">控台登录</span>
               </h1>
             </div>
-
-            <div class="space-6"></div>
-
             <div class="position-relative">
               <div id="login-box" class="login-box visible widget-box no-border">
                 <div class="widget-body">
                   <div class="widget-main">
                     <h4 class="header blue lighter bigger">
                       <i class="ace-icon fa fa-coffee green"></i>
-                     请输入用户名密码
+                      请输入用户名密码
                     </h4>
                     <form>
                       <fieldset>
@@ -47,8 +44,10 @@
                             <span class="lbl"> 记住我</span>
                           </label>
 
+                          <!-- 点击事件的两种不同的写法v-on:click和 @click-->
                           <button type="button"
-                                  class="width-35 pull-right btn btn-sm btn-primary">
+                                  class="width-35 pull-right btn btn-sm btn-primary"
+                                  v-on:click="Login">
                             <i class="ace-icon fa fa-key"></i>
                             <span class="bigger-110">登录</span>
                           </button>
@@ -69,8 +68,15 @@
 </template>
 
 <script>
-$("body").attr("class","login-layout light-login");
+$("body").attr("class", "login-layout light-login");
 export default {
-  name: "login"
+  name: "login",
+
+  methods: {
+    Login() {//一点击登录按钮，这个方法就会执行
+      this.$router.push("/admin");
+    }
+  }
 }
+
 </script>
