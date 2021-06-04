@@ -89,7 +89,7 @@ export default {
   methods: {
     list() {
       let _this = this;
-      _this.$ajax.get("http://localhost:9002/business/admin/chapter/list").then((respond) => {
+      _this.$ajax.get("http://localhost:9000/business/admin/chapter/list").then((respond) => {
         console.log("查询大章列表结果", respond);
         _this.chapters = respond.data;
       })
