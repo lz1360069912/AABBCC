@@ -9442,3 +9442,167 @@ Caused by: java.net.ConnectException: Connection refused: connect
 2021-06-04 19:04:36.715 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000013, 00000000, 测试大章13
 2021-06-04 19:04:36.715 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000014, 00000000, 测试大章14
 2021-06-04 19:04:36.715 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 14
+2021-06-04 19:08:19.338 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-04 19:13:19.341 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-04 19:18:19.355 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-04 19:23:05.362 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32m        [0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 1108649
+2021-06-04 19:23:05.364 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32m        [0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 1145421
+2021-06-04 19:23:05.378 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter
+2021-06-04 19:23:05.379 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 
+2021-06-04 19:23:05.381 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-04 19:23:05.381 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 00000000, 测试大章01
+2021-06-04 19:23:05.382 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-04 19:23:05.382 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-04 19:23:05.382 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-04 19:23:05.382 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-04 19:23:05.382 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000006, 00000000, 测试大章06
+2021-06-04 19:23:05.382 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000007, 00000000, 测试大章07
+2021-06-04 19:23:05.383 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000008, 00000000, 测试大章08
+2021-06-04 19:23:05.383 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000009, 00000000, 测试大章09
+2021-06-04 19:23:05.383 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000010, 00000000, 测试大章10
+2021-06-04 19:23:05.383 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000011, 00000000, 测试大章11
+2021-06-04 19:23:05.383 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000012, 00000000, 测试大章12
+2021-06-04 19:23:05.383 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000013, 00000000, 测试大章13
+2021-06-04 19:23:05.383 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000014, 00000000, 测试大章14
+2021-06-04 19:23:05.384 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 14
+2021-06-04 19:23:19.369 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-04 19:23:21.255 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter
+2021-06-04 19:23:21.255 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 
+2021-06-04 19:23:21.256 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-04 19:23:21.256 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 00000000, 测试大章01
+2021-06-04 19:23:21.257 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-04 19:23:21.257 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-04 19:23:21.257 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-04 19:23:21.257 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-04 19:23:21.258 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000006, 00000000, 测试大章06
+2021-06-04 19:23:21.258 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000007, 00000000, 测试大章07
+2021-06-04 19:23:21.259 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000008, 00000000, 测试大章08
+2021-06-04 19:23:21.259 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000009, 00000000, 测试大章09
+2021-06-04 19:23:21.259 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000010, 00000000, 测试大章10
+2021-06-04 19:23:21.260 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000011, 00000000, 测试大章11
+2021-06-04 19:23:21.260 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000012, 00000000, 测试大章12
+2021-06-04 19:23:21.260 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000013, 00000000, 测试大章13
+2021-06-04 19:23:21.260 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000014, 00000000, 测试大章14
+2021-06-04 19:23:21.260 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 14
+2021-06-04 19:23:40.037 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter
+2021-06-04 19:23:40.038 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 
+2021-06-04 19:23:40.039 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-04 19:23:40.040 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 00000000, 测试大章01
+2021-06-04 19:23:40.040 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-04 19:23:40.041 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-04 19:23:40.041 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-04 19:23:40.041 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-04 19:23:40.041 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000006, 00000000, 测试大章06
+2021-06-04 19:23:40.042 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000007, 00000000, 测试大章07
+2021-06-04 19:23:40.042 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000008, 00000000, 测试大章08
+2021-06-04 19:23:40.043 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000009, 00000000, 测试大章09
+2021-06-04 19:23:40.043 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000010, 00000000, 测试大章10
+2021-06-04 19:23:40.044 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000011, 00000000, 测试大章11
+2021-06-04 19:23:40.044 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000012, 00000000, 测试大章12
+2021-06-04 19:23:40.044 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000013, 00000000, 测试大章13
+2021-06-04 19:23:40.044 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000014, 00000000, 测试大章14
+2021-06-04 19:23:40.045 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 14
+2021-06-04 19:28:19.376 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-04 19:30:58.582 INFO  org.hibernate.validator.internal.util.Version     :21   [32m        [0;39m HV000001: Hibernate Validator 6.1.6.Final
+2021-06-04 19:30:58.631 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :225  [32m        [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-04 19:31:00.221 INFO  com.company.business.BusinessApplication          :651  [32m        [0;39m No active profile set, falling back to default profiles: default
+2021-06-04 19:31:01.004 INFO  o.springframework.cloud.context.scope.GenericScope:295  [32m        [0;39m BeanFactory id=62e12b5b-f31d-3962-8229-9f5d4b69d71e
+2021-06-04 19:31:01.530 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m        [0;39m Tomcat initialized with port(s): 9002 (http)
+2021-06-04 19:31:01.542 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m        [0;39m Initializing ProtocolHandler ["http-nio-9002"]
+2021-06-04 19:31:01.543 INFO  org.apache.catalina.core.StandardService          :173  [32m        [0;39m Starting service [Tomcat]
+2021-06-04 19:31:01.543 INFO  org.apache.catalina.core.StandardEngine           :173  [32m        [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-06-04 19:31:01.691 INFO  o.a.c.c.C.[Tomcat].[localhost].[/business]        :173  [32m        [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-04 19:31:01.691 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :285  [32m        [0;39m Root WebApplicationContext: initialization completed in 1450 ms
+2021-06-04 19:31:02.224 WARN  com.netflix.config.sources.URLConfigurationSource :121  [32m        [0;39m No URLs will be polled as dynamic configuration sources.
+2021-06-04 19:31:02.224 INFO  com.netflix.config.sources.URLConfigurationSource :122  [32m        [0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-06-04 19:31:02.228 WARN  com.netflix.config.sources.URLConfigurationSource :121  [32m        [0;39m No URLs will be polled as dynamic configuration sources.
+2021-06-04 19:31:02.229 INFO  com.netflix.config.sources.URLConfigurationSource :122  [32m        [0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-06-04 19:31:02.392 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m        [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-04 19:31:02.603 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :61   [32m        [0;39m Unable to start LiveReload server
+2021-06-04 19:31:03.517 INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration:78   [32m        [0;39m Eureka HTTP Client uses Jersey
+2021-06-04 19:31:04.261 WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger:106  [32m        [0;39m You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-06-04 19:31:04.343 INFO  o.s.cloud.netflix.eureka.InstanceInfoFactory      :72   [32m        [0;39m Setting initial instance status as: STARTING
+2021-06-04 19:31:04.367 INFO  com.netflix.discovery.DiscoveryClient             :372  [32m        [0;39m Initializing Eureka in region us-east-1
+2021-06-04 19:31:04.962 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :70   [32m        [0;39m Using JSON encoding codec LegacyJacksonJson
+2021-06-04 19:31:04.962 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :71   [32m        [0;39m Using JSON decoding codec LegacyJacksonJson
+2021-06-04 19:31:05.044 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :80   [32m        [0;39m Using XML encoding codec XStreamXml
+2021-06-04 19:31:05.044 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :81   [32m        [0;39m Using XML decoding codec XStreamXml
+2021-06-04 19:31:05.185 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-04 19:31:05.641 INFO  com.netflix.discovery.DiscoveryClient             :1007 [32m        [0;39m Disable delta property : false
+2021-06-04 19:31:05.641 INFO  com.netflix.discovery.DiscoveryClient             :1008 [32m        [0;39m Single vip registry refresh property : null
+2021-06-04 19:31:05.642 INFO  com.netflix.discovery.DiscoveryClient             :1009 [32m        [0;39m Force full registry fetch : false
+2021-06-04 19:31:05.642 INFO  com.netflix.discovery.DiscoveryClient             :1010 [32m        [0;39m Application is null : false
+2021-06-04 19:31:05.642 INFO  com.netflix.discovery.DiscoveryClient             :1011 [32m        [0;39m Registered Applications size is zero : true
+2021-06-04 19:31:05.642 INFO  com.netflix.discovery.DiscoveryClient             :1013 [32m        [0;39m Application version is -1: true
+2021-06-04 19:31:05.642 INFO  com.netflix.discovery.DiscoveryClient             :1097 [32m        [0;39m Getting all instance registry info from the eureka server
+2021-06-04 19:31:05.764 INFO  com.netflix.discovery.DiscoveryClient             :1106 [32m        [0;39m The response status is 200
+2021-06-04 19:31:05.767 INFO  com.netflix.discovery.DiscoveryClient             :1321 [32m        [0;39m Starting heartbeat executor: renew interval is: 30
+2021-06-04 19:31:05.768 INFO  com.netflix.discovery.InstanceInfoReplicator      :60   [32m        [0;39m InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-06-04 19:31:05.771 INFO  com.netflix.discovery.DiscoveryClient             :492  [32m        [0;39m Discovery Client initialized at timestamp 1622806265770 with initial instances count: 2
+2021-06-04 19:31:05.773 INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry   :41   [32m        [0;39m Registering application BUSINESS-CLIENT with eureka with status UP
+2021-06-04 19:31:05.773 INFO  com.netflix.discovery.DiscoveryClient             :1352 [32m        [0;39m Saw local status change event StatusChangeEvent [timestamp=1622806265773, current=UP, previous=STARTING]
+2021-06-04 19:31:05.775 INFO  com.netflix.discovery.DiscoveryClient             :873  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002: registering service...
+2021-06-04 19:31:05.776 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m        [0;39m Starting ProtocolHandler ["http-nio-9002"]
+2021-06-04 19:31:05.796 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m        [0;39m Tomcat started on port(s): 9002 (http) with context path '/business'
+2021-06-04 19:31:05.797 INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration         :145  [32m        [0;39m Updating port to 9002
+2021-06-04 19:31:05.818 INFO  com.netflix.discovery.DiscoveryClient             :882  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002 - registration status: 204
+2021-06-04 19:31:06.459 INFO  com.company.business.BusinessApplication          :61   [32m        [0;39m Started BusinessApplication in 9.451 seconds (JVM running for 11.886)
+2021-06-04 19:31:06.460 INFO  com.company.business.BusinessApplication          :21   [32m        [0;39m 启动成功
+2021-06-04 19:31:06.461 INFO  com.company.business.BusinessApplication          :22   [32m        [0;39m Business地址:	http://127.0.0.1:9002
+2021-06-04 19:36:05.655 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-04 19:41:05.669 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-04 19:46:05.674 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-04 19:51:05.683 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-04 19:56:05.697 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-04 20:01:05.704 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-04 20:06:05.714 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-04 20:08:05.667 INFO  org.hibernate.validator.internal.util.Version     :21   [32m        [0;39m HV000001: Hibernate Validator 6.1.6.Final
+2021-06-04 20:08:05.719 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :225  [32m        [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-04 20:08:07.065 INFO  com.company.business.BusinessApplication          :651  [32m        [0;39m No active profile set, falling back to default profiles: default
+2021-06-04 20:08:08.099 INFO  o.springframework.cloud.context.scope.GenericScope:295  [32m        [0;39m BeanFactory id=62e12b5b-f31d-3962-8229-9f5d4b69d71e
+2021-06-04 20:08:13.482 INFO  org.hibernate.validator.internal.util.Version     :21   [32m        [0;39m HV000001: Hibernate Validator 6.1.6.Final
+2021-06-04 20:08:13.525 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :225  [32m        [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-04 20:08:14.721 INFO  com.company.business.BusinessApplication          :651  [32m        [0;39m No active profile set, falling back to default profiles: default
+2021-06-04 20:08:15.468 INFO  o.springframework.cloud.context.scope.GenericScope:295  [32m        [0;39m BeanFactory id=62e12b5b-f31d-3962-8229-9f5d4b69d71e
+2021-06-04 20:08:16.006 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m        [0;39m Tomcat initialized with port(s): 9002 (http)
+2021-06-04 20:08:16.014 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m        [0;39m Initializing ProtocolHandler ["http-nio-9002"]
+2021-06-04 20:08:16.016 INFO  org.apache.catalina.core.StandardService          :173  [32m        [0;39m Starting service [Tomcat]
+2021-06-04 20:08:16.017 INFO  org.apache.catalina.core.StandardEngine           :173  [32m        [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-06-04 20:08:16.124 INFO  o.a.c.c.C.[Tomcat].[localhost].[/business]        :173  [32m        [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-04 20:08:16.125 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :285  [32m        [0;39m Root WebApplicationContext: initialization completed in 1384 ms
+2021-06-04 20:08:16.547 WARN  com.netflix.config.sources.URLConfigurationSource :121  [32m        [0;39m No URLs will be polled as dynamic configuration sources.
+2021-06-04 20:08:16.548 INFO  com.netflix.config.sources.URLConfigurationSource :122  [32m        [0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-06-04 20:08:16.552 WARN  com.netflix.config.sources.URLConfigurationSource :121  [32m        [0;39m No URLs will be polled as dynamic configuration sources.
+2021-06-04 20:08:16.552 INFO  com.netflix.config.sources.URLConfigurationSource :122  [32m        [0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-06-04 20:08:16.681 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m        [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-04 20:08:16.875 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :61   [32m        [0;39m Unable to start LiveReload server
+2021-06-04 20:08:17.682 INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration:78   [32m        [0;39m Eureka HTTP Client uses Jersey
+2021-06-04 20:08:18.477 WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger:106  [32m        [0;39m You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-06-04 20:08:18.558 INFO  o.s.cloud.netflix.eureka.InstanceInfoFactory      :72   [32m        [0;39m Setting initial instance status as: STARTING
+2021-06-04 20:08:18.583 INFO  com.netflix.discovery.DiscoveryClient             :372  [32m        [0;39m Initializing Eureka in region us-east-1
+2021-06-04 20:08:19.277 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :70   [32m        [0;39m Using JSON encoding codec LegacyJacksonJson
+2021-06-04 20:08:19.277 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :71   [32m        [0;39m Using JSON decoding codec LegacyJacksonJson
+2021-06-04 20:08:19.359 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :80   [32m        [0;39m Using XML encoding codec XStreamXml
+2021-06-04 20:08:19.359 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :81   [32m        [0;39m Using XML decoding codec XStreamXml
+2021-06-04 20:08:19.527 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-04 20:08:20.084 INFO  com.netflix.discovery.DiscoveryClient             :1007 [32m        [0;39m Disable delta property : false
+2021-06-04 20:08:20.084 INFO  com.netflix.discovery.DiscoveryClient             :1008 [32m        [0;39m Single vip registry refresh property : null
+2021-06-04 20:08:20.084 INFO  com.netflix.discovery.DiscoveryClient             :1009 [32m        [0;39m Force full registry fetch : false
+2021-06-04 20:08:20.085 INFO  com.netflix.discovery.DiscoveryClient             :1010 [32m        [0;39m Application is null : false
+2021-06-04 20:08:20.085 INFO  com.netflix.discovery.DiscoveryClient             :1011 [32m        [0;39m Registered Applications size is zero : true
+2021-06-04 20:08:20.085 INFO  com.netflix.discovery.DiscoveryClient             :1013 [32m        [0;39m Application version is -1: true
+2021-06-04 20:08:20.085 INFO  com.netflix.discovery.DiscoveryClient             :1097 [32m        [0;39m Getting all instance registry info from the eureka server
+2021-06-04 20:08:20.222 INFO  com.netflix.discovery.DiscoveryClient             :1106 [32m        [0;39m The response status is 200
+2021-06-04 20:08:20.224 INFO  com.netflix.discovery.DiscoveryClient             :1321 [32m        [0;39m Starting heartbeat executor: renew interval is: 30
+2021-06-04 20:08:20.225 INFO  com.netflix.discovery.InstanceInfoReplicator      :60   [32m        [0;39m InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-06-04 20:08:20.228 INFO  com.netflix.discovery.DiscoveryClient             :492  [32m        [0;39m Discovery Client initialized at timestamp 1622808500227 with initial instances count: 3
+2021-06-04 20:08:20.229 INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry   :41   [32m        [0;39m Registering application BUSINESS-CLIENT with eureka with status UP
+2021-06-04 20:08:20.229 INFO  com.netflix.discovery.DiscoveryClient             :1352 [32m        [0;39m Saw local status change event StatusChangeEvent [timestamp=1622808500229, current=UP, previous=STARTING]
+2021-06-04 20:08:20.231 INFO  com.netflix.discovery.DiscoveryClient             :873  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002: registering service...
+2021-06-04 20:08:20.232 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m        [0;39m Starting ProtocolHandler ["http-nio-9002"]
+2021-06-04 20:08:20.256 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m        [0;39m Tomcat started on port(s): 9002 (http) with context path '/business'
+2021-06-04 20:08:20.257 INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration         :145  [32m        [0;39m Updating port to 9002
+2021-06-04 20:08:20.266 INFO  com.netflix.discovery.DiscoveryClient             :882  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002 - registration status: 204
+2021-06-04 20:08:21.040 INFO  com.company.business.BusinessApplication          :61   [32m        [0;39m Started BusinessApplication in 8.822 seconds (JVM running for 10.585)
+2021-06-04 20:08:21.042 INFO  com.company.business.BusinessApplication          :21   [32m        [0;39m 启动成功
+2021-06-04 20:08:21.042 INFO  com.company.business.BusinessApplication          :22   [32m        [0;39m Business地址:	http://127.0.0.1:9002
