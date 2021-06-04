@@ -7,7 +7,7 @@ mybatis:
 # sql日志级别配置
 logging:
   level:
-    com.company.server.mapper: trace  # 设置com.company.system.mapper目录下的日志为trace级别
+    com.company.server.mapper: trace  # 设置com.company.system.mapper目录下的日志为trace级别，可显示sql详情
 
 # spring配置
 spring:

@@ -89,9 +89,12 @@ export default {
   methods: {
     list() {
       let _this = this;
-      _this.$ajax.get("http://localhost:9000/business/admin/chapter/list").then((respond) => {
+      _this.$ajax.post("http://localhost:9000/business/admin/chapter/list",{
+        page: 1,
+        size: 5
+      }).then((respond) => {
         console.log("查询大章列表结果", respond);
-        _this.chapters = respond.data;
+        _this.chapters = respond.data.list;
       })
     }
   }
