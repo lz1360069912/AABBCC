@@ -193,3 +193,12 @@
 2021-06-05 21:39:17.445 INFO  com.company.gateway.gatewayApplication            :61   [32m        [0;39m Started gatewayApplication in 14.457 seconds (JVM running for 16.151)
 2021-06-05 21:39:17.447 INFO  com.company.gateway.gatewayApplication            :22   [32m        [0;39m 启动成功
 2021-06-05 21:39:17.447 INFO  com.company.gateway.gatewayApplication            :23   [32m        [0;39m gateway地址:	http://127.0.0.1:9000
+2021-06-05 21:39:45.185 INFO  com.netflix.discovery.DiscoveryClient             :1007 [32m        [0;39m Disable delta property : false
+2021-06-05 21:39:45.186 INFO  com.netflix.discovery.DiscoveryClient             :1008 [32m        [0;39m Single vip registry refresh property : null
+2021-06-05 21:39:45.186 INFO  com.netflix.discovery.DiscoveryClient             :1009 [32m        [0;39m Force full registry fetch : false
+2021-06-05 21:39:45.186 INFO  com.netflix.discovery.DiscoveryClient             :1010 [32m        [0;39m Application is null : false
+2021-06-05 21:39:45.186 INFO  com.netflix.discovery.DiscoveryClient             :1011 [32m        [0;39m Registered Applications size is zero : true
+2021-06-05 21:39:45.186 INFO  com.netflix.discovery.DiscoveryClient             :1013 [32m        [0;39m Application version is -1: false
+2021-06-05 21:39:45.186 INFO  com.netflix.discovery.DiscoveryClient             :1097 [32m        [0;39m Getting all instance registry info from the eureka server
+2021-06-05 21:39:45.208 INFO  com.netflix.discovery.DiscoveryClient             :1106 [32m        [0;39m The response status is 200
+2021-06-05 21:40:17.323 INFO  com.netflix.config.ChainedDynamicProperty         :115  [32m        [0;39m Flipping property: business-client.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
