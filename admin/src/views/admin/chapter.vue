@@ -1,6 +1,11 @@
 <template>
   <div>
     <p>
+      <button v-on:click="add()" class="btn btn-white btn-default btn-round">
+        <i class="ace-icon fa fa-edit"></i>
+        新增
+      </button>
+      &nbsp;
       <button v-on:click="list(1)" class="btn btn-white btn-default btn-round">
         <i class="ace-icon fa fa-refresh"></i>
         刷新
@@ -80,6 +85,38 @@
       </tr>
       </tbody>
     </table>
+
+    <div class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">表单</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="courseID" class="col-sm-2 control-label">课程ID</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="courseID" placeholder="ID">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="input" class="col-sm-2 control-label">名称</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="input" placeholder="名称">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary">保存</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
   </div>
 
 </template>
@@ -103,6 +140,12 @@ export default {
     _this.list(1);
   },
   methods: {
+    add() {
+      let _this = this;
+      console.log("新增");
+      //$(".modal")里的modal是css的选择器，模态框代码里有class="modal"样式;.modal里的modal是内置的方法,用于弹出或关闭模态框
+      $(".modal").modal("show");//hide
+    },
     list(page) {
       let _this = this;
       _this.$ajax.post("http://localhost:9000/business/admin/chapter/list", {
