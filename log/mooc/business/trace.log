@@ -5732,3 +5732,405 @@
 2021-06-05 16:57:25.320 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
 2021-06-05 16:57:25.320 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
 2021-06-05 16:57:25.321 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 16:58:07.093 INFO  c.c.business.controller.admin.ChapterController   :34   [32m        [0;39m chapterDto:ChapterDto [Hash = 165744252, id=00000001, courseId=777, name=章001]
+2021-06-05 16:58:07.094 DEBUG c.c.server.mapper.ChapterMapper.updateByPrimaryKey:137  [32m        [0;39m ==>  Preparing: update chapter set course_id = ?, name = ? where id = ?
+2021-06-05 16:58:07.094 DEBUG c.c.server.mapper.ChapterMapper.updateByPrimaryKey:137  [32m        [0;39m ==> Parameters: 777(String), 章001(String), 00000001(String)
+2021-06-05 16:58:07.175 DEBUG c.c.server.mapper.ChapterMapper.updateByPrimaryKey:137  [32m        [0;39m <==    Updates: 1
+2021-06-05 16:58:07.187 INFO  c.c.business.controller.admin.ChapterController   :24   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 16:58:07.188 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 16:58:07.189 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 16:58:07.190 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 16:58:07.191 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 26
+2021-06-05 16:58:07.191 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 16:58:07.192 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 16:58:07.192 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 16:58:07.193 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 16:58:07.193 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 777, 章001
+2021-06-05 16:58:07.194 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-05 16:58:07.195 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-05 16:58:07.195 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-05 16:58:07.195 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 16:58:07.195 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 16:58:46.480 INFO  c.c.business.controller.admin.ChapterController   :24   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 16:58:46.481 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 16:58:46.482 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 16:58:46.483 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 16:58:46.483 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 26
+2021-06-05 16:58:46.483 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 16:58:46.484 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 16:58:46.484 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 16:58:46.485 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 16:58:46.485 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 777, 章001
+2021-06-05 16:58:46.485 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-05 16:58:46.486 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-05 16:58:46.486 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-05 16:58:46.486 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 16:58:46.486 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 16:58:56.496 INFO  c.c.business.controller.admin.ChapterController   :24   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 16:58:56.497 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 16:58:56.498 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 16:58:56.499 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 16:58:56.500 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 26
+2021-06-05 16:58:56.501 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 16:58:56.501 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 16:58:56.502 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 16:58:56.503 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 16:58:56.503 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 777, 章001
+2021-06-05 16:58:56.504 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-05 16:58:56.504 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-05 16:58:56.504 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-05 16:58:56.505 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 16:58:56.505 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:00:31.125 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-05 17:00:47.144 INFO  c.c.business.controller.admin.ChapterController   :24   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:00:47.146 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32m        [0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 110644
+2021-06-05 17:00:47.163 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:00:47.164 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:00:47.166 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:00:47.166 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 26
+2021-06-05 17:00:47.167 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:00:47.168 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:00:47.168 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:00:47.169 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:00:47.169 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 777, 章001
+2021-06-05 17:00:47.170 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-05 17:00:47.170 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-05 17:00:47.171 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-05 17:00:47.171 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 17:00:47.171 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:00:47.768 INFO  c.c.business.controller.admin.ChapterController   :24   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:00:47.770 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:00:47.771 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:00:47.773 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:00:47.774 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 26
+2021-06-05 17:00:47.774 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:00:47.775 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:00:47.776 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:00:47.778 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:00:47.778 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 777, 章001
+2021-06-05 17:00:47.778 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-05 17:00:47.779 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-05 17:00:47.779 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-05 17:00:47.779 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 17:00:47.780 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:02:33.850 INFO  c.c.business.controller.admin.ChapterController   :24   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:02:33.851 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32m        [0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 106074
+2021-06-05 17:02:33.865 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:02:33.865 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:02:33.867 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:02:33.867 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 26
+2021-06-05 17:02:33.868 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:02:33.868 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:02:33.868 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:02:33.869 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:02:33.869 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 777, 章001
+2021-06-05 17:02:33.870 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-05 17:02:33.870 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-05 17:02:33.870 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-05 17:02:33.870 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 17:02:33.870 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:03:41.786 INFO  c.c.business.controller.admin.ChapterController   :24   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:03:41.789 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32m        [0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 67919
+2021-06-05 17:03:41.803 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:03:41.804 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:03:41.805 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:03:41.806 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 26
+2021-06-05 17:03:41.806 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:03:41.806 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:03:41.807 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:03:41.807 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:03:41.807 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 777, 章001
+2021-06-05 17:03:41.808 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-05 17:03:41.808 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-05 17:03:41.808 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-05 17:03:41.808 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 17:03:41.809 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:05:31.142 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-05 17:10:31.152 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-05 17:14:48.828 INFO  c.c.business.controller.admin.ChapterController   :24   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:14:48.830 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32m        [0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 667023
+2021-06-05 17:14:48.844 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:14:48.844 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:14:48.846 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:14:48.846 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 26
+2021-06-05 17:14:48.846 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:14:48.847 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:14:48.847 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:14:48.848 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:14:48.848 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 777, 章001
+2021-06-05 17:14:48.848 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-05 17:14:48.848 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-05 17:14:48.848 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-05 17:14:48.849 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 17:14:48.849 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:14:53.579 INFO  c.c.business.controller.admin.ChapterController   :34   [32m        [0;39m chapterDto:ChapterDto [Hash = 771671950, id=00000001, courseId=777, name=章000]
+2021-06-05 17:14:53.579 DEBUG c.c.server.mapper.ChapterMapper.updateByPrimaryKey:137  [32m        [0;39m ==>  Preparing: update chapter set course_id = ?, name = ? where id = ?
+2021-06-05 17:14:53.580 DEBUG c.c.server.mapper.ChapterMapper.updateByPrimaryKey:137  [32m        [0;39m ==> Parameters: 777(String), 章000(String), 00000001(String)
+2021-06-05 17:14:53.680 DEBUG c.c.server.mapper.ChapterMapper.updateByPrimaryKey:137  [32m        [0;39m <==    Updates: 1
+2021-06-05 17:14:53.688 INFO  c.c.business.controller.admin.ChapterController   :24   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:14:53.689 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:14:53.689 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:14:53.743 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:14:53.743 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 26
+2021-06-05 17:14:53.744 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:14:53.744 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:14:53.744 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:14:53.745 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:14:53.745 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 777, 章000
+2021-06-05 17:14:53.745 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-05 17:14:53.746 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-05 17:14:53.746 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-05 17:14:53.746 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 17:14:53.746 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:15:09.520 INFO  c.c.business.controller.admin.ChapterController   :24   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:15:09.521 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:15:09.522 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:15:09.524 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:15:09.524 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 26
+2021-06-05 17:15:09.525 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:15:09.525 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:15:09.526 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:15:09.527 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:15:09.527 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 777, 章000
+2021-06-05 17:15:09.527 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-05 17:15:09.527 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-05 17:15:09.528 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-05 17:15:09.528 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 17:15:09.528 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:15:10.473 INFO  c.c.business.controller.admin.ChapterController   :24   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:15:10.474 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:15:10.474 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:15:10.476 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:15:10.476 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 26
+2021-06-05 17:15:10.476 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:15:10.477 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:15:10.477 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:15:10.478 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:15:10.478 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 777, 章000
+2021-06-05 17:15:10.478 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-05 17:15:10.478 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-05 17:15:10.479 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-05 17:15:10.479 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 17:15:10.479 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:15:14.995 INFO  c.c.business.controller.admin.ChapterController   :34   [32m        [0;39m chapterDto:ChapterDto [Hash = 1901036549, id=00000001, courseId=888, name=章000]
+2021-06-05 17:15:14.995 DEBUG c.c.server.mapper.ChapterMapper.updateByPrimaryKey:137  [32m        [0;39m ==>  Preparing: update chapter set course_id = ?, name = ? where id = ?
+2021-06-05 17:15:14.996 DEBUG c.c.server.mapper.ChapterMapper.updateByPrimaryKey:137  [32m        [0;39m ==> Parameters: 888(String), 章000(String), 00000001(String)
+2021-06-05 17:15:15.076 DEBUG c.c.server.mapper.ChapterMapper.updateByPrimaryKey:137  [32m        [0;39m <==    Updates: 1
+2021-06-05 17:15:15.084 INFO  c.c.business.controller.admin.ChapterController   :24   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:15:15.086 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:15:15.087 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:15:15.088 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:15:15.088 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 26
+2021-06-05 17:15:15.089 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:15:15.089 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:15:15.089 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:15:15.090 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:15:15.090 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 888, 章000
+2021-06-05 17:15:15.090 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-05 17:15:15.090 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-05 17:15:15.091 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-05 17:15:15.091 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 17:15:15.091 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:15:31.160 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-05 17:20:31.171 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-05 17:25:31.175 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-05 17:30:31.185 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-05 17:35:31.195 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-05 17:36:22.604 INFO  org.hibernate.validator.internal.util.Version     :21   [32m        [0;39m HV000001: Hibernate Validator 6.1.6.Final
+2021-06-05 17:36:22.643 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :225  [32m        [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-05 17:36:23.627 INFO  com.company.business.BusinessApplication          :651  [32m        [0;39m No active profile set, falling back to default profiles: default
+2021-06-05 17:36:24.253 INFO  o.springframework.cloud.context.scope.GenericScope:295  [32m        [0;39m BeanFactory id=91678998-d02b-3c00-8abd-84b8d6be5866
+2021-06-05 17:36:24.649 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m        [0;39m Tomcat initialized with port(s): 9002 (http)
+2021-06-05 17:36:24.657 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m        [0;39m Initializing ProtocolHandler ["http-nio-9002"]
+2021-06-05 17:36:24.658 INFO  org.apache.catalina.core.StandardService          :173  [32m        [0;39m Starting service [Tomcat]
+2021-06-05 17:36:24.658 INFO  org.apache.catalina.core.StandardEngine           :173  [32m        [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-06-05 17:36:24.768 INFO  o.a.c.c.C.[Tomcat].[localhost].[/business]        :173  [32m        [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-05 17:36:24.768 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :285  [32m        [0;39m Root WebApplicationContext: initialization completed in 1123 ms
+2021-06-05 17:36:25.133 WARN  com.netflix.config.sources.URLConfigurationSource :121  [32m        [0;39m No URLs will be polled as dynamic configuration sources.
+2021-06-05 17:36:25.134 INFO  com.netflix.config.sources.URLConfigurationSource :122  [32m        [0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-06-05 17:36:25.138 WARN  com.netflix.config.sources.URLConfigurationSource :121  [32m        [0;39m No URLs will be polled as dynamic configuration sources.
+2021-06-05 17:36:25.138 INFO  com.netflix.config.sources.URLConfigurationSource :122  [32m        [0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-06-05 17:36:25.270 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m        [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-05 17:36:25.480 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m        [0;39m LiveReload server is running on port 35729
+2021-06-05 17:36:26.129 INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration:78   [32m        [0;39m Eureka HTTP Client uses Jersey
+2021-06-05 17:36:26.799 WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger:106  [32m        [0;39m You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-06-05 17:36:26.875 INFO  o.s.cloud.netflix.eureka.InstanceInfoFactory      :72   [32m        [0;39m Setting initial instance status as: STARTING
+2021-06-05 17:36:26.899 INFO  com.netflix.discovery.DiscoveryClient             :372  [32m        [0;39m Initializing Eureka in region us-east-1
+2021-06-05 17:36:27.589 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :70   [32m        [0;39m Using JSON encoding codec LegacyJacksonJson
+2021-06-05 17:36:27.590 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :71   [32m        [0;39m Using JSON decoding codec LegacyJacksonJson
+2021-06-05 17:36:27.678 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :80   [32m        [0;39m Using XML encoding codec XStreamXml
+2021-06-05 17:36:27.679 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :81   [32m        [0;39m Using XML decoding codec XStreamXml
+2021-06-05 17:36:28.164 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-05 17:36:28.974 INFO  com.netflix.discovery.DiscoveryClient             :1007 [32m        [0;39m Disable delta property : false
+2021-06-05 17:36:28.975 INFO  com.netflix.discovery.DiscoveryClient             :1008 [32m        [0;39m Single vip registry refresh property : null
+2021-06-05 17:36:28.975 INFO  com.netflix.discovery.DiscoveryClient             :1009 [32m        [0;39m Force full registry fetch : false
+2021-06-05 17:36:28.975 INFO  com.netflix.discovery.DiscoveryClient             :1010 [32m        [0;39m Application is null : false
+2021-06-05 17:36:28.975 INFO  com.netflix.discovery.DiscoveryClient             :1011 [32m        [0;39m Registered Applications size is zero : true
+2021-06-05 17:36:28.975 INFO  com.netflix.discovery.DiscoveryClient             :1013 [32m        [0;39m Application version is -1: true
+2021-06-05 17:36:28.976 INFO  com.netflix.discovery.DiscoveryClient             :1097 [32m        [0;39m Getting all instance registry info from the eureka server
+2021-06-05 17:36:29.093 INFO  com.netflix.discovery.DiscoveryClient             :1106 [32m        [0;39m The response status is 200
+2021-06-05 17:36:29.095 INFO  com.netflix.discovery.DiscoveryClient             :1321 [32m        [0;39m Starting heartbeat executor: renew interval is: 30
+2021-06-05 17:36:29.097 INFO  com.netflix.discovery.InstanceInfoReplicator      :60   [32m        [0;39m InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-06-05 17:36:29.102 INFO  com.netflix.discovery.DiscoveryClient             :492  [32m        [0;39m Discovery Client initialized at timestamp 1622885789101 with initial instances count: 2
+2021-06-05 17:36:29.105 INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry   :41   [32m        [0;39m Registering application BUSINESS-CLIENT with eureka with status UP
+2021-06-05 17:36:29.105 INFO  com.netflix.discovery.DiscoveryClient             :1352 [32m        [0;39m Saw local status change event StatusChangeEvent [timestamp=1622885789105, current=UP, previous=STARTING]
+2021-06-05 17:36:29.107 INFO  com.netflix.discovery.DiscoveryClient             :873  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002: registering service...
+2021-06-05 17:36:29.111 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m        [0;39m Starting ProtocolHandler ["http-nio-9002"]
+2021-06-05 17:36:29.129 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m        [0;39m Tomcat started on port(s): 9002 (http) with context path '/business'
+2021-06-05 17:36:29.130 INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration         :145  [32m        [0;39m Updating port to 9002
+2021-06-05 17:36:29.148 INFO  com.netflix.discovery.DiscoveryClient             :882  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002 - registration status: 204
+2021-06-05 17:36:29.811 INFO  com.company.business.BusinessApplication          :61   [32m        [0;39m Started BusinessApplication in 8.253 seconds (JVM running for 10.029)
+2021-06-05 17:36:29.813 INFO  com.company.business.BusinessApplication          :21   [32m        [0;39m 启动成功
+2021-06-05 17:36:29.813 INFO  com.company.business.BusinessApplication          :22   [32m        [0;39m Business地址:	http://127.0.0.1:9002
+2021-06-05 17:36:32.379 INFO  o.a.c.c.C.[Tomcat].[localhost].[/business]        :173  [32m        [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-05 17:36:32.379 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m        [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-05 17:36:32.385 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m        [0;39m Completed initialization in 6 ms
+2021-06-05 17:36:32.424 INFO  c.c.business.controller.admin.ChapterController   :22   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:36:32.479 INFO  com.alibaba.druid.pool.DruidDataSource            :986  [32m        [0;39m {dataSource-1} inited
+2021-06-05 17:36:32.676 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:36:32.697 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:36:32.714 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:36:32.714 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 26
+2021-06-05 17:36:32.715 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:36:32.717 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:36:32.717 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:36:32.719 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:36:32.719 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 888, 章000
+2021-06-05 17:36:32.720 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-05 17:36:32.720 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-05 17:36:32.720 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-05 17:36:32.721 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 17:36:32.721 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:36:35.089 INFO  c.c.business.controller.admin.ChapterController   :42   [32m        [0;39m id:00000002
+2021-06-05 17:36:35.090 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m ==>  Preparing: delete from chapter where id = ?
+2021-06-05 17:36:35.090 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m ==> Parameters: 00000002(String)
+2021-06-05 17:36:35.189 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m <==    Updates: 1
+2021-06-05 17:36:35.198 INFO  c.c.business.controller.admin.ChapterController   :22   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:36:35.199 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:36:35.199 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:36:35.201 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:36:35.201 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 25
+2021-06-05 17:36:35.201 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:36:35.202 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:36:35.202 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:36:35.203 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:36:35.203 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 888, 章000
+2021-06-05 17:36:35.204 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-05 17:36:35.204 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-05 17:36:35.204 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 17:36:35.205 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000006, 00000000, 测试大章06
+2021-06-05 17:36:35.205 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:36:40.269 INFO  c.c.business.controller.admin.ChapterController   :42   [32m        [0;39m id:00000003
+2021-06-05 17:36:40.269 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m ==>  Preparing: delete from chapter where id = ?
+2021-06-05 17:36:40.270 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m ==> Parameters: 00000003(String)
+2021-06-05 17:36:40.330 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m <==    Updates: 1
+2021-06-05 17:36:40.339 INFO  c.c.business.controller.admin.ChapterController   :22   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:36:40.339 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:36:40.340 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:36:40.341 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:36:40.342 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 24
+2021-06-05 17:36:40.342 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:36:40.342 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:36:40.342 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:36:40.343 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:36:40.344 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 888, 章000
+2021-06-05 17:36:40.344 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-05 17:36:40.344 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 17:36:40.344 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000006, 00000000, 测试大章06
+2021-06-05 17:36:40.345 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000007, 00000000, 测试大章07
+2021-06-05 17:36:40.345 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:36:42.463 INFO  c.c.business.controller.admin.ChapterController   :42   [32m        [0;39m id:00000004
+2021-06-05 17:36:42.464 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m ==>  Preparing: delete from chapter where id = ?
+2021-06-05 17:36:42.464 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m ==> Parameters: 00000004(String)
+2021-06-05 17:36:42.619 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m <==    Updates: 1
+2021-06-05 17:36:42.627 INFO  c.c.business.controller.admin.ChapterController   :22   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:36:42.628 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:36:42.628 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:36:42.630 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:36:42.630 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 23
+2021-06-05 17:36:42.630 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:36:42.631 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:36:42.631 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:36:42.632 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:36:42.632 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 888, 章000
+2021-06-05 17:36:42.633 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 17:36:42.634 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000006, 00000000, 测试大章06
+2021-06-05 17:36:42.634 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000007, 00000000, 测试大章07
+2021-06-05 17:36:42.635 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000008, 00000000, 测试大章08
+2021-06-05 17:36:42.635 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:36:43.126 INFO  c.c.business.controller.admin.ChapterController   :42   [32m        [0;39m id:00000005
+2021-06-05 17:36:43.127 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m ==>  Preparing: delete from chapter where id = ?
+2021-06-05 17:36:43.127 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m ==> Parameters: 00000005(String)
+2021-06-05 17:36:43.185 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m <==    Updates: 1
+2021-06-05 17:36:43.193 INFO  c.c.business.controller.admin.ChapterController   :22   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:36:43.194 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:36:43.195 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:36:43.196 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:36:43.197 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 22
+2021-06-05 17:36:43.197 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:36:43.198 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:36:43.198 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:36:43.199 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:36:43.199 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 888, 章000
+2021-06-05 17:36:43.200 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000006, 00000000, 测试大章06
+2021-06-05 17:36:43.200 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000007, 00000000, 测试大章07
+2021-06-05 17:36:43.200 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000008, 00000000, 测试大章08
+2021-06-05 17:36:43.201 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000009, 00000000, 测试大章09
+2021-06-05 17:36:43.201 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:36:43.920 INFO  c.c.business.controller.admin.ChapterController   :42   [32m        [0;39m id:00000006
+2021-06-05 17:36:43.920 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m ==>  Preparing: delete from chapter where id = ?
+2021-06-05 17:36:43.921 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m ==> Parameters: 00000006(String)
+2021-06-05 17:36:43.983 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m <==    Updates: 1
+2021-06-05 17:36:43.991 INFO  c.c.business.controller.admin.ChapterController   :22   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:36:43.992 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:36:43.993 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:36:43.995 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:36:43.995 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 21
+2021-06-05 17:36:43.995 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:36:43.996 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:36:43.996 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:36:43.997 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:36:43.997 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 888, 章000
+2021-06-05 17:36:43.998 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000007, 00000000, 测试大章07
+2021-06-05 17:36:43.998 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000008, 00000000, 测试大章08
+2021-06-05 17:36:43.998 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000009, 00000000, 测试大章09
+2021-06-05 17:36:43.998 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000010, 00000000, 测试大章10
+2021-06-05 17:36:43.999 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:36:44.355 INFO  c.c.business.controller.admin.ChapterController   :42   [32m        [0;39m id:00000007
+2021-06-05 17:36:44.356 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m ==>  Preparing: delete from chapter where id = ?
+2021-06-05 17:36:44.356 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m ==> Parameters: 00000007(String)
+2021-06-05 17:36:44.418 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m <==    Updates: 1
+2021-06-05 17:36:44.426 INFO  c.c.business.controller.admin.ChapterController   :22   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:36:44.427 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:36:44.427 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:36:44.428 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:36:44.429 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 20
+2021-06-05 17:36:44.429 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:36:44.429 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:36:44.430 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:36:44.431 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:36:44.431 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 888, 章000
+2021-06-05 17:36:44.431 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000008, 00000000, 测试大章08
+2021-06-05 17:36:44.431 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000009, 00000000, 测试大章09
+2021-06-05 17:36:44.431 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000010, 00000000, 测试大章10
+2021-06-05 17:36:44.432 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000011, 00000000, 测试大章11
+2021-06-05 17:36:44.432 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 17:36:44.673 INFO  c.c.business.controller.admin.ChapterController   :42   [32m        [0;39m id:00000008
+2021-06-05 17:36:44.674 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m ==>  Preparing: delete from chapter where id = ?
+2021-06-05 17:36:44.674 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m ==> Parameters: 00000008(String)
+2021-06-05 17:36:44.720 DEBUG c.c.server.mapper.ChapterMapper.deleteByPrimaryKey:137  [32m        [0;39m <==    Updates: 1
+2021-06-05 17:36:44.728 INFO  c.c.business.controller.admin.ChapterController   :22   [32m        [0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-05 17:36:44.729 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 17:36:44.729 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 17:36:44.731 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 17:36:44.731 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 19
+2021-06-05 17:36:44.731 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 17:36:44.732 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 17:36:44.732 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 17:36:44.734 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 17:36:44.734 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 888, 章000
+2021-06-05 17:36:44.734 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000009, 00000000, 测试大章09
+2021-06-05 17:36:44.735 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000010, 00000000, 测试大章10
+2021-06-05 17:36:44.735 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000011, 00000000, 测试大章11
+2021-06-05 17:36:44.735 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000012, 00000000, 测试大章12
+2021-06-05 17:36:44.735 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5

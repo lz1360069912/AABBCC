@@ -6,9 +6,7 @@ import com.company.server.dto.ResponseDto;
 import com.company.server.service.ChapterService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/admin/chapter")
@@ -18,7 +16,7 @@ public class ChapterController {
     @Autowired
     private ChapterService chapterService;
 
-    @RequestMapping("/list")
+    @PostMapping("/list")
     //@RequestBody接收流数据
     public ResponseDto list(@RequestBody PageDto pageDto) {
         log.info("pageDto:{}", pageDto);
@@ -28,13 +26,22 @@ public class ChapterController {
         return responseDto;
     }
 
-    @RequestMapping("/save")
+    @PostMapping("/save")
     //@RequestBody接收流数据
     public ResponseDto save(@RequestBody ChapterDto chapterDto) {
         log.info("chapterDto:{}", chapterDto);
         ResponseDto responseDto = new ResponseDto();
         chapterService.save(chapterDto);
         responseDto.setContent(chapterDto);
+        return responseDto;
+    }
+
+    @DeleteMapping("/delete/{id}")
+    //@RequestBody接收流数据
+    public ResponseDto delete(@PathVariable String id) {
+        log.info("id:{}", id);
+        ResponseDto responseDto = new ResponseDto();
+        chapterService.delete(id);
         return responseDto;
     }
 }
