@@ -69,7 +69,7 @@
         _this.page = page;
         _this.total = total;
         _this.pageTotal = Math.ceil(total / _this.size);
-        _this.pages = _this.getPageItems(_this.pageTotal, page, _this.itemCount || 5);//默认5个按钮
+        _this.pages = _this.getPageItems(_this.pageTotal, page, _this.itemCount || 3);//默认3个按钮
       },
 
       /**
