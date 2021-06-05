@@ -3463,3 +3463,25 @@
 2021-06-05 15:20:13.422 INFO  com.company.business.BusinessApplication          :61   [32m        [0;39m Started BusinessApplication in 7.274 seconds (JVM running for 8.614)
 2021-06-05 15:20:13.424 INFO  com.company.business.BusinessApplication          :21   [32m        [0;39m 启动成功
 2021-06-05 15:20:13.424 INFO  com.company.business.BusinessApplication          :22   [32m        [0;39m Business地址:	http://127.0.0.1:9002
+2021-06-05 15:20:42.243 INFO  o.a.c.c.C.[Tomcat].[localhost].[/business]        :173  [32m        [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-05 15:20:42.244 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m        [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-05 15:20:42.249 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m        [0;39m Completed initialization in 5 ms
+2021-06-05 15:20:42.339 INFO  com.alibaba.druid.pool.DruidDataSource            :986  [32m        [0;39m {dataSource-1} inited
+2021-06-05 15:20:42.533 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-05 15:20:42.549 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m ==> Parameters: 
+2021-06-05 15:20:42.564 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==    Columns: count(0)
+2021-06-05 15:20:42.565 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m        [0;39m <==        Row: 14
+2021-06-05 15:20:42.566 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m        [0;39m <==      Total: 1
+2021-06-05 15:20:42.568 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-05 15:20:42.568 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m ==> Parameters: 5(Integer)
+2021-06-05 15:20:42.569 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==    Columns: id, course_id, name
+2021-06-05 15:20:42.570 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000001, 00000000, 测试大章01
+2021-06-05 15:20:42.570 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000002, 00000000, 测试大章02
+2021-06-05 15:20:42.571 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000003, 00000000, 测试大章03
+2021-06-05 15:20:42.571 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000004, 00000000, 测试大章04
+2021-06-05 15:20:42.571 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m        [0;39m <==        Row: 00000005, 00000000, 测试大章05
+2021-06-05 15:20:42.572 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m        [0;39m <==      Total: 5
+2021-06-05 15:21:27.664 INFO  c.c.business.controller.admin.ChapterController   :30   [32m        [0;39m chapterDto:ChapterDto [Hash = 718852052, id=null, courseId=123, name=test]
+2021-06-05 15:21:27.665 DEBUG com.company.server.mapper.ChapterMapper.insert    :137  [32m        [0;39m ==>  Preparing: insert into chapter (id, course_id, name) values (?, ?, ?)
+2021-06-05 15:21:27.667 DEBUG com.company.server.mapper.ChapterMapper.insert    :137  [32m        [0;39m ==> Parameters: jcUNOtPO(String), 123(String), test(String)
+2021-06-05 15:21:27.962 DEBUG com.company.server.mapper.ChapterMapper.insert    :137  [32m        [0;39m <==    Updates: 1
