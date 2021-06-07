@@ -1623,3 +1623,17 @@ com.company.server.exception.ValidatorException: 名称不能为空
 2021-06-07 15:45:55.005 INFO  com.company.server.config.LogAspect               :110  [32mWRQmrf4u[0;39m 返回结果: {"content":{"list":[{"courseId":"12","id":"jcUNOtPO","name":"test"},{"courseId":"444","id":"JnoEDBAk","name":"章001"},{"courseId":"456","id":"kHrEATME","name":"测试"},{"courseId":"444","id":"lr75Ik8n","name":"nnnnnnn"},{"courseId":"123","id":"mEEpwSGW","name":"test"}],"page":1,"size":5,"total":10},"success":true}
 2021-06-07 15:45:55.005 INFO  com.company.server.config.LogAspect               :111  [32mWRQmrf4u[0;39m ------------- 结束 耗时：512 ms -------------
 2021-06-07 15:48:44.467 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 18:28:41.377 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 18:33:41.391 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 18:38:41.403 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 18:43:41.413 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 18:48:41.423 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 18:53:41.424 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 18:58:41.426 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 19:03:41.433 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 19:08:41.437 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 19:13:41.443 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 19:18:41.448 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 19:23:41.464 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 19:28:41.480 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 19:33:41.495 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
