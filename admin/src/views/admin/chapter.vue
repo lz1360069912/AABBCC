@@ -44,7 +44,7 @@
     </table>
 
     <div id="form-modal" class="modal fade" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-dialog-scrollable" >
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
@@ -134,39 +134,22 @@ export default {
         if (resp.success) {
           $("#form-modal").modal("hide");
           _this.list(1);
-          toast.success("保存成功");
+          Toast.success("保存成功");
         }
       });
     },
     del(id) {
       let _this = this;
-      Swal.fire({
-        title: '确认删除？',
-        text: "删除后不可恢复，确认删除!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        cancelButtonText: '取消',
-        confirmButtonText: '确认'
-      }).then((result) => {
-            if (result.isConfirmed) {
-              _this.$ajax.delete("http://localhost:9000/business/admin/chapter/delete/" + id).then((response) => {
-                console.log("删除大章列表结果", response);
-                let resp = response.data;
-                if (resp.success) {
-                  _this.list(1);
-                  Swal.fire(
-                      '删除成功!',
-                      '',
-                      'success'
-                  );
-                  toast.success("保存成功");
-                }
-              })
-            }
+      Confirm.show("确认删除？","删除后不可恢复，确认删除!",function () {
+        _this.$ajax.delete("http://localhost:9000/business/admin/chapter/delete/" + id).then((response) => {
+          console.log("删除大章列表结果", response);
+          let resp = response.data;
+          if (resp.success) {
+            _this.list(1);
+            Toast.success("删除成功");
           }
-      )
+        })
+      });
     }
   }
 }
