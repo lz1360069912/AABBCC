@@ -13,6 +13,7 @@
         <module>gateway</module>
         <module>server</module>
         <module>business</module>
+        <module>generator</module>
     </modules>
 
     <dependencyManagement>
@@ -114,6 +115,13 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>1.2.60</version>
+            </dependency>
+
+            <!-- freemarker -->
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>2.3.30</version>
             </dependency>
 
         </dependencies>

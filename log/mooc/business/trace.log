@@ -1596,3 +1596,30 @@ com.company.server.exception.ValidatorException: 名称不能为空
 2021-06-07 15:43:45.275 INFO  com.company.business.BusinessApplication          :61   [32m        [0;39m Started BusinessApplication in 9.146 seconds (JVM running for 10.759)
 2021-06-07 15:43:45.277 INFO  com.company.business.BusinessApplication          :21   [32m        [0;39m 启动成功
 2021-06-07 15:43:45.277 INFO  com.company.business.BusinessApplication          :22   [32m        [0;39m Business地址:	http://127.0.0.1:9002
+2021-06-07 15:45:54.428 INFO  o.a.c.c.C.[Tomcat].[localhost].[/business]        :173  [32m        [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-07 15:45:54.428 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m        [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-07 15:45:54.443 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m        [0;39m Completed initialization in 14 ms
+2021-06-07 15:45:54.495 INFO  com.company.server.config.LogAspect               :77   [32mWRQmrf4u[0;39m ------------- 【大章】查询开始 -------------
+2021-06-07 15:45:54.496 INFO  com.company.server.config.LogAspect               :78   [32mWRQmrf4u[0;39m 请求地址: http://172.22.32.90:9002/business/admin/chapter/list POST
+2021-06-07 15:45:54.496 INFO  com.company.server.config.LogAspect               :79   [32mWRQmrf4u[0;39m 类名方法: com.company.business.controller.admin.ChapterController.list
+2021-06-07 15:45:54.496 INFO  com.company.server.config.LogAspect               :80   [32mWRQmrf4u[0;39m 远程地址: 172.22.32.90
+2021-06-07 15:45:54.511 INFO  com.company.server.config.LogAspect               :98   [32mWRQmrf4u[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-07 15:45:54.514 INFO  c.c.business.controller.admin.ChapterController   :25   [32mWRQmrf4u[0;39m pageDto:PageDto{page=1, size=5, total=0, list=null}
+2021-06-07 15:45:54.586 INFO  com.alibaba.druid.pool.DruidDataSource            :986  [32mWRQmrf4u[0;39m {dataSource-1} inited
+2021-06-07 15:45:54.955 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mWRQmrf4u[0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-07 15:45:54.971 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mWRQmrf4u[0;39m ==> Parameters: 
+2021-06-07 15:45:54.986 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mWRQmrf4u[0;39m <==    Columns: count(0)
+2021-06-07 15:45:54.986 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mWRQmrf4u[0;39m <==        Row: 10
+2021-06-07 15:45:54.988 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mWRQmrf4u[0;39m <==      Total: 1
+2021-06-07 15:45:54.991 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mWRQmrf4u[0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-07 15:45:54.991 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mWRQmrf4u[0;39m ==> Parameters: 5(Integer)
+2021-06-07 15:45:54.993 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mWRQmrf4u[0;39m <==    Columns: id, course_id, name
+2021-06-07 15:45:54.993 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mWRQmrf4u[0;39m <==        Row: jcUNOtPO, 12, test
+2021-06-07 15:45:54.994 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mWRQmrf4u[0;39m <==        Row: JnoEDBAk, 444, 章001
+2021-06-07 15:45:54.994 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mWRQmrf4u[0;39m <==        Row: kHrEATME, 456, 测试
+2021-06-07 15:45:54.995 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mWRQmrf4u[0;39m <==        Row: lr75Ik8n, 444, nnnnnnn
+2021-06-07 15:45:54.995 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mWRQmrf4u[0;39m <==        Row: mEEpwSGW, 123, test
+2021-06-07 15:45:54.996 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mWRQmrf4u[0;39m <==      Total: 5
+2021-06-07 15:45:55.005 INFO  com.company.server.config.LogAspect               :110  [32mWRQmrf4u[0;39m 返回结果: {"content":{"list":[{"courseId":"12","id":"jcUNOtPO","name":"test"},{"courseId":"444","id":"JnoEDBAk","name":"章001"},{"courseId":"456","id":"kHrEATME","name":"测试"},{"courseId":"444","id":"lr75Ik8n","name":"nnnnnnn"},{"courseId":"123","id":"mEEpwSGW","name":"test"}],"page":1,"size":5,"total":10},"success":true}
+2021-06-07 15:45:55.005 INFO  com.company.server.config.LogAspect               :111  [32mWRQmrf4u[0;39m ------------- 结束 耗时：512 ms -------------
+2021-06-07 15:48:44.467 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration

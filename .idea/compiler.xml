@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="server" />
+        <module name="generator" />
         <module name="system" />
         <module name="business" />
         <module name="eureka" />
@@ -18,6 +19,7 @@
       <module name="business" target="1.5" />
       <module name="eureka" target="1.5" />
       <module name="gateway" target="1.5" />
+      <module name="generator" target="1.5" />
       <module name="mooc" target="1.5" />
       <module name="server" target="7" />
       <module name="system" target="1.5" />
