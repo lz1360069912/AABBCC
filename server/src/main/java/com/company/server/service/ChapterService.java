@@ -23,23 +23,24 @@ public class ChapterService {
     @Autowired
     private ChapterMapper chapterMapper;
 
+    /**
+     * 列表查询
+     * @param pageDto
+     */
     public void list(PageDto pageDto) {
         PageHelper.startPage(pageDto.getPage(), pageDto.getSize());
         ChapterExample example = new ChapterExample();
         List<Chapter> chapterList = chapterMapper.selectByExample(example);
         PageInfo<Chapter> pageInfo = new PageInfo<>(chapterList);
         pageDto.setTotal(pageInfo.getTotal());
-        /*List<ChapterDto> chapterDtoList = new ArrayList<>();
-        for (int i = 0, l = chapterList.size(); i < l; i++) {
-            Chapter chapter = chapterList.get(i);
-            ChapterDto chapterDto = new ChapterDto();
-            BeanUtils.copyProperties(chapter, chapterDto);
-            chapterDtoList.add(chapterDto);
-        }*/
         List<ChapterDto> chapterDtoList = CopyUtil.copyList(chapterList, ChapterDto.class);
         pageDto.setList(chapterDtoList);
     }
 
+    /**
+     * 保存，id有值时更新，无值时新增
+     * @param chapterDto
+     */
     //即支持新增也支持修改，通过判断有没有ID值，有值认为是修改，没值认为是新增
     public void save(ChapterDto chapterDto) {
         Chapter chapter = CopyUtil.copy(chapterDto, Chapter.class);
@@ -50,15 +51,27 @@ public class ChapterService {
         }
     }
 
+    /**
+     * 新增
+     * @param chapter
+     */
     private void insert(Chapter chapter) {
         chapter.setId(UuidUtil.getShortUuid());
         chapterMapper.insert(chapter);
     }
 
+    /**
+     * 更新
+     * @param chapter
+     */
     private void update(Chapter chapter) {
         chapterMapper.updateByPrimaryKey(chapter);
     }
 
+    /**
+     * 删除
+     * @param id
+     */
     public void delete(String id) {
         chapterMapper.deleteByPrimaryKey(id);
     }
