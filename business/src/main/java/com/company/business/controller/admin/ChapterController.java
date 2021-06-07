@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/admin/chapter")
 @Slf4j
 public class ChapterController {
+    public static final String BUSINESS_NAME = "大章";
 
     @Autowired
     private ChapterService chapterService;

@@ -34,7 +34,7 @@
                 <scope>import</scope>
             </dependency>
 
-            <!--数据库mysql+druid+mybatis+pagehelper-->
+            <!-- 数据库mysql+druid+mybatis+pagehelper -->
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
@@ -56,14 +56,14 @@
                 <version>1.2.10</version>
             </dependency>
 
-            <!--springboot启动器-->
+            <!-- springboot 启动器-->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>2.1.4</version>
             </dependency>
 
-            <!--日志测试-->
+            <!-- 日志测试 -->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
@@ -88,20 +88,36 @@
                 <version>2.2.8.RELEASE</version>
             </dependency>
 
-            <!--热部署-->
+            <!-- AOP -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>2.3.5.RELEASE</version>
+            </dependency>
+
+            <!-- 热部署 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-devtools</artifactId>
                 <version>2.3.5.RELEASE</version>
             </dependency>
 
-            <!--公共服务-->
+            <!-- 公共服务 -->
             <dependency>
                 <groupId>com.company</groupId>
                 <artifactId>server</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
+
+            <!-- fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.60</version>
+            </dependency>
+
         </dependencies>
+
     </dependencyManagement>
 
     <build>
@@ -117,7 +133,7 @@
                 <version>3.8.1</version>
             </plugin>
 
-            <!--mybatis generator自动生成代码插件-->
+            <!-- mybatis generator自动生成代码插件 -->
             <plugin>
                 <groupId>org.mybatis.generator</groupId>
                 <artifactId>mybatis-generator-maven-plugin</artifactId>
