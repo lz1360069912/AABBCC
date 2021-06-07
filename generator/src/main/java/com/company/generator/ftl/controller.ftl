@@ -1,4 +1,4 @@
-package com.company.business.controller.admin;
+package com.company.${module}.controller.admin;
 
 import com.company.server.dto.${Domain}Dto;
 import com.company.server.dto.PageDto;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/admin/${domain}")
 @Slf4j
 public class ${Domain}Controller {
-    public static final String BUSINESS_NAME = "大章";
+    public static final String BUSINESS_NAME = "${tableNameCn}";
 
     @Autowired
     private ${Domain}Service ${domain}Service;
