@@ -68,3 +68,7 @@
 2021-06-07 13:58:59.102 INFO  com.netflix.discovery.DiscoveryClient             :1097 [32m        [0;39m Getting all instance registry info from the eureka server
 2021-06-07 13:58:59.230 INFO  com.netflix.discovery.DiscoveryClient             :1106 [32m        [0;39m The response status is 200
 2021-06-07 13:59:10.994 INFO  com.netflix.config.ChainedDynamicProperty         :115  [32m        [0;39m Flipping property: business-client.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2021-06-07 14:03:28.241 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 14:08:28.243 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 14:13:28.244 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 14:18:28.250 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration

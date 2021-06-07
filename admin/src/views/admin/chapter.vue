@@ -44,7 +44,7 @@
     </table>
 
     <div id="form-modal" class="modal fade" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-scrollable" >
+      <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
@@ -54,16 +54,16 @@
           <div class="modal-body">
             <form class="form-horizontal">
               <div class="form-group">
+                <label for="input" class="col-sm-2 control-label">名称</label>
+                <div class="col-sm-10">
+                  <input v-model="chapter.name" type="text" class="form-control" id="input" placeholder="名称">
+                </div>
+              </div>
+              <div class="form-group">
                 <label for="courseId" class="col-sm-2 control-label">课程ID</label>
                 <div class="col-sm-10">
                   <!--vue变量_this.chapter会通过v-model属性和form表单做数据绑定-->
                   <input v-model="chapter.courseId" type="text" class="form-control" id="courseId" placeholder="ID">
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="input" class="col-sm-2 control-label">名称</label>
-                <div class="col-sm-10">
-                  <input v-model="chapter.name" type="text" class="form-control" id="input" placeholder="名称">
                 </div>
               </div>
             </form>
@@ -126,6 +126,13 @@ export default {
     },
     save() {
       let _this = this;
+
+      // 保存校验
+      if (!Validator.require(_this.chapter.name, "名称")
+          || !Validator.require(_this.chapter.courseId, "课程ID")
+          || !Validator.length(_this.chapter.courseId, "课程ID", 1, 8)) {
+        return;
+      }
       Loading.show();
       _this.$ajax.post("http://localhost:9000/business/admin/chapter/save", _this.chapter).then((response) => {
         Loading.hide();
@@ -140,7 +147,7 @@ export default {
     },
     del(id) {
       let _this = this;
-      Confirm.show("确认删除？","删除后不可恢复，确认删除!",function () {
+      Confirm.show("确认删除？", "删除后不可恢复，确认删除!", function () {
         _this.$ajax.delete("http://localhost:9000/business/admin/chapter/delete/" + id).then((response) => {
           console.log("删除大章列表结果", response);
           let resp = response.data;
