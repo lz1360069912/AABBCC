@@ -17,24 +17,24 @@
     <table id="simple-table" class="table  table-bordered table-hover">
       <thead>
       <tr>
-        <th>ID</th>
-        <th>名称</th>
-        <th>课程ID</th>
+      <#list fieldList as field>
+        <th>${field.nameCn}</th>
+      </#list>
         <th>操作</th>
       </tr>
       </thead>
 
       <tbody>
-      <tr v-for="chapter in chapters">
-        <td>{{ chapter.id }}</td>
-        <td>{{ chapter.name }}</td>
-        <td>{{ chapter.courseId }}</td>
+      <tr v-for="${domain} in ${domain}s">
+        <#list fieldList as field>
+        <td>{{ ${domain}.${field.nameHump} }}</td>
+        </#list>
         <td>
           <div class="btn-group">
-            <button v-on:click="edit(chapter)" class="btn btn-xs btn-info">
+            <button v-on:click="edit(${domain})" class="btn btn-xs btn-info">
               <i class="ace-icon fa fa-pencil bigger-120"></i>
             </button>
-            <button v-on:click="del(chapter.id)" class="btn btn-xs btn-danger ">
+            <button v-on:click="del(${domain}.id)" class="btn btn-xs btn-danger ">
               <i class="ace-icon fa fa-trash-o bigger-120"></i>
             </button>
           </div>
@@ -53,19 +53,14 @@
           </div>
           <div class="modal-body">
             <form class="form-horizontal">
+              <#list fieldList as field>
               <div class="form-group">
-                <label for="input" class="col-sm-2 control-label">名称</label>
+                <label for="${field.nameHump}" class="col-sm-2 control-label">${field.nameCn}</label>
                 <div class="col-sm-10">
-                  <input v-model="chapter.name" type="text" class="form-control" id="input" placeholder="名称">
+                  <input v-model="${domain}.${field.nameHump}" type="text" class="form-control" id="${field.nameHump}" placeholder="${field.nameCn}">
                 </div>
               </div>
-              <div class="form-group">
-                <label for="courseId" class="col-sm-2 control-label">课程ID</label>
-                <div class="col-sm-10">
-                  <!--vue变量_this.chapter会通过v-model属性和form表单做数据绑定-->
-                  <input v-model="chapter.courseId" type="text" class="form-control" id="courseId" placeholder="ID">
-                </div>
-              </div>
+              </#list>
             </form>
           </div>
           <div class="modal-footer">
@@ -84,16 +79,16 @@ import Pagination from "../../components/pagination";
 
 export default {
   components: {Pagination},
-  name: "chapter",
+  name: "${domain}",
   data: function () {
     return {
-      chapter: {}, // 用于绑定form表单的数据
-      chapters: []
+      ${domain}: {}, // 用于绑定form表单的数据
+      ${domain}s: []
     }
   },
   mounted: function () {
     // sidebar激活样式方法一
-    // this.$parent.activeSidebar("business-chapter-sidebar");
+    // this.$parent.activeSidebar("${module}-${domain}-sidebar");
     let _this = this;
     _this.$refs.pagination.size = 5;
     _this.list(1);
@@ -101,11 +96,11 @@ export default {
   methods: {
     /**
      * 点击编辑
-     * @param chapter
+     * @param ${domain}
      */
-    edit(chapter) {
+    edit(${domain}) {
       let _this = this;
-      _this.chapter = $.extend({}, chapter); // 列表数据复制一份赋值给表单chapter，防止修改表单时把列表也修改
+      _this.${domain} = $.extend({}, ${domain}); // 列表数据复制一份赋值给表单${domain}，防止修改表单时把列表也修改
       $("#form-modal").modal("show");//hide
     },
     /**
@@ -114,7 +109,7 @@ export default {
     add() {
       let _this = this;
       //.modal里的modal是内置的方法,用于弹出或关闭模态框
-      _this.chapter = {};
+      _this.${domain} = {};
       $("#form-modal").modal("show");//hide
     },
     /**
@@ -124,13 +119,13 @@ export default {
     list(page) {
       let _this = this;
       Loading.show();
-      _this.$ajax.post(process.env.VUE_APP_SERVER + "/business/admin/chapter/list", {
+      _this.$ajax.post(process.env.VUE_APP_SERVER + "/${module}/admin/${domain}/list", {
         page: page,
         size: _this.$refs.pagination.size
       }).then((response) => {
         Loading.hide();
         let resp = response.data;
-        _this.chapters = resp.content.list;
+        _this.${domain}s = resp.content.list;
         _this.$refs.pagination.render(page, resp.content.total);
       });
     },
@@ -139,15 +134,8 @@ export default {
      */
     save() {
       let _this = this;
-
-      // 保存校验
-      if (!Validator.require(_this.chapter.name, "名称")
-          || !Validator.require(_this.chapter.courseId, "课程ID")
-          || !Validator.length(_this.chapter.courseId, "课程ID", 1, 8)) {
-        return;
-      }
       Loading.show();
-      _this.$ajax.post(process.env.VUE_APP_SERVER + "/business/admin/chapter/save", _this.chapter).then((response) => {
+      _this.$ajax.post(process.env.VUE_APP_SERVER + "/${module}/admin/${domain}/save", _this.${domain}).then((response) => {
         Loading.hide();
         let resp = response.data;
         if (resp.success) {
@@ -166,7 +154,7 @@ export default {
     del(id) {
       let _this = this;
       Confirm.show("确认删除？", "删除后不可恢复，确认删除!", function () {
-        _this.$ajax.delete(process.env.VUE_APP_SERVER + "/business/admin/chapter/delete/" + id).then((response) => {
+        _this.$ajax.delete(process.env.VUE_APP_SERVER + "/${module}/admin/${domain}/delete/" + id).then((response) => {
           let resp = response.data;
           if (resp.success) {
             _this.list(1);

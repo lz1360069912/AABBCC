@@ -366,7 +366,7 @@
           </li>
 
           <li class="">
-            <a href="#" class="dropdown-toggle">
+            <a href="" class="dropdown-toggle">
               <i class="menu-icon fa fa-list"></i>
               <span class="menu-text"> 系统管理 </span>
 
@@ -377,7 +377,7 @@
 
             <ul class="submenu">
               <li class="">
-                <a href="tables.html">
+                <a href="">
                   <i class="menu-icon fa fa-caret-right"></i>
                   用户管理
                 </a>
@@ -386,7 +386,7 @@
               </li>
 
               <li class="">
-                <a href="jqgrid.html">
+                <a href="">
                   <i class="menu-icon fa fa-caret-right"></i>
                   权限管理
                 </a>
@@ -396,7 +396,7 @@
           </li>
 
           <li class="">
-            <a href="#" class="dropdown-toggle">
+            <a href="" class="dropdown-toggle">
               <i class="menu-icon fa fa-list"></i>
               <span class="menu-text"> 业务管理 </span>
               <b class="arrow fa fa-angle-down"></b>
@@ -409,6 +409,12 @@
                 <router-link to="/business/chapter">
                   <i class="menu-icon fa fa-caret-right"></i>
                   大章管理
+                </router-link>
+              </li>
+              <li class="" id="business-section-sidebar">
+                <router-link to="/business/section">
+                  <i class="menu-icon fa fa-caret-right"></i>
+                  小节管理
                 </router-link>
               </li>
             </ul>

@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 
 public class ${Domain}Dto {
 
-<#list fieldList as field>
+    <#list fieldList as field>
     /**
      * ${field.comment}
      */
@@ -20,10 +20,9 @@ public class ${Domain}Dto {
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     </#if>
     private ${field.javaType} ${field.nameHump};
+    </#list>
 
-</#list>
-
-<#list fieldList as field>
+    <#list fieldList as field>
     public ${field.javaType} get${field.nameBigHump}() {
         return ${field.nameHump};
     }
@@ -31,7 +30,7 @@ public class ${Domain}Dto {
     public void set${field.nameBigHump}(${field.javaType} ${field.nameHump}) {
         this.${field.nameHump} = ${field.nameHump};
     }
-</#list>
+    </#list>
 
     @Override
     public String toString() {
