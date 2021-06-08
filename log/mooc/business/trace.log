@@ -1720,3 +1720,7 @@ com.company.server.exception.ValidatorException: 名称不能为空
 2021-06-07 21:55:10.509 INFO  com.company.business.BusinessApplication          :21   [32m        [0;39m 启动成功
 2021-06-07 21:55:10.509 INFO  com.company.business.BusinessApplication          :22   [32m        [0;39m Business地址:	http://127.0.0.1:9002
 2021-06-07 22:00:09.907 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 22:05:09.919 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 22:10:09.933 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 22:15:09.947 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-07 22:20:09.949 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
