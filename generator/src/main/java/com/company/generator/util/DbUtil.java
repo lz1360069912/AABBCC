@@ -64,6 +64,7 @@ public class DbUtil {
                 String columnName = rs.getString("Field");// 列名
                 String type = rs.getString("Type");// 类型
                 String comment = rs.getString("Comment");// 注释
+                String nullAble = rs.getString("Null");// 是否可为空 NO/YES
                 Field field = new Field();
                 field.setName(columnName);
                 field.setNameHump(lineToHump(columnName));
@@ -71,6 +72,13 @@ public class DbUtil {
                 field.setType(type);
                 field.setJavaType(DbUtil.sqlTypeToJavaType(rs.getString("Type")));
                 field.setComment(comment);
+                field.setNullAble("YES".equals(nullAble));
+                if (type.toUpperCase().contains("varchar".toUpperCase())) {
+                    String lengthStr = type.substring(type.indexOf("(") + 1, type.length() - 1);
+                    field.setLength(Integer.valueOf(lengthStr));
+                } else {
+                    field.setLength(0);
+                }
                 if (comment.contains("|")) {
                     field.setNameCn(comment.substring(0, comment.indexOf("|")));
                 } else {

@@ -4,6 +4,7 @@ import com.company.server.dto.${Domain}Dto;
 import com.company.server.dto.PageDto;
 import com.company.server.dto.ResponseDto;
 import com.company.server.service.${Domain}Service;
+import com.company.server.util.ValidatorUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +24,6 @@ public class ${Domain}Controller {
      * @return
      */
     @PostMapping("/list")
-    //@RequestBody接收流数据
     public ResponseDto list(@RequestBody PageDto pageDto) {
         ResponseDto responseDto = new ResponseDto();
         ${domain}Service.list(pageDto);
@@ -37,8 +37,19 @@ public class ${Domain}Controller {
      * @return
      */
     @PostMapping("/save")
-    //@RequestBody接收流数据
     public ResponseDto save(@RequestBody ${Domain}Dto ${domain}Dto) {
+        // 保存校验
+        <#list fieldList as field>
+        <#if field.name!="id" && field.nameHump!="createdAt" && field.nameHump!="updatedAt" && field.nameHump!="sort">
+            <#if !field.nullAble>
+        ValidatorUtil.require(${domain}Dto.get${field.nameBigHump}(), "${field.nameCn}");
+            </#if>
+            <#if (field.length > 0)>
+        ValidatorUtil.length(${domain}Dto.get${field.nameBigHump}(), "${field.nameCn}", 1, ${field.length?c});
+            </#if>
+        </#if>
+        </#list>
+
         ResponseDto responseDto = new ResponseDto();
         ${domain}Service.save(${domain}Dto);
         responseDto.setContent(${domain}Dto);

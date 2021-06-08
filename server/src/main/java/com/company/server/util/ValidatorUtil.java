@@ -21,10 +21,7 @@ public class ValidatorUtil {
         if (StringUtils.isEmpty(str)) {
             return;
         }
-        int length = 0;
-        if (!StringUtils.isEmpty(str)) {
-            length = str.length();
-        }
+        int length = str.length();
         if (length < min || length > max) {
             throw new ValidatorException(fieldName + "长度" + min + "~" + max + "位");
         }
