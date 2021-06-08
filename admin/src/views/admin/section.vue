@@ -17,7 +17,7 @@
     <table id="simple-table" class="table  table-bordered table-hover">
       <thead>
       <tr>
-                <th>id</th>
+        <th>id</th>
         <th>标题</th>
         <th>课程</th>
         <th>大章</th>
@@ -37,7 +37,7 @@
         <td>{{ section.chapterId }}</td>
         <td>{{ section.video }}</td>
         <td>{{ section.time }}</td>
-        <td>{{ section.charge }}</td>
+        <td>{{ CHARGE | optionKV(section.charge) }}</td>
         <td>{{ section.sort }}</td>
         <td>
           <div class="btn-group">
@@ -96,7 +96,9 @@
               <div class="form-group">
                 <label for="charge" class="col-sm-2 control-label">收费</label>
                 <div class="col-sm-10">
-                  <input v-model="section.charge" type="text" class="form-control" id="charge" placeholder="收费">
+                  <select v-model="section.charge" class="form-control" id="charge">
+                    <option v-for="o in CHARGE" v-bind:value="o.key">{{ o.value }}</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">
@@ -127,7 +129,8 @@ export default {
   data: function () {
     return {
       section: {}, // 用于绑定form表单的数据
-      sections: []
+      sections: [],
+      CHARGE: [{key: "C", value: "收费"}, {key: "F", value: "免费"}]
     }
   },
   mounted: function () {
