@@ -1,5 +1,15 @@
 <template>
   <div>
+    <h4 class="lighter">
+      <router-link to="/business/course" class="ace-icon fa fa-hand-o-right fa-reply icon-only pink2">
+        {{ course.name }}
+      </router-link>
+      ：
+      <router-link to="/business/chapter" class="ace-icon fa fa-hand-o-right fa-reply icon-only pink2">
+        {{ chapter.name }}
+      </router-link>
+    </h4>
+    <hr>
     <p>
       <button v-on:click="add()" class="btn btn-white btn-default btn-round">
         <i class="ace-icon fa fa-edit"></i>
@@ -19,8 +29,6 @@
       <tr>
         <th>id</th>
         <th>标题</th>
-        <th>课程</th>
-        <th>大章</th>
         <th>视频</th>
         <th>时长</th>
         <th>收费</th>
@@ -33,8 +41,6 @@
       <tr v-for="section in sections">
         <td>{{ section.id }}</td>
         <td>{{ section.title }}</td>
-        <td>{{ section.courseId }}</td>
-        <td>{{ section.chapterId }}</td>
         <td>{{ section.video }}</td>
         <td>{{ section.time }}</td>
         <td>{{ SECTION_CHARGE | optionKV(section.charge) }}</td>
@@ -70,15 +76,15 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="courseId" class="col-sm-2 control-label">课程</label>
+                <label class="col-sm-2 control-label">课程</label>
                 <div class="col-sm-10">
-                  <input v-model="section.courseId" type="text" class="form-control" id="courseId" placeholder="课程">
+                  <p class="form-control-static">{{ course.name }}</p>
                 </div>
               </div>
               <div class="form-group">
-                <label for="chapterId" class="col-sm-2 control-label">大章</label>
+                <label class="col-sm-2 control-label">大章</label>
                 <div class="col-sm-10">
-                  <input v-model="section.chapterId" type="text" class="form-control" id="chapterId" placeholder="大章">
+                  <p class="form-control-static">{{ chapter.name }}</p>
                 </div>
               </div>
               <div class="form-group">
@@ -130,7 +136,9 @@ export default {
     return {
       section: {}, // 用于绑定form表单的数据
       sections: [],
-      SECTION_CHARGE: SECTION_CHARGE
+      SECTION_CHARGE: SECTION_CHARGE,
+      course: {},
+      chapter: {},
     }
   },
   mounted: function () {
@@ -138,6 +146,13 @@ export default {
     // this.$parent.activeSidebar("business-section-sidebar");
     let _this = this;
     _this.$refs.pagination.size = 5;
+    let course = SessionStorage.get("course") || {};
+    let chapter = SessionStorage.get("chapter") || {};
+    if (Tool.isEmpty(course) || Tool.isEmpty(chapter)) {
+      _this.$router.push("/welcome");
+    }
+    _this.course = course;
+    _this.chapter = chapter;
     _this.list(1);
   },
   methods: {
@@ -168,7 +183,9 @@ export default {
       Loading.show();
       _this.$ajax.post(process.env.VUE_APP_SERVER + "/business/admin/section/list", {
         page: page,
-        size: _this.$refs.pagination.size
+        size: _this.$refs.pagination.size,
+        courseId: _this.course.id,
+        chapterId: _this.chapter.id,
       }).then((response) => {
         Loading.hide();
         let resp = response.data;
@@ -190,6 +207,8 @@ export default {
       ) {
         return;
       }
+      _this.section.courseId = _this.course.id;
+      _this.section.chapterId = _this.chapter.id;
       Loading.show();
       _this.$ajax.post(process.env.VUE_APP_SERVER + "/business/admin/section/save", _this.section).then((response) => {
         Loading.hide();

@@ -1,6 +1,11 @@
 <template>
   <div>
-    <h3>{{ course.name }}</h3>
+    <h4 class="lighter">
+      <router-link to="/business/course" class="ace-icon fa fa-hand-o-right fa-reply icon-only pink2">
+        {{ course.name }}
+      </router-link>
+    </h4>
+    <hr>
     <p>
       <router-link to="/business/course" class="btn btn-white btn-default btn-round">
         <i class="ace-icon fa fa-arrow-left"></i>
@@ -25,7 +30,6 @@
       <tr>
         <th>ID</th>
         <th>名称</th>
-        <th>课程ID</th>
         <th>操作</th>
       </tr>
       </thead>
@@ -34,14 +38,16 @@
       <tr v-for="chapter in chapters">
         <td>{{ chapter.id }}</td>
         <td>{{ chapter.name }}</td>
-        <td>{{ chapter.courseId }}</td>
         <td>
           <div class="btn-group">
-            <button v-on:click="edit(chapter)" class="btn btn-xs btn-info">
-              <i class="ace-icon fa fa-pencil bigger-120"></i>
-            </button>
-            <button v-on:click="del(chapter.id)" class="btn btn-xs btn-danger ">
-              <i class="ace-icon fa fa-trash-o bigger-120"></i>
+            <button v-on:click="toSection(chapter)" class="btn btn-white btn-xs btn-info btn-round">
+              小节
+            </button>&nbsp;
+            <button v-on:click="edit(chapter)" class="btn btn-white btn-xs btn-info btn-round">
+              编辑
+            </button>&nbsp;
+            <button v-on:click="del(chapter.id)" class="btn btn-white btn-xs btn-warning btn-round">
+              删除
             </button>
           </div>
         </td>
@@ -195,6 +201,15 @@ export default {
           }
         })
       });
+    },
+    /**
+     * 点击小节
+     * @param chapter
+     */
+    toSection(chapter) {
+      let _this = this;
+      SessionStorage.set("chapter", chapter);
+      _this.$router.push("/business/section");
     }
   }
 }

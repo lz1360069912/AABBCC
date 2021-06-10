@@ -1,8 +1,8 @@
 package com.company.business.controller.admin;
 
-import com.company.server.dto.SectionDto;
-import com.company.server.dto.PageDto;
 import com.company.server.dto.ResponseDto;
+import com.company.server.dto.SectionDto;
+import com.company.server.dto.SectionPageDto;
 import com.company.server.service.SectionService;
 import com.company.server.util.ValidatorUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -20,14 +20,16 @@ public class SectionController {
 
     /**
      * 列表查询
-     * @param pageDto
+     * @param sectionPageDto
      * @return
      */
     @PostMapping("/list")
-    public ResponseDto list(@RequestBody PageDto pageDto) {
+    public ResponseDto list(@RequestBody SectionPageDto sectionPageDto) {
         ResponseDto responseDto = new ResponseDto();
-        sectionService.list(pageDto);
-        responseDto.setContent(pageDto);
+        ValidatorUtil.require(sectionPageDto.getCourseId(), "课程ID");
+        ValidatorUtil.require(sectionPageDto.getChapterId(), "大章ID");
+        sectionService.list(sectionPageDto);
+        responseDto.setContent(sectionPageDto);
         return responseDto;
     }
 
