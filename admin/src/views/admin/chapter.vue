@@ -84,7 +84,7 @@ import Pagination from "../../components/pagination";
 
 export default {
   components: {Pagination},
-  name: "chapter",
+  name: "business-chapter",
   data: function () {
     return {
       chapter: {}, // 用于绑定form表单的数据
