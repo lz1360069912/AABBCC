@@ -4,6 +4,7 @@ import com.company.server.domain.Section;
 import com.company.server.domain.SectionExample;
 import com.company.server.dto.SectionDto;
 import com.company.server.dto.PageDto;
+import com.company.server.enums.SectionChargeEnum;
 import com.company.server.mapper.SectionMapper;
 import com.company.server.util.CopyUtil;
 import com.company.server.util.UuidUtil;
@@ -59,6 +60,7 @@ public class SectionService {
         section.setCreatedAt(now);
         section.setUpdatedAt(now);
         section.setId(UuidUtil.getShortUuid());
+        section.setCharge(SectionChargeEnum.CHARGE.getCode());
         sectionMapper.insert(section);
     }
 
