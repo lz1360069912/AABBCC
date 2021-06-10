@@ -30,6 +30,9 @@
       <tr v-for="${domain} in ${domain}s">
         <#list fieldList as field>
           <#if field.nameHump!="createdAt" && field.nameHump!="updatedAt">
+            <#if field.enums>
+        <td>{{ ${field.enumsConst} | optionKV(${domain}.${field.nameHump}) }}</td>
+            </#if>
         <td>{{ ${domain}.${field.nameHump} }}</td>
           </#if>
         </#list>
@@ -59,12 +62,23 @@
             <form class="form-horizontal">
               <#list fieldList as field>
                 <#if field.nameHump!="id" && field.nameHump!="createdAt" && field.nameHump!="updatedAt">
+                 <#if field.enums>
+              <div class="form-group">
+                <label for="${field.nameHump}" class="col-sm-2 control-label">${field.nameCn}</label>
+                <div class="col-sm-10">
+                  <select v-model="${domain}.${field.nameHump}" class="form-control" id="${field.nameHump}">
+                    <option v-for="o in ${field.enumsConst}" v-bind:value="o.key">{{ o.value }}</option>
+                  </select>
+                </div>
+              </div>
+                 <#else>
               <div class="form-group">
                 <label for="${field.nameHump}" class="col-sm-2 control-label">${field.nameCn}</label>
                 <div class="col-sm-10">
                   <input v-model="${domain}.${field.nameHump}" type="text" class="form-control" id="${field.nameHump}" placeholder="${field.nameCn}">
                 </div>
               </div>
+                 </#if>
                 </#if>
               </#list>
             </form>
@@ -89,7 +103,12 @@ export default {
   data: function () {
     return {
       ${domain}: {}, // 用于绑定form表单的数据
-      ${domain}s: []
+      ${domain}s: [],
+      <#list fieldList as field>
+        <#if field.enums>
+      ${field.enumsConst}: ${field.enumsConst},
+        </#if>
+      </#list>
     }
   },
   mounted: function () {
