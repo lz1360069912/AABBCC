@@ -17,7 +17,7 @@ create table course
     updated_at datetime(3) comment '修改时间',
     primary key (id)
 ) engine = innodb
-  default charset = utf8mb4 comment ='课程';
+  default charset = utf8mb4 comment ='课程表';
 
 insert into course (id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at)
 values ('00000001', '测试课程01', '这是一门测试课程', 7200, 19.9, '', 1, 'C', 'P', 100, 0, now(), now());

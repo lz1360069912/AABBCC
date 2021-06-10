@@ -417,3 +417,671 @@
 2021-06-10 15:21:56.549 INFO  com.company.business.BusinessApplication          :22   [32m        [0;39m Business地址:	http://127.0.0.1:9002
 2021-06-10 15:26:55.953 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
 2021-06-10 15:31:55.963 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 15:34:10.243 INFO  o.a.c.c.C.[Tomcat].[localhost].[/business]        :173  [32m        [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-10 15:34:10.243 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m        [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-10 15:34:10.251 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m        [0;39m Completed initialization in 8 ms
+2021-06-10 15:34:10.257 INFO  com.company.server.config.LogAspect               :77   [32mv4IMLDiW[0;39m ------------- 【大章】查询开始 -------------
+2021-06-10 15:34:10.258 INFO  com.company.server.config.LogAspect               :78   [32mv4IMLDiW[0;39m 请求地址: http://172.22.32.90:9002/business/admin/chapter/list POST
+2021-06-10 15:34:10.258 INFO  com.company.server.config.LogAspect               :79   [32mv4IMLDiW[0;39m 类名方法: com.company.business.controller.admin.ChapterController.list
+2021-06-10 15:34:10.258 INFO  com.company.server.config.LogAspect               :80   [32mv4IMLDiW[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:34:10.260 INFO  com.company.server.config.LogAspect               :98   [32mv4IMLDiW[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:34:10.270 INFO  com.alibaba.druid.pool.DruidDataSource            :986  [32mv4IMLDiW[0;39m {dataSource-2} inited
+2021-06-10 15:34:10.290 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mv4IMLDiW[0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-10 15:34:10.290 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mv4IMLDiW[0;39m ==> Parameters: 
+2021-06-10 15:34:10.293 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mv4IMLDiW[0;39m <==    Columns: count(0)
+2021-06-10 15:34:10.293 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mv4IMLDiW[0;39m <==        Row: 10
+2021-06-10 15:34:10.293 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mv4IMLDiW[0;39m <==      Total: 1
+2021-06-10 15:34:10.294 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mv4IMLDiW[0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-10 15:34:10.294 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mv4IMLDiW[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:34:10.295 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mv4IMLDiW[0;39m <==    Columns: id, course_id, name
+2021-06-10 15:34:10.295 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mv4IMLDiW[0;39m <==        Row: jcUNOtPO, 12, test
+2021-06-10 15:34:10.296 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mv4IMLDiW[0;39m <==        Row: JnoEDBAk, 444, 章001
+2021-06-10 15:34:10.296 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mv4IMLDiW[0;39m <==        Row: kHrEATME, 456, 测试
+2021-06-10 15:34:10.296 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mv4IMLDiW[0;39m <==        Row: lr75Ik8n, 444, nnnnnnn
+2021-06-10 15:34:10.296 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mv4IMLDiW[0;39m <==        Row: mEEpwSGW, 123, test
+2021-06-10 15:34:10.296 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mv4IMLDiW[0;39m <==      Total: 5
+2021-06-10 15:34:10.306 INFO  com.company.server.config.LogAspect               :110  [32mv4IMLDiW[0;39m 返回结果: {"content":{"list":[{"courseId":"12","id":"jcUNOtPO","name":"test"},{"courseId":"444","id":"JnoEDBAk","name":"章001"},{"courseId":"456","id":"kHrEATME","name":"测试"},{"courseId":"444","id":"lr75Ik8n","name":"nnnnnnn"},{"courseId":"123","id":"mEEpwSGW","name":"test"}],"page":1,"size":5,"total":10},"success":true}
+2021-06-10 15:34:10.306 INFO  com.company.server.config.LogAspect               :111  [32mv4IMLDiW[0;39m ------------- 结束 耗时：51 ms -------------
+2021-06-10 15:34:11.279 INFO  com.company.server.config.LogAspect               :77   [32mwX4K68Uo[0;39m ------------- 【小节】查询开始 -------------
+2021-06-10 15:34:11.279 INFO  com.company.server.config.LogAspect               :78   [32mwX4K68Uo[0;39m 请求地址: http://172.22.32.90:9002/business/admin/section/list POST
+2021-06-10 15:34:11.280 INFO  com.company.server.config.LogAspect               :79   [32mwX4K68Uo[0;39m 类名方法: com.company.business.controller.admin.SectionController.list
+2021-06-10 15:34:11.280 INFO  com.company.server.config.LogAspect               :80   [32mwX4K68Uo[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:34:11.280 INFO  com.company.server.config.LogAspect               :98   [32mwX4K68Uo[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:34:11.298 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mwX4K68Uo[0;39m ==>  Preparing: SELECT count(0) FROM section
+2021-06-10 15:34:11.298 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mwX4K68Uo[0;39m ==> Parameters: 
+2021-06-10 15:34:11.300 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mwX4K68Uo[0;39m <==    Columns: count(0)
+2021-06-10 15:34:11.300 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mwX4K68Uo[0;39m <==        Row: 5
+2021-06-10 15:34:11.301 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mwX4K68Uo[0;39m <==      Total: 1
+2021-06-10 15:34:11.302 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mwX4K68Uo[0;39m ==>  Preparing: select id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at from section order by sort asc LIMIT ?
+2021-06-10 15:34:11.302 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mwX4K68Uo[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:34:11.304 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mwX4K68Uo[0;39m <==    Columns: id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at
+2021-06-10 15:34:11.305 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mwX4K68Uo[0;39m <==        Row: fVPTEPU7, 1, null, null, 5, null, C, null, null, null
+2021-06-10 15:34:11.305 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mwX4K68Uo[0;39m <==        Row: hd1cNCIV, 7, null, null, null, null, C, null, null, null
+2021-06-10 15:34:11.306 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mwX4K68Uo[0;39m <==        Row: lMKvVsMc, 13, null, null, null, null, F, null, null, null
+2021-06-10 15:34:11.306 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mwX4K68Uo[0;39m <==        Row: nlLobVJh, 2222, null, null, null, null, F, null, null, null
+2021-06-10 15:34:11.306 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mwX4K68Uo[0;39m <==        Row: h636Qomu, 1, 2, 3, 4, 5, F, 7, null, null
+2021-06-10 15:34:11.307 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mwX4K68Uo[0;39m <==      Total: 5
+2021-06-10 15:34:11.312 INFO  com.company.server.config.LogAspect               :110  [32mwX4K68Uo[0;39m 返回结果: {"content":{"list":[{"charge":"C","id":"fVPTEPU7","title":"1","video":"5"},{"charge":"C","id":"hd1cNCIV","title":"7"},{"charge":"F","id":"lMKvVsMc","title":"13"},{"charge":"F","id":"nlLobVJh","title":"2222"},{"chapterId":"3","charge":"F","courseId":"2","id":"h636Qomu","sort":7,"time":5,"title":"1","video":"4"}],"page":1,"size":5,"total":5},"success":true}
+2021-06-10 15:34:11.312 INFO  com.company.server.config.LogAspect               :111  [32mwX4K68Uo[0;39m ------------- 结束 耗时：33 ms -------------
+2021-06-10 15:34:16.658 INFO  com.company.server.config.LogAspect               :77   [32mEMDFBFa1[0;39m ------------- 【小节】保存开始 -------------
+2021-06-10 15:34:16.658 INFO  com.company.server.config.LogAspect               :78   [32mEMDFBFa1[0;39m 请求地址: http://172.22.32.90:9002/business/admin/section/save POST
+2021-06-10 15:34:16.658 INFO  com.company.server.config.LogAspect               :79   [32mEMDFBFa1[0;39m 类名方法: com.company.business.controller.admin.SectionController.save
+2021-06-10 15:34:16.658 INFO  com.company.server.config.LogAspect               :80   [32mEMDFBFa1[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:34:16.658 INFO  com.company.server.config.LogAspect               :98   [32mEMDFBFa1[0;39m 请求参数: [{"charge":"F","id":"fVPTEPU7","title":"1","video":"5"}]
+2021-06-10 15:34:16.659 DEBUG c.c.server.mapper.SectionMapper.updateByPrimaryKey:137  [32mEMDFBFa1[0;39m ==>  Preparing: update section set title = ?, course_id = ?, chapter_id = ?, video = ?, time = ?, charge = ?, sort = ?, created_at = ?, updated_at = ? where id = ?
+2021-06-10 15:34:16.660 DEBUG c.c.server.mapper.SectionMapper.updateByPrimaryKey:137  [32mEMDFBFa1[0;39m ==> Parameters: 1(String), null, null, 5(String), null, F(String), null, null, 2021-06-10 15:34:16.659(Timestamp), fVPTEPU7(String)
+2021-06-10 15:34:16.858 DEBUG c.c.server.mapper.SectionMapper.updateByPrimaryKey:137  [32mEMDFBFa1[0;39m <==    Updates: 1
+2021-06-10 15:34:16.858 INFO  com.company.server.config.LogAspect               :110  [32mEMDFBFa1[0;39m 返回结果: {"content":{"charge":"F","id":"fVPTEPU7","title":"1","video":"5"},"success":true}
+2021-06-10 15:34:16.858 INFO  com.company.server.config.LogAspect               :111  [32mEMDFBFa1[0;39m ------------- 结束 耗时：200 ms -------------
+2021-06-10 15:34:16.883 INFO  com.company.server.config.LogAspect               :77   [32mifvWHLhS[0;39m ------------- 【小节】查询开始 -------------
+2021-06-10 15:34:16.883 INFO  com.company.server.config.LogAspect               :78   [32mifvWHLhS[0;39m 请求地址: http://172.22.32.90:9002/business/admin/section/list POST
+2021-06-10 15:34:16.884 INFO  com.company.server.config.LogAspect               :79   [32mifvWHLhS[0;39m 类名方法: com.company.business.controller.admin.SectionController.list
+2021-06-10 15:34:16.884 INFO  com.company.server.config.LogAspect               :80   [32mifvWHLhS[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:34:16.884 INFO  com.company.server.config.LogAspect               :98   [32mifvWHLhS[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:34:16.885 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mifvWHLhS[0;39m ==>  Preparing: SELECT count(0) FROM section
+2021-06-10 15:34:16.885 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mifvWHLhS[0;39m ==> Parameters: 
+2021-06-10 15:34:16.887 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mifvWHLhS[0;39m <==    Columns: count(0)
+2021-06-10 15:34:16.887 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mifvWHLhS[0;39m <==        Row: 5
+2021-06-10 15:34:16.888 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mifvWHLhS[0;39m <==      Total: 1
+2021-06-10 15:34:16.888 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mifvWHLhS[0;39m ==>  Preparing: select id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at from section order by sort asc LIMIT ?
+2021-06-10 15:34:16.889 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mifvWHLhS[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:34:16.889 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mifvWHLhS[0;39m <==    Columns: id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at
+2021-06-10 15:34:16.891 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mifvWHLhS[0;39m <==        Row: fVPTEPU7, 1, null, null, 5, null, F, null, null, 2021-06-10 15:34:16.659
+2021-06-10 15:34:16.891 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mifvWHLhS[0;39m <==        Row: hd1cNCIV, 7, null, null, null, null, C, null, null, null
+2021-06-10 15:34:16.891 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mifvWHLhS[0;39m <==        Row: lMKvVsMc, 13, null, null, null, null, F, null, null, null
+2021-06-10 15:34:16.891 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mifvWHLhS[0;39m <==        Row: nlLobVJh, 2222, null, null, null, null, F, null, null, null
+2021-06-10 15:34:16.892 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mifvWHLhS[0;39m <==        Row: h636Qomu, 1, 2, 3, 4, 5, F, 7, null, null
+2021-06-10 15:34:16.892 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mifvWHLhS[0;39m <==      Total: 5
+2021-06-10 15:34:16.893 INFO  com.company.server.config.LogAspect               :110  [32mifvWHLhS[0;39m 返回结果: {"content":{"list":[{"charge":"F","id":"fVPTEPU7","title":"1","updatedAt":1623310456659,"video":"5"},{"charge":"C","id":"hd1cNCIV","title":"7"},{"charge":"F","id":"lMKvVsMc","title":"13"},{"charge":"F","id":"nlLobVJh","title":"2222"},{"chapterId":"3","charge":"F","courseId":"2","id":"h636Qomu","sort":7,"time":5,"title":"1","video":"4"}],"page":1,"size":5,"total":5},"success":true}
+2021-06-10 15:34:16.893 INFO  com.company.server.config.LogAspect               :111  [32mifvWHLhS[0;39m ------------- 结束 耗时：10 ms -------------
+2021-06-10 15:34:56.511 INFO  com.company.server.config.LogAspect               :77   [32mZKvliZv3[0;39m ------------- 【小节】查询开始 -------------
+2021-06-10 15:34:56.511 INFO  com.company.server.config.LogAspect               :78   [32mZKvliZv3[0;39m 请求地址: http://172.22.32.90:9002/business/admin/section/list POST
+2021-06-10 15:34:56.512 INFO  com.company.server.config.LogAspect               :79   [32mZKvliZv3[0;39m 类名方法: com.company.business.controller.admin.SectionController.list
+2021-06-10 15:34:56.512 INFO  com.company.server.config.LogAspect               :80   [32mZKvliZv3[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:34:56.512 INFO  com.company.server.config.LogAspect               :98   [32mZKvliZv3[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:34:56.513 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mZKvliZv3[0;39m ==>  Preparing: SELECT count(0) FROM section
+2021-06-10 15:34:56.514 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mZKvliZv3[0;39m ==> Parameters: 
+2021-06-10 15:34:56.515 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mZKvliZv3[0;39m <==    Columns: count(0)
+2021-06-10 15:34:56.516 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mZKvliZv3[0;39m <==        Row: 5
+2021-06-10 15:34:56.516 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mZKvliZv3[0;39m <==      Total: 1
+2021-06-10 15:34:56.517 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mZKvliZv3[0;39m ==>  Preparing: select id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at from section order by sort asc LIMIT ?
+2021-06-10 15:34:56.517 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mZKvliZv3[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:34:56.518 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mZKvliZv3[0;39m <==    Columns: id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at
+2021-06-10 15:34:56.518 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mZKvliZv3[0;39m <==        Row: fVPTEPU7, 1, null, null, 5, null, F, null, null, 2021-06-10 15:34:16.659
+2021-06-10 15:34:56.518 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mZKvliZv3[0;39m <==        Row: hd1cNCIV, 7, null, null, null, null, C, null, null, null
+2021-06-10 15:34:56.519 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mZKvliZv3[0;39m <==        Row: lMKvVsMc, 13, null, null, null, null, F, null, null, null
+2021-06-10 15:34:56.519 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mZKvliZv3[0;39m <==        Row: nlLobVJh, 2222, null, null, null, null, F, null, null, null
+2021-06-10 15:34:56.519 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mZKvliZv3[0;39m <==        Row: h636Qomu, 1, 2, 3, 4, 5, F, 7, null, null
+2021-06-10 15:34:56.520 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mZKvliZv3[0;39m <==      Total: 5
+2021-06-10 15:34:56.521 INFO  com.company.server.config.LogAspect               :110  [32mZKvliZv3[0;39m 返回结果: {"content":{"list":[{"charge":"F","id":"fVPTEPU7","title":"1","updatedAt":1623310456659,"video":"5"},{"charge":"C","id":"hd1cNCIV","title":"7"},{"charge":"F","id":"lMKvVsMc","title":"13"},{"charge":"F","id":"nlLobVJh","title":"2222"},{"chapterId":"3","charge":"F","courseId":"2","id":"h636Qomu","sort":7,"time":5,"title":"1","video":"4"}],"page":1,"size":5,"total":5},"success":true}
+2021-06-10 15:34:56.521 INFO  com.company.server.config.LogAspect               :111  [32mZKvliZv3[0;39m ------------- 结束 耗时：10 ms -------------
+2021-06-10 15:34:57.472 INFO  com.company.server.config.LogAspect               :77   [32mYZtBAsqO[0;39m ------------- 【小节】查询开始 -------------
+2021-06-10 15:34:57.472 INFO  com.company.server.config.LogAspect               :78   [32mYZtBAsqO[0;39m 请求地址: http://172.22.32.90:9002/business/admin/section/list POST
+2021-06-10 15:34:57.472 INFO  com.company.server.config.LogAspect               :79   [32mYZtBAsqO[0;39m 类名方法: com.company.business.controller.admin.SectionController.list
+2021-06-10 15:34:57.473 INFO  com.company.server.config.LogAspect               :80   [32mYZtBAsqO[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:34:57.473 INFO  com.company.server.config.LogAspect               :98   [32mYZtBAsqO[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:34:57.474 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mYZtBAsqO[0;39m ==>  Preparing: SELECT count(0) FROM section
+2021-06-10 15:34:57.474 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mYZtBAsqO[0;39m ==> Parameters: 
+2021-06-10 15:34:57.476 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mYZtBAsqO[0;39m <==    Columns: count(0)
+2021-06-10 15:34:57.477 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mYZtBAsqO[0;39m <==        Row: 5
+2021-06-10 15:34:57.477 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mYZtBAsqO[0;39m <==      Total: 1
+2021-06-10 15:34:57.477 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mYZtBAsqO[0;39m ==>  Preparing: select id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at from section order by sort asc LIMIT ?
+2021-06-10 15:34:57.478 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mYZtBAsqO[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:34:57.479 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mYZtBAsqO[0;39m <==    Columns: id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at
+2021-06-10 15:34:57.480 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mYZtBAsqO[0;39m <==        Row: fVPTEPU7, 1, null, null, 5, null, F, null, null, 2021-06-10 15:34:16.659
+2021-06-10 15:34:57.481 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mYZtBAsqO[0;39m <==        Row: hd1cNCIV, 7, null, null, null, null, C, null, null, null
+2021-06-10 15:34:57.481 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mYZtBAsqO[0;39m <==        Row: lMKvVsMc, 13, null, null, null, null, F, null, null, null
+2021-06-10 15:34:57.481 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mYZtBAsqO[0;39m <==        Row: nlLobVJh, 2222, null, null, null, null, F, null, null, null
+2021-06-10 15:34:57.482 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mYZtBAsqO[0;39m <==        Row: h636Qomu, 1, 2, 3, 4, 5, F, 7, null, null
+2021-06-10 15:34:57.482 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mYZtBAsqO[0;39m <==      Total: 5
+2021-06-10 15:34:57.486 INFO  com.company.server.config.LogAspect               :110  [32mYZtBAsqO[0;39m 返回结果: {"content":{"list":[{"charge":"F","id":"fVPTEPU7","title":"1","updatedAt":1623310456659,"video":"5"},{"charge":"C","id":"hd1cNCIV","title":"7"},{"charge":"F","id":"lMKvVsMc","title":"13"},{"charge":"F","id":"nlLobVJh","title":"2222"},{"chapterId":"3","charge":"F","courseId":"2","id":"h636Qomu","sort":7,"time":5,"title":"1","video":"4"}],"page":1,"size":5,"total":5},"success":true}
+2021-06-10 15:34:57.486 INFO  com.company.server.config.LogAspect               :111  [32mYZtBAsqO[0;39m ------------- 结束 耗时：14 ms -------------
+2021-06-10 15:35:01.283 INFO  com.company.server.config.LogAspect               :77   [32mW3XMe92u[0;39m ------------- 【小节】查询开始 -------------
+2021-06-10 15:35:01.283 INFO  com.company.server.config.LogAspect               :78   [32mW3XMe92u[0;39m 请求地址: http://172.22.32.90:9002/business/admin/section/list POST
+2021-06-10 15:35:01.283 INFO  com.company.server.config.LogAspect               :79   [32mW3XMe92u[0;39m 类名方法: com.company.business.controller.admin.SectionController.list
+2021-06-10 15:35:01.283 INFO  com.company.server.config.LogAspect               :80   [32mW3XMe92u[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:35:01.283 INFO  com.company.server.config.LogAspect               :98   [32mW3XMe92u[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:35:01.284 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mW3XMe92u[0;39m ==>  Preparing: SELECT count(0) FROM section
+2021-06-10 15:35:01.284 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mW3XMe92u[0;39m ==> Parameters: 
+2021-06-10 15:35:01.286 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mW3XMe92u[0;39m <==    Columns: count(0)
+2021-06-10 15:35:01.286 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mW3XMe92u[0;39m <==        Row: 5
+2021-06-10 15:35:01.286 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mW3XMe92u[0;39m <==      Total: 1
+2021-06-10 15:35:01.287 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mW3XMe92u[0;39m ==>  Preparing: select id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at from section order by sort asc LIMIT ?
+2021-06-10 15:35:01.287 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mW3XMe92u[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:35:01.289 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mW3XMe92u[0;39m <==    Columns: id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at
+2021-06-10 15:35:01.290 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mW3XMe92u[0;39m <==        Row: fVPTEPU7, 1, null, null, 5, null, F, null, null, 2021-06-10 15:34:16.659
+2021-06-10 15:35:01.291 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mW3XMe92u[0;39m <==        Row: hd1cNCIV, 7, null, null, null, null, C, null, null, null
+2021-06-10 15:35:01.291 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mW3XMe92u[0;39m <==        Row: lMKvVsMc, 13, null, null, null, null, F, null, null, null
+2021-06-10 15:35:01.292 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mW3XMe92u[0;39m <==        Row: nlLobVJh, 2222, null, null, null, null, F, null, null, null
+2021-06-10 15:35:01.292 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mW3XMe92u[0;39m <==        Row: h636Qomu, 1, 2, 3, 4, 5, F, 7, null, null
+2021-06-10 15:35:01.293 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mW3XMe92u[0;39m <==      Total: 5
+2021-06-10 15:35:01.293 INFO  com.company.server.config.LogAspect               :110  [32mW3XMe92u[0;39m 返回结果: {"content":{"list":[{"charge":"F","id":"fVPTEPU7","title":"1","updatedAt":1623310456659,"video":"5"},{"charge":"C","id":"hd1cNCIV","title":"7"},{"charge":"F","id":"lMKvVsMc","title":"13"},{"charge":"F","id":"nlLobVJh","title":"2222"},{"chapterId":"3","charge":"F","courseId":"2","id":"h636Qomu","sort":7,"time":5,"title":"1","video":"4"}],"page":1,"size":5,"total":5},"success":true}
+2021-06-10 15:35:01.294 INFO  com.company.server.config.LogAspect               :111  [32mW3XMe92u[0;39m ------------- 结束 耗时：11 ms -------------
+2021-06-10 15:36:55.968 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 15:38:09.190 INFO  com.company.server.config.LogAspect               :77   [32mUlBc5MYM[0;39m ------------- 【小节】查询开始 -------------
+2021-06-10 15:38:09.190 INFO  com.company.server.config.LogAspect               :78   [32mUlBc5MYM[0;39m 请求地址: http://172.22.32.90:9002/business/admin/section/list POST
+2021-06-10 15:38:09.190 INFO  com.company.server.config.LogAspect               :79   [32mUlBc5MYM[0;39m 类名方法: com.company.business.controller.admin.SectionController.list
+2021-06-10 15:38:09.191 INFO  com.company.server.config.LogAspect               :80   [32mUlBc5MYM[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:38:09.191 INFO  com.company.server.config.LogAspect               :98   [32mUlBc5MYM[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:38:09.195 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32mUlBc5MYM[0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 187906
+2021-06-10 15:38:09.217 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mUlBc5MYM[0;39m ==>  Preparing: SELECT count(0) FROM section
+2021-06-10 15:38:09.217 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mUlBc5MYM[0;39m ==> Parameters: 
+2021-06-10 15:38:09.220 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mUlBc5MYM[0;39m <==    Columns: count(0)
+2021-06-10 15:38:09.220 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mUlBc5MYM[0;39m <==        Row: 5
+2021-06-10 15:38:09.221 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mUlBc5MYM[0;39m <==      Total: 1
+2021-06-10 15:38:09.221 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mUlBc5MYM[0;39m ==>  Preparing: select id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at from section order by sort asc LIMIT ?
+2021-06-10 15:38:09.221 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mUlBc5MYM[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:38:09.222 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mUlBc5MYM[0;39m <==    Columns: id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at
+2021-06-10 15:38:09.223 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mUlBc5MYM[0;39m <==        Row: fVPTEPU7, 1, null, null, 5, null, F, null, null, 2021-06-10 15:34:16.659
+2021-06-10 15:38:09.223 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mUlBc5MYM[0;39m <==        Row: hd1cNCIV, 7, null, null, null, null, C, null, null, null
+2021-06-10 15:38:09.223 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mUlBc5MYM[0;39m <==        Row: lMKvVsMc, 13, null, null, null, null, F, null, null, null
+2021-06-10 15:38:09.223 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mUlBc5MYM[0;39m <==        Row: nlLobVJh, 2222, null, null, null, null, F, null, null, null
+2021-06-10 15:38:09.223 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mUlBc5MYM[0;39m <==        Row: h636Qomu, 1, 2, 3, 4, 5, F, 7, null, null
+2021-06-10 15:38:09.224 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mUlBc5MYM[0;39m <==      Total: 5
+2021-06-10 15:38:09.224 INFO  com.company.server.config.LogAspect               :110  [32mUlBc5MYM[0;39m 返回结果: {"content":{"list":[{"charge":"F","id":"fVPTEPU7","title":"1","updatedAt":1623310456659,"video":"5"},{"charge":"C","id":"hd1cNCIV","title":"7"},{"charge":"F","id":"lMKvVsMc","title":"13"},{"charge":"F","id":"nlLobVJh","title":"2222"},{"chapterId":"3","charge":"F","courseId":"2","id":"h636Qomu","sort":7,"time":5,"title":"1","video":"4"}],"page":1,"size":5,"total":5},"success":true}
+2021-06-10 15:38:09.224 INFO  com.company.server.config.LogAspect               :111  [32mUlBc5MYM[0;39m ------------- 结束 耗时：34 ms -------------
+2021-06-10 15:38:11.278 INFO  com.company.server.config.LogAspect               :77   [32m3Usq1IWY[0;39m ------------- 【小节】查询开始 -------------
+2021-06-10 15:38:11.279 INFO  com.company.server.config.LogAspect               :78   [32m3Usq1IWY[0;39m 请求地址: http://172.22.32.90:9002/business/admin/section/list POST
+2021-06-10 15:38:11.279 INFO  com.company.server.config.LogAspect               :79   [32m3Usq1IWY[0;39m 类名方法: com.company.business.controller.admin.SectionController.list
+2021-06-10 15:38:11.280 INFO  com.company.server.config.LogAspect               :80   [32m3Usq1IWY[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:38:11.280 INFO  com.company.server.config.LogAspect               :98   [32m3Usq1IWY[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:38:11.281 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32m3Usq1IWY[0;39m ==>  Preparing: SELECT count(0) FROM section
+2021-06-10 15:38:11.282 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32m3Usq1IWY[0;39m ==> Parameters: 
+2021-06-10 15:38:11.283 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32m3Usq1IWY[0;39m <==    Columns: count(0)
+2021-06-10 15:38:11.284 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32m3Usq1IWY[0;39m <==        Row: 5
+2021-06-10 15:38:11.284 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32m3Usq1IWY[0;39m <==      Total: 1
+2021-06-10 15:38:11.285 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32m3Usq1IWY[0;39m ==>  Preparing: select id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at from section order by sort asc LIMIT ?
+2021-06-10 15:38:11.285 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32m3Usq1IWY[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:38:11.286 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32m3Usq1IWY[0;39m <==    Columns: id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at
+2021-06-10 15:38:11.287 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32m3Usq1IWY[0;39m <==        Row: fVPTEPU7, 1, null, null, 5, null, F, null, null, 2021-06-10 15:34:16.659
+2021-06-10 15:38:11.287 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32m3Usq1IWY[0;39m <==        Row: hd1cNCIV, 7, null, null, null, null, C, null, null, null
+2021-06-10 15:38:11.287 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32m3Usq1IWY[0;39m <==        Row: lMKvVsMc, 13, null, null, null, null, F, null, null, null
+2021-06-10 15:38:11.287 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32m3Usq1IWY[0;39m <==        Row: nlLobVJh, 2222, null, null, null, null, F, null, null, null
+2021-06-10 15:38:11.288 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32m3Usq1IWY[0;39m <==        Row: h636Qomu, 1, 2, 3, 4, 5, F, 7, null, null
+2021-06-10 15:38:11.288 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32m3Usq1IWY[0;39m <==      Total: 5
+2021-06-10 15:38:11.289 INFO  com.company.server.config.LogAspect               :110  [32m3Usq1IWY[0;39m 返回结果: {"content":{"list":[{"charge":"F","id":"fVPTEPU7","title":"1","updatedAt":1623310456659,"video":"5"},{"charge":"C","id":"hd1cNCIV","title":"7"},{"charge":"F","id":"lMKvVsMc","title":"13"},{"charge":"F","id":"nlLobVJh","title":"2222"},{"chapterId":"3","charge":"F","courseId":"2","id":"h636Qomu","sort":7,"time":5,"title":"1","video":"4"}],"page":1,"size":5,"total":5},"success":true}
+2021-06-10 15:38:11.289 INFO  com.company.server.config.LogAspect               :111  [32m3Usq1IWY[0;39m ------------- 结束 耗时：12 ms -------------
+2021-06-10 15:38:12.796 INFO  com.company.server.config.LogAspect               :77   [32mwDtVMxir[0;39m ------------- 【大章】查询开始 -------------
+2021-06-10 15:38:12.797 INFO  com.company.server.config.LogAspect               :78   [32mwDtVMxir[0;39m 请求地址: http://172.22.32.90:9002/business/admin/chapter/list POST
+2021-06-10 15:38:12.797 INFO  com.company.server.config.LogAspect               :79   [32mwDtVMxir[0;39m 类名方法: com.company.business.controller.admin.ChapterController.list
+2021-06-10 15:38:12.797 INFO  com.company.server.config.LogAspect               :80   [32mwDtVMxir[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:38:12.797 INFO  com.company.server.config.LogAspect               :98   [32mwDtVMxir[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:38:12.798 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mwDtVMxir[0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-10 15:38:12.798 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mwDtVMxir[0;39m ==> Parameters: 
+2021-06-10 15:38:12.800 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mwDtVMxir[0;39m <==    Columns: count(0)
+2021-06-10 15:38:12.800 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mwDtVMxir[0;39m <==        Row: 10
+2021-06-10 15:38:12.800 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mwDtVMxir[0;39m <==      Total: 1
+2021-06-10 15:38:12.801 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mwDtVMxir[0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-10 15:38:12.801 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mwDtVMxir[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:38:12.801 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mwDtVMxir[0;39m <==    Columns: id, course_id, name
+2021-06-10 15:38:12.802 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mwDtVMxir[0;39m <==        Row: jcUNOtPO, 12, test
+2021-06-10 15:38:12.802 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mwDtVMxir[0;39m <==        Row: JnoEDBAk, 444, 章001
+2021-06-10 15:38:12.802 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mwDtVMxir[0;39m <==        Row: kHrEATME, 456, 测试
+2021-06-10 15:38:12.802 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mwDtVMxir[0;39m <==        Row: lr75Ik8n, 444, nnnnnnn
+2021-06-10 15:38:12.802 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mwDtVMxir[0;39m <==        Row: mEEpwSGW, 123, test
+2021-06-10 15:38:12.803 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mwDtVMxir[0;39m <==      Total: 5
+2021-06-10 15:38:12.803 INFO  com.company.server.config.LogAspect               :110  [32mwDtVMxir[0;39m 返回结果: {"content":{"list":[{"courseId":"12","id":"jcUNOtPO","name":"test"},{"courseId":"444","id":"JnoEDBAk","name":"章001"},{"courseId":"456","id":"kHrEATME","name":"测试"},{"courseId":"444","id":"lr75Ik8n","name":"nnnnnnn"},{"courseId":"123","id":"mEEpwSGW","name":"test"}],"page":1,"size":5,"total":10},"success":true}
+2021-06-10 15:38:12.803 INFO  com.company.server.config.LogAspect               :111  [32mwDtVMxir[0;39m ------------- 结束 耗时：7 ms -------------
+2021-06-10 15:38:13.505 INFO  com.company.server.config.LogAspect               :77   [32mZWZdjMrC[0;39m ------------- 【小节】查询开始 -------------
+2021-06-10 15:38:13.505 INFO  com.company.server.config.LogAspect               :78   [32mZWZdjMrC[0;39m 请求地址: http://172.22.32.90:9002/business/admin/section/list POST
+2021-06-10 15:38:13.505 INFO  com.company.server.config.LogAspect               :79   [32mZWZdjMrC[0;39m 类名方法: com.company.business.controller.admin.SectionController.list
+2021-06-10 15:38:13.506 INFO  com.company.server.config.LogAspect               :80   [32mZWZdjMrC[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:38:13.506 INFO  com.company.server.config.LogAspect               :98   [32mZWZdjMrC[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:38:13.507 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mZWZdjMrC[0;39m ==>  Preparing: SELECT count(0) FROM section
+2021-06-10 15:38:13.507 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mZWZdjMrC[0;39m ==> Parameters: 
+2021-06-10 15:38:13.509 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mZWZdjMrC[0;39m <==    Columns: count(0)
+2021-06-10 15:38:13.509 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mZWZdjMrC[0;39m <==        Row: 5
+2021-06-10 15:38:13.510 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mZWZdjMrC[0;39m <==      Total: 1
+2021-06-10 15:38:13.510 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mZWZdjMrC[0;39m ==>  Preparing: select id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at from section order by sort asc LIMIT ?
+2021-06-10 15:38:13.511 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mZWZdjMrC[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:38:13.511 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mZWZdjMrC[0;39m <==    Columns: id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at
+2021-06-10 15:38:13.512 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mZWZdjMrC[0;39m <==        Row: fVPTEPU7, 1, null, null, 5, null, F, null, null, 2021-06-10 15:34:16.659
+2021-06-10 15:38:13.512 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mZWZdjMrC[0;39m <==        Row: hd1cNCIV, 7, null, null, null, null, C, null, null, null
+2021-06-10 15:38:13.512 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mZWZdjMrC[0;39m <==        Row: lMKvVsMc, 13, null, null, null, null, F, null, null, null
+2021-06-10 15:38:13.513 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mZWZdjMrC[0;39m <==        Row: nlLobVJh, 2222, null, null, null, null, F, null, null, null
+2021-06-10 15:38:13.513 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mZWZdjMrC[0;39m <==        Row: h636Qomu, 1, 2, 3, 4, 5, F, 7, null, null
+2021-06-10 15:38:13.513 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mZWZdjMrC[0;39m <==      Total: 5
+2021-06-10 15:38:13.514 INFO  com.company.server.config.LogAspect               :110  [32mZWZdjMrC[0;39m 返回结果: {"content":{"list":[{"charge":"F","id":"fVPTEPU7","title":"1","updatedAt":1623310456659,"video":"5"},{"charge":"C","id":"hd1cNCIV","title":"7"},{"charge":"F","id":"lMKvVsMc","title":"13"},{"charge":"F","id":"nlLobVJh","title":"2222"},{"chapterId":"3","charge":"F","courseId":"2","id":"h636Qomu","sort":7,"time":5,"title":"1","video":"4"}],"page":1,"size":5,"total":5},"success":true}
+2021-06-10 15:38:13.514 INFO  com.company.server.config.LogAspect               :111  [32mZWZdjMrC[0;39m ------------- 结束 耗时：9 ms -------------
+2021-06-10 15:38:14.418 INFO  com.company.server.config.LogAspect               :77   [32mYzTISiXC[0;39m ------------- 【大章】查询开始 -------------
+2021-06-10 15:38:14.418 INFO  com.company.server.config.LogAspect               :78   [32mYzTISiXC[0;39m 请求地址: http://172.22.32.90:9002/business/admin/chapter/list POST
+2021-06-10 15:38:14.418 INFO  com.company.server.config.LogAspect               :79   [32mYzTISiXC[0;39m 类名方法: com.company.business.controller.admin.ChapterController.list
+2021-06-10 15:38:14.418 INFO  com.company.server.config.LogAspect               :80   [32mYzTISiXC[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:38:14.418 INFO  com.company.server.config.LogAspect               :98   [32mYzTISiXC[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:38:14.419 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mYzTISiXC[0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-10 15:38:14.419 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mYzTISiXC[0;39m ==> Parameters: 
+2021-06-10 15:38:14.421 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mYzTISiXC[0;39m <==    Columns: count(0)
+2021-06-10 15:38:14.421 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mYzTISiXC[0;39m <==        Row: 10
+2021-06-10 15:38:14.422 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mYzTISiXC[0;39m <==      Total: 1
+2021-06-10 15:38:14.422 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mYzTISiXC[0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-10 15:38:14.422 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mYzTISiXC[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:38:14.424 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mYzTISiXC[0;39m <==    Columns: id, course_id, name
+2021-06-10 15:38:14.424 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mYzTISiXC[0;39m <==        Row: jcUNOtPO, 12, test
+2021-06-10 15:38:14.425 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mYzTISiXC[0;39m <==        Row: JnoEDBAk, 444, 章001
+2021-06-10 15:38:14.425 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mYzTISiXC[0;39m <==        Row: kHrEATME, 456, 测试
+2021-06-10 15:38:14.425 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mYzTISiXC[0;39m <==        Row: lr75Ik8n, 444, nnnnnnn
+2021-06-10 15:38:14.425 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mYzTISiXC[0;39m <==        Row: mEEpwSGW, 123, test
+2021-06-10 15:38:14.426 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mYzTISiXC[0;39m <==      Total: 5
+2021-06-10 15:38:14.427 INFO  com.company.server.config.LogAspect               :110  [32mYzTISiXC[0;39m 返回结果: {"content":{"list":[{"courseId":"12","id":"jcUNOtPO","name":"test"},{"courseId":"444","id":"JnoEDBAk","name":"章001"},{"courseId":"456","id":"kHrEATME","name":"测试"},{"courseId":"444","id":"lr75Ik8n","name":"nnnnnnn"},{"courseId":"123","id":"mEEpwSGW","name":"test"}],"page":1,"size":5,"total":10},"success":true}
+2021-06-10 15:38:14.427 INFO  com.company.server.config.LogAspect               :111  [32mYzTISiXC[0;39m ------------- 结束 耗时：9 ms -------------
+2021-06-10 15:41:55.975 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 15:46:55.978 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 15:50:33.249 INFO  com.company.server.config.LogAspect               :77   [32mvkfZCimj[0;39m ------------- 【大章】查询开始 -------------
+2021-06-10 15:50:33.249 INFO  com.company.server.config.LogAspect               :78   [32mvkfZCimj[0;39m 请求地址: http://172.22.32.90:9002/business/admin/chapter/list POST
+2021-06-10 15:50:33.250 INFO  com.company.server.config.LogAspect               :79   [32mvkfZCimj[0;39m 类名方法: com.company.business.controller.admin.ChapterController.list
+2021-06-10 15:50:33.250 INFO  com.company.server.config.LogAspect               :80   [32mvkfZCimj[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:50:33.251 INFO  com.company.server.config.LogAspect               :98   [32mvkfZCimj[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:50:33.253 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32mvkfZCimj[0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 738829
+2021-06-10 15:50:33.275 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mvkfZCimj[0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-10 15:50:33.275 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mvkfZCimj[0;39m ==> Parameters: 
+2021-06-10 15:50:33.278 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mvkfZCimj[0;39m <==    Columns: count(0)
+2021-06-10 15:50:33.278 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mvkfZCimj[0;39m <==        Row: 10
+2021-06-10 15:50:33.279 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mvkfZCimj[0;39m <==      Total: 1
+2021-06-10 15:50:33.280 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mvkfZCimj[0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-10 15:50:33.280 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mvkfZCimj[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:50:33.281 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mvkfZCimj[0;39m <==    Columns: id, course_id, name
+2021-06-10 15:50:33.282 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mvkfZCimj[0;39m <==        Row: jcUNOtPO, 12, test
+2021-06-10 15:50:33.283 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mvkfZCimj[0;39m <==        Row: JnoEDBAk, 444, 章001
+2021-06-10 15:50:33.284 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mvkfZCimj[0;39m <==        Row: kHrEATME, 456, 测试
+2021-06-10 15:50:33.284 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mvkfZCimj[0;39m <==        Row: lr75Ik8n, 444, nnnnnnn
+2021-06-10 15:50:33.285 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mvkfZCimj[0;39m <==        Row: mEEpwSGW, 123, test
+2021-06-10 15:50:33.285 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mvkfZCimj[0;39m <==      Total: 5
+2021-06-10 15:50:33.288 INFO  com.company.server.config.LogAspect               :110  [32mvkfZCimj[0;39m 返回结果: {"content":{"list":[{"courseId":"12","id":"jcUNOtPO","name":"test"},{"courseId":"444","id":"JnoEDBAk","name":"章001"},{"courseId":"456","id":"kHrEATME","name":"测试"},{"courseId":"444","id":"lr75Ik8n","name":"nnnnnnn"},{"courseId":"123","id":"mEEpwSGW","name":"test"}],"page":1,"size":5,"total":10},"success":true}
+2021-06-10 15:50:33.288 INFO  com.company.server.config.LogAspect               :111  [32mvkfZCimj[0;39m ------------- 结束 耗时：39 ms -------------
+2021-06-10 15:51:55.979 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 15:54:18.316 INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry   :65   [32m        [0;39m Unregistering application BUSINESS-CLIENT with eureka with status DOWN
+2021-06-10 15:54:18.316 INFO  com.netflix.discovery.DiscoveryClient             :1352 [32m        [0;39m Saw local status change event StatusChangeEvent [timestamp=1623311658316, current=DOWN, previous=UP]
+2021-06-10 15:54:18.317 INFO  com.netflix.discovery.DiscoveryClient             :873  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002: registering service...
+2021-06-10 15:54:18.329 INFO  com.netflix.discovery.DiscoveryClient             :882  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002 - registration status: 204
+2021-06-10 15:54:18.827 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m        [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-10 15:54:18.828 INFO  com.alibaba.druid.pool.DruidDataSource            :2039 [32m        [0;39m {dataSource-2} closing ...
+2021-06-10 15:54:18.830 INFO  com.alibaba.druid.pool.DruidDataSource            :2111 [32m        [0;39m {dataSource-2} closed
+2021-06-10 15:54:18.831 INFO  com.netflix.discovery.DiscoveryClient             :935  [32m        [0;39m Shutting down DiscoveryClient ...
+2021-06-10 15:54:21.836 INFO  com.netflix.discovery.DiscoveryClient             :971  [32m        [0;39m Unregistering ...
+2021-06-10 15:54:21.852 INFO  com.netflix.discovery.DiscoveryClient             :973  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002 - deregister  status: 200
+2021-06-10 15:54:21.864 INFO  com.netflix.discovery.DiscoveryClient             :960  [32m        [0;39m Completed shut down of DiscoveryClient
+2021-06-10 15:54:23.697 INFO  com.company.business.BusinessApplication          :651  [32m        [0;39m No active profile set, falling back to default profiles: default
+2021-06-10 15:54:23.950 INFO  o.springframework.cloud.context.scope.GenericScope:295  [32m        [0;39m BeanFactory id=459ad307-a194-377f-b681-6d711110b7b7
+2021-06-10 15:54:24.093 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m        [0;39m Tomcat initialized with port(s): 9002 (http)
+2021-06-10 15:54:24.093 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m        [0;39m Initializing ProtocolHandler ["http-nio-9002"]
+2021-06-10 15:54:24.093 INFO  org.apache.catalina.core.StandardService          :173  [32m        [0;39m Starting service [Tomcat]
+2021-06-10 15:54:24.093 INFO  org.apache.catalina.core.StandardEngine           :173  [32m        [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-06-10 15:54:24.116 INFO  o.a.c.c.C.[Tomcat].[localhost].[/business]        :173  [32m        [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-10 15:54:24.116 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :285  [32m        [0;39m Root WebApplicationContext: initialization completed in 416 ms
+2021-06-10 15:54:24.275 WARN  com.netflix.config.sources.URLConfigurationSource :121  [32m        [0;39m No URLs will be polled as dynamic configuration sources.
+2021-06-10 15:54:24.275 INFO  com.netflix.config.sources.URLConfigurationSource :122  [32m        [0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-06-10 15:54:24.403 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m        [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-10 15:54:24.597 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :61   [32m        [0;39m Unable to start LiveReload server
+2021-06-10 15:54:25.222 INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration:78   [32m        [0;39m Eureka HTTP Client uses Jersey
+2021-06-10 15:54:25.834 WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger:106  [32m        [0;39m You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-06-10 15:54:25.873 INFO  o.s.cloud.netflix.eureka.InstanceInfoFactory      :72   [32m        [0;39m Setting initial instance status as: STARTING
+2021-06-10 15:54:25.874 INFO  com.netflix.discovery.DiscoveryClient             :372  [32m        [0;39m Initializing Eureka in region us-east-1
+2021-06-10 15:54:25.875 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :70   [32m        [0;39m Using JSON encoding codec LegacyJacksonJson
+2021-06-10 15:54:25.876 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :71   [32m        [0;39m Using JSON decoding codec LegacyJacksonJson
+2021-06-10 15:54:25.876 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :80   [32m        [0;39m Using XML encoding codec XStreamXml
+2021-06-10 15:54:25.876 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :81   [32m        [0;39m Using XML decoding codec XStreamXml
+2021-06-10 15:54:25.926 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 15:54:25.927 INFO  com.netflix.discovery.DiscoveryClient             :1007 [32m        [0;39m Disable delta property : false
+2021-06-10 15:54:25.927 INFO  com.netflix.discovery.DiscoveryClient             :1008 [32m        [0;39m Single vip registry refresh property : null
+2021-06-10 15:54:25.928 INFO  com.netflix.discovery.DiscoveryClient             :1009 [32m        [0;39m Force full registry fetch : false
+2021-06-10 15:54:25.928 INFO  com.netflix.discovery.DiscoveryClient             :1010 [32m        [0;39m Application is null : false
+2021-06-10 15:54:25.928 INFO  com.netflix.discovery.DiscoveryClient             :1011 [32m        [0;39m Registered Applications size is zero : true
+2021-06-10 15:54:25.928 INFO  com.netflix.discovery.DiscoveryClient             :1013 [32m        [0;39m Application version is -1: true
+2021-06-10 15:54:25.928 INFO  com.netflix.discovery.DiscoveryClient             :1097 [32m        [0;39m Getting all instance registry info from the eureka server
+2021-06-10 15:54:25.930 INFO  com.netflix.discovery.DiscoveryClient             :1106 [32m        [0;39m The response status is 200
+2021-06-10 15:54:25.931 INFO  com.netflix.discovery.DiscoveryClient             :1321 [32m        [0;39m Starting heartbeat executor: renew interval is: 30
+2021-06-10 15:54:25.931 INFO  com.netflix.discovery.InstanceInfoReplicator      :60   [32m        [0;39m InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-06-10 15:54:25.932 INFO  com.netflix.discovery.DiscoveryClient             :492  [32m        [0;39m Discovery Client initialized at timestamp 1623311665932 with initial instances count: 2
+2021-06-10 15:54:25.937 INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry   :41   [32m        [0;39m Registering application BUSINESS-CLIENT with eureka with status UP
+2021-06-10 15:54:25.937 INFO  com.netflix.discovery.DiscoveryClient             :1352 [32m        [0;39m Saw local status change event StatusChangeEvent [timestamp=1623311665937, current=UP, previous=STARTING]
+2021-06-10 15:54:25.938 INFO  com.netflix.discovery.DiscoveryClient             :873  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002: registering service...
+2021-06-10 15:54:25.939 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m        [0;39m Starting ProtocolHandler ["http-nio-9002"]
+2021-06-10 15:54:25.943 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m        [0;39m Tomcat started on port(s): 9002 (http) with context path '/business'
+2021-06-10 15:54:25.943 INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration         :145  [32m        [0;39m Updating port to 9002
+2021-06-10 15:54:25.955 INFO  com.netflix.discovery.DiscoveryClient             :882  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002 - registration status: 204
+2021-06-10 15:54:26.563 INFO  com.company.business.BusinessApplication          :61   [32m        [0;39m Started BusinessApplication in 4.409 seconds (JVM running for 174336.651)
+2021-06-10 15:54:26.564 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m        [0;39m Condition evaluation unchanged
+2021-06-10 15:54:26.564 INFO  com.company.business.BusinessApplication          :21   [32m        [0;39m 启动成功
+2021-06-10 15:54:26.564 INFO  com.company.business.BusinessApplication          :22   [32m        [0;39m Business地址:	http://127.0.0.1:9002
+2021-06-10 15:54:57.755 INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry   :65   [32m        [0;39m Unregistering application BUSINESS-CLIENT with eureka with status DOWN
+2021-06-10 15:54:57.755 INFO  com.netflix.discovery.DiscoveryClient             :1352 [32m        [0;39m Saw local status change event StatusChangeEvent [timestamp=1623311697755, current=DOWN, previous=UP]
+2021-06-10 15:54:57.756 INFO  com.netflix.discovery.DiscoveryClient             :873  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002: registering service...
+2021-06-10 15:54:57.766 INFO  com.netflix.discovery.DiscoveryClient             :882  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002 - registration status: 204
+2021-06-10 15:54:58.404 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :218  [32m        [0;39m Shutting down ExecutorService 'applicationTaskExecutor'
+2021-06-10 15:54:58.405 INFO  com.alibaba.druid.pool.DruidDataSource            :2039 [32m        [0;39m {dataSource-0} closing ...
+2021-06-10 15:54:58.405 INFO  com.netflix.discovery.DiscoveryClient             :935  [32m        [0;39m Shutting down DiscoveryClient ...
+2021-06-10 15:55:01.411 INFO  com.netflix.discovery.DiscoveryClient             :971  [32m        [0;39m Unregistering ...
+2021-06-10 15:55:01.428 INFO  com.netflix.discovery.DiscoveryClient             :973  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002 - deregister  status: 200
+2021-06-10 15:55:01.433 INFO  com.netflix.discovery.DiscoveryClient             :960  [32m        [0;39m Completed shut down of DiscoveryClient
+2021-06-10 15:55:03.024 INFO  com.company.business.BusinessApplication          :651  [32m        [0;39m No active profile set, falling back to default profiles: default
+2021-06-10 15:55:03.227 INFO  o.springframework.cloud.context.scope.GenericScope:295  [32m        [0;39m BeanFactory id=817efbf9-5bdb-3eea-bc20-ce571aa6f788
+2021-06-10 15:55:03.361 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m        [0;39m Tomcat initialized with port(s): 9002 (http)
+2021-06-10 15:55:03.362 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m        [0;39m Initializing ProtocolHandler ["http-nio-9002"]
+2021-06-10 15:55:03.362 INFO  org.apache.catalina.core.StandardService          :173  [32m        [0;39m Starting service [Tomcat]
+2021-06-10 15:55:03.362 INFO  org.apache.catalina.core.StandardEngine           :173  [32m        [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-06-10 15:55:03.385 INFO  o.a.c.c.C.[Tomcat].[localhost].[/business]        :173  [32m        [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-10 15:55:03.386 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :285  [32m        [0;39m Root WebApplicationContext: initialization completed in 360 ms
+2021-06-10 15:55:03.518 WARN  com.netflix.config.sources.URLConfigurationSource :121  [32m        [0;39m No URLs will be polled as dynamic configuration sources.
+2021-06-10 15:55:03.518 INFO  com.netflix.config.sources.URLConfigurationSource :122  [32m        [0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-06-10 15:55:03.632 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m        [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-10 15:55:03.777 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :61   [32m        [0;39m Unable to start LiveReload server
+2021-06-10 15:55:04.382 INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration:78   [32m        [0;39m Eureka HTTP Client uses Jersey
+2021-06-10 15:55:05.036 WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger:106  [32m        [0;39m You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-06-10 15:55:05.072 INFO  o.s.cloud.netflix.eureka.InstanceInfoFactory      :72   [32m        [0;39m Setting initial instance status as: STARTING
+2021-06-10 15:55:05.073 INFO  com.netflix.discovery.DiscoveryClient             :372  [32m        [0;39m Initializing Eureka in region us-east-1
+2021-06-10 15:55:05.074 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :70   [32m        [0;39m Using JSON encoding codec LegacyJacksonJson
+2021-06-10 15:55:05.074 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :71   [32m        [0;39m Using JSON decoding codec LegacyJacksonJson
+2021-06-10 15:55:05.074 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :80   [32m        [0;39m Using XML encoding codec XStreamXml
+2021-06-10 15:55:05.074 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :81   [32m        [0;39m Using XML decoding codec XStreamXml
+2021-06-10 15:55:05.117 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 15:55:05.118 INFO  com.netflix.discovery.DiscoveryClient             :1007 [32m        [0;39m Disable delta property : false
+2021-06-10 15:55:05.118 INFO  com.netflix.discovery.DiscoveryClient             :1008 [32m        [0;39m Single vip registry refresh property : null
+2021-06-10 15:55:05.118 INFO  com.netflix.discovery.DiscoveryClient             :1009 [32m        [0;39m Force full registry fetch : false
+2021-06-10 15:55:05.118 INFO  com.netflix.discovery.DiscoveryClient             :1010 [32m        [0;39m Application is null : false
+2021-06-10 15:55:05.118 INFO  com.netflix.discovery.DiscoveryClient             :1011 [32m        [0;39m Registered Applications size is zero : true
+2021-06-10 15:55:05.118 INFO  com.netflix.discovery.DiscoveryClient             :1013 [32m        [0;39m Application version is -1: true
+2021-06-10 15:55:05.118 INFO  com.netflix.discovery.DiscoveryClient             :1097 [32m        [0;39m Getting all instance registry info from the eureka server
+2021-06-10 15:55:05.120 INFO  com.netflix.discovery.DiscoveryClient             :1106 [32m        [0;39m The response status is 200
+2021-06-10 15:55:05.121 INFO  com.netflix.discovery.DiscoveryClient             :1321 [32m        [0;39m Starting heartbeat executor: renew interval is: 30
+2021-06-10 15:55:05.121 INFO  com.netflix.discovery.InstanceInfoReplicator      :60   [32m        [0;39m InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-06-10 15:55:05.122 INFO  com.netflix.discovery.DiscoveryClient             :492  [32m        [0;39m Discovery Client initialized at timestamp 1623311705122 with initial instances count: 2
+2021-06-10 15:55:05.127 INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry   :41   [32m        [0;39m Registering application BUSINESS-CLIENT with eureka with status UP
+2021-06-10 15:55:05.127 INFO  com.netflix.discovery.DiscoveryClient             :1352 [32m        [0;39m Saw local status change event StatusChangeEvent [timestamp=1623311705127, current=UP, previous=STARTING]
+2021-06-10 15:55:05.127 INFO  com.netflix.discovery.DiscoveryClient             :873  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002: registering service...
+2021-06-10 15:55:05.128 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m        [0;39m Starting ProtocolHandler ["http-nio-9002"]
+2021-06-10 15:55:05.131 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m        [0;39m Tomcat started on port(s): 9002 (http) with context path '/business'
+2021-06-10 15:55:05.132 INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration         :145  [32m        [0;39m Updating port to 9002
+2021-06-10 15:55:05.136 INFO  com.netflix.discovery.DiscoveryClient             :882  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002 - registration status: 204
+2021-06-10 15:55:05.781 INFO  com.company.business.BusinessApplication          :61   [32m        [0;39m Started BusinessApplication in 4.136 seconds (JVM running for 174375.869)
+2021-06-10 15:55:05.782 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener :63   [32m        [0;39m Condition evaluation unchanged
+2021-06-10 15:55:05.783 INFO  com.company.business.BusinessApplication          :21   [32m        [0;39m 启动成功
+2021-06-10 15:55:05.783 INFO  com.company.business.BusinessApplication          :22   [32m        [0;39m Business地址:	http://127.0.0.1:9002
+2021-06-10 15:56:43.534 INFO  o.a.c.c.C.[Tomcat].[localhost].[/business]        :173  [32m        [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-10 15:56:43.534 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m        [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-10 15:56:43.540 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m        [0;39m Completed initialization in 6 ms
+2021-06-10 15:56:43.545 INFO  com.company.server.config.LogAspect               :77   [32m6SabkEnO[0;39m ------------- 【大章】查询开始 -------------
+2021-06-10 15:56:43.545 INFO  com.company.server.config.LogAspect               :78   [32m6SabkEnO[0;39m 请求地址: http://172.22.32.90:9002/business/admin/chapter/list POST
+2021-06-10 15:56:43.546 INFO  com.company.server.config.LogAspect               :79   [32m6SabkEnO[0;39m 类名方法: com.company.business.controller.admin.ChapterController.list
+2021-06-10 15:56:43.546 INFO  com.company.server.config.LogAspect               :80   [32m6SabkEnO[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:56:43.547 INFO  com.company.server.config.LogAspect               :98   [32m6SabkEnO[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:56:43.553 INFO  com.alibaba.druid.pool.DruidDataSource            :986  [32m6SabkEnO[0;39m {dataSource-3} inited
+2021-06-10 15:56:43.569 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m6SabkEnO[0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-10 15:56:43.569 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m6SabkEnO[0;39m ==> Parameters: 
+2021-06-10 15:56:43.571 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m6SabkEnO[0;39m <==    Columns: count(0)
+2021-06-10 15:56:43.571 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32m6SabkEnO[0;39m <==        Row: 10
+2021-06-10 15:56:43.572 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32m6SabkEnO[0;39m <==      Total: 1
+2021-06-10 15:56:43.572 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m6SabkEnO[0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-10 15:56:43.572 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m6SabkEnO[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:56:43.573 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m6SabkEnO[0;39m <==    Columns: id, course_id, name
+2021-06-10 15:56:43.573 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m6SabkEnO[0;39m <==        Row: jcUNOtPO, 12, test
+2021-06-10 15:56:43.573 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m6SabkEnO[0;39m <==        Row: JnoEDBAk, 444, 章001
+2021-06-10 15:56:43.574 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m6SabkEnO[0;39m <==        Row: kHrEATME, 456, 测试
+2021-06-10 15:56:43.574 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m6SabkEnO[0;39m <==        Row: lr75Ik8n, 444, nnnnnnn
+2021-06-10 15:56:43.574 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32m6SabkEnO[0;39m <==        Row: mEEpwSGW, 123, test
+2021-06-10 15:56:43.574 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32m6SabkEnO[0;39m <==      Total: 5
+2021-06-10 15:56:43.579 INFO  com.company.server.config.LogAspect               :110  [32m6SabkEnO[0;39m 返回结果: {"content":{"list":[{"courseId":"12","id":"jcUNOtPO","name":"test"},{"courseId":"444","id":"JnoEDBAk","name":"章001"},{"courseId":"456","id":"kHrEATME","name":"测试"},{"courseId":"444","id":"lr75Ik8n","name":"nnnnnnn"},{"courseId":"123","id":"mEEpwSGW","name":"test"}],"page":1,"size":5,"total":10},"success":true}
+2021-06-10 15:56:43.580 INFO  com.company.server.config.LogAspect               :111  [32m6SabkEnO[0;39m ------------- 结束 耗时：36 ms -------------
+2021-06-10 15:57:13.734 INFO  com.company.server.config.LogAspect               :77   [32mQ20Y2ksI[0;39m ------------- 【大章】查询开始 -------------
+2021-06-10 15:57:13.735 INFO  com.company.server.config.LogAspect               :78   [32mQ20Y2ksI[0;39m 请求地址: http://172.22.32.90:9002/business/admin/chapter/list POST
+2021-06-10 15:57:13.735 INFO  com.company.server.config.LogAspect               :79   [32mQ20Y2ksI[0;39m 类名方法: com.company.business.controller.admin.ChapterController.list
+2021-06-10 15:57:13.735 INFO  com.company.server.config.LogAspect               :80   [32mQ20Y2ksI[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:57:13.735 INFO  com.company.server.config.LogAspect               :98   [32mQ20Y2ksI[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:57:13.736 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mQ20Y2ksI[0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-10 15:57:13.736 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mQ20Y2ksI[0;39m ==> Parameters: 
+2021-06-10 15:57:13.738 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mQ20Y2ksI[0;39m <==    Columns: count(0)
+2021-06-10 15:57:13.738 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mQ20Y2ksI[0;39m <==        Row: 10
+2021-06-10 15:57:13.738 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mQ20Y2ksI[0;39m <==      Total: 1
+2021-06-10 15:57:13.739 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mQ20Y2ksI[0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-10 15:57:13.739 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mQ20Y2ksI[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:57:13.740 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mQ20Y2ksI[0;39m <==    Columns: id, course_id, name
+2021-06-10 15:57:13.740 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mQ20Y2ksI[0;39m <==        Row: jcUNOtPO, 12, test
+2021-06-10 15:57:13.740 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mQ20Y2ksI[0;39m <==        Row: JnoEDBAk, 444, 章001
+2021-06-10 15:57:13.740 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mQ20Y2ksI[0;39m <==        Row: kHrEATME, 456, 测试
+2021-06-10 15:57:13.741 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mQ20Y2ksI[0;39m <==        Row: lr75Ik8n, 444, nnnnnnn
+2021-06-10 15:57:13.741 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mQ20Y2ksI[0;39m <==        Row: mEEpwSGW, 123, test
+2021-06-10 15:57:13.741 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mQ20Y2ksI[0;39m <==      Total: 5
+2021-06-10 15:57:13.741 INFO  com.company.server.config.LogAspect               :110  [32mQ20Y2ksI[0;39m 返回结果: {"content":{"list":[{"courseId":"12","id":"jcUNOtPO","name":"test"},{"courseId":"444","id":"JnoEDBAk","name":"章001"},{"courseId":"456","id":"kHrEATME","name":"测试"},{"courseId":"444","id":"lr75Ik8n","name":"nnnnnnn"},{"courseId":"123","id":"mEEpwSGW","name":"test"}],"page":1,"size":5,"total":10},"success":true}
+2021-06-10 15:57:13.742 INFO  com.company.server.config.LogAspect               :111  [32mQ20Y2ksI[0;39m ------------- 结束 耗时：8 ms -------------
+2021-06-10 15:58:15.755 INFO  com.company.server.config.LogAspect               :77   [32mGtrYK9PF[0;39m ------------- 【大章】查询开始 -------------
+2021-06-10 15:58:15.756 INFO  com.company.server.config.LogAspect               :78   [32mGtrYK9PF[0;39m 请求地址: http://172.22.32.90:9002/business/admin/chapter/list POST
+2021-06-10 15:58:15.756 INFO  com.company.server.config.LogAspect               :79   [32mGtrYK9PF[0;39m 类名方法: com.company.business.controller.admin.ChapterController.list
+2021-06-10 15:58:15.756 INFO  com.company.server.config.LogAspect               :80   [32mGtrYK9PF[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:58:15.757 INFO  com.company.server.config.LogAspect               :98   [32mGtrYK9PF[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:58:15.760 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32mGtrYK9PF[0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 62019
+2021-06-10 15:58:15.778 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mGtrYK9PF[0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-10 15:58:15.778 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mGtrYK9PF[0;39m ==> Parameters: 
+2021-06-10 15:58:15.780 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mGtrYK9PF[0;39m <==    Columns: count(0)
+2021-06-10 15:58:15.781 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mGtrYK9PF[0;39m <==        Row: 10
+2021-06-10 15:58:15.781 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mGtrYK9PF[0;39m <==      Total: 1
+2021-06-10 15:58:15.782 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mGtrYK9PF[0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-10 15:58:15.782 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mGtrYK9PF[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:58:15.783 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mGtrYK9PF[0;39m <==    Columns: id, course_id, name
+2021-06-10 15:58:15.783 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mGtrYK9PF[0;39m <==        Row: jcUNOtPO, 12, test
+2021-06-10 15:58:15.783 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mGtrYK9PF[0;39m <==        Row: JnoEDBAk, 444, 章001
+2021-06-10 15:58:15.783 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mGtrYK9PF[0;39m <==        Row: kHrEATME, 456, 测试
+2021-06-10 15:58:15.784 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mGtrYK9PF[0;39m <==        Row: lr75Ik8n, 444, nnnnnnn
+2021-06-10 15:58:15.784 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mGtrYK9PF[0;39m <==        Row: mEEpwSGW, 123, test
+2021-06-10 15:58:15.784 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mGtrYK9PF[0;39m <==      Total: 5
+2021-06-10 15:58:15.784 INFO  com.company.server.config.LogAspect               :110  [32mGtrYK9PF[0;39m 返回结果: {"content":{"list":[{"courseId":"12","id":"jcUNOtPO","name":"test"},{"courseId":"444","id":"JnoEDBAk","name":"章001"},{"courseId":"456","id":"kHrEATME","name":"测试"},{"courseId":"444","id":"lr75Ik8n","name":"nnnnnnn"},{"courseId":"123","id":"mEEpwSGW","name":"test"}],"page":1,"size":5,"total":10},"success":true}
+2021-06-10 15:58:15.785 INFO  com.company.server.config.LogAspect               :111  [32mGtrYK9PF[0;39m ------------- 结束 耗时：30 ms -------------
+2021-06-10 15:58:32.776 INFO  com.company.server.config.LogAspect               :77   [32mfGz6eP5t[0;39m ------------- 【大章】查询开始 -------------
+2021-06-10 15:58:32.776 INFO  com.company.server.config.LogAspect               :78   [32mfGz6eP5t[0;39m 请求地址: http://172.22.32.90:9002/business/admin/chapter/list POST
+2021-06-10 15:58:32.777 INFO  com.company.server.config.LogAspect               :79   [32mfGz6eP5t[0;39m 类名方法: com.company.business.controller.admin.ChapterController.list
+2021-06-10 15:58:32.777 INFO  com.company.server.config.LogAspect               :80   [32mfGz6eP5t[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:58:32.777 INFO  com.company.server.config.LogAspect               :98   [32mfGz6eP5t[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:58:32.778 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mfGz6eP5t[0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-10 15:58:32.778 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mfGz6eP5t[0;39m ==> Parameters: 
+2021-06-10 15:58:32.780 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mfGz6eP5t[0;39m <==    Columns: count(0)
+2021-06-10 15:58:32.780 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mfGz6eP5t[0;39m <==        Row: 10
+2021-06-10 15:58:32.780 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mfGz6eP5t[0;39m <==      Total: 1
+2021-06-10 15:58:32.781 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mfGz6eP5t[0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-10 15:58:32.781 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mfGz6eP5t[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:58:32.782 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mfGz6eP5t[0;39m <==    Columns: id, course_id, name
+2021-06-10 15:58:32.782 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mfGz6eP5t[0;39m <==        Row: jcUNOtPO, 12, test
+2021-06-10 15:58:32.783 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mfGz6eP5t[0;39m <==        Row: JnoEDBAk, 444, 章001
+2021-06-10 15:58:32.783 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mfGz6eP5t[0;39m <==        Row: kHrEATME, 456, 测试
+2021-06-10 15:58:32.784 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mfGz6eP5t[0;39m <==        Row: lr75Ik8n, 444, nnnnnnn
+2021-06-10 15:58:32.784 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mfGz6eP5t[0;39m <==        Row: mEEpwSGW, 123, test
+2021-06-10 15:58:32.784 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mfGz6eP5t[0;39m <==      Total: 5
+2021-06-10 15:58:32.785 INFO  com.company.server.config.LogAspect               :110  [32mfGz6eP5t[0;39m 返回结果: {"content":{"list":[{"courseId":"12","id":"jcUNOtPO","name":"test"},{"courseId":"444","id":"JnoEDBAk","name":"章001"},{"courseId":"456","id":"kHrEATME","name":"测试"},{"courseId":"444","id":"lr75Ik8n","name":"nnnnnnn"},{"courseId":"123","id":"mEEpwSGW","name":"test"}],"page":1,"size":5,"total":10},"success":true}
+2021-06-10 15:58:32.785 INFO  com.company.server.config.LogAspect               :111  [32mfGz6eP5t[0;39m ------------- 结束 耗时：9 ms -------------
+2021-06-10 15:58:35.344 INFO  com.company.server.config.LogAspect               :77   [32mmkCesz0i[0;39m ------------- 【小节】查询开始 -------------
+2021-06-10 15:58:35.345 INFO  com.company.server.config.LogAspect               :78   [32mmkCesz0i[0;39m 请求地址: http://172.22.32.90:9002/business/admin/section/list POST
+2021-06-10 15:58:35.345 INFO  com.company.server.config.LogAspect               :79   [32mmkCesz0i[0;39m 类名方法: com.company.business.controller.admin.SectionController.list
+2021-06-10 15:58:35.345 INFO  com.company.server.config.LogAspect               :80   [32mmkCesz0i[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:58:35.346 INFO  com.company.server.config.LogAspect               :98   [32mmkCesz0i[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:58:35.350 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mmkCesz0i[0;39m ==>  Preparing: SELECT count(0) FROM section
+2021-06-10 15:58:35.351 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mmkCesz0i[0;39m ==> Parameters: 
+2021-06-10 15:58:35.353 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mmkCesz0i[0;39m <==    Columns: count(0)
+2021-06-10 15:58:35.353 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mmkCesz0i[0;39m <==        Row: 5
+2021-06-10 15:58:35.353 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mmkCesz0i[0;39m <==      Total: 1
+2021-06-10 15:58:35.354 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mmkCesz0i[0;39m ==>  Preparing: select id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at from section order by sort asc LIMIT ?
+2021-06-10 15:58:35.354 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mmkCesz0i[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:58:35.355 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mmkCesz0i[0;39m <==    Columns: id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at
+2021-06-10 15:58:35.355 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mmkCesz0i[0;39m <==        Row: fVPTEPU7, 1, null, null, 5, null, F, null, null, 2021-06-10 15:34:16.659
+2021-06-10 15:58:35.356 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mmkCesz0i[0;39m <==        Row: hd1cNCIV, 7, null, null, null, null, C, null, null, null
+2021-06-10 15:58:35.356 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mmkCesz0i[0;39m <==        Row: lMKvVsMc, 13, null, null, null, null, F, null, null, null
+2021-06-10 15:58:35.357 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mmkCesz0i[0;39m <==        Row: nlLobVJh, 2222, null, null, null, null, F, null, null, null
+2021-06-10 15:58:35.357 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mmkCesz0i[0;39m <==        Row: h636Qomu, 1, 2, 3, 4, 5, F, 7, null, null
+2021-06-10 15:58:35.357 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mmkCesz0i[0;39m <==      Total: 5
+2021-06-10 15:58:35.363 INFO  com.company.server.config.LogAspect               :110  [32mmkCesz0i[0;39m 返回结果: {"content":{"list":[{"charge":"F","id":"fVPTEPU7","title":"1","updatedAt":1623310456659,"video":"5"},{"charge":"C","id":"hd1cNCIV","title":"7"},{"charge":"F","id":"lMKvVsMc","title":"13"},{"charge":"F","id":"nlLobVJh","title":"2222"},{"chapterId":"3","charge":"F","courseId":"2","id":"h636Qomu","sort":7,"time":5,"title":"1","video":"4"}],"page":1,"size":5,"total":5},"success":true}
+2021-06-10 15:58:35.363 INFO  com.company.server.config.LogAspect               :111  [32mmkCesz0i[0;39m ------------- 结束 耗时：19 ms -------------
+2021-06-10 15:58:39.075 INFO  com.company.server.config.LogAspect               :77   [32mAB1Iz1Dc[0;39m ------------- 【大章】查询开始 -------------
+2021-06-10 15:58:39.076 INFO  com.company.server.config.LogAspect               :78   [32mAB1Iz1Dc[0;39m 请求地址: http://172.22.32.90:9002/business/admin/chapter/list POST
+2021-06-10 15:58:39.076 INFO  com.company.server.config.LogAspect               :79   [32mAB1Iz1Dc[0;39m 类名方法: com.company.business.controller.admin.ChapterController.list
+2021-06-10 15:58:39.076 INFO  com.company.server.config.LogAspect               :80   [32mAB1Iz1Dc[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:58:39.076 INFO  com.company.server.config.LogAspect               :98   [32mAB1Iz1Dc[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:58:39.077 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mAB1Iz1Dc[0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-10 15:58:39.077 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mAB1Iz1Dc[0;39m ==> Parameters: 
+2021-06-10 15:58:39.079 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mAB1Iz1Dc[0;39m <==    Columns: count(0)
+2021-06-10 15:58:39.079 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mAB1Iz1Dc[0;39m <==        Row: 10
+2021-06-10 15:58:39.080 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mAB1Iz1Dc[0;39m <==      Total: 1
+2021-06-10 15:58:39.080 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mAB1Iz1Dc[0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-10 15:58:39.080 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mAB1Iz1Dc[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:58:39.081 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mAB1Iz1Dc[0;39m <==    Columns: id, course_id, name
+2021-06-10 15:58:39.081 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mAB1Iz1Dc[0;39m <==        Row: jcUNOtPO, 12, test
+2021-06-10 15:58:39.081 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mAB1Iz1Dc[0;39m <==        Row: JnoEDBAk, 444, 章001
+2021-06-10 15:58:39.081 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mAB1Iz1Dc[0;39m <==        Row: kHrEATME, 456, 测试
+2021-06-10 15:58:39.082 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mAB1Iz1Dc[0;39m <==        Row: lr75Ik8n, 444, nnnnnnn
+2021-06-10 15:58:39.082 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mAB1Iz1Dc[0;39m <==        Row: mEEpwSGW, 123, test
+2021-06-10 15:58:39.082 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mAB1Iz1Dc[0;39m <==      Total: 5
+2021-06-10 15:58:39.082 INFO  com.company.server.config.LogAspect               :110  [32mAB1Iz1Dc[0;39m 返回结果: {"content":{"list":[{"courseId":"12","id":"jcUNOtPO","name":"test"},{"courseId":"444","id":"JnoEDBAk","name":"章001"},{"courseId":"456","id":"kHrEATME","name":"测试"},{"courseId":"444","id":"lr75Ik8n","name":"nnnnnnn"},{"courseId":"123","id":"mEEpwSGW","name":"test"}],"page":1,"size":5,"total":10},"success":true}
+2021-06-10 15:58:39.083 INFO  com.company.server.config.LogAspect               :111  [32mAB1Iz1Dc[0;39m ------------- 结束 耗时：8 ms -------------
+2021-06-10 15:58:39.770 INFO  com.company.server.config.LogAspect               :77   [32mWF2t5WBL[0;39m ------------- 【小节】查询开始 -------------
+2021-06-10 15:58:39.770 INFO  com.company.server.config.LogAspect               :78   [32mWF2t5WBL[0;39m 请求地址: http://172.22.32.90:9002/business/admin/section/list POST
+2021-06-10 15:58:39.771 INFO  com.company.server.config.LogAspect               :79   [32mWF2t5WBL[0;39m 类名方法: com.company.business.controller.admin.SectionController.list
+2021-06-10 15:58:39.771 INFO  com.company.server.config.LogAspect               :80   [32mWF2t5WBL[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:58:39.771 INFO  com.company.server.config.LogAspect               :98   [32mWF2t5WBL[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:58:39.772 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mWF2t5WBL[0;39m ==>  Preparing: SELECT count(0) FROM section
+2021-06-10 15:58:39.772 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mWF2t5WBL[0;39m ==> Parameters: 
+2021-06-10 15:58:39.774 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mWF2t5WBL[0;39m <==    Columns: count(0)
+2021-06-10 15:58:39.774 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mWF2t5WBL[0;39m <==        Row: 5
+2021-06-10 15:58:39.774 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mWF2t5WBL[0;39m <==      Total: 1
+2021-06-10 15:58:39.774 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mWF2t5WBL[0;39m ==>  Preparing: select id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at from section order by sort asc LIMIT ?
+2021-06-10 15:58:39.775 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mWF2t5WBL[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:58:39.775 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mWF2t5WBL[0;39m <==    Columns: id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at
+2021-06-10 15:58:39.776 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mWF2t5WBL[0;39m <==        Row: fVPTEPU7, 1, null, null, 5, null, F, null, null, 2021-06-10 15:34:16.659
+2021-06-10 15:58:39.776 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mWF2t5WBL[0;39m <==        Row: hd1cNCIV, 7, null, null, null, null, C, null, null, null
+2021-06-10 15:58:39.776 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mWF2t5WBL[0;39m <==        Row: lMKvVsMc, 13, null, null, null, null, F, null, null, null
+2021-06-10 15:58:39.777 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mWF2t5WBL[0;39m <==        Row: nlLobVJh, 2222, null, null, null, null, F, null, null, null
+2021-06-10 15:58:39.777 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mWF2t5WBL[0;39m <==        Row: h636Qomu, 1, 2, 3, 4, 5, F, 7, null, null
+2021-06-10 15:58:39.777 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mWF2t5WBL[0;39m <==      Total: 5
+2021-06-10 15:58:39.778 INFO  com.company.server.config.LogAspect               :110  [32mWF2t5WBL[0;39m 返回结果: {"content":{"list":[{"charge":"F","id":"fVPTEPU7","title":"1","updatedAt":1623310456659,"video":"5"},{"charge":"C","id":"hd1cNCIV","title":"7"},{"charge":"F","id":"lMKvVsMc","title":"13"},{"charge":"F","id":"nlLobVJh","title":"2222"},{"chapterId":"3","charge":"F","courseId":"2","id":"h636Qomu","sort":7,"time":5,"title":"1","video":"4"}],"page":1,"size":5,"total":5},"success":true}
+2021-06-10 15:58:39.778 INFO  com.company.server.config.LogAspect               :111  [32mWF2t5WBL[0;39m ------------- 结束 耗时：8 ms -------------
+2021-06-10 15:58:46.837 INFO  com.company.server.config.LogAspect               :77   [32mzGijFEzF[0;39m ------------- 【大章】查询开始 -------------
+2021-06-10 15:58:46.837 INFO  com.company.server.config.LogAspect               :78   [32mzGijFEzF[0;39m 请求地址: http://172.22.32.90:9002/business/admin/chapter/list POST
+2021-06-10 15:58:46.837 INFO  com.company.server.config.LogAspect               :79   [32mzGijFEzF[0;39m 类名方法: com.company.business.controller.admin.ChapterController.list
+2021-06-10 15:58:46.838 INFO  com.company.server.config.LogAspect               :80   [32mzGijFEzF[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:58:46.838 INFO  com.company.server.config.LogAspect               :98   [32mzGijFEzF[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:58:46.838 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mzGijFEzF[0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-10 15:58:46.839 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mzGijFEzF[0;39m ==> Parameters: 
+2021-06-10 15:58:46.840 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mzGijFEzF[0;39m <==    Columns: count(0)
+2021-06-10 15:58:46.840 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mzGijFEzF[0;39m <==        Row: 10
+2021-06-10 15:58:46.840 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mzGijFEzF[0;39m <==      Total: 1
+2021-06-10 15:58:46.841 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mzGijFEzF[0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-10 15:58:46.841 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mzGijFEzF[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:58:46.842 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mzGijFEzF[0;39m <==    Columns: id, course_id, name
+2021-06-10 15:58:46.842 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mzGijFEzF[0;39m <==        Row: jcUNOtPO, 12, test
+2021-06-10 15:58:46.842 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mzGijFEzF[0;39m <==        Row: JnoEDBAk, 444, 章001
+2021-06-10 15:58:46.842 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mzGijFEzF[0;39m <==        Row: kHrEATME, 456, 测试
+2021-06-10 15:58:46.843 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mzGijFEzF[0;39m <==        Row: lr75Ik8n, 444, nnnnnnn
+2021-06-10 15:58:46.843 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mzGijFEzF[0;39m <==        Row: mEEpwSGW, 123, test
+2021-06-10 15:58:46.843 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mzGijFEzF[0;39m <==      Total: 5
+2021-06-10 15:58:46.844 INFO  com.company.server.config.LogAspect               :110  [32mzGijFEzF[0;39m 返回结果: {"content":{"list":[{"courseId":"12","id":"jcUNOtPO","name":"test"},{"courseId":"444","id":"JnoEDBAk","name":"章001"},{"courseId":"456","id":"kHrEATME","name":"测试"},{"courseId":"444","id":"lr75Ik8n","name":"nnnnnnn"},{"courseId":"123","id":"mEEpwSGW","name":"test"}],"page":1,"size":5,"total":10},"success":true}
+2021-06-10 15:58:46.844 INFO  com.company.server.config.LogAspect               :111  [32mzGijFEzF[0;39m ------------- 结束 耗时：7 ms -------------
+2021-06-10 15:58:47.569 INFO  com.company.server.config.LogAspect               :77   [32mvx1JrXyn[0;39m ------------- 【小节】查询开始 -------------
+2021-06-10 15:58:47.569 INFO  com.company.server.config.LogAspect               :78   [32mvx1JrXyn[0;39m 请求地址: http://172.22.32.90:9002/business/admin/section/list POST
+2021-06-10 15:58:47.569 INFO  com.company.server.config.LogAspect               :79   [32mvx1JrXyn[0;39m 类名方法: com.company.business.controller.admin.SectionController.list
+2021-06-10 15:58:47.569 INFO  com.company.server.config.LogAspect               :80   [32mvx1JrXyn[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:58:47.570 INFO  com.company.server.config.LogAspect               :98   [32mvx1JrXyn[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:58:47.570 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mvx1JrXyn[0;39m ==>  Preparing: SELECT count(0) FROM section
+2021-06-10 15:58:47.571 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mvx1JrXyn[0;39m ==> Parameters: 
+2021-06-10 15:58:47.572 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mvx1JrXyn[0;39m <==    Columns: count(0)
+2021-06-10 15:58:47.572 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32mvx1JrXyn[0;39m <==        Row: 5
+2021-06-10 15:58:47.572 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32mvx1JrXyn[0;39m <==      Total: 1
+2021-06-10 15:58:47.573 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mvx1JrXyn[0;39m ==>  Preparing: select id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at from section order by sort asc LIMIT ?
+2021-06-10 15:58:47.573 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mvx1JrXyn[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:58:47.574 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mvx1JrXyn[0;39m <==    Columns: id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at
+2021-06-10 15:58:47.574 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mvx1JrXyn[0;39m <==        Row: fVPTEPU7, 1, null, null, 5, null, F, null, null, 2021-06-10 15:34:16.659
+2021-06-10 15:58:47.574 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mvx1JrXyn[0;39m <==        Row: hd1cNCIV, 7, null, null, null, null, C, null, null, null
+2021-06-10 15:58:47.575 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mvx1JrXyn[0;39m <==        Row: lMKvVsMc, 13, null, null, null, null, F, null, null, null
+2021-06-10 15:58:47.575 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mvx1JrXyn[0;39m <==        Row: nlLobVJh, 2222, null, null, null, null, F, null, null, null
+2021-06-10 15:58:47.575 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32mvx1JrXyn[0;39m <==        Row: h636Qomu, 1, 2, 3, 4, 5, F, 7, null, null
+2021-06-10 15:58:47.575 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32mvx1JrXyn[0;39m <==      Total: 5
+2021-06-10 15:58:47.576 INFO  com.company.server.config.LogAspect               :110  [32mvx1JrXyn[0;39m 返回结果: {"content":{"list":[{"charge":"F","id":"fVPTEPU7","title":"1","updatedAt":1623310456659,"video":"5"},{"charge":"C","id":"hd1cNCIV","title":"7"},{"charge":"F","id":"lMKvVsMc","title":"13"},{"charge":"F","id":"nlLobVJh","title":"2222"},{"chapterId":"3","charge":"F","courseId":"2","id":"h636Qomu","sort":7,"time":5,"title":"1","video":"4"}],"page":1,"size":5,"total":5},"success":true}
+2021-06-10 15:58:47.576 INFO  com.company.server.config.LogAspect               :111  [32mvx1JrXyn[0;39m ------------- 结束 耗时：7 ms -------------
+2021-06-10 15:59:06.514 INFO  org.hibernate.validator.internal.util.Version     :21   [32m        [0;39m HV000001: Hibernate Validator 6.1.6.Final
+2021-06-10 15:59:06.552 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :225  [32m        [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-10 15:59:07.488 INFO  com.company.business.BusinessApplication          :651  [32m        [0;39m No active profile set, falling back to default profiles: default
+2021-06-10 15:59:08.099 INFO  o.springframework.cloud.context.scope.GenericScope:295  [32m        [0;39m BeanFactory id=680da2af-1965-365e-aaaa-49051284504b
+2021-06-10 15:59:08.730 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m        [0;39m Tomcat initialized with port(s): 9002 (http)
+2021-06-10 15:59:08.735 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m        [0;39m Initializing ProtocolHandler ["http-nio-9002"]
+2021-06-10 15:59:08.736 INFO  org.apache.catalina.core.StandardService          :173  [32m        [0;39m Starting service [Tomcat]
+2021-06-10 15:59:08.736 INFO  org.apache.catalina.core.StandardEngine           :173  [32m        [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-06-10 15:59:08.843 INFO  o.a.c.c.C.[Tomcat].[localhost].[/business]        :173  [32m        [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-10 15:59:08.844 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :285  [32m        [0;39m Root WebApplicationContext: initialization completed in 1340 ms
+2021-06-10 15:59:09.318 WARN  com.netflix.config.sources.URLConfigurationSource :121  [32m        [0;39m No URLs will be polled as dynamic configuration sources.
+2021-06-10 15:59:09.318 INFO  com.netflix.config.sources.URLConfigurationSource :122  [32m        [0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-06-10 15:59:09.321 WARN  com.netflix.config.sources.URLConfigurationSource :121  [32m        [0;39m No URLs will be polled as dynamic configuration sources.
+2021-06-10 15:59:09.321 INFO  com.netflix.config.sources.URLConfigurationSource :122  [32m        [0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-06-10 15:59:09.540 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m        [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-10 15:59:09.874 WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :61   [32m        [0;39m Unable to start LiveReload server
+2021-06-10 15:59:10.541 INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration:78   [32m        [0;39m Eureka HTTP Client uses Jersey
+2021-06-10 15:59:11.179 WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger:106  [32m        [0;39m You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-06-10 15:59:11.267 INFO  o.s.cloud.netflix.eureka.InstanceInfoFactory      :72   [32m        [0;39m Setting initial instance status as: STARTING
+2021-06-10 15:59:11.289 INFO  com.netflix.discovery.DiscoveryClient             :372  [32m        [0;39m Initializing Eureka in region us-east-1
+2021-06-10 15:59:11.849 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :70   [32m        [0;39m Using JSON encoding codec LegacyJacksonJson
+2021-06-10 15:59:11.849 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :71   [32m        [0;39m Using JSON decoding codec LegacyJacksonJson
+2021-06-10 15:59:11.922 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :80   [32m        [0;39m Using XML encoding codec XStreamXml
+2021-06-10 15:59:11.922 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :81   [32m        [0;39m Using XML decoding codec XStreamXml
+2021-06-10 15:59:12.081 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 15:59:12.505 INFO  com.netflix.discovery.DiscoveryClient             :1007 [32m        [0;39m Disable delta property : false
+2021-06-10 15:59:12.505 INFO  com.netflix.discovery.DiscoveryClient             :1008 [32m        [0;39m Single vip registry refresh property : null
+2021-06-10 15:59:12.505 INFO  com.netflix.discovery.DiscoveryClient             :1009 [32m        [0;39m Force full registry fetch : false
+2021-06-10 15:59:12.505 INFO  com.netflix.discovery.DiscoveryClient             :1010 [32m        [0;39m Application is null : false
+2021-06-10 15:59:12.506 INFO  com.netflix.discovery.DiscoveryClient             :1011 [32m        [0;39m Registered Applications size is zero : true
+2021-06-10 15:59:12.506 INFO  com.netflix.discovery.DiscoveryClient             :1013 [32m        [0;39m Application version is -1: true
+2021-06-10 15:59:12.506 INFO  com.netflix.discovery.DiscoveryClient             :1097 [32m        [0;39m Getting all instance registry info from the eureka server
+2021-06-10 15:59:12.615 INFO  com.netflix.discovery.DiscoveryClient             :1106 [32m        [0;39m The response status is 200
+2021-06-10 15:59:12.617 INFO  com.netflix.discovery.DiscoveryClient             :1321 [32m        [0;39m Starting heartbeat executor: renew interval is: 30
+2021-06-10 15:59:12.618 INFO  com.netflix.discovery.InstanceInfoReplicator      :60   [32m        [0;39m InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-06-10 15:59:12.620 INFO  com.netflix.discovery.DiscoveryClient             :492  [32m        [0;39m Discovery Client initialized at timestamp 1623311952620 with initial instances count: 2
+2021-06-10 15:59:12.625 INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry   :41   [32m        [0;39m Registering application BUSINESS-CLIENT with eureka with status UP
+2021-06-10 15:59:12.626 INFO  com.netflix.discovery.DiscoveryClient             :1352 [32m        [0;39m Saw local status change event StatusChangeEvent [timestamp=1623311952626, current=UP, previous=STARTING]
+2021-06-10 15:59:12.627 INFO  com.netflix.discovery.DiscoveryClient             :873  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002: registering service...
+2021-06-10 15:59:12.628 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m        [0;39m Starting ProtocolHandler ["http-nio-9002"]
+2021-06-10 15:59:12.646 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m        [0;39m Tomcat started on port(s): 9002 (http) with context path '/business'
+2021-06-10 15:59:12.647 INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration         :145  [32m        [0;39m Updating port to 9002
+2021-06-10 15:59:12.668 INFO  com.netflix.discovery.DiscoveryClient             :882  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002 - registration status: 204
+2021-06-10 15:59:13.254 INFO  com.company.business.BusinessApplication          :61   [32m        [0;39m Started BusinessApplication in 7.889 seconds (JVM running for 9.33)
+2021-06-10 15:59:13.256 INFO  com.company.business.BusinessApplication          :21   [32m        [0;39m 启动成功
+2021-06-10 15:59:13.256 INFO  com.company.business.BusinessApplication          :22   [32m        [0;39m Business地址:	http://127.0.0.1:9002
+2021-06-10 15:59:14.823 INFO  o.a.c.c.C.[Tomcat].[localhost].[/business]        :173  [32m        [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-10 15:59:14.824 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m        [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-10 15:59:14.832 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m        [0;39m Completed initialization in 8 ms
+2021-06-10 15:59:14.892 INFO  com.company.server.config.LogAspect               :77   [32meTfknH8R[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 15:59:14.893 INFO  com.company.server.config.LogAspect               :78   [32meTfknH8R[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 15:59:14.893 INFO  com.company.server.config.LogAspect               :79   [32meTfknH8R[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 15:59:14.893 INFO  com.company.server.config.LogAspect               :80   [32meTfknH8R[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:59:14.906 INFO  com.company.server.config.LogAspect               :98   [32meTfknH8R[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:59:14.977 INFO  com.alibaba.druid.pool.DruidDataSource            :986  [32meTfknH8R[0;39m {dataSource-1} inited
+2021-06-10 15:59:15.335 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32meTfknH8R[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 15:59:15.350 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32meTfknH8R[0;39m ==> Parameters: 
+2021-06-10 15:59:15.364 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32meTfknH8R[0;39m <==    Columns: count(0)
+2021-06-10 15:59:15.365 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32meTfknH8R[0;39m <==        Row: 0
+2021-06-10 15:59:15.366 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32meTfknH8R[0;39m <==      Total: 1
+2021-06-10 15:59:15.371 INFO  com.company.server.config.LogAspect               :110  [32meTfknH8R[0;39m 返回结果: {"content":{"list":[],"page":1,"size":5,"total":0},"success":true}
+2021-06-10 15:59:15.371 INFO  com.company.server.config.LogAspect               :111  [32meTfknH8R[0;39m ------------- 结束 耗时：482 ms -------------
+2021-06-10 15:59:18.360 INFO  com.company.server.config.LogAspect               :77   [32mFJAi2xkz[0;39m ------------- 【大章】查询开始 -------------
+2021-06-10 15:59:18.360 INFO  com.company.server.config.LogAspect               :78   [32mFJAi2xkz[0;39m 请求地址: http://172.22.32.90:9002/business/admin/chapter/list POST
+2021-06-10 15:59:18.360 INFO  com.company.server.config.LogAspect               :79   [32mFJAi2xkz[0;39m 类名方法: com.company.business.controller.admin.ChapterController.list
+2021-06-10 15:59:18.361 INFO  com.company.server.config.LogAspect               :80   [32mFJAi2xkz[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:59:18.361 INFO  com.company.server.config.LogAspect               :98   [32mFJAi2xkz[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:59:18.366 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mFJAi2xkz[0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-10 15:59:18.367 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mFJAi2xkz[0;39m ==> Parameters: 
+2021-06-10 15:59:18.369 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mFJAi2xkz[0;39m <==    Columns: count(0)
+2021-06-10 15:59:18.370 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mFJAi2xkz[0;39m <==        Row: 10
+2021-06-10 15:59:18.370 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mFJAi2xkz[0;39m <==      Total: 1
+2021-06-10 15:59:18.373 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mFJAi2xkz[0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-10 15:59:18.374 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mFJAi2xkz[0;39m ==> Parameters: 5(Integer)
+2021-06-10 15:59:18.375 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mFJAi2xkz[0;39m <==    Columns: id, course_id, name
+2021-06-10 15:59:18.376 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mFJAi2xkz[0;39m <==        Row: jcUNOtPO, 12, test
+2021-06-10 15:59:18.377 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mFJAi2xkz[0;39m <==        Row: JnoEDBAk, 444, 章001
+2021-06-10 15:59:18.377 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mFJAi2xkz[0;39m <==        Row: kHrEATME, 456, 测试
+2021-06-10 15:59:18.378 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mFJAi2xkz[0;39m <==        Row: lr75Ik8n, 444, nnnnnnn
+2021-06-10 15:59:18.378 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mFJAi2xkz[0;39m <==        Row: mEEpwSGW, 123, test
+2021-06-10 15:59:18.379 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mFJAi2xkz[0;39m <==      Total: 5
+2021-06-10 15:59:18.386 INFO  com.company.server.config.LogAspect               :110  [32mFJAi2xkz[0;39m 返回结果: {"content":{"list":[{"courseId":"12","id":"jcUNOtPO","name":"test"},{"courseId":"444","id":"JnoEDBAk","name":"章001"},{"courseId":"456","id":"kHrEATME","name":"测试"},{"courseId":"444","id":"lr75Ik8n","name":"nnnnnnn"},{"courseId":"123","id":"mEEpwSGW","name":"test"}],"page":1,"size":5,"total":10},"success":true}
+2021-06-10 15:59:18.387 INFO  com.company.server.config.LogAspect               :111  [32mFJAi2xkz[0;39m ------------- 结束 耗时：28 ms -------------
+2021-06-10 15:59:19.094 INFO  com.company.server.config.LogAspect               :77   [32mG2orItdm[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 15:59:19.094 INFO  com.company.server.config.LogAspect               :78   [32mG2orItdm[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 15:59:19.094 INFO  com.company.server.config.LogAspect               :79   [32mG2orItdm[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 15:59:19.095 INFO  com.company.server.config.LogAspect               :80   [32mG2orItdm[0;39m 远程地址: 172.22.32.90
+2021-06-10 15:59:19.095 INFO  com.company.server.config.LogAspect               :98   [32mG2orItdm[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 15:59:19.096 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mG2orItdm[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 15:59:19.097 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mG2orItdm[0;39m ==> Parameters: 
+2021-06-10 15:59:19.098 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mG2orItdm[0;39m <==    Columns: count(0)
+2021-06-10 15:59:19.098 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mG2orItdm[0;39m <==        Row: 0
+2021-06-10 15:59:19.099 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mG2orItdm[0;39m <==      Total: 1
+2021-06-10 15:59:19.099 INFO  com.company.server.config.LogAspect               :110  [32mG2orItdm[0;39m 返回结果: {"content":{"list":[],"page":1,"size":5,"total":0},"success":true}
+2021-06-10 15:59:19.099 INFO  com.company.server.config.LogAspect               :111  [32mG2orItdm[0;39m ------------- 结束 耗时：5 ms -------------
