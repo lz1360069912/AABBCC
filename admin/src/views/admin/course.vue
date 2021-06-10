@@ -37,14 +37,21 @@
             <p>{{ course.summary }}</p>
             <p>
               <span class="badge badge-info">{{ course.id }}</span>
+              &nbsp;
               <span class="badge badge-info">排序：{{ course.sort }}</span>
+              &nbsp;
               <span class="badge badge-info">时长：{{ course.time }}</span>
             </p>
             <p>
+              <button v-on:click="toChapter(course)" class="btn btn-white btn-xs btn-info btn-round">
+                <i class="ace-icon fa fa-book bigger-120"> 大章</i>
+              </button>
+              &nbsp;
               <button v-on:click="edit(course)" class="btn btn-white btn-xs btn-info btn-round">
                 <i class="ace-icon fa fa-pencil bigger-120"> 编辑</i>
               </button>
-              <button v-on:click="del(course.id)" class="btn btn-white btn-xs btn-info btn-round">
+              &nbsp;
+              <button v-on:click="del(course.id)" class="btn btn-white btn-xs btn-warning btn-round">
                 <i class="ace-icon fa fa-trash-o bigger-120"> 删除</i>
               </button>
             </p>
@@ -296,7 +303,16 @@ export default {
           }
         })
       });
-    }
+    },
+    /**
+     * 点击 大章
+     * @param course
+     */
+    toChapter(course) {
+      let _this = this;
+      SessionStorage.set("course", course);
+      _this.$router.push("/business/chapter");
+    },
   }
 }
 </script>
