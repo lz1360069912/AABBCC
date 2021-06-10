@@ -1377,3 +1377,879 @@
 2021-06-10 16:39:12.581 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
 2021-06-10 16:44:12.583 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
 2021-06-10 16:49:12.587 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 16:54:12.594 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 16:59:12.599 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 17:04:12.602 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 17:09:12.605 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 17:14:12.612 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 17:19:12.622 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 17:24:12.637 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 17:29:12.642 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 17:34:12.657 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 17:39:12.673 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 17:44:12.682 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 17:49:12.690 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 17:54:12.703 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 17:56:00.270 INFO  com.company.server.config.LogAspect               :77   [32m7AApcEdB[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 17:56:00.272 INFO  com.company.server.config.LogAspect               :78   [32m7AApcEdB[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 17:56:00.272 INFO  com.company.server.config.LogAspect               :79   [32m7AApcEdB[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 17:56:00.272 INFO  com.company.server.config.LogAspect               :80   [32m7AApcEdB[0;39m 远程地址: 172.22.32.90
+2021-06-10 17:56:00.273 INFO  com.company.server.config.LogAspect               :98   [32m7AApcEdB[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 17:56:00.308 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m7AApcEdB[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 17:56:00.310 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m7AApcEdB[0;39m ==> Parameters: 
+2021-06-10 17:56:00.314 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m7AApcEdB[0;39m <==    Columns: count(0)
+2021-06-10 17:56:00.315 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m7AApcEdB[0;39m <==        Row: 1
+2021-06-10 17:56:00.315 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m7AApcEdB[0;39m <==      Total: 1
+2021-06-10 17:56:00.316 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m7AApcEdB[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 17:56:00.316 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m7AApcEdB[0;39m ==> Parameters: 5(Integer)
+2021-06-10 17:56:00.317 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m7AApcEdB[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 17:56:00.318 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m7AApcEdB[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 17:56:00.319 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m7AApcEdB[0;39m <==      Total: 1
+2021-06-10 17:56:00.320 INFO  com.company.server.config.LogAspect               :110  [32m7AApcEdB[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 17:56:00.320 INFO  com.company.server.config.LogAspect               :111  [32m7AApcEdB[0;39m ------------- 结束 耗时：51 ms -------------
+2021-06-10 17:56:27.116 INFO  com.company.server.config.LogAspect               :77   [32mXLy7dM4a[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 17:56:27.117 INFO  com.company.server.config.LogAspect               :78   [32mXLy7dM4a[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 17:56:27.117 INFO  com.company.server.config.LogAspect               :79   [32mXLy7dM4a[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 17:56:27.117 INFO  com.company.server.config.LogAspect               :80   [32mXLy7dM4a[0;39m 远程地址: 172.22.32.90
+2021-06-10 17:56:27.117 INFO  com.company.server.config.LogAspect               :98   [32mXLy7dM4a[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 17:56:27.118 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mXLy7dM4a[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 17:56:27.119 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mXLy7dM4a[0;39m ==> Parameters: 
+2021-06-10 17:56:27.121 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mXLy7dM4a[0;39m <==    Columns: count(0)
+2021-06-10 17:56:27.121 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mXLy7dM4a[0;39m <==        Row: 1
+2021-06-10 17:56:27.121 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mXLy7dM4a[0;39m <==      Total: 1
+2021-06-10 17:56:27.122 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mXLy7dM4a[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 17:56:27.122 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mXLy7dM4a[0;39m ==> Parameters: 5(Integer)
+2021-06-10 17:56:27.123 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mXLy7dM4a[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 17:56:27.124 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mXLy7dM4a[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 17:56:27.124 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mXLy7dM4a[0;39m <==      Total: 1
+2021-06-10 17:56:27.126 INFO  com.company.server.config.LogAspect               :110  [32mXLy7dM4a[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 17:56:27.126 INFO  com.company.server.config.LogAspect               :111  [32mXLy7dM4a[0;39m ------------- 结束 耗时：10 ms -------------
+2021-06-10 17:57:42.642 INFO  com.company.server.config.LogAspect               :77   [32m5uBWOhoN[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 17:57:42.642 INFO  com.company.server.config.LogAspect               :78   [32m5uBWOhoN[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 17:57:42.642 INFO  com.company.server.config.LogAspect               :79   [32m5uBWOhoN[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 17:57:42.642 INFO  com.company.server.config.LogAspect               :80   [32m5uBWOhoN[0;39m 远程地址: 172.22.32.90
+2021-06-10 17:57:42.642 INFO  com.company.server.config.LogAspect               :98   [32m5uBWOhoN[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 17:57:42.644 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32m5uBWOhoN[0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 75521
+2021-06-10 17:57:42.662 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m5uBWOhoN[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 17:57:42.662 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m5uBWOhoN[0;39m ==> Parameters: 
+2021-06-10 17:57:42.665 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m5uBWOhoN[0;39m <==    Columns: count(0)
+2021-06-10 17:57:42.666 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m5uBWOhoN[0;39m <==        Row: 1
+2021-06-10 17:57:42.666 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m5uBWOhoN[0;39m <==      Total: 1
+2021-06-10 17:57:42.666 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m5uBWOhoN[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 17:57:42.667 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m5uBWOhoN[0;39m ==> Parameters: 5(Integer)
+2021-06-10 17:57:42.667 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m5uBWOhoN[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 17:57:42.668 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m5uBWOhoN[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 17:57:42.668 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m5uBWOhoN[0;39m <==      Total: 1
+2021-06-10 17:57:42.669 INFO  com.company.server.config.LogAspect               :110  [32m5uBWOhoN[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 17:57:42.669 INFO  com.company.server.config.LogAspect               :111  [32m5uBWOhoN[0;39m ------------- 结束 耗时：27 ms -------------
+2021-06-10 17:57:48.448 INFO  com.company.server.config.LogAspect               :77   [32m8vdHji1X[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 17:57:48.448 INFO  com.company.server.config.LogAspect               :78   [32m8vdHji1X[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 17:57:48.448 INFO  com.company.server.config.LogAspect               :79   [32m8vdHji1X[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 17:57:48.448 INFO  com.company.server.config.LogAspect               :80   [32m8vdHji1X[0;39m 远程地址: 172.22.32.90
+2021-06-10 17:57:48.448 INFO  com.company.server.config.LogAspect               :98   [32m8vdHji1X[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 17:57:48.449 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m8vdHji1X[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 17:57:48.449 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m8vdHji1X[0;39m ==> Parameters: 
+2021-06-10 17:57:48.451 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m8vdHji1X[0;39m <==    Columns: count(0)
+2021-06-10 17:57:48.451 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m8vdHji1X[0;39m <==        Row: 1
+2021-06-10 17:57:48.451 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m8vdHji1X[0;39m <==      Total: 1
+2021-06-10 17:57:48.452 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m8vdHji1X[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 17:57:48.452 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m8vdHji1X[0;39m ==> Parameters: 5(Integer)
+2021-06-10 17:57:48.453 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m8vdHji1X[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 17:57:48.453 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m8vdHji1X[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 17:57:48.454 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m8vdHji1X[0;39m <==      Total: 1
+2021-06-10 17:57:48.455 INFO  com.company.server.config.LogAspect               :110  [32m8vdHji1X[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 17:57:48.455 INFO  com.company.server.config.LogAspect               :111  [32m8vdHji1X[0;39m ------------- 结束 耗时：7 ms -------------
+2021-06-10 17:57:58.035 INFO  com.company.server.config.LogAspect               :77   [32m9WMXiu5Q[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 17:57:58.036 INFO  com.company.server.config.LogAspect               :78   [32m9WMXiu5Q[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 17:57:58.036 INFO  com.company.server.config.LogAspect               :79   [32m9WMXiu5Q[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 17:57:58.036 INFO  com.company.server.config.LogAspect               :80   [32m9WMXiu5Q[0;39m 远程地址: 172.22.32.90
+2021-06-10 17:57:58.036 INFO  com.company.server.config.LogAspect               :98   [32m9WMXiu5Q[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 17:57:58.037 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m9WMXiu5Q[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 17:57:58.037 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m9WMXiu5Q[0;39m ==> Parameters: 
+2021-06-10 17:57:58.039 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m9WMXiu5Q[0;39m <==    Columns: count(0)
+2021-06-10 17:57:58.040 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m9WMXiu5Q[0;39m <==        Row: 1
+2021-06-10 17:57:58.040 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m9WMXiu5Q[0;39m <==      Total: 1
+2021-06-10 17:57:58.040 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m9WMXiu5Q[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 17:57:58.040 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m9WMXiu5Q[0;39m ==> Parameters: 5(Integer)
+2021-06-10 17:57:58.041 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m9WMXiu5Q[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 17:57:58.042 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m9WMXiu5Q[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 17:57:58.043 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m9WMXiu5Q[0;39m <==      Total: 1
+2021-06-10 17:57:58.049 INFO  com.company.server.config.LogAspect               :110  [32m9WMXiu5Q[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 17:57:58.049 INFO  com.company.server.config.LogAspect               :111  [32m9WMXiu5Q[0;39m ------------- 结束 耗时：14 ms -------------
+2021-06-10 17:57:59.040 INFO  com.company.server.config.LogAspect               :77   [32mbaWbhSpS[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 17:57:59.040 INFO  com.company.server.config.LogAspect               :78   [32mbaWbhSpS[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 17:57:59.040 INFO  com.company.server.config.LogAspect               :79   [32mbaWbhSpS[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 17:57:59.041 INFO  com.company.server.config.LogAspect               :80   [32mbaWbhSpS[0;39m 远程地址: 172.22.32.90
+2021-06-10 17:57:59.041 INFO  com.company.server.config.LogAspect               :98   [32mbaWbhSpS[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 17:57:59.042 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mbaWbhSpS[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 17:57:59.042 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mbaWbhSpS[0;39m ==> Parameters: 
+2021-06-10 17:57:59.044 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mbaWbhSpS[0;39m <==    Columns: count(0)
+2021-06-10 17:57:59.045 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mbaWbhSpS[0;39m <==        Row: 1
+2021-06-10 17:57:59.045 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mbaWbhSpS[0;39m <==      Total: 1
+2021-06-10 17:57:59.046 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mbaWbhSpS[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 17:57:59.047 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mbaWbhSpS[0;39m ==> Parameters: 5(Integer)
+2021-06-10 17:57:59.067 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mbaWbhSpS[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 17:57:59.068 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mbaWbhSpS[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 17:57:59.070 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mbaWbhSpS[0;39m <==      Total: 1
+2021-06-10 17:57:59.071 INFO  com.company.server.config.LogAspect               :110  [32mbaWbhSpS[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 17:57:59.071 INFO  com.company.server.config.LogAspect               :111  [32mbaWbhSpS[0;39m ------------- 结束 耗时：31 ms -------------
+2021-06-10 17:58:00.132 INFO  com.company.server.config.LogAspect               :77   [32mpFiZFzmL[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 17:58:00.133 INFO  com.company.server.config.LogAspect               :78   [32mpFiZFzmL[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 17:58:00.133 INFO  com.company.server.config.LogAspect               :79   [32mpFiZFzmL[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 17:58:00.133 INFO  com.company.server.config.LogAspect               :80   [32mpFiZFzmL[0;39m 远程地址: 172.22.32.90
+2021-06-10 17:58:00.133 INFO  com.company.server.config.LogAspect               :98   [32mpFiZFzmL[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 17:58:00.134 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mpFiZFzmL[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 17:58:00.135 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mpFiZFzmL[0;39m ==> Parameters: 
+2021-06-10 17:58:00.137 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mpFiZFzmL[0;39m <==    Columns: count(0)
+2021-06-10 17:58:00.137 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mpFiZFzmL[0;39m <==        Row: 1
+2021-06-10 17:58:00.137 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mpFiZFzmL[0;39m <==      Total: 1
+2021-06-10 17:58:00.138 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mpFiZFzmL[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 17:58:00.139 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mpFiZFzmL[0;39m ==> Parameters: 5(Integer)
+2021-06-10 17:58:00.140 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mpFiZFzmL[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 17:58:00.140 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mpFiZFzmL[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 17:58:00.140 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mpFiZFzmL[0;39m <==      Total: 1
+2021-06-10 17:58:00.141 INFO  com.company.server.config.LogAspect               :110  [32mpFiZFzmL[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 17:58:00.141 INFO  com.company.server.config.LogAspect               :111  [32mpFiZFzmL[0;39m ------------- 结束 耗时：9 ms -------------
+2021-06-10 17:58:46.580 INFO  com.company.server.config.LogAspect               :77   [32mvUAip3Wb[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 17:58:46.580 INFO  com.company.server.config.LogAspect               :78   [32mvUAip3Wb[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 17:58:46.581 INFO  com.company.server.config.LogAspect               :79   [32mvUAip3Wb[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 17:58:46.581 INFO  com.company.server.config.LogAspect               :80   [32mvUAip3Wb[0;39m 远程地址: 172.22.32.90
+2021-06-10 17:58:46.581 INFO  com.company.server.config.LogAspect               :98   [32mvUAip3Wb[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 17:58:46.582 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mvUAip3Wb[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 17:58:46.582 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mvUAip3Wb[0;39m ==> Parameters: 
+2021-06-10 17:58:46.583 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mvUAip3Wb[0;39m <==    Columns: count(0)
+2021-06-10 17:58:46.584 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mvUAip3Wb[0;39m <==        Row: 1
+2021-06-10 17:58:46.584 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mvUAip3Wb[0;39m <==      Total: 1
+2021-06-10 17:58:46.584 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mvUAip3Wb[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 17:58:46.585 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mvUAip3Wb[0;39m ==> Parameters: 5(Integer)
+2021-06-10 17:58:46.586 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mvUAip3Wb[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 17:58:46.587 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mvUAip3Wb[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 17:58:46.587 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mvUAip3Wb[0;39m <==      Total: 1
+2021-06-10 17:58:46.588 INFO  com.company.server.config.LogAspect               :110  [32mvUAip3Wb[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 17:58:46.588 INFO  com.company.server.config.LogAspect               :111  [32mvUAip3Wb[0;39m ------------- 结束 耗时：8 ms -------------
+2021-06-10 17:58:47.594 INFO  com.company.server.config.LogAspect               :77   [32m3tezXhsG[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 17:58:47.595 INFO  com.company.server.config.LogAspect               :78   [32m3tezXhsG[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 17:58:47.595 INFO  com.company.server.config.LogAspect               :79   [32m3tezXhsG[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 17:58:47.595 INFO  com.company.server.config.LogAspect               :80   [32m3tezXhsG[0;39m 远程地址: 172.22.32.90
+2021-06-10 17:58:47.595 INFO  com.company.server.config.LogAspect               :98   [32m3tezXhsG[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 17:58:47.596 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m3tezXhsG[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 17:58:47.596 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m3tezXhsG[0;39m ==> Parameters: 
+2021-06-10 17:58:47.599 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m3tezXhsG[0;39m <==    Columns: count(0)
+2021-06-10 17:58:47.599 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m3tezXhsG[0;39m <==        Row: 1
+2021-06-10 17:58:47.599 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m3tezXhsG[0;39m <==      Total: 1
+2021-06-10 17:58:47.599 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m3tezXhsG[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 17:58:47.599 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m3tezXhsG[0;39m ==> Parameters: 5(Integer)
+2021-06-10 17:58:47.600 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m3tezXhsG[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 17:58:47.601 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m3tezXhsG[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 17:58:47.602 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m3tezXhsG[0;39m <==      Total: 1
+2021-06-10 17:58:47.603 INFO  com.company.server.config.LogAspect               :110  [32m3tezXhsG[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 17:58:47.603 INFO  com.company.server.config.LogAspect               :111  [32m3tezXhsG[0;39m ------------- 结束 耗时：9 ms -------------
+2021-06-10 17:59:12.710 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 18:00:32.898 INFO  com.company.server.config.LogAspect               :77   [32mfcgql9Wr[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:00:32.899 INFO  com.company.server.config.LogAspect               :78   [32mfcgql9Wr[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:00:32.899 INFO  com.company.server.config.LogAspect               :79   [32mfcgql9Wr[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:00:32.899 INFO  com.company.server.config.LogAspect               :80   [32mfcgql9Wr[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:00:32.899 INFO  com.company.server.config.LogAspect               :98   [32mfcgql9Wr[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:00:32.901 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32mfcgql9Wr[0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 105300
+2021-06-10 18:00:32.918 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mfcgql9Wr[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:00:32.918 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mfcgql9Wr[0;39m ==> Parameters: 
+2021-06-10 18:00:32.920 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mfcgql9Wr[0;39m <==    Columns: count(0)
+2021-06-10 18:00:32.921 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mfcgql9Wr[0;39m <==        Row: 1
+2021-06-10 18:00:32.921 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mfcgql9Wr[0;39m <==      Total: 1
+2021-06-10 18:00:32.922 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mfcgql9Wr[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:00:32.922 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mfcgql9Wr[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:00:32.923 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mfcgql9Wr[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:00:32.923 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mfcgql9Wr[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:00:32.924 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mfcgql9Wr[0;39m <==      Total: 1
+2021-06-10 18:00:32.925 INFO  com.company.server.config.LogAspect               :110  [32mfcgql9Wr[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:00:32.925 INFO  com.company.server.config.LogAspect               :111  [32mfcgql9Wr[0;39m ------------- 结束 耗时：27 ms -------------
+2021-06-10 18:01:16.700 INFO  com.company.server.config.LogAspect               :77   [32m9FVUWi6X[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:01:16.701 INFO  com.company.server.config.LogAspect               :78   [32m9FVUWi6X[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:01:16.701 INFO  com.company.server.config.LogAspect               :79   [32m9FVUWi6X[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:01:16.701 INFO  com.company.server.config.LogAspect               :80   [32m9FVUWi6X[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:01:16.701 INFO  com.company.server.config.LogAspect               :98   [32m9FVUWi6X[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:01:16.702 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m9FVUWi6X[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:01:16.703 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m9FVUWi6X[0;39m ==> Parameters: 
+2021-06-10 18:01:16.704 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m9FVUWi6X[0;39m <==    Columns: count(0)
+2021-06-10 18:01:16.705 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m9FVUWi6X[0;39m <==        Row: 1
+2021-06-10 18:01:16.706 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m9FVUWi6X[0;39m <==      Total: 1
+2021-06-10 18:01:16.706 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m9FVUWi6X[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:01:16.706 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m9FVUWi6X[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:01:16.708 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m9FVUWi6X[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:01:16.708 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m9FVUWi6X[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:01:16.709 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m9FVUWi6X[0;39m <==      Total: 1
+2021-06-10 18:01:16.709 INFO  com.company.server.config.LogAspect               :110  [32m9FVUWi6X[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:01:16.710 INFO  com.company.server.config.LogAspect               :111  [32m9FVUWi6X[0;39m ------------- 结束 耗时：10 ms -------------
+2021-06-10 18:02:29.248 INFO  com.company.server.config.LogAspect               :77   [32mCi9oZnL5[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:02:29.249 INFO  com.company.server.config.LogAspect               :78   [32mCi9oZnL5[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:02:29.249 INFO  com.company.server.config.LogAspect               :79   [32mCi9oZnL5[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:02:29.249 INFO  com.company.server.config.LogAspect               :80   [32mCi9oZnL5[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:02:29.250 INFO  com.company.server.config.LogAspect               :98   [32mCi9oZnL5[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:02:29.251 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32mCi9oZnL5[0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 72543
+2021-06-10 18:02:29.271 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mCi9oZnL5[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:02:29.271 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mCi9oZnL5[0;39m ==> Parameters: 
+2021-06-10 18:02:29.274 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mCi9oZnL5[0;39m <==    Columns: count(0)
+2021-06-10 18:02:29.274 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mCi9oZnL5[0;39m <==        Row: 1
+2021-06-10 18:02:29.274 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mCi9oZnL5[0;39m <==      Total: 1
+2021-06-10 18:02:29.275 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mCi9oZnL5[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:02:29.275 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mCi9oZnL5[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:02:29.276 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mCi9oZnL5[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:02:29.276 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mCi9oZnL5[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:02:29.277 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mCi9oZnL5[0;39m <==      Total: 1
+2021-06-10 18:02:29.278 INFO  com.company.server.config.LogAspect               :110  [32mCi9oZnL5[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:02:29.278 INFO  com.company.server.config.LogAspect               :111  [32mCi9oZnL5[0;39m ------------- 结束 耗时：30 ms -------------
+2021-06-10 18:03:50.070 INFO  com.company.server.config.LogAspect               :77   [32mOgjzVbms[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:03:50.070 INFO  com.company.server.config.LogAspect               :78   [32mOgjzVbms[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:03:50.070 INFO  com.company.server.config.LogAspect               :79   [32mOgjzVbms[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:03:50.070 INFO  com.company.server.config.LogAspect               :80   [32mOgjzVbms[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:03:50.070 INFO  com.company.server.config.LogAspect               :98   [32mOgjzVbms[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:03:50.072 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32mOgjzVbms[0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 80796
+2021-06-10 18:03:50.089 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mOgjzVbms[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:03:50.090 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mOgjzVbms[0;39m ==> Parameters: 
+2021-06-10 18:03:50.093 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mOgjzVbms[0;39m <==    Columns: count(0)
+2021-06-10 18:03:50.093 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mOgjzVbms[0;39m <==        Row: 1
+2021-06-10 18:03:50.094 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mOgjzVbms[0;39m <==      Total: 1
+2021-06-10 18:03:50.094 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mOgjzVbms[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:03:50.095 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mOgjzVbms[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:03:50.096 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mOgjzVbms[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:03:50.097 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mOgjzVbms[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:03:50.097 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mOgjzVbms[0;39m <==      Total: 1
+2021-06-10 18:03:50.098 INFO  com.company.server.config.LogAspect               :110  [32mOgjzVbms[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:03:50.098 INFO  com.company.server.config.LogAspect               :111  [32mOgjzVbms[0;39m ------------- 结束 耗时：28 ms -------------
+2021-06-10 18:04:12.723 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 18:05:07.618 INFO  com.company.server.config.LogAspect               :77   [32mYIFln8Sg[0;39m ------------- 【大章】查询开始 -------------
+2021-06-10 18:05:07.618 INFO  com.company.server.config.LogAspect               :78   [32mYIFln8Sg[0;39m 请求地址: http://172.22.32.90:9002/business/admin/chapter/list POST
+2021-06-10 18:05:07.618 INFO  com.company.server.config.LogAspect               :79   [32mYIFln8Sg[0;39m 类名方法: com.company.business.controller.admin.ChapterController.list
+2021-06-10 18:05:07.618 INFO  com.company.server.config.LogAspect               :80   [32mYIFln8Sg[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:05:07.619 INFO  com.company.server.config.LogAspect               :98   [32mYIFln8Sg[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:05:07.621 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32mYIFln8Sg[0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 77524
+2021-06-10 18:05:07.641 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mYIFln8Sg[0;39m ==>  Preparing: SELECT count(0) FROM chapter
+2021-06-10 18:05:07.642 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mYIFln8Sg[0;39m ==> Parameters: 
+2021-06-10 18:05:07.647 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mYIFln8Sg[0;39m <==    Columns: count(0)
+2021-06-10 18:05:07.648 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mYIFln8Sg[0;39m <==        Row: 10
+2021-06-10 18:05:07.648 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mYIFln8Sg[0;39m <==      Total: 1
+2021-06-10 18:05:07.648 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mYIFln8Sg[0;39m ==>  Preparing: select id, course_id, name from chapter LIMIT ?
+2021-06-10 18:05:07.649 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mYIFln8Sg[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:05:07.649 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mYIFln8Sg[0;39m <==    Columns: id, course_id, name
+2021-06-10 18:05:07.649 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mYIFln8Sg[0;39m <==        Row: jcUNOtPO, 12, test
+2021-06-10 18:05:07.650 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mYIFln8Sg[0;39m <==        Row: JnoEDBAk, 444, 章001
+2021-06-10 18:05:07.650 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mYIFln8Sg[0;39m <==        Row: kHrEATME, 456, 测试
+2021-06-10 18:05:07.650 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mYIFln8Sg[0;39m <==        Row: lr75Ik8n, 444, nnnnnnn
+2021-06-10 18:05:07.650 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mYIFln8Sg[0;39m <==        Row: mEEpwSGW, 123, test
+2021-06-10 18:05:07.651 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mYIFln8Sg[0;39m <==      Total: 5
+2021-06-10 18:05:07.651 INFO  com.company.server.config.LogAspect               :110  [32mYIFln8Sg[0;39m 返回结果: {"content":{"list":[{"courseId":"12","id":"jcUNOtPO","name":"test"},{"courseId":"444","id":"JnoEDBAk","name":"章001"},{"courseId":"456","id":"kHrEATME","name":"测试"},{"courseId":"444","id":"lr75Ik8n","name":"nnnnnnn"},{"courseId":"123","id":"mEEpwSGW","name":"test"}],"page":1,"size":5,"total":10},"success":true}
+2021-06-10 18:05:07.651 INFO  com.company.server.config.LogAspect               :111  [32mYIFln8Sg[0;39m ------------- 结束 耗时：33 ms -------------
+2021-06-10 18:05:08.421 INFO  com.company.server.config.LogAspect               :77   [32mirP3cg2k[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:05:08.421 INFO  com.company.server.config.LogAspect               :78   [32mirP3cg2k[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:05:08.422 INFO  com.company.server.config.LogAspect               :79   [32mirP3cg2k[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:05:08.422 INFO  com.company.server.config.LogAspect               :80   [32mirP3cg2k[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:05:08.422 INFO  com.company.server.config.LogAspect               :98   [32mirP3cg2k[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:05:08.423 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mirP3cg2k[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:05:08.423 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mirP3cg2k[0;39m ==> Parameters: 
+2021-06-10 18:05:08.425 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mirP3cg2k[0;39m <==    Columns: count(0)
+2021-06-10 18:05:08.425 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mirP3cg2k[0;39m <==        Row: 1
+2021-06-10 18:05:08.426 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mirP3cg2k[0;39m <==      Total: 1
+2021-06-10 18:05:08.427 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mirP3cg2k[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:05:08.427 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mirP3cg2k[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:05:08.429 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mirP3cg2k[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:05:08.429 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mirP3cg2k[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:05:08.430 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mirP3cg2k[0;39m <==      Total: 1
+2021-06-10 18:05:08.431 INFO  com.company.server.config.LogAspect               :110  [32mirP3cg2k[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:05:08.431 INFO  com.company.server.config.LogAspect               :111  [32mirP3cg2k[0;39m ------------- 结束 耗时：10 ms -------------
+2021-06-10 18:06:01.480 INFO  com.company.server.config.LogAspect               :77   [32mXrifXSqN[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:06:01.480 INFO  com.company.server.config.LogAspect               :78   [32mXrifXSqN[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:06:01.481 INFO  com.company.server.config.LogAspect               :79   [32mXrifXSqN[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:06:01.481 INFO  com.company.server.config.LogAspect               :80   [32mXrifXSqN[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:06:01.481 INFO  com.company.server.config.LogAspect               :98   [32mXrifXSqN[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:06:01.482 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mXrifXSqN[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:06:01.482 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mXrifXSqN[0;39m ==> Parameters: 
+2021-06-10 18:06:01.484 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mXrifXSqN[0;39m <==    Columns: count(0)
+2021-06-10 18:06:01.484 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mXrifXSqN[0;39m <==        Row: 1
+2021-06-10 18:06:01.484 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mXrifXSqN[0;39m <==      Total: 1
+2021-06-10 18:06:01.485 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mXrifXSqN[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:06:01.485 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mXrifXSqN[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:06:01.486 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mXrifXSqN[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:06:01.486 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mXrifXSqN[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:06:01.486 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mXrifXSqN[0;39m <==      Total: 1
+2021-06-10 18:06:01.487 INFO  com.company.server.config.LogAspect               :110  [32mXrifXSqN[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:06:01.487 INFO  com.company.server.config.LogAspect               :111  [32mXrifXSqN[0;39m ------------- 结束 耗时：7 ms -------------
+2021-06-10 18:06:31.201 INFO  com.company.server.config.LogAspect               :77   [32mUjd0VhPH[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:06:31.202 INFO  com.company.server.config.LogAspect               :78   [32mUjd0VhPH[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:06:31.202 INFO  com.company.server.config.LogAspect               :79   [32mUjd0VhPH[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:06:31.202 INFO  com.company.server.config.LogAspect               :80   [32mUjd0VhPH[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:06:31.203 INFO  com.company.server.config.LogAspect               :98   [32mUjd0VhPH[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:06:31.204 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mUjd0VhPH[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:06:31.205 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mUjd0VhPH[0;39m ==> Parameters: 
+2021-06-10 18:06:31.207 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mUjd0VhPH[0;39m <==    Columns: count(0)
+2021-06-10 18:06:31.207 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mUjd0VhPH[0;39m <==        Row: 1
+2021-06-10 18:06:31.207 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mUjd0VhPH[0;39m <==      Total: 1
+2021-06-10 18:06:31.208 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mUjd0VhPH[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:06:31.209 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mUjd0VhPH[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:06:31.210 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mUjd0VhPH[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:06:31.210 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mUjd0VhPH[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:06:31.210 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mUjd0VhPH[0;39m <==      Total: 1
+2021-06-10 18:06:31.211 INFO  com.company.server.config.LogAspect               :110  [32mUjd0VhPH[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:06:31.211 INFO  com.company.server.config.LogAspect               :111  [32mUjd0VhPH[0;39m ------------- 结束 耗时：10 ms -------------
+2021-06-10 18:07:50.678 INFO  com.company.server.config.LogAspect               :77   [32mbYFp0Bmy[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:07:50.678 INFO  com.company.server.config.LogAspect               :78   [32mbYFp0Bmy[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:07:50.679 INFO  com.company.server.config.LogAspect               :79   [32mbYFp0Bmy[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:07:50.679 INFO  com.company.server.config.LogAspect               :80   [32mbYFp0Bmy[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:07:50.679 INFO  com.company.server.config.LogAspect               :98   [32mbYFp0Bmy[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:07:50.682 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32mbYFp0Bmy[0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 79471
+2021-06-10 18:07:50.706 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mbYFp0Bmy[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:07:50.706 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mbYFp0Bmy[0;39m ==> Parameters: 
+2021-06-10 18:07:50.710 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mbYFp0Bmy[0;39m <==    Columns: count(0)
+2021-06-10 18:07:50.710 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mbYFp0Bmy[0;39m <==        Row: 1
+2021-06-10 18:07:50.710 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mbYFp0Bmy[0;39m <==      Total: 1
+2021-06-10 18:07:50.711 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mbYFp0Bmy[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:07:50.711 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mbYFp0Bmy[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:07:50.712 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mbYFp0Bmy[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:07:50.712 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mbYFp0Bmy[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:07:50.713 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mbYFp0Bmy[0;39m <==      Total: 1
+2021-06-10 18:07:50.713 INFO  com.company.server.config.LogAspect               :110  [32mbYFp0Bmy[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:07:50.713 INFO  com.company.server.config.LogAspect               :111  [32mbYFp0Bmy[0;39m ------------- 结束 耗时：35 ms -------------
+2021-06-10 18:07:51.738 INFO  com.company.server.config.LogAspect               :77   [32masmpK1hT[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:07:51.738 INFO  com.company.server.config.LogAspect               :78   [32masmpK1hT[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:07:51.738 INFO  com.company.server.config.LogAspect               :79   [32masmpK1hT[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:07:51.739 INFO  com.company.server.config.LogAspect               :80   [32masmpK1hT[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:07:51.739 INFO  com.company.server.config.LogAspect               :98   [32masmpK1hT[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:07:51.740 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32masmpK1hT[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:07:51.741 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32masmpK1hT[0;39m ==> Parameters: 
+2021-06-10 18:07:51.742 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32masmpK1hT[0;39m <==    Columns: count(0)
+2021-06-10 18:07:51.743 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32masmpK1hT[0;39m <==        Row: 1
+2021-06-10 18:07:51.743 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32masmpK1hT[0;39m <==      Total: 1
+2021-06-10 18:07:51.744 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32masmpK1hT[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:07:51.745 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32masmpK1hT[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:07:51.746 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32masmpK1hT[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:07:51.747 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32masmpK1hT[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:07:51.747 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32masmpK1hT[0;39m <==      Total: 1
+2021-06-10 18:07:51.748 INFO  com.company.server.config.LogAspect               :110  [32masmpK1hT[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:07:51.748 INFO  com.company.server.config.LogAspect               :111  [32masmpK1hT[0;39m ------------- 结束 耗时：10 ms -------------
+2021-06-10 18:07:59.347 INFO  com.company.server.config.LogAspect               :77   [32my62kSrAt[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:07:59.347 INFO  com.company.server.config.LogAspect               :78   [32my62kSrAt[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:07:59.347 INFO  com.company.server.config.LogAspect               :79   [32my62kSrAt[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:07:59.347 INFO  com.company.server.config.LogAspect               :80   [32my62kSrAt[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:07:59.348 INFO  com.company.server.config.LogAspect               :98   [32my62kSrAt[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:07:59.349 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32my62kSrAt[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:07:59.349 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32my62kSrAt[0;39m ==> Parameters: 
+2021-06-10 18:07:59.350 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32my62kSrAt[0;39m <==    Columns: count(0)
+2021-06-10 18:07:59.351 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32my62kSrAt[0;39m <==        Row: 1
+2021-06-10 18:07:59.351 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32my62kSrAt[0;39m <==      Total: 1
+2021-06-10 18:07:59.351 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32my62kSrAt[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:07:59.352 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32my62kSrAt[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:07:59.353 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32my62kSrAt[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:07:59.353 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32my62kSrAt[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:07:59.353 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32my62kSrAt[0;39m <==      Total: 1
+2021-06-10 18:07:59.354 INFO  com.company.server.config.LogAspect               :110  [32my62kSrAt[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:07:59.354 INFO  com.company.server.config.LogAspect               :111  [32my62kSrAt[0;39m ------------- 结束 耗时：7 ms -------------
+2021-06-10 18:08:00.061 INFO  com.company.server.config.LogAspect               :77   [32my1bp2hz8[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:08:00.062 INFO  com.company.server.config.LogAspect               :78   [32my1bp2hz8[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:08:00.062 INFO  com.company.server.config.LogAspect               :79   [32my1bp2hz8[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:08:00.062 INFO  com.company.server.config.LogAspect               :80   [32my1bp2hz8[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:08:00.062 INFO  com.company.server.config.LogAspect               :98   [32my1bp2hz8[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:08:00.063 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32my1bp2hz8[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:08:00.063 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32my1bp2hz8[0;39m ==> Parameters: 
+2021-06-10 18:08:00.065 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32my1bp2hz8[0;39m <==    Columns: count(0)
+2021-06-10 18:08:00.065 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32my1bp2hz8[0;39m <==        Row: 1
+2021-06-10 18:08:00.065 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32my1bp2hz8[0;39m <==      Total: 1
+2021-06-10 18:08:00.066 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32my1bp2hz8[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:08:00.066 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32my1bp2hz8[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:08:00.067 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32my1bp2hz8[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:08:00.068 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32my1bp2hz8[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:08:00.068 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32my1bp2hz8[0;39m <==      Total: 1
+2021-06-10 18:08:00.068 INFO  com.company.server.config.LogAspect               :110  [32my1bp2hz8[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:08:00.068 INFO  com.company.server.config.LogAspect               :111  [32my1bp2hz8[0;39m ------------- 结束 耗时：7 ms -------------
+2021-06-10 18:08:00.235 INFO  com.company.server.config.LogAspect               :77   [32mWNeLXQzQ[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:08:00.236 INFO  com.company.server.config.LogAspect               :78   [32mWNeLXQzQ[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:08:00.236 INFO  com.company.server.config.LogAspect               :79   [32mWNeLXQzQ[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:08:00.236 INFO  com.company.server.config.LogAspect               :80   [32mWNeLXQzQ[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:08:00.236 INFO  com.company.server.config.LogAspect               :98   [32mWNeLXQzQ[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:08:00.237 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mWNeLXQzQ[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:08:00.237 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mWNeLXQzQ[0;39m ==> Parameters: 
+2021-06-10 18:08:00.238 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mWNeLXQzQ[0;39m <==    Columns: count(0)
+2021-06-10 18:08:00.239 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mWNeLXQzQ[0;39m <==        Row: 1
+2021-06-10 18:08:00.239 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mWNeLXQzQ[0;39m <==      Total: 1
+2021-06-10 18:08:00.239 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mWNeLXQzQ[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:08:00.240 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mWNeLXQzQ[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:08:00.241 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mWNeLXQzQ[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:08:00.242 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mWNeLXQzQ[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:08:00.242 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mWNeLXQzQ[0;39m <==      Total: 1
+2021-06-10 18:08:00.243 INFO  com.company.server.config.LogAspect               :110  [32mWNeLXQzQ[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:08:00.244 INFO  com.company.server.config.LogAspect               :111  [32mWNeLXQzQ[0;39m ------------- 结束 耗时：9 ms -------------
+2021-06-10 18:08:06.190 INFO  com.company.server.config.LogAspect               :77   [32mqpJf28Ca[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:08:06.190 INFO  com.company.server.config.LogAspect               :78   [32mqpJf28Ca[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:08:06.190 INFO  com.company.server.config.LogAspect               :79   [32mqpJf28Ca[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:08:06.190 INFO  com.company.server.config.LogAspect               :80   [32mqpJf28Ca[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:08:06.191 INFO  com.company.server.config.LogAspect               :98   [32mqpJf28Ca[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:08:06.191 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mqpJf28Ca[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:08:06.192 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mqpJf28Ca[0;39m ==> Parameters: 
+2021-06-10 18:08:06.193 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mqpJf28Ca[0;39m <==    Columns: count(0)
+2021-06-10 18:08:06.193 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mqpJf28Ca[0;39m <==        Row: 1
+2021-06-10 18:08:06.194 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mqpJf28Ca[0;39m <==      Total: 1
+2021-06-10 18:08:06.194 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mqpJf28Ca[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:08:06.194 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mqpJf28Ca[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:08:06.195 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mqpJf28Ca[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:08:06.195 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mqpJf28Ca[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:08:06.196 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mqpJf28Ca[0;39m <==      Total: 1
+2021-06-10 18:08:06.196 INFO  com.company.server.config.LogAspect               :110  [32mqpJf28Ca[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:08:06.196 INFO  com.company.server.config.LogAspect               :111  [32mqpJf28Ca[0;39m ------------- 结束 耗时：6 ms -------------
+2021-06-10 18:08:08.007 INFO  com.company.server.config.LogAspect               :77   [32m5PlPmOJH[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:08:08.007 INFO  com.company.server.config.LogAspect               :78   [32m5PlPmOJH[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:08:08.007 INFO  com.company.server.config.LogAspect               :79   [32m5PlPmOJH[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:08:08.008 INFO  com.company.server.config.LogAspect               :80   [32m5PlPmOJH[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:08:08.008 INFO  com.company.server.config.LogAspect               :98   [32m5PlPmOJH[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:08:08.009 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m5PlPmOJH[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:08:08.009 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m5PlPmOJH[0;39m ==> Parameters: 
+2021-06-10 18:08:08.011 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m5PlPmOJH[0;39m <==    Columns: count(0)
+2021-06-10 18:08:08.011 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m5PlPmOJH[0;39m <==        Row: 1
+2021-06-10 18:08:08.011 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m5PlPmOJH[0;39m <==      Total: 1
+2021-06-10 18:08:08.011 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m5PlPmOJH[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:08:08.012 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m5PlPmOJH[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:08:08.013 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m5PlPmOJH[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:08:08.014 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m5PlPmOJH[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:08:08.015 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m5PlPmOJH[0;39m <==      Total: 1
+2021-06-10 18:08:08.015 INFO  com.company.server.config.LogAspect               :110  [32m5PlPmOJH[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:08:08.016 INFO  com.company.server.config.LogAspect               :111  [32m5PlPmOJH[0;39m ------------- 结束 耗时：9 ms -------------
+2021-06-10 18:08:21.949 INFO  com.company.server.config.LogAspect               :77   [32m2ABijhKQ[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:08:21.950 INFO  com.company.server.config.LogAspect               :78   [32m2ABijhKQ[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:08:21.950 INFO  com.company.server.config.LogAspect               :79   [32m2ABijhKQ[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:08:21.950 INFO  com.company.server.config.LogAspect               :80   [32m2ABijhKQ[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:08:21.951 INFO  com.company.server.config.LogAspect               :98   [32m2ABijhKQ[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:08:21.952 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m2ABijhKQ[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:08:21.953 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m2ABijhKQ[0;39m ==> Parameters: 
+2021-06-10 18:08:21.955 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m2ABijhKQ[0;39m <==    Columns: count(0)
+2021-06-10 18:08:21.955 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m2ABijhKQ[0;39m <==        Row: 1
+2021-06-10 18:08:21.956 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m2ABijhKQ[0;39m <==      Total: 1
+2021-06-10 18:08:21.957 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m2ABijhKQ[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:08:21.957 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m2ABijhKQ[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:08:21.959 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m2ABijhKQ[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:08:21.959 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m2ABijhKQ[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:08:21.960 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m2ABijhKQ[0;39m <==      Total: 1
+2021-06-10 18:08:21.961 INFO  com.company.server.config.LogAspect               :110  [32m2ABijhKQ[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:08:21.961 INFO  com.company.server.config.LogAspect               :111  [32m2ABijhKQ[0;39m ------------- 结束 耗时：12 ms -------------
+2021-06-10 18:09:03.900 INFO  com.company.server.config.LogAspect               :77   [32mMBHXANFE[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:09:03.900 INFO  com.company.server.config.LogAspect               :78   [32mMBHXANFE[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:09:03.900 INFO  com.company.server.config.LogAspect               :79   [32mMBHXANFE[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:09:03.900 INFO  com.company.server.config.LogAspect               :80   [32mMBHXANFE[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:09:03.900 INFO  com.company.server.config.LogAspect               :98   [32mMBHXANFE[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:09:03.901 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mMBHXANFE[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:09:03.902 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mMBHXANFE[0;39m ==> Parameters: 
+2021-06-10 18:09:03.904 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mMBHXANFE[0;39m <==    Columns: count(0)
+2021-06-10 18:09:03.904 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mMBHXANFE[0;39m <==        Row: 1
+2021-06-10 18:09:03.905 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mMBHXANFE[0;39m <==      Total: 1
+2021-06-10 18:09:03.905 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mMBHXANFE[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:09:03.905 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mMBHXANFE[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:09:03.906 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mMBHXANFE[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:09:03.907 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mMBHXANFE[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:09:03.907 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mMBHXANFE[0;39m <==      Total: 1
+2021-06-10 18:09:03.908 INFO  com.company.server.config.LogAspect               :110  [32mMBHXANFE[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:09:03.908 INFO  com.company.server.config.LogAspect               :111  [32mMBHXANFE[0;39m ------------- 结束 耗时：8 ms -------------
+2021-06-10 18:09:04.732 INFO  com.company.server.config.LogAspect               :77   [32m8KrZefpH[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:09:04.732 INFO  com.company.server.config.LogAspect               :78   [32m8KrZefpH[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:09:04.732 INFO  com.company.server.config.LogAspect               :79   [32m8KrZefpH[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:09:04.733 INFO  com.company.server.config.LogAspect               :80   [32m8KrZefpH[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:09:04.733 INFO  com.company.server.config.LogAspect               :98   [32m8KrZefpH[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:09:04.734 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m8KrZefpH[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:09:04.734 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m8KrZefpH[0;39m ==> Parameters: 
+2021-06-10 18:09:04.737 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m8KrZefpH[0;39m <==    Columns: count(0)
+2021-06-10 18:09:04.737 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m8KrZefpH[0;39m <==        Row: 1
+2021-06-10 18:09:04.737 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m8KrZefpH[0;39m <==      Total: 1
+2021-06-10 18:09:04.738 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m8KrZefpH[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:09:04.738 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m8KrZefpH[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:09:04.739 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m8KrZefpH[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:09:04.739 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m8KrZefpH[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:09:04.740 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m8KrZefpH[0;39m <==      Total: 1
+2021-06-10 18:09:04.741 INFO  com.company.server.config.LogAspect               :110  [32m8KrZefpH[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:09:04.741 INFO  com.company.server.config.LogAspect               :111  [32m8KrZefpH[0;39m ------------- 结束 耗时：9 ms -------------
+2021-06-10 18:09:04.920 INFO  com.company.server.config.LogAspect               :77   [32mHh1fLQM7[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:09:04.920 INFO  com.company.server.config.LogAspect               :78   [32mHh1fLQM7[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:09:04.920 INFO  com.company.server.config.LogAspect               :79   [32mHh1fLQM7[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:09:04.920 INFO  com.company.server.config.LogAspect               :80   [32mHh1fLQM7[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:09:04.921 INFO  com.company.server.config.LogAspect               :98   [32mHh1fLQM7[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:09:04.922 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mHh1fLQM7[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:09:04.922 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mHh1fLQM7[0;39m ==> Parameters: 
+2021-06-10 18:09:04.924 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mHh1fLQM7[0;39m <==    Columns: count(0)
+2021-06-10 18:09:04.924 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mHh1fLQM7[0;39m <==        Row: 1
+2021-06-10 18:09:04.925 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mHh1fLQM7[0;39m <==      Total: 1
+2021-06-10 18:09:04.925 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mHh1fLQM7[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:09:04.925 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mHh1fLQM7[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:09:04.926 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mHh1fLQM7[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:09:04.926 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mHh1fLQM7[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:09:04.927 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mHh1fLQM7[0;39m <==      Total: 1
+2021-06-10 18:09:04.927 INFO  com.company.server.config.LogAspect               :110  [32mHh1fLQM7[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:09:04.928 INFO  com.company.server.config.LogAspect               :111  [32mHh1fLQM7[0;39m ------------- 结束 耗时：9 ms -------------
+2021-06-10 18:09:05.091 INFO  com.company.server.config.LogAspect               :77   [32m0TAG797q[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:09:05.092 INFO  com.company.server.config.LogAspect               :78   [32m0TAG797q[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:09:05.092 INFO  com.company.server.config.LogAspect               :79   [32m0TAG797q[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:09:05.092 INFO  com.company.server.config.LogAspect               :80   [32m0TAG797q[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:09:05.092 INFO  com.company.server.config.LogAspect               :98   [32m0TAG797q[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:09:05.093 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m0TAG797q[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:09:05.093 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m0TAG797q[0;39m ==> Parameters: 
+2021-06-10 18:09:05.094 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m0TAG797q[0;39m <==    Columns: count(0)
+2021-06-10 18:09:05.095 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m0TAG797q[0;39m <==        Row: 1
+2021-06-10 18:09:05.095 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m0TAG797q[0;39m <==      Total: 1
+2021-06-10 18:09:05.095 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m0TAG797q[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:09:05.096 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m0TAG797q[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:09:05.097 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m0TAG797q[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:09:05.097 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m0TAG797q[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:09:05.097 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m0TAG797q[0;39m <==      Total: 1
+2021-06-10 18:09:05.098 INFO  com.company.server.config.LogAspect               :110  [32m0TAG797q[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:09:05.098 INFO  com.company.server.config.LogAspect               :111  [32m0TAG797q[0;39m ------------- 结束 耗时：7 ms -------------
+2021-06-10 18:09:05.271 INFO  com.company.server.config.LogAspect               :77   [32moOrzX1HC[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:09:05.272 INFO  com.company.server.config.LogAspect               :78   [32moOrzX1HC[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:09:05.272 INFO  com.company.server.config.LogAspect               :79   [32moOrzX1HC[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:09:05.272 INFO  com.company.server.config.LogAspect               :80   [32moOrzX1HC[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:09:05.272 INFO  com.company.server.config.LogAspect               :98   [32moOrzX1HC[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:09:05.274 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32moOrzX1HC[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:09:05.275 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32moOrzX1HC[0;39m ==> Parameters: 
+2021-06-10 18:09:05.276 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32moOrzX1HC[0;39m <==    Columns: count(0)
+2021-06-10 18:09:05.276 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32moOrzX1HC[0;39m <==        Row: 1
+2021-06-10 18:09:05.277 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32moOrzX1HC[0;39m <==      Total: 1
+2021-06-10 18:09:05.277 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32moOrzX1HC[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:09:05.277 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32moOrzX1HC[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:09:05.278 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32moOrzX1HC[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:09:05.278 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32moOrzX1HC[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:09:05.279 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32moOrzX1HC[0;39m <==      Total: 1
+2021-06-10 18:09:05.279 INFO  com.company.server.config.LogAspect               :110  [32moOrzX1HC[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:09:05.279 INFO  com.company.server.config.LogAspect               :111  [32moOrzX1HC[0;39m ------------- 结束 耗时：8 ms -------------
+2021-06-10 18:09:05.460 INFO  com.company.server.config.LogAspect               :77   [32mVeYosDSg[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:09:05.460 INFO  com.company.server.config.LogAspect               :78   [32mVeYosDSg[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:09:05.460 INFO  com.company.server.config.LogAspect               :79   [32mVeYosDSg[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:09:05.460 INFO  com.company.server.config.LogAspect               :80   [32mVeYosDSg[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:09:05.460 INFO  com.company.server.config.LogAspect               :98   [32mVeYosDSg[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:09:05.461 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mVeYosDSg[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:09:05.461 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mVeYosDSg[0;39m ==> Parameters: 
+2021-06-10 18:09:05.463 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mVeYosDSg[0;39m <==    Columns: count(0)
+2021-06-10 18:09:05.463 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mVeYosDSg[0;39m <==        Row: 1
+2021-06-10 18:09:05.463 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mVeYosDSg[0;39m <==      Total: 1
+2021-06-10 18:09:05.463 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mVeYosDSg[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:09:05.464 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mVeYosDSg[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:09:05.465 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mVeYosDSg[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:09:05.465 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mVeYosDSg[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:09:05.465 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mVeYosDSg[0;39m <==      Total: 1
+2021-06-10 18:09:05.466 INFO  com.company.server.config.LogAspect               :110  [32mVeYosDSg[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:09:05.466 INFO  com.company.server.config.LogAspect               :111  [32mVeYosDSg[0;39m ------------- 结束 耗时：6 ms -------------
+2021-06-10 18:09:05.643 INFO  com.company.server.config.LogAspect               :77   [32musqfYoiD[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:09:05.643 INFO  com.company.server.config.LogAspect               :78   [32musqfYoiD[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:09:05.643 INFO  com.company.server.config.LogAspect               :79   [32musqfYoiD[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:09:05.643 INFO  com.company.server.config.LogAspect               :80   [32musqfYoiD[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:09:05.643 INFO  com.company.server.config.LogAspect               :98   [32musqfYoiD[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:09:05.644 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32musqfYoiD[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:09:05.645 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32musqfYoiD[0;39m ==> Parameters: 
+2021-06-10 18:09:05.646 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32musqfYoiD[0;39m <==    Columns: count(0)
+2021-06-10 18:09:05.647 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32musqfYoiD[0;39m <==        Row: 1
+2021-06-10 18:09:05.647 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32musqfYoiD[0;39m <==      Total: 1
+2021-06-10 18:09:05.647 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32musqfYoiD[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:09:05.648 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32musqfYoiD[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:09:05.649 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32musqfYoiD[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:09:05.649 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32musqfYoiD[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:09:05.650 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32musqfYoiD[0;39m <==      Total: 1
+2021-06-10 18:09:05.650 INFO  com.company.server.config.LogAspect               :110  [32musqfYoiD[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:09:05.650 INFO  com.company.server.config.LogAspect               :111  [32musqfYoiD[0;39m ------------- 结束 耗时：7 ms -------------
+2021-06-10 18:09:06.015 INFO  com.company.server.config.LogAspect               :77   [32mFxgaAcFU[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:09:06.016 INFO  com.company.server.config.LogAspect               :78   [32mFxgaAcFU[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:09:06.016 INFO  com.company.server.config.LogAspect               :79   [32mFxgaAcFU[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:09:06.016 INFO  com.company.server.config.LogAspect               :80   [32mFxgaAcFU[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:09:06.016 INFO  com.company.server.config.LogAspect               :98   [32mFxgaAcFU[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:09:06.017 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mFxgaAcFU[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:09:06.018 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mFxgaAcFU[0;39m ==> Parameters: 
+2021-06-10 18:09:06.019 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mFxgaAcFU[0;39m <==    Columns: count(0)
+2021-06-10 18:09:06.020 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mFxgaAcFU[0;39m <==        Row: 1
+2021-06-10 18:09:06.020 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mFxgaAcFU[0;39m <==      Total: 1
+2021-06-10 18:09:06.020 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mFxgaAcFU[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:09:06.021 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mFxgaAcFU[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:09:06.022 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mFxgaAcFU[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:09:06.022 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mFxgaAcFU[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:09:06.022 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mFxgaAcFU[0;39m <==      Total: 1
+2021-06-10 18:09:06.023 INFO  com.company.server.config.LogAspect               :110  [32mFxgaAcFU[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:09:06.023 INFO  com.company.server.config.LogAspect               :111  [32mFxgaAcFU[0;39m ------------- 结束 耗时：8 ms -------------
+2021-06-10 18:09:12.735 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 18:09:33.263 INFO  com.company.server.config.LogAspect               :77   [32mSswZro6S[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:09:33.263 INFO  com.company.server.config.LogAspect               :78   [32mSswZro6S[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:09:33.263 INFO  com.company.server.config.LogAspect               :79   [32mSswZro6S[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:09:33.264 INFO  com.company.server.config.LogAspect               :80   [32mSswZro6S[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:09:33.264 INFO  com.company.server.config.LogAspect               :98   [32mSswZro6S[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:09:33.265 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mSswZro6S[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:09:33.266 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mSswZro6S[0;39m ==> Parameters: 
+2021-06-10 18:09:33.268 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mSswZro6S[0;39m <==    Columns: count(0)
+2021-06-10 18:09:33.268 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mSswZro6S[0;39m <==        Row: 1
+2021-06-10 18:09:33.268 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mSswZro6S[0;39m <==      Total: 1
+2021-06-10 18:09:33.269 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mSswZro6S[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:09:33.269 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mSswZro6S[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:09:33.270 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mSswZro6S[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:09:33.271 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mSswZro6S[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 16:23:57.227, null
+2021-06-10 18:09:33.271 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mSswZro6S[0;39m <==      Total: 1
+2021-06-10 18:09:33.271 INFO  com.company.server.config.LogAspect               :110  [32mSswZro6S[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437227}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:09:33.272 INFO  com.company.server.config.LogAspect               :111  [32mSswZro6S[0;39m ------------- 结束 耗时：9 ms -------------
+2021-06-10 18:11:36.338 INFO  com.company.server.config.LogAspect               :77   [32mvu5n053r[0;39m ------------- 【课程表】保存开始 -------------
+2021-06-10 18:11:36.338 INFO  com.company.server.config.LogAspect               :78   [32mvu5n053r[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/save POST
+2021-06-10 18:11:36.338 INFO  com.company.server.config.LogAspect               :79   [32mvu5n053r[0;39m 类名方法: com.company.business.controller.admin.CourseController.save
+2021-06-10 18:11:36.338 INFO  com.company.server.config.LogAspect               :80   [32mvu5n053r[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:11:36.339 INFO  com.company.server.config.LogAspect               :98   [32mvu5n053r[0;39m 请求参数: [{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q","level":"1","name":"测试课程01","price":19.9,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437000}]
+2021-06-10 18:11:36.340 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32mvu5n053r[0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 123070
+2021-06-10 18:11:36.355 DEBUG c.c.server.mapper.CourseMapper.updateByPrimaryKey :137  [32mvu5n053r[0;39m ==>  Preparing: update course set name = ?, summary = ?, time = ?, price = ?, image = ?, level = ?, charge = ?, status = ?, enroll = ?, sort = ?, created_at = ?, updated_at = ?, teacher_id = ? where id = ?
+2021-06-10 18:11:36.356 DEBUG c.c.server.mapper.CourseMapper.updateByPrimaryKey :137  [32mvu5n053r[0;39m ==> Parameters: 测试课程01(String), 这是一门测试课程(String), 7200(Integer), 19.9(BigDecimal), https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q(String), 1(String), C(String), P(String), 100(Integer), 0(Integer), 2021-06-10 16:08:29.0(Timestamp), 2021-06-10 18:11:36.339(Timestamp), null, 00000001(String)
+2021-06-10 18:11:36.546 DEBUG c.c.server.mapper.CourseMapper.updateByPrimaryKey :137  [32mvu5n053r[0;39m <==    Updates: 1
+2021-06-10 18:11:36.547 INFO  com.company.server.config.LogAspect               :110  [32mvu5n053r[0;39m 返回结果: {"content":{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q","level":"1","name":"测试课程01","price":19.9,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623313437000},"success":true}
+2021-06-10 18:11:36.547 INFO  com.company.server.config.LogAspect               :111  [32mvu5n053r[0;39m ------------- 结束 耗时：209 ms -------------
+2021-06-10 18:11:36.577 INFO  com.company.server.config.LogAspect               :77   [32mB0RC1hD7[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:11:36.577 INFO  com.company.server.config.LogAspect               :78   [32mB0RC1hD7[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:11:36.578 INFO  com.company.server.config.LogAspect               :79   [32mB0RC1hD7[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:11:36.578 INFO  com.company.server.config.LogAspect               :80   [32mB0RC1hD7[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:11:36.578 INFO  com.company.server.config.LogAspect               :98   [32mB0RC1hD7[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:11:36.579 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mB0RC1hD7[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:11:36.580 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mB0RC1hD7[0;39m ==> Parameters: 
+2021-06-10 18:11:36.582 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mB0RC1hD7[0;39m <==    Columns: count(0)
+2021-06-10 18:11:36.582 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mB0RC1hD7[0;39m <==        Row: 1
+2021-06-10 18:11:36.582 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mB0RC1hD7[0;39m <==      Total: 1
+2021-06-10 18:11:36.582 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mB0RC1hD7[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:11:36.583 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mB0RC1hD7[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:11:36.584 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mB0RC1hD7[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:11:36.584 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mB0RC1hD7[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q, 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 18:11:36.339, null
+2021-06-10 18:11:36.584 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mB0RC1hD7[0;39m <==      Total: 1
+2021-06-10 18:11:36.585 INFO  com.company.server.config.LogAspect               :110  [32mB0RC1hD7[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623319896339}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:11:36.585 INFO  com.company.server.config.LogAspect               :111  [32mB0RC1hD7[0;39m ------------- 结束 耗时：8 ms -------------
+2021-06-10 18:11:39.777 INFO  com.company.server.config.LogAspect               :77   [32mY9AflAdA[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:11:39.777 INFO  com.company.server.config.LogAspect               :78   [32mY9AflAdA[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:11:39.777 INFO  com.company.server.config.LogAspect               :79   [32mY9AflAdA[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:11:39.777 INFO  com.company.server.config.LogAspect               :80   [32mY9AflAdA[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:11:39.777 INFO  com.company.server.config.LogAspect               :98   [32mY9AflAdA[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:11:39.778 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mY9AflAdA[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:11:39.779 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mY9AflAdA[0;39m ==> Parameters: 
+2021-06-10 18:11:39.781 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mY9AflAdA[0;39m <==    Columns: count(0)
+2021-06-10 18:11:39.781 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mY9AflAdA[0;39m <==        Row: 1
+2021-06-10 18:11:39.782 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mY9AflAdA[0;39m <==      Total: 1
+2021-06-10 18:11:39.782 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mY9AflAdA[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:11:39.783 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mY9AflAdA[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:11:39.785 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mY9AflAdA[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:11:39.785 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mY9AflAdA[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q, 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 18:11:36.339, null
+2021-06-10 18:11:39.786 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mY9AflAdA[0;39m <==      Total: 1
+2021-06-10 18:11:39.786 INFO  com.company.server.config.LogAspect               :110  [32mY9AflAdA[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623319896339}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:11:39.786 INFO  com.company.server.config.LogAspect               :111  [32mY9AflAdA[0;39m ------------- 结束 耗时：9 ms -------------
+2021-06-10 18:11:58.561 INFO  com.company.server.config.LogAspect               :77   [32mesBghxpM[0;39m ------------- 【课程表】保存开始 -------------
+2021-06-10 18:11:58.561 INFO  com.company.server.config.LogAspect               :78   [32mesBghxpM[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/save POST
+2021-06-10 18:11:58.561 INFO  com.company.server.config.LogAspect               :79   [32mesBghxpM[0;39m 类名方法: com.company.business.controller.admin.CourseController.save
+2021-06-10 18:11:58.561 INFO  com.company.server.config.LogAspect               :80   [32mesBghxpM[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:11:58.561 INFO  com.company.server.config.LogAspect               :98   [32mesBghxpM[0;39m 请求参数: [{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.9,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623319896000}]
+2021-06-10 18:11:58.561 DEBUG c.c.server.mapper.CourseMapper.updateByPrimaryKey :137  [32mesBghxpM[0;39m ==>  Preparing: update course set name = ?, summary = ?, time = ?, price = ?, image = ?, level = ?, charge = ?, status = ?, enroll = ?, sort = ?, created_at = ?, updated_at = ?, teacher_id = ? where id = ?
+2021-06-10 18:11:58.563 DEBUG c.c.server.mapper.CourseMapper.updateByPrimaryKey :137  [32mesBghxpM[0;39m ==> Parameters: 测试课程01(String), 这是一门测试课程(String), 7200(Integer), 19.9(BigDecimal), (String), 1(String), C(String), P(String), 100(Integer), 0(Integer), 2021-06-10 16:08:29.0(Timestamp), 2021-06-10 18:11:58.561(Timestamp), null, 00000001(String)
+2021-06-10 18:11:58.660 DEBUG c.c.server.mapper.CourseMapper.updateByPrimaryKey :137  [32mesBghxpM[0;39m <==    Updates: 1
+2021-06-10 18:11:58.661 INFO  com.company.server.config.LogAspect               :110  [32mesBghxpM[0;39m 返回结果: {"content":{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.9,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623319896000},"success":true}
+2021-06-10 18:11:58.661 INFO  com.company.server.config.LogAspect               :111  [32mesBghxpM[0;39m ------------- 结束 耗时：100 ms -------------
+2021-06-10 18:11:58.691 INFO  com.company.server.config.LogAspect               :77   [32mseHSvT1d[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:11:58.691 INFO  com.company.server.config.LogAspect               :78   [32mseHSvT1d[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:11:58.691 INFO  com.company.server.config.LogAspect               :79   [32mseHSvT1d[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:11:58.691 INFO  com.company.server.config.LogAspect               :80   [32mseHSvT1d[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:11:58.692 INFO  com.company.server.config.LogAspect               :98   [32mseHSvT1d[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:11:58.692 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mseHSvT1d[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:11:58.693 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mseHSvT1d[0;39m ==> Parameters: 
+2021-06-10 18:11:58.694 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mseHSvT1d[0;39m <==    Columns: count(0)
+2021-06-10 18:11:58.695 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mseHSvT1d[0;39m <==        Row: 1
+2021-06-10 18:11:58.695 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mseHSvT1d[0;39m <==      Total: 1
+2021-06-10 18:11:58.695 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mseHSvT1d[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:11:58.696 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mseHSvT1d[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:11:58.697 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mseHSvT1d[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:11:58.697 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mseHSvT1d[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 18:11:58.561, null
+2021-06-10 18:11:58.697 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mseHSvT1d[0;39m <==      Total: 1
+2021-06-10 18:11:58.698 INFO  com.company.server.config.LogAspect               :110  [32mseHSvT1d[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623319918561}],"page":1,"size":5,"total":1},"success":true}
+2021-06-10 18:11:58.698 INFO  com.company.server.config.LogAspect               :111  [32mseHSvT1d[0;39m ------------- 结束 耗时：7 ms -------------
+2021-06-10 18:12:06.718 INFO  com.company.server.config.LogAspect               :77   [32mGxKKMrDb[0;39m ------------- 【课程表】保存开始 -------------
+2021-06-10 18:12:06.719 INFO  com.company.server.config.LogAspect               :78   [32mGxKKMrDb[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/save POST
+2021-06-10 18:12:06.719 INFO  com.company.server.config.LogAspect               :79   [32mGxKKMrDb[0;39m 类名方法: com.company.business.controller.admin.CourseController.save
+2021-06-10 18:12:06.719 INFO  com.company.server.config.LogAspect               :80   [32mGxKKMrDb[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:12:06.719 INFO  com.company.server.config.LogAspect               :98   [32mGxKKMrDb[0;39m 请求参数: [{"name":"02"}]
+2021-06-10 18:12:06.720 DEBUG com.company.server.mapper.CourseMapper.insert     :137  [32mGxKKMrDb[0;39m ==>  Preparing: insert into course (id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2021-06-10 18:12:06.721 DEBUG com.company.server.mapper.CourseMapper.insert     :137  [32mGxKKMrDb[0;39m ==> Parameters: x4DBLnpR(String), 02(String), null, null, null, null, null, null, null, null, null, 2021-06-10 18:12:06.719(Timestamp), 2021-06-10 18:12:06.719(Timestamp), null
+2021-06-10 18:12:06.795 DEBUG com.company.server.mapper.CourseMapper.insert     :137  [32mGxKKMrDb[0;39m <==    Updates: 1
+2021-06-10 18:12:06.796 INFO  com.company.server.config.LogAspect               :110  [32mGxKKMrDb[0;39m 返回结果: {"content":{"name":"02"},"success":true}
+2021-06-10 18:12:06.796 INFO  com.company.server.config.LogAspect               :111  [32mGxKKMrDb[0;39m ------------- 结束 耗时：78 ms -------------
+2021-06-10 18:12:06.817 INFO  com.company.server.config.LogAspect               :77   [32m8nf2hI93[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:12:06.817 INFO  com.company.server.config.LogAspect               :78   [32m8nf2hI93[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:12:06.817 INFO  com.company.server.config.LogAspect               :79   [32m8nf2hI93[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:12:06.818 INFO  com.company.server.config.LogAspect               :80   [32m8nf2hI93[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:12:06.818 INFO  com.company.server.config.LogAspect               :98   [32m8nf2hI93[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:12:06.818 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m8nf2hI93[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:12:06.819 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m8nf2hI93[0;39m ==> Parameters: 
+2021-06-10 18:12:06.821 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m8nf2hI93[0;39m <==    Columns: count(0)
+2021-06-10 18:12:06.822 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m8nf2hI93[0;39m <==        Row: 2
+2021-06-10 18:12:06.823 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m8nf2hI93[0;39m <==      Total: 1
+2021-06-10 18:12:06.824 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m8nf2hI93[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:12:06.824 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m8nf2hI93[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:12:06.825 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m8nf2hI93[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:12:06.826 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m8nf2hI93[0;39m <==        Row: x4DBLnpR, 02, null, null, null, null, null, null, null, null, null, 2021-06-10 18:12:06.719, 2021-06-10 18:12:06.719, null
+2021-06-10 18:12:06.827 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m8nf2hI93[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 18:11:58.561, null
+2021-06-10 18:12:06.828 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m8nf2hI93[0;39m <==      Total: 2
+2021-06-10 18:12:06.828 INFO  com.company.server.config.LogAspect               :110  [32m8nf2hI93[0;39m 返回结果: {"content":{"list":[{"createdAt":1623319926719,"id":"x4DBLnpR","name":"02","updatedAt":1623319926719},{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623319918561}],"page":1,"size":5,"total":2},"success":true}
+2021-06-10 18:12:06.829 INFO  com.company.server.config.LogAspect               :111  [32m8nf2hI93[0;39m ------------- 结束 耗时：12 ms -------------
+2021-06-10 18:13:52.872 INFO  com.company.server.config.LogAspect               :77   [32mD3awMHyd[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:13:52.872 INFO  com.company.server.config.LogAspect               :78   [32mD3awMHyd[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:13:52.872 INFO  com.company.server.config.LogAspect               :79   [32mD3awMHyd[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:13:52.872 INFO  com.company.server.config.LogAspect               :80   [32mD3awMHyd[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:13:52.873 INFO  com.company.server.config.LogAspect               :98   [32mD3awMHyd[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:13:52.874 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32mD3awMHyd[0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 106049
+2021-06-10 18:13:52.893 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mD3awMHyd[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:13:52.894 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mD3awMHyd[0;39m ==> Parameters: 
+2021-06-10 18:13:52.897 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mD3awMHyd[0;39m <==    Columns: count(0)
+2021-06-10 18:13:52.897 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mD3awMHyd[0;39m <==        Row: 2
+2021-06-10 18:13:52.897 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mD3awMHyd[0;39m <==      Total: 1
+2021-06-10 18:13:52.898 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mD3awMHyd[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:13:52.898 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mD3awMHyd[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:13:52.900 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mD3awMHyd[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:13:52.900 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mD3awMHyd[0;39m <==        Row: x4DBLnpR, 02, null, null, null, null, null, null, null, null, null, 2021-06-10 18:12:06.719, 2021-06-10 18:12:06.719, null
+2021-06-10 18:13:52.901 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mD3awMHyd[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 18:11:58.561, null
+2021-06-10 18:13:52.902 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mD3awMHyd[0;39m <==      Total: 2
+2021-06-10 18:13:52.902 INFO  com.company.server.config.LogAspect               :110  [32mD3awMHyd[0;39m 返回结果: {"content":{"list":[{"createdAt":1623319926719,"id":"x4DBLnpR","name":"02","updatedAt":1623319926719},{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623319918561}],"page":1,"size":5,"total":2},"success":true}
+2021-06-10 18:13:52.902 INFO  com.company.server.config.LogAspect               :111  [32mD3awMHyd[0;39m ------------- 结束 耗时：30 ms -------------
+2021-06-10 18:13:54.714 INFO  com.company.server.config.LogAspect               :77   [32meNttmAmW[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:13:54.714 INFO  com.company.server.config.LogAspect               :78   [32meNttmAmW[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:13:54.714 INFO  com.company.server.config.LogAspect               :79   [32meNttmAmW[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:13:54.715 INFO  com.company.server.config.LogAspect               :80   [32meNttmAmW[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:13:54.715 INFO  com.company.server.config.LogAspect               :98   [32meNttmAmW[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:13:54.717 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32meNttmAmW[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:13:54.717 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32meNttmAmW[0;39m ==> Parameters: 
+2021-06-10 18:13:54.719 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32meNttmAmW[0;39m <==    Columns: count(0)
+2021-06-10 18:13:54.719 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32meNttmAmW[0;39m <==        Row: 2
+2021-06-10 18:13:54.719 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32meNttmAmW[0;39m <==      Total: 1
+2021-06-10 18:13:54.720 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32meNttmAmW[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:13:54.720 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32meNttmAmW[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:13:54.721 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32meNttmAmW[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:13:54.722 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32meNttmAmW[0;39m <==        Row: x4DBLnpR, 02, null, null, null, null, null, null, null, null, null, 2021-06-10 18:12:06.719, 2021-06-10 18:12:06.719, null
+2021-06-10 18:13:54.723 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32meNttmAmW[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 18:11:58.561, null
+2021-06-10 18:13:54.723 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32meNttmAmW[0;39m <==      Total: 2
+2021-06-10 18:13:54.723 INFO  com.company.server.config.LogAspect               :110  [32meNttmAmW[0;39m 返回结果: {"content":{"list":[{"createdAt":1623319926719,"id":"x4DBLnpR","name":"02","updatedAt":1623319926719},{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623319918561}],"page":1,"size":5,"total":2},"success":true}
+2021-06-10 18:13:54.724 INFO  com.company.server.config.LogAspect               :111  [32meNttmAmW[0;39m ------------- 结束 耗时：10 ms -------------
+2021-06-10 18:14:01.665 INFO  com.company.server.config.LogAspect               :77   [32m3nfzsIAh[0;39m ------------- 【课程表】保存开始 -------------
+2021-06-10 18:14:01.665 INFO  com.company.server.config.LogAspect               :78   [32m3nfzsIAh[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/save POST
+2021-06-10 18:14:01.665 INFO  com.company.server.config.LogAspect               :79   [32m3nfzsIAh[0;39m 类名方法: com.company.business.controller.admin.CourseController.save
+2021-06-10 18:14:01.665 INFO  com.company.server.config.LogAspect               :80   [32m3nfzsIAh[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:14:01.665 INFO  com.company.server.config.LogAspect               :98   [32m3nfzsIAh[0;39m 请求参数: [{"createdAt":1623319926000,"id":"x4DBLnpR","image":"https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q","name":"02","updatedAt":1623319926000}]
+2021-06-10 18:14:01.666 DEBUG c.c.server.mapper.CourseMapper.updateByPrimaryKey :137  [32m3nfzsIAh[0;39m ==>  Preparing: update course set name = ?, summary = ?, time = ?, price = ?, image = ?, level = ?, charge = ?, status = ?, enroll = ?, sort = ?, created_at = ?, updated_at = ?, teacher_id = ? where id = ?
+2021-06-10 18:14:01.666 DEBUG c.c.server.mapper.CourseMapper.updateByPrimaryKey :137  [32m3nfzsIAh[0;39m ==> Parameters: 02(String), null, null, null, https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q(String), null, null, null, null, null, 2021-06-10 18:12:06.0(Timestamp), 2021-06-10 18:14:01.665(Timestamp), null, x4DBLnpR(String)
+2021-06-10 18:14:01.832 DEBUG c.c.server.mapper.CourseMapper.updateByPrimaryKey :137  [32m3nfzsIAh[0;39m <==    Updates: 1
+2021-06-10 18:14:01.833 INFO  com.company.server.config.LogAspect               :110  [32m3nfzsIAh[0;39m 返回结果: {"content":{"createdAt":1623319926000,"id":"x4DBLnpR","image":"https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q","name":"02","updatedAt":1623319926000},"success":true}
+2021-06-10 18:14:01.833 INFO  com.company.server.config.LogAspect               :111  [32m3nfzsIAh[0;39m ------------- 结束 耗时：169 ms -------------
+2021-06-10 18:14:01.856 INFO  com.company.server.config.LogAspect               :77   [32m4zHvZPns[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:14:01.856 INFO  com.company.server.config.LogAspect               :78   [32m4zHvZPns[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:14:01.856 INFO  com.company.server.config.LogAspect               :79   [32m4zHvZPns[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:14:01.856 INFO  com.company.server.config.LogAspect               :80   [32m4zHvZPns[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:14:01.857 INFO  com.company.server.config.LogAspect               :98   [32m4zHvZPns[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:14:01.857 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m4zHvZPns[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:14:01.858 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m4zHvZPns[0;39m ==> Parameters: 
+2021-06-10 18:14:01.860 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m4zHvZPns[0;39m <==    Columns: count(0)
+2021-06-10 18:14:01.860 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32m4zHvZPns[0;39m <==        Row: 2
+2021-06-10 18:14:01.860 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32m4zHvZPns[0;39m <==      Total: 1
+2021-06-10 18:14:01.861 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m4zHvZPns[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:14:01.861 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m4zHvZPns[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:14:01.862 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m4zHvZPns[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:14:01.862 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m4zHvZPns[0;39m <==        Row: x4DBLnpR, 02, null, null, null, https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q, null, null, null, null, null, 2021-06-10 18:12:06, 2021-06-10 18:14:01.665, null
+2021-06-10 18:14:01.863 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32m4zHvZPns[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 18:11:58.561, null
+2021-06-10 18:14:01.863 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32m4zHvZPns[0;39m <==      Total: 2
+2021-06-10 18:14:01.864 INFO  com.company.server.config.LogAspect               :110  [32m4zHvZPns[0;39m 返回结果: {"content":{"list":[{"createdAt":1623319926000,"id":"x4DBLnpR","image":"https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q","name":"02","updatedAt":1623320041665},{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623319918561}],"page":1,"size":5,"total":2},"success":true}
+2021-06-10 18:14:01.864 INFO  com.company.server.config.LogAspect               :111  [32m4zHvZPns[0;39m ------------- 结束 耗时：8 ms -------------
+2021-06-10 18:14:12.747 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 18:14:35.627 INFO  com.company.server.config.LogAspect               :77   [32mGFBvM2fd[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:14:35.627 INFO  com.company.server.config.LogAspect               :78   [32mGFBvM2fd[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:14:35.627 INFO  com.company.server.config.LogAspect               :79   [32mGFBvM2fd[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:14:35.627 INFO  com.company.server.config.LogAspect               :80   [32mGFBvM2fd[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:14:35.627 INFO  com.company.server.config.LogAspect               :98   [32mGFBvM2fd[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:14:35.628 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mGFBvM2fd[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:14:35.628 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mGFBvM2fd[0;39m ==> Parameters: 
+2021-06-10 18:14:35.630 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mGFBvM2fd[0;39m <==    Columns: count(0)
+2021-06-10 18:14:35.631 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mGFBvM2fd[0;39m <==        Row: 2
+2021-06-10 18:14:35.631 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mGFBvM2fd[0;39m <==      Total: 1
+2021-06-10 18:14:35.631 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mGFBvM2fd[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:14:35.632 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mGFBvM2fd[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:14:35.633 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mGFBvM2fd[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:14:35.633 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mGFBvM2fd[0;39m <==        Row: x4DBLnpR, 02, null, null, null, https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q, null, null, null, null, null, 2021-06-10 18:12:06, 2021-06-10 18:14:01.665, null
+2021-06-10 18:14:35.633 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mGFBvM2fd[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 18:11:58.561, null
+2021-06-10 18:14:35.634 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mGFBvM2fd[0;39m <==      Total: 2
+2021-06-10 18:14:35.634 INFO  com.company.server.config.LogAspect               :110  [32mGFBvM2fd[0;39m 返回结果: {"content":{"list":[{"createdAt":1623319926000,"id":"x4DBLnpR","image":"https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q","name":"02","updatedAt":1623320041665},{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623319918561}],"page":1,"size":5,"total":2},"success":true}
+2021-06-10 18:14:35.634 INFO  com.company.server.config.LogAspect               :111  [32mGFBvM2fd[0;39m ------------- 结束 耗时：7 ms -------------
+2021-06-10 18:18:08.295 INFO  com.company.server.config.LogAspect               :77   [32mUHaQSkYz[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:18:08.295 INFO  com.company.server.config.LogAspect               :78   [32mUHaQSkYz[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:18:08.296 INFO  com.company.server.config.LogAspect               :79   [32mUHaQSkYz[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:18:08.296 INFO  com.company.server.config.LogAspect               :80   [32mUHaQSkYz[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:18:08.296 INFO  com.company.server.config.LogAspect               :98   [32mUHaQSkYz[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:18:08.298 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32mUHaQSkYz[0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 212666
+2021-06-10 18:18:08.320 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mUHaQSkYz[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:18:08.321 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mUHaQSkYz[0;39m ==> Parameters: 
+2021-06-10 18:18:08.323 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mUHaQSkYz[0;39m <==    Columns: count(0)
+2021-06-10 18:18:08.324 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mUHaQSkYz[0;39m <==        Row: 2
+2021-06-10 18:18:08.324 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mUHaQSkYz[0;39m <==      Total: 1
+2021-06-10 18:18:08.325 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mUHaQSkYz[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:18:08.326 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mUHaQSkYz[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:18:08.329 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mUHaQSkYz[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:18:08.329 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mUHaQSkYz[0;39m <==        Row: x4DBLnpR, 02, null, null, null, https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q, null, null, null, null, null, 2021-06-10 18:12:06, 2021-06-10 18:14:01.665, null
+2021-06-10 18:18:08.330 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mUHaQSkYz[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 18:11:58.561, null
+2021-06-10 18:18:08.331 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mUHaQSkYz[0;39m <==      Total: 2
+2021-06-10 18:18:08.332 INFO  com.company.server.config.LogAspect               :110  [32mUHaQSkYz[0;39m 返回结果: {"content":{"list":[{"createdAt":1623319926000,"id":"x4DBLnpR","image":"https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q","name":"02","updatedAt":1623320041665},{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623319918561}],"page":1,"size":5,"total":2},"success":true}
+2021-06-10 18:18:08.332 INFO  com.company.server.config.LogAspect               :111  [32mUHaQSkYz[0;39m ------------- 结束 耗时：37 ms -------------
+2021-06-10 18:19:12.755 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 18:21:16.556 INFO  com.company.server.config.LogAspect               :77   [32mgciP7QRQ[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:21:16.557 INFO  com.company.server.config.LogAspect               :78   [32mgciP7QRQ[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:21:16.557 INFO  com.company.server.config.LogAspect               :79   [32mgciP7QRQ[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:21:16.557 INFO  com.company.server.config.LogAspect               :80   [32mgciP7QRQ[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:21:16.557 INFO  com.company.server.config.LogAspect               :98   [32mgciP7QRQ[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:21:16.559 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32mgciP7QRQ[0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 188231
+2021-06-10 18:21:16.576 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mgciP7QRQ[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:21:16.576 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mgciP7QRQ[0;39m ==> Parameters: 
+2021-06-10 18:21:16.579 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mgciP7QRQ[0;39m <==    Columns: count(0)
+2021-06-10 18:21:16.579 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mgciP7QRQ[0;39m <==        Row: 2
+2021-06-10 18:21:16.580 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mgciP7QRQ[0;39m <==      Total: 1
+2021-06-10 18:21:16.581 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mgciP7QRQ[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:21:16.582 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mgciP7QRQ[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:21:16.583 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mgciP7QRQ[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:21:16.583 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mgciP7QRQ[0;39m <==        Row: x4DBLnpR, 02, null, null, null, https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q, null, null, null, null, null, 2021-06-10 18:12:06, 2021-06-10 18:14:01.665, null
+2021-06-10 18:21:16.584 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mgciP7QRQ[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 18:11:58.561, null
+2021-06-10 18:21:16.585 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mgciP7QRQ[0;39m <==      Total: 2
+2021-06-10 18:21:16.586 INFO  com.company.server.config.LogAspect               :110  [32mgciP7QRQ[0;39m 返回结果: {"content":{"list":[{"createdAt":1623319926000,"id":"x4DBLnpR","image":"https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q","name":"02","updatedAt":1623320041665},{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623319918561}],"page":1,"size":5,"total":2},"success":true}
+2021-06-10 18:21:16.586 INFO  com.company.server.config.LogAspect               :111  [32mgciP7QRQ[0;39m ------------- 结束 耗时：30 ms -------------
+2021-06-10 18:24:07.532 INFO  com.company.server.config.LogAspect               :77   [32mCo5Cy7mg[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:24:07.533 INFO  com.company.server.config.LogAspect               :78   [32mCo5Cy7mg[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:24:07.533 INFO  com.company.server.config.LogAspect               :79   [32mCo5Cy7mg[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:24:07.533 INFO  com.company.server.config.LogAspect               :80   [32mCo5Cy7mg[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:24:07.533 INFO  com.company.server.config.LogAspect               :98   [32mCo5Cy7mg[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:24:07.535 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32mCo5Cy7mg[0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 170952
+2021-06-10 18:24:07.551 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mCo5Cy7mg[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:24:07.551 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mCo5Cy7mg[0;39m ==> Parameters: 
+2021-06-10 18:24:07.553 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mCo5Cy7mg[0;39m <==    Columns: count(0)
+2021-06-10 18:24:07.553 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mCo5Cy7mg[0;39m <==        Row: 2
+2021-06-10 18:24:07.554 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mCo5Cy7mg[0;39m <==      Total: 1
+2021-06-10 18:24:07.554 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mCo5Cy7mg[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:24:07.554 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mCo5Cy7mg[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:24:07.555 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mCo5Cy7mg[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:24:07.555 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mCo5Cy7mg[0;39m <==        Row: x4DBLnpR, 02, null, null, null, https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q, null, null, null, null, null, 2021-06-10 18:12:06, 2021-06-10 18:14:01.665, null
+2021-06-10 18:24:07.556 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mCo5Cy7mg[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 18:11:58.561, null
+2021-06-10 18:24:07.556 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mCo5Cy7mg[0;39m <==      Total: 2
+2021-06-10 18:24:07.557 INFO  com.company.server.config.LogAspect               :110  [32mCo5Cy7mg[0;39m 返回结果: {"content":{"list":[{"createdAt":1623319926000,"id":"x4DBLnpR","image":"https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q","name":"02","updatedAt":1623320041665},{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623319918561}],"page":1,"size":5,"total":2},"success":true}
+2021-06-10 18:24:07.557 INFO  com.company.server.config.LogAspect               :111  [32mCo5Cy7mg[0;39m ------------- 结束 耗时：25 ms -------------
+2021-06-10 18:24:12.766 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-10 18:26:52.218 INFO  com.company.server.config.LogAspect               :77   [32mzW9AGnYw[0;39m ------------- 【课程表】保存开始 -------------
+2021-06-10 18:26:52.218 INFO  com.company.server.config.LogAspect               :78   [32mzW9AGnYw[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/save POST
+2021-06-10 18:26:52.218 INFO  com.company.server.config.LogAspect               :79   [32mzW9AGnYw[0;39m 类名方法: com.company.business.controller.admin.CourseController.save
+2021-06-10 18:26:52.218 INFO  com.company.server.config.LogAspect               :80   [32mzW9AGnYw[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:26:52.219 INFO  com.company.server.config.LogAspect               :98   [32mzW9AGnYw[0;39m 请求参数: [{"createdAt":1623319926000,"id":"x4DBLnpR","image":"https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q","name":"02","summary":"5","updatedAt":1623320041000}]
+2021-06-10 18:26:52.220 WARN  com.alibaba.druid.pool.DruidAbstractDataSource    :1489 [32mzW9AGnYw[0;39m discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/mooc, version : 1.2.5, lastPacketReceivedIdleMillis : 164665
+2021-06-10 18:26:52.236 DEBUG c.c.server.mapper.CourseMapper.updateByPrimaryKey :137  [32mzW9AGnYw[0;39m ==>  Preparing: update course set name = ?, summary = ?, time = ?, price = ?, image = ?, level = ?, charge = ?, status = ?, enroll = ?, sort = ?, created_at = ?, updated_at = ?, teacher_id = ? where id = ?
+2021-06-10 18:26:52.237 DEBUG c.c.server.mapper.CourseMapper.updateByPrimaryKey :137  [32mzW9AGnYw[0;39m ==> Parameters: 02(String), 5(String), null, null, https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q(String), null, null, null, null, null, 2021-06-10 18:12:06.0(Timestamp), 2021-06-10 18:26:52.219(Timestamp), null, x4DBLnpR(String)
+2021-06-10 18:26:53.179 DEBUG c.c.server.mapper.CourseMapper.updateByPrimaryKey :137  [32mzW9AGnYw[0;39m <==    Updates: 1
+2021-06-10 18:26:53.179 INFO  com.company.server.config.LogAspect               :110  [32mzW9AGnYw[0;39m 返回结果: {"content":{"createdAt":1623319926000,"id":"x4DBLnpR","image":"https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q","name":"02","summary":"5","updatedAt":1623320041000},"success":true}
+2021-06-10 18:26:53.180 INFO  com.company.server.config.LogAspect               :111  [32mzW9AGnYw[0;39m ------------- 结束 耗时：962 ms -------------
+2021-06-10 18:26:53.204 INFO  com.company.server.config.LogAspect               :77   [32mN9aDucyG[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-10 18:26:53.204 INFO  com.company.server.config.LogAspect               :78   [32mN9aDucyG[0;39m 请求地址: http://172.22.32.90:9002/business/admin/course/list POST
+2021-06-10 18:26:53.205 INFO  com.company.server.config.LogAspect               :79   [32mN9aDucyG[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-10 18:26:53.205 INFO  com.company.server.config.LogAspect               :80   [32mN9aDucyG[0;39m 远程地址: 172.22.32.90
+2021-06-10 18:26:53.205 INFO  com.company.server.config.LogAspect               :98   [32mN9aDucyG[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-10 18:26:53.206 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mN9aDucyG[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-10 18:26:53.207 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mN9aDucyG[0;39m ==> Parameters: 
+2021-06-10 18:26:53.208 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mN9aDucyG[0;39m <==    Columns: count(0)
+2021-06-10 18:26:53.209 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mN9aDucyG[0;39m <==        Row: 2
+2021-06-10 18:26:53.209 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mN9aDucyG[0;39m <==      Total: 1
+2021-06-10 18:26:53.209 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mN9aDucyG[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-10 18:26:53.210 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mN9aDucyG[0;39m ==> Parameters: 5(Integer)
+2021-06-10 18:26:53.211 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mN9aDucyG[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-10 18:26:53.212 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mN9aDucyG[0;39m <==        Row: x4DBLnpR, 02, 5, null, null, https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q, null, null, null, null, null, 2021-06-10 18:12:06, 2021-06-10 18:26:52.219, null
+2021-06-10 18:26:53.212 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mN9aDucyG[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 7200, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 18:11:58.561, null
+2021-06-10 18:26:53.212 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mN9aDucyG[0;39m <==      Total: 2
+2021-06-10 18:26:53.213 INFO  com.company.server.config.LogAspect               :110  [32mN9aDucyG[0;39m 返回结果: {"content":{"list":[{"createdAt":1623319926000,"id":"x4DBLnpR","image":"https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q","name":"02","summary":"5","updatedAt":1623320812219},{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":7200,"updatedAt":1623319918561}],"page":1,"size":5,"total":2},"success":true}
+2021-06-10 18:26:53.213 INFO  com.company.server.config.LogAspect               :111  [32mN9aDucyG[0;39m ------------- 结束 耗时：9 ms -------------
