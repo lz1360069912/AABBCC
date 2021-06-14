@@ -40,7 +40,7 @@
               &nbsp;
               <span class="badge badge-info">排序：{{ course.sort }}</span>
               &nbsp;
-              <span class="badge badge-info">时长：{{ course.time }}</span>
+              <span class="badge badge-info">时长：{{ course.time | formatSecond }}</span>
             </p>
             <p>
               <button v-on:click="toChapter(course)" class="btn btn-white btn-xs btn-info btn-round">
