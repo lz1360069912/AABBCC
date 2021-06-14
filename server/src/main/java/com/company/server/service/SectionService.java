@@ -23,6 +23,12 @@ public class SectionService {
     @Autowired
     private SectionMapper sectionMapper;
 
+    @Autowired
+    private CourseService courseService;
+
+    @Autowired
+    private ChapterService chapterService;
+
     /**
      * 列表查询
      * @param sectionPageDto
@@ -56,6 +62,9 @@ public class SectionService {
         } else {
             this.update(section);
         }
+
+        courseService.updateTime(section.getCourseId());
+        chapterService.updateTime(section.getChapterId());
     }
 
     /**

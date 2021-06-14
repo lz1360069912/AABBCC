@@ -47,11 +47,11 @@
         <td>{{ section.sort }}</td>
         <td>
           <div class="btn-group">
-            <button v-on:click="edit(section)" class="btn btn-xs btn-info">
-              <i class="ace-icon fa fa-pencil bigger-120"></i>
-            </button>
-            <button v-on:click="del(section.id)" class="btn btn-xs btn-danger ">
-              <i class="ace-icon fa fa-trash-o bigger-120"></i>
+            <button v-on:click="edit(section)" class="btn btn-white btn-xs btn-info btn-round">
+              编辑
+            </button>&nbsp;
+            <button v-on:click="del(section.id)" class="btn btn-white btn-xs btn-warning btn-round">
+              删除
             </button>
           </div>
         </td>

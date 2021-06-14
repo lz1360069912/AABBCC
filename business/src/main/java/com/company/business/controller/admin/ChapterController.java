@@ -1,7 +1,7 @@
 package com.company.business.controller.admin;
 
 import com.company.server.dto.ChapterDto;
-import com.company.server.dto.ChapterPageDto;
+import com.company.server.dto.PageDto;
 import com.company.server.dto.ResponseDto;
 import com.company.server.service.ChapterService;
 import com.company.server.util.ValidatorUtil;
@@ -20,16 +20,14 @@ public class ChapterController {
 
     /**
      * 列表查询
-     * @param chapterPageDto
+     * @param pageDto
      * @return
      */
     @PostMapping("/list")
-    //@RequestBody接收流数据
-    public ResponseDto list(@RequestBody ChapterPageDto chapterPageDto) {
+    public ResponseDto list(@RequestBody PageDto pageDto) {
         ResponseDto responseDto = new ResponseDto();
-        ValidatorUtil.require(chapterPageDto.getCourseId(), "课程ID");
-        chapterService.list(chapterPageDto);
-        responseDto.setContent(chapterPageDto);
+        chapterService.list(pageDto);
+        responseDto.setContent(pageDto);
         return responseDto;
     }
 
@@ -39,14 +37,9 @@ public class ChapterController {
      * @return
      */
     @PostMapping("/save")
-    //@RequestBody接收流数据
     public ResponseDto save(@RequestBody ChapterDto chapterDto) {
-
         // 保存校验
-        ValidatorUtil.require(chapterDto.getName(), "名称");
-        ValidatorUtil.require(chapterDto.getCourseId(), "课程ID");
-        ValidatorUtil.length(chapterDto.getCourseId(), "课程ID", 1, 8);
-
+        ValidatorUtil.length(chapterDto.getName(), "名称", 1, 50);
 
         ResponseDto responseDto = new ResponseDto();
         chapterService.save(chapterDto);

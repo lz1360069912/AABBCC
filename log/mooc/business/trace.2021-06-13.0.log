@@ -1,0 +1,355 @@
+2021-06-13 18:35:24.078 INFO  org.hibernate.validator.internal.util.Version     :21   [32m        [0;39m HV000001: Hibernate Validator 6.1.6.Final
+2021-06-13 18:35:24.413 INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor :225  [32m        [0;39m Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-06-13 18:35:27.537 INFO  com.company.business.BusinessApplication          :651  [32m        [0;39m No active profile set, falling back to default profiles: default
+2021-06-13 18:35:29.986 INFO  o.springframework.cloud.context.scope.GenericScope:295  [32m        [0;39m BeanFactory id=9329338b-54af-36c9-95c9-2a8d0008d89f
+2021-06-13 18:35:31.214 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :108  [32m        [0;39m Tomcat initialized with port(s): 9002 (http)
+2021-06-13 18:35:31.224 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m        [0;39m Initializing ProtocolHandler ["http-nio-9002"]
+2021-06-13 18:35:31.224 INFO  org.apache.catalina.core.StandardService          :173  [32m        [0;39m Starting service [Tomcat]
+2021-06-13 18:35:31.225 INFO  org.apache.catalina.core.StandardEngine           :173  [32m        [0;39m Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-06-13 18:35:31.483 INFO  o.a.c.c.C.[Tomcat].[localhost].[/business]        :173  [32m        [0;39m Initializing Spring embedded WebApplicationContext
+2021-06-13 18:35:31.484 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext    :285  [32m        [0;39m Root WebApplicationContext: initialization completed in 3917 ms
+2021-06-13 18:35:33.163 WARN  com.netflix.config.sources.URLConfigurationSource :121  [32m        [0;39m No URLs will be polled as dynamic configuration sources.
+2021-06-13 18:35:33.163 INFO  com.netflix.config.sources.URLConfigurationSource :122  [32m        [0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-06-13 18:35:33.165 WARN  com.netflix.config.sources.URLConfigurationSource :121  [32m        [0;39m No URLs will be polled as dynamic configuration sources.
+2021-06-13 18:35:33.166 INFO  com.netflix.config.sources.URLConfigurationSource :122  [32m        [0;39m To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-06-13 18:35:33.429 INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor  :181  [32m        [0;39m Initializing ExecutorService 'applicationTaskExecutor'
+2021-06-13 18:35:34.385 INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer    :58   [32m        [0;39m LiveReload server is running on port 35729
+2021-06-13 18:35:36.236 INFO  org.springframework.cloud.commons.util.InetUtils  :170  [32m        [0;39m Cannot determine local hostname
+2021-06-13 18:35:36.292 INFO  o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration:78   [32m        [0;39m Eureka HTTP Client uses Jersey
+2021-06-13 18:35:38.082 INFO  org.springframework.cloud.commons.util.InetUtils  :170  [32m        [0;39m Cannot determine local hostname
+2021-06-13 18:35:38.136 WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger:106  [32m        [0;39m You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2021-06-13 18:35:38.271 INFO  o.s.cloud.netflix.eureka.InstanceInfoFactory      :72   [32m        [0;39m Setting initial instance status as: STARTING
+2021-06-13 18:35:38.296 INFO  com.netflix.discovery.DiscoveryClient             :372  [32m        [0;39m Initializing Eureka in region us-east-1
+2021-06-13 18:35:38.895 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :70   [32m        [0;39m Using JSON encoding codec LegacyJacksonJson
+2021-06-13 18:35:38.895 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :71   [32m        [0;39m Using JSON decoding codec LegacyJacksonJson
+2021-06-13 18:35:38.998 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :80   [32m        [0;39m Using XML encoding codec XStreamXml
+2021-06-13 18:35:38.998 INFO  c.n.discovery.provider.DiscoveryJerseyProvider    :81   [32m        [0;39m Using XML decoding codec XStreamXml
+2021-06-13 18:35:39.521 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-13 18:35:40.073 INFO  com.netflix.discovery.DiscoveryClient             :1007 [32m        [0;39m Disable delta property : false
+2021-06-13 18:35:40.073 INFO  com.netflix.discovery.DiscoveryClient             :1008 [32m        [0;39m Single vip registry refresh property : null
+2021-06-13 18:35:40.073 INFO  com.netflix.discovery.DiscoveryClient             :1009 [32m        [0;39m Force full registry fetch : false
+2021-06-13 18:35:40.073 INFO  com.netflix.discovery.DiscoveryClient             :1010 [32m        [0;39m Application is null : false
+2021-06-13 18:35:40.074 INFO  com.netflix.discovery.DiscoveryClient             :1011 [32m        [0;39m Registered Applications size is zero : true
+2021-06-13 18:35:40.074 INFO  com.netflix.discovery.DiscoveryClient             :1013 [32m        [0;39m Application version is -1: true
+2021-06-13 18:35:40.074 INFO  com.netflix.discovery.DiscoveryClient             :1097 [32m        [0;39m Getting all instance registry info from the eureka server
+2021-06-13 18:35:40.144 INFO  com.netflix.discovery.DiscoveryClient             :1106 [32m        [0;39m The response status is 200
+2021-06-13 18:35:40.145 INFO  com.netflix.discovery.DiscoveryClient             :1321 [32m        [0;39m Starting heartbeat executor: renew interval is: 30
+2021-06-13 18:35:40.147 INFO  com.netflix.discovery.InstanceInfoReplicator      :60   [32m        [0;39m InstanceInfoReplicator onDemand update allowed rate per min is 4
+2021-06-13 18:35:40.150 INFO  com.netflix.discovery.DiscoveryClient             :492  [32m        [0;39m Discovery Client initialized at timestamp 1623580540149 with initial instances count: 0
+2021-06-13 18:35:40.155 INFO  o.s.c.n.e.serviceregistry.EurekaServiceRegistry   :41   [32m        [0;39m Registering application BUSINESS-CLIENT with eureka with status UP
+2021-06-13 18:35:40.156 INFO  com.netflix.discovery.DiscoveryClient             :1352 [32m        [0;39m Saw local status change event StatusChangeEvent [timestamp=1623580540155, current=UP, previous=STARTING]
+2021-06-13 18:35:40.157 INFO  com.netflix.discovery.DiscoveryClient             :873  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002: registering service...
+2021-06-13 18:35:40.159 INFO  org.apache.coyote.http11.Http11NioProtocol        :173  [32m        [0;39m Starting ProtocolHandler ["http-nio-9002"]
+2021-06-13 18:35:40.219 INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer      :220  [32m        [0;39m Tomcat started on port(s): 9002 (http) with context path '/business'
+2021-06-13 18:35:40.220 INFO  o.s.c.n.e.s.EurekaAutoServiceRegistration         :145  [32m        [0;39m Updating port to 9002
+2021-06-13 18:35:40.272 INFO  com.netflix.discovery.DiscoveryClient             :882  [32m        [0;39m DiscoveryClient_BUSINESS-CLIENT/business-9002 - registration status: 204
+2021-06-13 18:35:41.758 INFO  org.springframework.cloud.commons.util.InetUtils  :170  [32m        [0;39m Cannot determine local hostname
+2021-06-13 18:35:41.765 INFO  com.company.business.BusinessApplication          :61   [32m        [0;39m Started BusinessApplication in 21.113 seconds (JVM running for 22.925)
+2021-06-13 18:35:41.767 INFO  com.company.business.BusinessApplication          :21   [32m        [0;39m 启动成功
+2021-06-13 18:35:41.768 INFO  com.company.business.BusinessApplication          :22   [32m        [0;39m Business地址:	http://127.0.0.1:9002
+2021-06-13 18:36:10.154 INFO  com.netflix.discovery.DiscoveryClient             :1007 [32m        [0;39m Disable delta property : false
+2021-06-13 18:36:10.155 INFO  com.netflix.discovery.DiscoveryClient             :1008 [32m        [0;39m Single vip registry refresh property : null
+2021-06-13 18:36:10.155 INFO  com.netflix.discovery.DiscoveryClient             :1009 [32m        [0;39m Force full registry fetch : false
+2021-06-13 18:36:10.155 INFO  com.netflix.discovery.DiscoveryClient             :1010 [32m        [0;39m Application is null : false
+2021-06-13 18:36:10.155 INFO  com.netflix.discovery.DiscoveryClient             :1011 [32m        [0;39m Registered Applications size is zero : true
+2021-06-13 18:36:10.155 INFO  com.netflix.discovery.DiscoveryClient             :1013 [32m        [0;39m Application version is -1: false
+2021-06-13 18:36:10.155 INFO  com.netflix.discovery.DiscoveryClient             :1097 [32m        [0;39m Getting all instance registry info from the eureka server
+2021-06-13 18:36:10.193 INFO  com.netflix.discovery.DiscoveryClient             :1106 [32m        [0;39m The response status is 200
+2021-06-13 18:38:46.105 INFO  o.a.c.c.C.[Tomcat].[localhost].[/business]        :173  [32m        [0;39m Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-06-13 18:38:46.106 INFO  org.springframework.web.servlet.DispatcherServlet :525  [32m        [0;39m Initializing Servlet 'dispatcherServlet'
+2021-06-13 18:38:46.114 INFO  org.springframework.web.servlet.DispatcherServlet :547  [32m        [0;39m Completed initialization in 8 ms
+2021-06-13 18:38:46.229 INFO  com.company.server.config.LogAspect               :77   [32mm1JeGPye[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-13 18:38:46.229 INFO  com.company.server.config.LogAspect               :78   [32mm1JeGPye[0;39m 请求地址: http://192.168.200.1:9002/business/admin/course/list POST
+2021-06-13 18:38:46.229 INFO  com.company.server.config.LogAspect               :79   [32mm1JeGPye[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-13 18:38:46.230 INFO  com.company.server.config.LogAspect               :80   [32mm1JeGPye[0;39m 远程地址: 192.168.200.1
+2021-06-13 18:38:46.239 INFO  com.company.server.config.LogAspect               :98   [32mm1JeGPye[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-13 18:38:46.469 INFO  com.alibaba.druid.pool.DruidDataSource            :986  [32mm1JeGPye[0;39m {dataSource-1} inited
+2021-06-13 18:38:50.727 ERROR com.alibaba.druid.pool.DruidDataSource            :2794 [32m        [0;39m create connection SQLException, url: jdbc:mysql://localhost:3306/mooc, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1652)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1718)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2792)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 6 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 9 common frames omitted
+2021-06-13 18:38:54.824 ERROR com.alibaba.druid.pool.DruidDataSource            :2794 [32m        [0;39m create connection SQLException, url: jdbc:mysql://localhost:3306/mooc, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1652)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1718)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2792)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 6 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 9 common frames omitted
+2021-06-13 18:38:54.825 INFO  com.alibaba.druid.pool.DruidAbstractDataSource    :1799 [32m        [0;39m {dataSource-1} failContinuous is true
+2021-06-13 18:38:59.447 ERROR com.alibaba.druid.pool.DruidDataSource            :2794 [32m        [0;39m create connection SQLException, url: jdbc:mysql://localhost:3306/mooc, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1652)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1718)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2792)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 6 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 9 common frames omitted
+2021-06-13 18:39:04.039 ERROR com.alibaba.druid.pool.DruidDataSource            :2794 [32m        [0;39m create connection SQLException, url: jdbc:mysql://localhost:3306/mooc, errorCode 0, state 08S01
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1652)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1718)
+	at com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2792)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 6 common frames omitted
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:75)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:162)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 9 common frames omitted
+2021-06-13 18:39:06.989 INFO  com.alibaba.druid.pool.DruidAbstractDataSource    :1804 [32m        [0;39m {dataSource-1} failContinuous is false
+2021-06-13 18:39:07.063 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mm1JeGPye[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-13 18:39:07.094 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mm1JeGPye[0;39m ==> Parameters: 
+2021-06-13 18:39:07.125 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mm1JeGPye[0;39m <==    Columns: count(0)
+2021-06-13 18:39:07.125 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mm1JeGPye[0;39m <==        Row: 2
+2021-06-13 18:39:07.126 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mm1JeGPye[0;39m <==      Total: 1
+2021-06-13 18:39:07.129 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mm1JeGPye[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-13 18:39:07.130 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mm1JeGPye[0;39m ==> Parameters: 5(Integer)
+2021-06-13 18:39:07.132 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mm1JeGPye[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-13 18:39:07.133 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mm1JeGPye[0;39m <==        Row: x4DBLnpR, 02, 5, 10, null, https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q, null, null, null, null, null, 2021-06-10 18:12:06, 2021-06-10 18:26:52.219, null
+2021-06-13 18:39:07.135 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mm1JeGPye[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 5555556, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 18:11:58.561, null
+2021-06-13 18:39:07.136 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mm1JeGPye[0;39m <==      Total: 2
+2021-06-13 18:39:07.151 INFO  com.company.server.config.LogAspect               :110  [32mm1JeGPye[0;39m 返回结果: {"content":{"list":[{"createdAt":1623319926000,"id":"x4DBLnpR","image":"https://i0.hdslb.com/bfs/feed-admin/483eaa42a44d5f53471643cfe3ede43e0656711a.jpg@880w_388h_1c_95q","name":"02","summary":"5","time":10,"updatedAt":1623320812219},{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":5555556,"updatedAt":1623319918561}],"page":1,"size":5,"total":2},"success":true}
+2021-06-13 18:39:07.152 INFO  com.company.server.config.LogAspect               :111  [32mm1JeGPye[0;39m ------------- 结束 耗时：20925 ms -------------
+2021-06-13 18:39:43.587 INFO  com.company.server.config.LogAspect               :77   [32m5qpgy4r2[0;39m ------------- 【课程表】保存开始 -------------
+2021-06-13 18:39:43.587 INFO  com.company.server.config.LogAspect               :78   [32m5qpgy4r2[0;39m 请求地址: http://192.168.200.1:9002/business/admin/course/save POST
+2021-06-13 18:39:43.587 INFO  com.company.server.config.LogAspect               :79   [32m5qpgy4r2[0;39m 类名方法: com.company.business.controller.admin.CourseController.save
+2021-06-13 18:39:43.587 INFO  com.company.server.config.LogAspect               :80   [32m5qpgy4r2[0;39m 远程地址: 192.168.200.1
+2021-06-13 18:39:43.588 INFO  com.company.server.config.LogAspect               :98   [32m5qpgy4r2[0;39m 请求参数: [{"createdAt":1623319926000,"id":"x4DBLnpR","image":"https://i0.hdslb.com/bfs/feed-admin/3b1401dbb857af9b8b0f2bce1bf430863e57ab5d.jpg@880w_388h_1c_95q","name":"02","summary":"5","time":10,"updatedAt":1623320812000}]
+2021-06-13 18:39:43.589 DEBUG c.c.server.mapper.CourseMapper.updateByPrimaryKey :137  [32m5qpgy4r2[0;39m ==>  Preparing: update course set name = ?, summary = ?, time = ?, price = ?, image = ?, level = ?, charge = ?, status = ?, enroll = ?, sort = ?, created_at = ?, updated_at = ?, teacher_id = ? where id = ?
+2021-06-13 18:39:43.590 DEBUG c.c.server.mapper.CourseMapper.updateByPrimaryKey :137  [32m5qpgy4r2[0;39m ==> Parameters: 02(String), 5(String), 10(Integer), null, https://i0.hdslb.com/bfs/feed-admin/3b1401dbb857af9b8b0f2bce1bf430863e57ab5d.jpg@880w_388h_1c_95q(String), null, null, null, null, null, 2021-06-10 18:12:06.0(Timestamp), 2021-06-13 18:39:43.588(Timestamp), null, x4DBLnpR(String)
+2021-06-13 18:39:43.654 DEBUG c.c.server.mapper.CourseMapper.updateByPrimaryKey :137  [32m5qpgy4r2[0;39m <==    Updates: 1
+2021-06-13 18:39:43.655 INFO  com.company.server.config.LogAspect               :110  [32m5qpgy4r2[0;39m 返回结果: {"content":{"createdAt":1623319926000,"id":"x4DBLnpR","image":"https://i0.hdslb.com/bfs/feed-admin/3b1401dbb857af9b8b0f2bce1bf430863e57ab5d.jpg@880w_388h_1c_95q","name":"02","summary":"5","time":10,"updatedAt":1623320812000},"success":true}
+2021-06-13 18:39:43.655 INFO  com.company.server.config.LogAspect               :111  [32m5qpgy4r2[0;39m ------------- 结束 耗时：68 ms -------------
+2021-06-13 18:39:43.687 INFO  com.company.server.config.LogAspect               :77   [32mqq3fKfim[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-13 18:39:43.687 INFO  com.company.server.config.LogAspect               :78   [32mqq3fKfim[0;39m 请求地址: http://192.168.200.1:9002/business/admin/course/list POST
+2021-06-13 18:39:43.688 INFO  com.company.server.config.LogAspect               :79   [32mqq3fKfim[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-13 18:39:43.688 INFO  com.company.server.config.LogAspect               :80   [32mqq3fKfim[0;39m 远程地址: 192.168.200.1
+2021-06-13 18:39:43.688 INFO  com.company.server.config.LogAspect               :98   [32mqq3fKfim[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-13 18:39:43.689 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mqq3fKfim[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-13 18:39:43.690 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mqq3fKfim[0;39m ==> Parameters: 
+2021-06-13 18:39:43.693 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mqq3fKfim[0;39m <==    Columns: count(0)
+2021-06-13 18:39:43.694 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mqq3fKfim[0;39m <==        Row: 2
+2021-06-13 18:39:43.695 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mqq3fKfim[0;39m <==      Total: 1
+2021-06-13 18:39:43.696 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mqq3fKfim[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-13 18:39:43.696 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mqq3fKfim[0;39m ==> Parameters: 5(Integer)
+2021-06-13 18:39:43.698 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mqq3fKfim[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-13 18:39:43.698 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mqq3fKfim[0;39m <==        Row: x4DBLnpR, 02, 5, 10, null, https://i0.hdslb.com/bfs/feed-admin/3b1401dbb857af9b8b0f2bce1bf430863e57ab5d.jpg@880w_388h_1c_95q, null, null, null, null, null, 2021-06-10 18:12:06, 2021-06-13 18:39:43.588, null
+2021-06-13 18:39:43.700 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mqq3fKfim[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 5555556, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 18:11:58.561, null
+2021-06-13 18:39:43.700 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mqq3fKfim[0;39m <==      Total: 2
+2021-06-13 18:39:43.701 INFO  com.company.server.config.LogAspect               :110  [32mqq3fKfim[0;39m 返回结果: {"content":{"list":[{"createdAt":1623319926000,"id":"x4DBLnpR","image":"https://i0.hdslb.com/bfs/feed-admin/3b1401dbb857af9b8b0f2bce1bf430863e57ab5d.jpg@880w_388h_1c_95q","name":"02","summary":"5","time":10,"updatedAt":1623580783588},{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":5555556,"updatedAt":1623319918561}],"page":1,"size":5,"total":2},"success":true}
+2021-06-13 18:39:43.702 INFO  com.company.server.config.LogAspect               :111  [32mqq3fKfim[0;39m ------------- 结束 耗时：15 ms -------------
+2021-06-13 18:39:52.887 INFO  com.company.server.config.LogAspect               :77   [32m34EIcprs[0;39m ------------- 【课程表】删除开始 -------------
+2021-06-13 18:39:52.888 INFO  com.company.server.config.LogAspect               :78   [32m34EIcprs[0;39m 请求地址: http://192.168.200.1:9002/business/admin/course/delete/x4DBLnpR DELETE
+2021-06-13 18:39:52.888 INFO  com.company.server.config.LogAspect               :79   [32m34EIcprs[0;39m 类名方法: com.company.business.controller.admin.CourseController.delete
+2021-06-13 18:39:52.889 INFO  com.company.server.config.LogAspect               :80   [32m34EIcprs[0;39m 远程地址: 192.168.200.1
+2021-06-13 18:39:52.889 INFO  com.company.server.config.LogAspect               :98   [32m34EIcprs[0;39m 请求参数: ["x4DBLnpR"]
+2021-06-13 18:39:52.889 DEBUG c.c.server.mapper.CourseMapper.deleteByPrimaryKey :137  [32m34EIcprs[0;39m ==>  Preparing: delete from course where id = ?
+2021-06-13 18:39:52.890 DEBUG c.c.server.mapper.CourseMapper.deleteByPrimaryKey :137  [32m34EIcprs[0;39m ==> Parameters: x4DBLnpR(String)
+2021-06-13 18:39:52.947 DEBUG c.c.server.mapper.CourseMapper.deleteByPrimaryKey :137  [32m34EIcprs[0;39m <==    Updates: 1
+2021-06-13 18:39:52.947 INFO  com.company.server.config.LogAspect               :110  [32m34EIcprs[0;39m 返回结果: {"success":true}
+2021-06-13 18:39:52.947 INFO  com.company.server.config.LogAspect               :111  [32m34EIcprs[0;39m ------------- 结束 耗时：60 ms -------------
+2021-06-13 18:39:52.972 INFO  com.company.server.config.LogAspect               :77   [32mPeurJxEx[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-13 18:39:52.973 INFO  com.company.server.config.LogAspect               :78   [32mPeurJxEx[0;39m 请求地址: http://192.168.200.1:9002/business/admin/course/list POST
+2021-06-13 18:39:52.973 INFO  com.company.server.config.LogAspect               :79   [32mPeurJxEx[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-13 18:39:52.973 INFO  com.company.server.config.LogAspect               :80   [32mPeurJxEx[0;39m 远程地址: 192.168.200.1
+2021-06-13 18:39:52.973 INFO  com.company.server.config.LogAspect               :98   [32mPeurJxEx[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-13 18:39:52.975 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mPeurJxEx[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-13 18:39:52.975 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mPeurJxEx[0;39m ==> Parameters: 
+2021-06-13 18:39:52.977 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mPeurJxEx[0;39m <==    Columns: count(0)
+2021-06-13 18:39:52.977 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mPeurJxEx[0;39m <==        Row: 1
+2021-06-13 18:39:52.978 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mPeurJxEx[0;39m <==      Total: 1
+2021-06-13 18:39:52.978 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mPeurJxEx[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-13 18:39:52.979 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mPeurJxEx[0;39m ==> Parameters: 5(Integer)
+2021-06-13 18:39:52.980 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mPeurJxEx[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-13 18:39:52.981 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mPeurJxEx[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 5555556, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 18:11:58.561, null
+2021-06-13 18:39:52.982 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mPeurJxEx[0;39m <==      Total: 1
+2021-06-13 18:39:52.983 INFO  com.company.server.config.LogAspect               :110  [32mPeurJxEx[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":5555556,"updatedAt":1623319918561}],"page":1,"size":5,"total":1},"success":true}
+2021-06-13 18:39:52.983 INFO  com.company.server.config.LogAspect               :111  [32mPeurJxEx[0;39m ------------- 结束 耗时：11 ms -------------
+2021-06-13 18:40:31.114 INFO  com.company.server.config.LogAspect               :77   [32mGm1xe7rR[0;39m ------------- 【大章】查询开始 -------------
+2021-06-13 18:40:31.114 INFO  com.company.server.config.LogAspect               :78   [32mGm1xe7rR[0;39m 请求地址: http://192.168.200.1:9002/business/admin/chapter/list/ POST
+2021-06-13 18:40:31.114 INFO  com.company.server.config.LogAspect               :79   [32mGm1xe7rR[0;39m 类名方法: com.company.business.controller.admin.ChapterController.list
+2021-06-13 18:40:31.115 INFO  com.company.server.config.LogAspect               :80   [32mGm1xe7rR[0;39m 远程地址: 192.168.200.1
+2021-06-13 18:40:31.118 INFO  com.company.server.config.LogAspect               :98   [32mGm1xe7rR[0;39m 请求参数: [{"courseId":"00000001","page":1,"size":5,"total":0}]
+2021-06-13 18:40:31.138 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mGm1xe7rR[0;39m ==>  Preparing: SELECT count(0) FROM chapter WHERE (course_id = ?)
+2021-06-13 18:40:31.139 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mGm1xe7rR[0;39m ==> Parameters: 00000001(String)
+2021-06-13 18:40:31.144 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mGm1xe7rR[0;39m <==    Columns: count(0)
+2021-06-13 18:40:31.144 TRACE c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :143  [32mGm1xe7rR[0;39m <==        Row: 4
+2021-06-13 18:40:31.145 DEBUG c.c.s.mapper.ChapterMapper.selectByExample_COUNT  :137  [32mGm1xe7rR[0;39m <==      Total: 1
+2021-06-13 18:40:31.146 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mGm1xe7rR[0;39m ==>  Preparing: select id, course_id, name from chapter WHERE ( course_id = ? ) LIMIT ?
+2021-06-13 18:40:31.147 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mGm1xe7rR[0;39m ==> Parameters: 00000001(String), 5(Integer)
+2021-06-13 18:40:31.148 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mGm1xe7rR[0;39m <==    Columns: id, course_id, name
+2021-06-13 18:40:31.148 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mGm1xe7rR[0;39m <==        Row: tlP4PVwk, 00000001, nnnnnnn
+2021-06-13 18:40:31.149 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mGm1xe7rR[0;39m <==        Row: vyD8nDR4, 00000001, nnnnnnn
+2021-06-13 18:40:31.150 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mGm1xe7rR[0;39m <==        Row: ympVWlih, 00000001, 测试
+2021-06-13 18:40:31.151 TRACE c.c.server.mapper.ChapterMapper.selectByExample   :143  [32mGm1xe7rR[0;39m <==        Row: ZxbbUVos, 00000001, hhhhh
+2021-06-13 18:40:31.152 DEBUG c.c.server.mapper.ChapterMapper.selectByExample   :137  [32mGm1xe7rR[0;39m <==      Total: 4
+2021-06-13 18:40:31.159 INFO  com.company.server.config.LogAspect               :110  [32mGm1xe7rR[0;39m 返回结果: {"content":{"courseId":"00000001","list":[{"courseId":"00000001","id":"tlP4PVwk","name":"nnnnnnn"},{"courseId":"00000001","id":"vyD8nDR4","name":"nnnnnnn"},{"courseId":"00000001","id":"ympVWlih","name":"测试"},{"courseId":"00000001","id":"ZxbbUVos","name":"hhhhh"}],"page":1,"size":5,"total":4},"success":true}
+2021-06-13 18:40:31.159 INFO  com.company.server.config.LogAspect               :111  [32mGm1xe7rR[0;39m ------------- 结束 耗时：45 ms -------------
+2021-06-13 18:40:40.080 INFO  c.n.d.shared.resolver.aws.ConfigClusterResolver   :43   [32m        [0;39m Resolving eureka endpoints via configuration
+2021-06-13 18:40:43.597 INFO  com.company.server.config.LogAspect               :77   [32m3e7DH2RA[0;39m ------------- 【小节】查询开始 -------------
+2021-06-13 18:40:43.597 INFO  com.company.server.config.LogAspect               :78   [32m3e7DH2RA[0;39m 请求地址: http://192.168.200.1:9002/business/admin/section/list POST
+2021-06-13 18:40:43.597 INFO  com.company.server.config.LogAspect               :79   [32m3e7DH2RA[0;39m 类名方法: com.company.business.controller.admin.SectionController.list
+2021-06-13 18:40:43.597 INFO  com.company.server.config.LogAspect               :80   [32m3e7DH2RA[0;39m 远程地址: 192.168.200.1
+2021-06-13 18:40:43.599 INFO  com.company.server.config.LogAspect               :98   [32m3e7DH2RA[0;39m 请求参数: [{"chapterId":"tlP4PVwk","courseId":"00000001","page":1,"size":5,"total":0}]
+2021-06-13 18:40:43.606 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32m3e7DH2RA[0;39m ==>  Preparing: SELECT count(0) FROM section WHERE (course_id = ? AND chapter_id = ?)
+2021-06-13 18:40:43.607 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32m3e7DH2RA[0;39m ==> Parameters: 00000001(String), tlP4PVwk(String)
+2021-06-13 18:40:43.635 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32m3e7DH2RA[0;39m <==    Columns: count(0)
+2021-06-13 18:40:43.635 TRACE c.c.s.mapper.SectionMapper.selectByExample_COUNT  :143  [32m3e7DH2RA[0;39m <==        Row: 1
+2021-06-13 18:40:43.636 DEBUG c.c.s.mapper.SectionMapper.selectByExample_COUNT  :137  [32m3e7DH2RA[0;39m <==      Total: 1
+2021-06-13 18:40:43.637 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32m3e7DH2RA[0;39m ==>  Preparing: select id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at from section WHERE ( course_id = ? and chapter_id = ? ) order by sort asc LIMIT ?
+2021-06-13 18:40:43.637 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32m3e7DH2RA[0;39m ==> Parameters: 00000001(String), tlP4PVwk(String), 5(Integer)
+2021-06-13 18:40:43.639 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32m3e7DH2RA[0;39m <==    Columns: id, title, course_id, chapter_id, video, time, charge, sort, created_at, updated_at
+2021-06-13 18:40:43.640 TRACE c.c.server.mapper.SectionMapper.selectByExample   :143  [32m3e7DH2RA[0;39m <==        Row: uzQfy2VV, 1, 00000001, tlP4PVwk, null, 1, C, null, 2021-06-10 23:56:04, 2021-06-11 10:46:24.993
+2021-06-13 18:40:43.641 DEBUG c.c.server.mapper.SectionMapper.selectByExample   :137  [32m3e7DH2RA[0;39m <==      Total: 1
+2021-06-13 18:40:43.648 INFO  com.company.server.config.LogAspect               :110  [32m3e7DH2RA[0;39m 返回结果: {"content":{"chapterId":"tlP4PVwk","courseId":"00000001","list":[{"chapterId":"tlP4PVwk","charge":"C","courseId":"00000001","createdAt":1623340564000,"id":"uzQfy2VV","time":1,"title":"1","updatedAt":1623379584993}],"page":1,"size":5,"total":1},"success":true}
+2021-06-13 18:40:43.648 INFO  com.company.server.config.LogAspect               :111  [32m3e7DH2RA[0;39m ------------- 结束 耗时：51 ms -------------
+2021-06-13 18:41:30.692 INFO  com.company.server.config.LogAspect               :77   [32mluAlh9st[0;39m ------------- 【课程表】查询开始 -------------
+2021-06-13 18:41:30.692 INFO  com.company.server.config.LogAspect               :78   [32mluAlh9st[0;39m 请求地址: http://192.168.200.1:9002/business/admin/course/list POST
+2021-06-13 18:41:30.692 INFO  com.company.server.config.LogAspect               :79   [32mluAlh9st[0;39m 类名方法: com.company.business.controller.admin.CourseController.list
+2021-06-13 18:41:30.693 INFO  com.company.server.config.LogAspect               :80   [32mluAlh9st[0;39m 远程地址: 192.168.200.1
+2021-06-13 18:41:30.693 INFO  com.company.server.config.LogAspect               :98   [32mluAlh9st[0;39m 请求参数: [{"page":1,"size":5,"total":0}]
+2021-06-13 18:41:30.694 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mluAlh9st[0;39m ==>  Preparing: SELECT count(0) FROM course
+2021-06-13 18:41:30.694 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mluAlh9st[0;39m ==> Parameters: 
+2021-06-13 18:41:30.696 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mluAlh9st[0;39m <==    Columns: count(0)
+2021-06-13 18:41:30.697 TRACE c.c.s.mapper.CourseMapper.selectByExample_COUNT   :143  [32mluAlh9st[0;39m <==        Row: 1
+2021-06-13 18:41:30.698 DEBUG c.c.s.mapper.CourseMapper.selectByExample_COUNT   :137  [32mluAlh9st[0;39m <==      Total: 1
+2021-06-13 18:41:30.698 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mluAlh9st[0;39m ==>  Preparing: select id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id from course order by sort asc LIMIT ?
+2021-06-13 18:41:30.699 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mluAlh9st[0;39m ==> Parameters: 5(Integer)
+2021-06-13 18:41:30.701 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mluAlh9st[0;39m <==    Columns: id, name, summary, time, price, image, level, charge, status, enroll, sort, created_at, updated_at, teacher_id
+2021-06-13 18:41:30.702 TRACE c.c.server.mapper.CourseMapper.selectByExample    :143  [32mluAlh9st[0;39m <==        Row: 00000001, 测试课程01, 这是一门测试课程, 5555556, 19.90, , 1, C, P, 100, 0, 2021-06-10 16:08:29, 2021-06-10 18:11:58.561, null
+2021-06-13 18:41:30.702 DEBUG c.c.server.mapper.CourseMapper.selectByExample    :137  [32mluAlh9st[0;39m <==      Total: 1
+2021-06-13 18:41:30.703 INFO  com.company.server.config.LogAspect               :110  [32mluAlh9st[0;39m 返回结果: {"content":{"list":[{"charge":"C","createdAt":1623312509000,"enroll":100,"id":"00000001","image":"","level":"1","name":"测试课程01","price":19.90,"sort":0,"status":"P","summary":"这是一门测试课程","time":5555556,"updatedAt":1623319918561}],"page":1,"size":5,"total":1},"success":true}
+2021-06-13 18:41:30.703 INFO  com.company.server.config.LogAspect               :111  [32mluAlh9st[0;39m ------------- 结束 耗时：11 ms -------------

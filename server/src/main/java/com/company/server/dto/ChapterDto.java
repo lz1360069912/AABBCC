@@ -1,11 +1,24 @@
 package com.company.server.dto;
 
+
 public class ChapterDto {
+
+    /**
+     * id
+     */
     private String id;
-
+    /**
+     * 课程id
+     */
     private String courseId;
-
+    /**
+     * 名称
+     */
     private String name;
+    /**
+     * 时长|单位秒
+     */
+    private Integer time;
 
     public String getId() {
         return id;
@@ -14,7 +27,6 @@ public class ChapterDto {
     public void setId(String id) {
         this.id = id;
     }
-
     public String getCourseId() {
         return courseId;
     }
@@ -22,13 +34,19 @@ public class ChapterDto {
     public void setCourseId(String courseId) {
         this.courseId = courseId;
     }
-
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+    public Integer getTime() {
+        return time;
+    }
+
+    public void setTime(Integer time) {
+        this.time = time;
     }
 
     @Override
@@ -40,7 +58,9 @@ public class ChapterDto {
         sb.append(", id=").append(id);
         sb.append(", courseId=").append(courseId);
         sb.append(", name=").append(name);
+        sb.append(", time=").append(time);
         sb.append("]");
         return sb.toString();
     }
+
 }

@@ -7,11 +7,6 @@
     </h4>
     <hr>
     <p>
-      <router-link to="/business/course" class="btn btn-white btn-default btn-round">
-        <i class="ace-icon fa fa-arrow-left"></i>
-        返回课程
-      </router-link>
-      &nbsp;
       <button v-on:click="add()" class="btn btn-white btn-default btn-round">
         <i class="ace-icon fa fa-edit"></i>
         新增
@@ -30,6 +25,7 @@
       <tr>
         <th>ID</th>
         <th>名称</th>
+        <th>时长</th>
         <th>操作</th>
       </tr>
       </thead>
@@ -38,6 +34,7 @@
       <tr v-for="chapter in chapters">
         <td>{{ chapter.id }}</td>
         <td>{{ chapter.name }}</td>
+        <td>{{ chapter.time }}</td>
         <td>
           <div class="btn-group">
             <button v-on:click="toSection(chapter)" class="btn btn-white btn-xs btn-info btn-round">
@@ -71,18 +68,9 @@
                   <input v-model="chapter.name" type="text" class="form-control" id="input" placeholder="名称">
                 </div>
               </div>
-              <!--              <div class="form-group">
-                              <label for="courseId" class="col-sm-2 control-label">课程ID</label>
-                              <div class="col-sm-10">
-                                &lt;!&ndash;vue变量_this.chapter会通过v-model属性和form表单做数据绑定&ndash;&gt;
-                                <input v-model="chapter.courseId" type="text" class="form-control" id="courseId" placeholder="ID">
-                              </div>
-                            </div>-->
-
               <div class="form-group">
                 <label class="col-sm-2 control-label">课程</label>
                 <div class="col-sm-10">
-                  <!--vue变量_this.chapter会通过v-model属性和form表单做数据绑定-->
                   <p class="form-control-static">{{ course.name }}</p>
                 </div>
               </div>
@@ -168,8 +156,9 @@ export default {
       let _this = this;
 
       // 保存校验
-      if (!Validator.require(_this.chapter.name, "名称")
-          || !Validator.length(_this.chapter.courseId, "课程ID", 1, 8)) {
+      if (1 != 1
+          || !Validator.length(_this.chapter.name, "名称", 1, 50)
+      ) {
         return;
       }
       _this.chapter.courseId = _this.course.id;

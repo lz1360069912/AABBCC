@@ -2,7 +2,7 @@
 mybatis:
   type-aliases-package: com.company.server.domain
   config-location: classpath:mybatis/mybatis-config.xml
-  mapper-locations: classpath:mybatis/mapper/*.xml
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
 
 # sql日志级别配置
 logging:

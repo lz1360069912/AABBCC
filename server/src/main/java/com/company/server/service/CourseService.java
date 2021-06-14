@@ -5,6 +5,7 @@ import com.company.server.domain.CourseExample;
 import com.company.server.dto.CourseDto;
 import com.company.server.dto.PageDto;
 import com.company.server.mapper.CourseMapper;
+import com.company.server.mapper.my.MyCourseMapper;
 import com.company.server.util.CopyUtil;
 import com.company.server.util.UuidUtil;
 import com.github.pagehelper.PageHelper;
@@ -22,8 +23,12 @@ public class CourseService {
     @Autowired
     private CourseMapper courseMapper;
 
+    @Autowired
+    private MyCourseMapper myCourseMapper;
+
     /**
      * 列表查询
+     *
      * @param pageDto
      */
     public void list(PageDto pageDto) {
@@ -39,6 +44,7 @@ public class CourseService {
 
     /**
      * 保存，id有值时更新，无值时新增
+     *
      * @param courseDto
      */
     public void save(CourseDto courseDto) {
@@ -52,6 +58,7 @@ public class CourseService {
 
     /**
      * 新增
+     *
      * @param course
      */
     private void insert(Course course) {
@@ -64,6 +71,7 @@ public class CourseService {
 
     /**
      * 更新
+     *
      * @param course
      */
     private void update(Course course) {
@@ -73,9 +81,19 @@ public class CourseService {
 
     /**
      * 删除
+     *
      * @param id
      */
     public void delete(String id) {
         courseMapper.deleteByPrimaryKey(id);
+    }
+
+    /**
+     * 更新课程时长
+     *
+     * @param courseId
+     */
+    public void updateTime(String courseId) {
+        myCourseMapper.updateTime(courseId);
     }
 }
