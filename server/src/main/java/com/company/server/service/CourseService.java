@@ -26,6 +26,9 @@ public class CourseService {
     @Autowired
     private MyCourseMapper myCourseMapper;
 
+    @Autowired
+    private CourseCategoryService courseCategoryService;
+
     /**
      * 列表查询
      *
@@ -54,6 +57,9 @@ public class CourseService {
         } else {
             this.update(course);
         }
+
+        // 批量保存课程分类
+        courseCategoryService.saveBatch(courseDto.getId(), courseDto.getCategorys());
     }
 
     /**
