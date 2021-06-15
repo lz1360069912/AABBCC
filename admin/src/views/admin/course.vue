@@ -194,6 +194,8 @@ export default {
     edit(course) {
       let _this = this;
       _this.course = $.extend({}, course); // 列表数据复制一份赋值给表单course，防止修改表单时把列表也修改
+      // 查找当前结点勾选了哪些分类
+      _this.listCategory(course.id);
       $("#form-modal").modal("show");//hide
     },
     /**
@@ -203,6 +205,8 @@ export default {
       let _this = this;
       //.modal里的modal是内置的方法,用于弹出或关闭模态框
       _this.course = {};
+      // 让所有的结点都不选中
+      _this.tree.checkAllNodes(false);
       $("#form-modal").modal("show");//hide
     },
     /**
@@ -316,7 +320,30 @@ export default {
 
       _this.tree = $.fn.zTree.init($("#tree"), setting, zNodes);
 
-    }
+      // 默认展开所有的节点
+      // _this.tree.expandAll(true);
+    },
+    /**
+     * 查找课程下所有分类
+     * @param courseId
+     */
+    listCategory(courseId) {
+      let _this = this;
+      Loading.show();
+      _this.$ajax.post(process.env.VUE_APP_SERVER + '/business/admin/course/list-category/' + courseId).then((response)=>{
+        Loading.hide();
+        console.log("查找课程下所有分类结果：", response);
+        let resp = response.data;
+        let categorys = resp.content;
+
+        // 勾选查询到的分类
+        _this.tree.checkAllNodes(false);
+        for (let i = 0; i < categorys.length; i++) {
+          let node = _this.tree.getNodeByParam("id", categorys[i].categoryId);
+          _this.tree.checkNode(node, true);
+        }
+      })
+    },
   }
 }
 </script>

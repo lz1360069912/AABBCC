@@ -12,6 +12,7 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import java.util.List;
@@ -50,6 +51,7 @@ public class CourseService {
      *
      * @param courseDto
      */
+    @Transactional
     public void save(CourseDto courseDto) {
         Course course = CopyUtil.copy(courseDto, Course.class);
         if (StringUtils.isEmpty(course.getId())) {
@@ -58,8 +60,8 @@ public class CourseService {
             this.update(course);
         }
 
-        // 批量保存课程分类
-        courseCategoryService.saveBatch(courseDto.getId(), courseDto.getCategorys());
+        // 批量保存课程分类，第一个参数必须course获取，因为如果是新增的话，courseID为空
+        courseCategoryService.saveBatch(course.getId(), courseDto.getCategorys());
     }
 
     /**

@@ -26,10 +26,10 @@ public class ${Domain}Dto {
     public ${field.javaType} get${field.nameBigHump}() {
         return ${field.nameHump};
     }
-
     public void set${field.nameBigHump}(${field.javaType} ${field.nameHump}) {
         this.${field.nameHump} = ${field.nameHump};
     }
+
     </#list>
 
     @Override

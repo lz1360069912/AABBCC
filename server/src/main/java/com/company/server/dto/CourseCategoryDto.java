@@ -23,6 +23,7 @@ public class CourseCategoryDto {
     public void setId(String id) {
         this.id = id;
     }
+
     public String getCourseId() {
         return courseId;
     }
@@ -30,6 +31,7 @@ public class CourseCategoryDto {
     public void setCourseId(String courseId) {
         this.courseId = courseId;
     }
+
     public String getCategoryId() {
         return categoryId;
     }

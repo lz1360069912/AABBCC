@@ -1,13 +1,17 @@
 package com.company.business.controller.admin;
 
+import com.company.server.dto.CourseCategoryDto;
 import com.company.server.dto.CourseDto;
 import com.company.server.dto.PageDto;
 import com.company.server.dto.ResponseDto;
+import com.company.server.service.CourseCategoryService;
 import com.company.server.service.CourseService;
 import com.company.server.util.ValidatorUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/admin/course")
@@ -18,8 +22,12 @@ public class CourseController {
     @Autowired
     private CourseService courseService;
 
+    @Autowired
+    private CourseCategoryService courseCategoryService;
+
     /**
      * 列表查询
+     *
      * @param pageDto
      * @return
      */
@@ -33,6 +41,7 @@ public class CourseController {
 
     /**
      * 保存，id有值时更新，无值时新增
+     *
      * @param courseDto
      * @return
      */
@@ -52,6 +61,7 @@ public class CourseController {
 
     /**
      * 删除
+     *
      * @param id
      * @return
      */
@@ -60,6 +70,19 @@ public class CourseController {
     public ResponseDto delete(@PathVariable String id) {
         ResponseDto responseDto = new ResponseDto();
         courseService.delete(id);
+        return responseDto;
+    }
+
+    /**
+     * 查找课程下所有分类
+     *
+     * @param courseId
+     */
+    @PostMapping("/list-category/{courseId}")
+    public ResponseDto listCategory(@PathVariable(value = "courseId") String courseId) {
+        ResponseDto responseDto = new ResponseDto();
+        List<CourseCategoryDto> dtoList = courseCategoryService.listByCourse(courseId);
+        responseDto.setContent(dtoList);
         return responseDto;
     }
 }

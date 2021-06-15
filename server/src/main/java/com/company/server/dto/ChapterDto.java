@@ -27,6 +27,7 @@ public class ChapterDto {
     public void setId(String id) {
         this.id = id;
     }
+
     public String getCourseId() {
         return courseId;
     }
@@ -34,6 +35,7 @@ public class ChapterDto {
     public void setCourseId(String courseId) {
         this.courseId = courseId;
     }
+
     public String getName() {
         return name;
     }
@@ -41,6 +43,7 @@ public class ChapterDto {
     public void setName(String name) {
         this.name = name;
     }
+
     public Integer getTime() {
         return time;
     }

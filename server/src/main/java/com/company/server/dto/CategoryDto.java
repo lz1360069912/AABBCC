@@ -27,6 +27,7 @@ public class CategoryDto {
     public void setId(String id) {
         this.id = id;
     }
+
     public String getParent() {
         return parent;
     }
@@ -34,6 +35,7 @@ public class CategoryDto {
     public void setParent(String parent) {
         this.parent = parent;
     }
+
     public String getName() {
         return name;
     }
@@ -41,6 +43,7 @@ public class CategoryDto {
     public void setName(String name) {
         this.name = name;
     }
+
     public Integer getSort() {
         return sort;
     }
