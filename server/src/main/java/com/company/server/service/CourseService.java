@@ -1,9 +1,12 @@
 package com.company.server.service;
 
 import com.company.server.domain.Course;
+import com.company.server.domain.CourseContent;
 import com.company.server.domain.CourseExample;
+import com.company.server.dto.CourseContentDto;
 import com.company.server.dto.CourseDto;
 import com.company.server.dto.PageDto;
+import com.company.server.mapper.CourseContentMapper;
 import com.company.server.mapper.CourseMapper;
 import com.company.server.mapper.my.MyCourseMapper;
 import com.company.server.util.CopyUtil;
@@ -15,8 +18,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
-import java.util.List;
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class CourseService {
@@ -29,6 +32,9 @@ public class CourseService {
 
     @Autowired
     private CourseCategoryService courseCategoryService;
+
+    @Autowired
+    private CourseContentMapper courseContentMapper;
 
     /**
      * 列表查询
@@ -103,5 +109,28 @@ public class CourseService {
      */
     public void updateTime(String courseId) {
         myCourseMapper.updateTime(courseId);
+    }
+
+    /**
+     * 查找课程内容
+     */
+    public CourseContentDto findContent(String id) {
+        CourseContent content = courseContentMapper.selectByPrimaryKey(id);
+        if (content == null) {
+            return null;
+        }
+        return CopyUtil.copy(content, CourseContentDto.class);
+    }
+
+    /**
+     * 保存课程内容，包含新增和修改
+     */
+    public int saveContent(CourseContentDto contentDto) {
+        CourseContent content = CopyUtil.copy(contentDto, CourseContent.class);
+        int i = courseContentMapper.updateByPrimaryKeyWithBLOBs(content);
+        if (i == 0) {
+            i = courseContentMapper.insert(content);
+        }
+        return i;
     }
 }

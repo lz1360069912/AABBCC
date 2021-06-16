@@ -47,6 +47,10 @@
                 <i class="ace-icon fa fa-book bigger-120"> 大章</i>
               </button>
               &nbsp;
+              <button v-on:click="editContent(course)" class="btn btn-white btn-xs btn-info btn-round">
+                <i class="ace-icon fa  fa-bookmark-o bigger-120"> 内容</i>
+              </button>
+              &nbsp;
               <button v-on:click="edit(course)" class="btn btn-white btn-xs btn-info btn-round">
                 <i class="ace-icon fa fa-pencil bigger-120"> 编辑</i>
               </button>
@@ -153,6 +157,30 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
             <button v-on:click="save()" type="button" class="btn btn-primary">保存</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div id="course-content-modal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">内容编辑</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <div class="col-lg-12">
+                  <div id="content"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button v-on:click="saveContent()" type="button" class="btn btn-primary">保存</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
@@ -330,7 +358,7 @@ export default {
     listCategory(courseId) {
       let _this = this;
       Loading.show();
-      _this.$ajax.post(process.env.VUE_APP_SERVER + '/business/admin/course/list-category/' + courseId).then((response)=>{
+      _this.$ajax.post(process.env.VUE_APP_SERVER + "/business/admin/course/list-category/" + courseId).then((response) => {
         Loading.hide();
         console.log("查找课程下所有分类结果：", response);
         let resp = response.data;
@@ -344,6 +372,56 @@ export default {
         }
       })
     },
+    /**
+     * 编辑内容
+     * @param course
+     */
+    editContent(course) {
+      let _this = this;
+      let id = course.id;
+      _this.course = course;
+      $("#content").summernote({
+        focus: true,
+        height: 300
+      });
+      // 先清空历史文本
+      $("#content").summernote("code", "");
+      Loading.show();
+      _this.$ajax.get(process.env.VUE_APP_SERVER + "/business/admin/course/find-content/" + id).then((response) => {
+        Loading.hide();
+        let resp = response.data;
+        if (resp.success) {
+          // 调用modal方法时，增加backdrop:'static',则点击空白位置，模态框不会自动关闭
+          $("#course-content-modal").modal({backdrop: "static", keyboard: false});
+          if (resp.content) {
+            $("#content").summernote("code", resp.content.content);
+          }
+        } else {
+          Toast.warning(resp.message);
+        }
+      });
+    },
+    /**
+     * 保存内容
+     */
+    saveContent() {
+      let _this = this;
+      // 把文本框中的html代码读取出来
+      let content = $("#content").summernote("code");
+      _this.$ajax.post(process.env.VUE_APP_SERVER + "/business/admin/course/save-content", {
+        id: _this.course.id,
+        content: content
+      }).then((response) => {
+        Loading.hide();
+        let resp = response.data;
+        if (resp.success) {
+          $("#course-content-modal").modal("hide");
+          Toast.success("内容保存成功");
+        } else {
+          Toast.warning(resp.message);
+        }
+      });
+    }
   }
 }
 </script>
