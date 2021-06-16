@@ -19,11 +19,14 @@ public class ChapterDto {
      * 时长|单位秒
      */
     private Integer time;
+    /**
+     * 顺序
+     */
+    private Integer sort;
 
     public String getId() {
         return id;
     }
-
     public void setId(String id) {
         this.id = id;
     }
@@ -31,7 +34,6 @@ public class ChapterDto {
     public String getCourseId() {
         return courseId;
     }
-
     public void setCourseId(String courseId) {
         this.courseId = courseId;
     }
@@ -39,7 +41,6 @@ public class ChapterDto {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -47,10 +48,17 @@ public class ChapterDto {
     public Integer getTime() {
         return time;
     }
-
     public void setTime(Integer time) {
         this.time = time;
     }
+
+    public Integer getSort() {
+        return sort;
+    }
+    public void setSort(Integer sort) {
+        this.sort = sort;
+    }
+
 
     @Override
     public String toString() {
@@ -62,6 +70,7 @@ public class ChapterDto {
         sb.append(", courseId=").append(courseId);
         sb.append(", name=").append(name);
         sb.append(", time=").append(time);
+        sb.append(", sort=").append(sort);
         sb.append("]");
         return sb.toString();
     }

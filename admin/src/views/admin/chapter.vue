@@ -26,6 +26,7 @@
         <th>ID</th>
         <th>名称</th>
         <th>时长</th>
+        <th>顺序</th>
         <th>操作</th>
       </tr>
       </thead>
@@ -35,6 +36,7 @@
         <td>{{ chapter.id }}</td>
         <td>{{ chapter.name }}</td>
         <td>{{ chapter.time }}</td>
+        <td>{{ chapter.sort }}</td>
         <td>
           <div class="btn-group">
             <button v-on:click="toSection(chapter)" class="btn btn-white btn-xs btn-info btn-round">
@@ -66,6 +68,12 @@
                 <label for="input" class="col-sm-2 control-label">名称</label>
                 <div class="col-sm-10">
                   <input v-model="chapter.name" type="text" class="form-control" id="input" placeholder="名称">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="sort" class="col-sm-2 control-label">顺序</label>
+                <div class="col-sm-10">
+                  <input v-model="chapter.sort" type="text" class="form-control" id="sort" placeholder="顺序">
                 </div>
               </div>
               <div class="form-group">

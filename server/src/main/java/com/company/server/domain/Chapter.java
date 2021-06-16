@@ -9,6 +9,8 @@ public class Chapter {
 
     private Integer time;
 
+    private Integer sort;
+
     public String getId() {
         return id;
     }
@@ -41,6 +43,14 @@ public class Chapter {
         this.time = time;
     }
 
+    public Integer getSort() {
+        return sort;
+    }
+
+    public void setSort(Integer sort) {
+        this.sort = sort;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -51,6 +61,7 @@ public class Chapter {
         sb.append(", courseId=").append(courseId);
         sb.append(", name=").append(name);
         sb.append(", time=").append(time);
+        sb.append(", sort=").append(sort);
         sb.append("]");
         return sb.toString();
     }

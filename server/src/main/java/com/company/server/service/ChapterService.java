@@ -31,6 +31,7 @@ public class ChapterService {
     public void list(ChapterPageDto chapterPageDto) {
         PageHelper.startPage(chapterPageDto.getPage(), chapterPageDto.getSize());
         ChapterExample chapterExample = new ChapterExample();
+        chapterExample.setOrderByClause("sort asc");
         ChapterExample.Criteria criteria = chapterExample.createCriteria();
         if (!StringUtils.isEmpty(chapterPageDto.getCourseId())) {
             criteria.andCourseIdEqualTo(chapterPageDto.getCourseId());

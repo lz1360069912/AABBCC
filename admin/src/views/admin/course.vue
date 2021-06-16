@@ -17,7 +17,7 @@
     <div class="row">
       <div v-for="course in courses" class="col-md-3">
         <div class="thumbnail search-thumbnail">
-          <img v-show="!course.image" class="media-object" src="/static/image/fire.png"/>
+          <img v-show="!course.image" class="media-object" src="/static/image/蝴蝶忍.jpg"/>
           <img v-show="course.image" class="media-object" v-bind:src="course.image"/>
           <div class="caption">
             <div class="clearfix">
