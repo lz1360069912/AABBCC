@@ -44,12 +44,12 @@
         <div class="space-6"></div>
 
         <div class="profile-social-links align-center">
-          <button v-on:click="edit(teacher)" class="btn btn-xs btn-info">
-            <i class="ace-icon fa fa-pencil bigger-120"></i>
+          <button v-on:click="edit(teacher)" class="btn btn-white btn-xs btn-info btn-round">
+            <i class="ace-icon fa fa-pencil bigger-120"> 编辑</i>
           </button>
           &nbsp;
-          <button v-on:click="del(teacher.id)" class="btn btn-xs btn-danger">
-            <i class="ace-icon fa fa-trash-o bigger-120"></i>
+          <button v-on:click="del(teacher.id)" class="btn btn-white btn-xs btn-warning btn-round">
+            <i class="ace-icon fa fa-trash-o bigger-120"> 删除</i>
           </button>
         </div>
 
