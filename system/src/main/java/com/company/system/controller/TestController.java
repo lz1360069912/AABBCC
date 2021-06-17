@@ -1,4 +1,4 @@
-package com.company.server.controller;
+package com.company.system.controller;
 
 import com.company.server.domain.Test;
 import com.company.server.service.TestService;

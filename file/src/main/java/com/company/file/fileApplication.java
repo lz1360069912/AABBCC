@@ -1,4 +1,4 @@
-package com.company.server;
+package com.company.file;
 
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
@@ -13,12 +13,12 @@ import org.springframework.core.env.Environment;
 @SpringBootApplication
 @ComponentScan("com.company")
 @MapperScan("com.company.server.mapper")
-public class systemApplication {
+public class fileApplication {
 
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(systemApplication.class);
+        SpringApplication app = new SpringApplication(fileApplication.class);
         Environment env = app.run(args).getEnvironment();
         log.info("启动成功");
-        log.info("System地址:\thttp://127.0.0.1:{}",env.getProperty("server.port"));
+        log.info("File地址:\thttp://127.0.0.1:{}",env.getProperty("server.port"));
     }
 }

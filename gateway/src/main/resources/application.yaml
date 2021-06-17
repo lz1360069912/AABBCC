@@ -20,6 +20,10 @@ spring:
           uri: lb://business-client #默认支持负载均衡，//后是注册到注册中心的名字
           predicates:
             - Path=/business/**
+        - id: file
+          uri: lb://file-client #默认支持负载均衡，//后是注册到注册中心的名字
+          predicates:
+            - Path=/file/**
 
 #eureka配置
 eureka:
