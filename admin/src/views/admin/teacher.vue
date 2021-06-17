@@ -14,42 +14,48 @@
 
     <pagination ref="pagination" v-bind:list="list"></pagination>
 
-    <table id="simple-table" class="table  table-bordered table-hover">
-      <thead>
-      <tr>
-                <th>id</th>
-        <th>姓名</th>
-        <th>昵称</th>
-        <th>头像</th>
-        <th>职位</th>
-        <th>座右铭</th>
-        <th>简介</th>
-        <th>操作</th>
-      </tr>
-      </thead>
+    <div class="row">
+      <div v-for="teacher in teachers" class="col-xs-12 col-sm-3 center">
+        <div>
+          <span class="thumbnail search-thumbnail">
+           <img v-show="!teacher.image" class="media-object" src="/static/image/义勇.jpg" v-bind:title="teacher.intro"/>
+           <img v-show="teacher.image" class="media-object" v-bind:src="teacher.image"  v-bind:title="teacher.intro"/>
+          </span>
+          <div class="space-4"></div>
 
-      <tbody>
-      <tr v-for="teacher in teachers">
-        <td>{{ teacher.id }}</td>
-        <td>{{ teacher.name }}</td>
-        <td>{{ teacher.nickname }}</td>
-        <td>{{ teacher.image }}</td>
-        <td>{{ teacher.position }}</td>
-        <td>{{ teacher.motto }}</td>
-        <td>{{ teacher.intro }}</td>
-        <td>
-          <div class="btn-group">
-            <button v-on:click="edit(teacher)" class="btn btn-white btn-xs btn-info btn-round">
-              编辑
-            </button>&nbsp;
-            <button v-on:click="del(teacher.id)" class="btn btn-white btn-xs btn-warning btn-round">
-              删除
-            </button>
+          <div class="width-85 label label-info label-xlg arrowed-in arrowed-in-right">
+            <div class="inline position-relative">
+              <a href="javascript:;" class="user-title-label dropdown-toggle" data-toggle="dropdown">
+                <i class="ace-icon fa fa-circle light-green"></i>
+                &nbsp;
+                <span class="white">{{ teacher.position }}</span>
+              </a>
+            </div>
           </div>
-        </td>
-      </tr>
-      </tbody>
-    </table>
+        </div>
+
+        <div class="space-6"></div>
+
+        <a href="javascript:;" class="text-info bigger-110" v-bind:title="teacher.motto">
+          <i class="ace-icon fa fa-user"></i>
+          {{ teacher.name }}【{{ teacher.nickname }}】
+        </a>
+
+        <div class="space-6"></div>
+
+        <div class="profile-social-links align-center">
+          <button v-on:click="edit(teacher)" class="btn btn-xs btn-info">
+            <i class="ace-icon fa fa-pencil bigger-120"></i>
+          </button>
+          &nbsp;
+          <button v-on:click="del(teacher.id)" class="btn btn-xs btn-danger">
+            <i class="ace-icon fa fa-trash-o bigger-120"></i>
+          </button>
+        </div>
+
+        <div class="hr hr16 dotted"></div>
+      </div>
+    </div>
 
     <div id="form-modal" class="modal fade" tabindex="-1" role="dialog">
       <div class="modal-dialog modal-dialog-scrollable">
@@ -62,7 +68,7 @@
           <div class="modal-body">
             <form class="form-horizontal">
               <div class="form-group">
-                <label for="name" class="col-sm-2 control-label">姓名</label>
+                <labeteacherl for="name" class="col-sm-2 control-label">姓名</labeteacherl>
                 <div class="col-sm-10">
                   <input v-model="teacher.name" type="text" class="form-control" id="name" placeholder="姓名">
                 </div>
@@ -94,7 +100,7 @@
               <div class="form-group">
                 <label for="intro" class="col-sm-2 control-label">简介</label>
                 <div class="col-sm-10">
-                  <input v-model="teacher.intro" type="text" class="form-control" id="intro" placeholder="简介">
+                  <textarea v-model="teacher.intro" type="text" class="form-control" id="intro" rows="5"></textarea>
                 </div>
               </div>
             </form>

@@ -1,13 +1,15 @@
 package com.company.business.controller.admin;
 
-import com.company.server.dto.TeacherDto;
 import com.company.server.dto.PageDto;
 import com.company.server.dto.ResponseDto;
+import com.company.server.dto.TeacherDto;
 import com.company.server.service.TeacherService;
 import com.company.server.util.ValidatorUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/admin/teacher")
@@ -28,6 +30,18 @@ public class TeacherController {
         ResponseDto responseDto = new ResponseDto();
         teacherService.list(pageDto);
         responseDto.setContent(pageDto);
+        return responseDto;
+    }
+
+    /**
+     * 列表查询所有
+     * @return
+     */
+    @PostMapping("/all")
+    public ResponseDto all() {
+        ResponseDto responseDto = new ResponseDto();
+        List<TeacherDto> teacherDtoList = teacherService.all();
+        responseDto.setContent(teacherDtoList);
         return responseDto;
     }
 

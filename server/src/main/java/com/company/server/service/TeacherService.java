@@ -2,8 +2,8 @@ package com.company.server.service;
 
 import com.company.server.domain.Teacher;
 import com.company.server.domain.TeacherExample;
-import com.company.server.dto.TeacherDto;
 import com.company.server.dto.PageDto;
+import com.company.server.dto.TeacherDto;
 import com.company.server.mapper.TeacherMapper;
 import com.company.server.util.CopyUtil;
 import com.company.server.util.UuidUtil;
@@ -33,6 +33,16 @@ public class TeacherService {
         pageDto.setTotal(pageInfo.getTotal());
         List<TeacherDto> teacherDtoList = CopyUtil.copyList(teacherList, TeacherDto.class);
         pageDto.setList(teacherDtoList);
+    }
+
+    /**
+     * 列表查询所有
+     */
+    public List<TeacherDto> all() {
+        TeacherExample teacherExample = new TeacherExample();
+        List<Teacher> teacherList = teacherMapper.selectByExample(teacherExample);
+        List<TeacherDto> teacherDtoList = CopyUtil.copyList(teacherList,TeacherDto.class);
+        return teacherDtoList;
     }
 
     /**
@@ -72,4 +82,6 @@ public class TeacherService {
     public void delete(String id) {
         teacherMapper.deleteByPrimaryKey(id);
     }
+
+
 }

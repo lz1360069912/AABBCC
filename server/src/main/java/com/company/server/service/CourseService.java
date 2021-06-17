@@ -100,6 +100,8 @@ public class CourseService {
      * @param id
      */
     public void delete(String id) {
+        // 删除课程时需要把课程分类表中相关数据删除
+        courseCategoryService.deleteByCourseId(id);
         courseMapper.deleteByPrimaryKey(id);
     }
 

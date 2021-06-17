@@ -81,6 +81,28 @@ public class CourseCategoryService {
     }
 
     /**
+     * 删除课程所属分类
+     *
+     * @param courseId
+     */
+    public void deleteByCourseId(String courseId) {
+        CourseCategoryExample example = new CourseCategoryExample();
+        example.createCriteria().andCourseIdEqualTo(courseId);
+        courseCategoryMapper.deleteByExample(example);
+    }
+
+    /**
+     * 删除分类所属课程
+     *
+     * @param categoryId
+     */
+    public void deleteByCategoryId(String categoryId) {
+        CourseCategoryExample example = new CourseCategoryExample();
+        example.createCriteria().andCategoryIdEqualTo(categoryId);
+        courseCategoryMapper.deleteByExample(example);
+    }
+
+    /**
      * 根据某一课程，先清空课程分类，再保存课程分类
      *
      * @param courseId
@@ -112,4 +134,6 @@ public class CourseCategoryService {
         List<CourseCategory> courseCategoryList = courseCategoryMapper.selectByExample(example);
         return CopyUtil.copyList(courseCategoryList, CourseCategoryDto.class);
     }
+
+
 }

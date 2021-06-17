@@ -21,6 +21,9 @@ public class CategoryService {
     @Autowired
     private CategoryMapper categoryMapper;
 
+    @Autowired
+    private CourseCategoryService courseCategoryService;
+
     /**
      * 列表查询
      * @param pageDto
@@ -82,6 +85,8 @@ public class CategoryService {
      * @param id
      */
     public void delete(String id) {
+        // 删除一级分类所属课程
+        courseCategoryService.deleteByCategoryId(id);
         deleteChildren(id);
         categoryMapper.deleteByPrimaryKey(id);
     }
@@ -96,7 +101,15 @@ public class CategoryService {
             // 如果是一级分类，需要删除其下的二级分类
             CategoryExample example = new CategoryExample();
             example.createCriteria().andParentEqualTo(category.getId());
+            List<Category> categories = categoryMapper.selectByExample(example);
+            for (int i = 0, l = categories.size(); i < l; i++){
+                String s = categories.get(i).getId();
+                // 删除二级分类所属课程
+                courseCategoryService.deleteByCategoryId(s);
+            }
             categoryMapper.deleteByExample(example);
         }
     }
+
+
 }
