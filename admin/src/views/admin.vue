@@ -417,18 +417,6 @@
                   课程管理
                 </router-link>
               </li>
-              <li class="" id="business-chapter-sidebar">
-                <router-link to="/business/chapter">
-                  <i class="menu-icon fa fa-caret-right"></i>
-                  大章管理
-                </router-link>
-              </li>
-              <li class="" id="business-section-sidebar">
-                <router-link to="/business/section">
-                  <i class="menu-icon fa fa-caret-right"></i>
-                  小节管理
-                </router-link>
-              </li>
             </ul>
           </li>
         </ul><!-- /.nav-list -->
