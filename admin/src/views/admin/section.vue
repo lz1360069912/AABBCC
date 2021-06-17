@@ -24,7 +24,7 @@
 
     <pagination ref="pagination" v-bind:list="list"></pagination>
 
-    <table id="simple-table" class="table  table-bordered table-hover">
+    <table id="simple-table" class="table table-bordered table-hover">
       <thead>
       <tr>
         <th>id</th>
