@@ -16,4 +16,3 @@ eureka:
   instance:
     instance-id: system-9001 # 重点，和client平级
     prefer-ip-address: true # true访问路径可以显示IP地址
-
