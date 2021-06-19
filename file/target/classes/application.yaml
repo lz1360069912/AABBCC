@@ -1,7 +1,7 @@
 server:
   port: 9003
   servlet:
-    context-path: /file # 以/system访问该服务
+    context-path: /file # 以/file访问该服务
 
 # spring配置
 spring:
