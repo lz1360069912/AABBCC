@@ -29,7 +29,7 @@ public class UploadController {
         String fileName = file.getOriginalFilename();
         String key = UuidUtil.getShortUuid();
         // 需要提前创建
-        String fullPath = "D:/file/imooc/teacher/" + key + "-" + fileName;
+        String fullPath = "D:/file/imooc/course/teacher/" + key + "-" + fileName;
         File dest = new File(fullPath);
         file.transferTo(dest);
         log.info(dest.getAbsolutePath());
