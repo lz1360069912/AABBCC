@@ -4,8 +4,8 @@
       <i class="ace-icon fa fa-upload"></i>
       {{ text }}
     </button>
-    <p></p>
     <input class="hidden" type="file" ref="file" v-on:change="uploadFile()" v-bind:id="inputId+'-input'">
+    <p></p>
   </div>
 </template>
 

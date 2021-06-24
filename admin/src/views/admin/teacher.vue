@@ -70,7 +70,7 @@
           <div class="modal-body">
             <form class="form-horizontal">
               <div class="form-group">
-                <labeteacherl for="name" class="col-sm-2 control-label">姓名</labeteacherl>
+                <label for="name" class="col-sm-2 control-label">姓名</label>
                 <div class="col-sm-10">
                   <input v-model="teacher.name" type="text" class="form-control" id="name" placeholder="姓名">
                 </div>
@@ -86,13 +86,13 @@
                 <div class="col-sm-10">
                   <file
                       v-bind:suffixs="['jpg', 'jpeg', 'png']"
-                      v-bind:input-id="image-upload"
+                      v-bind:input-id="'image-upload'"
                       v-bind:text="'上传头像'"
                       v-bind:after-upload="afterUpload"></file>
                   <div v-show="teacher.image" class="row">
                     <div class="col-md-4">
                       <!-- img-responsive 图片自适应 -->
-                      <img v-bind:src="teacher.image" class="img-responsive col-lg-4">
+                      <img v-bind:src="teacher.image" class="img-responsive">
                     </div>
                   </div>
                 </div>
