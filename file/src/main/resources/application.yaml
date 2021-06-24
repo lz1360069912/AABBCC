@@ -19,4 +19,4 @@ eureka:
 
 file:
   path: D:/file/imooc/course/
-  domain: http://127.0.0.1:9000/file/
+  domain: http://127.0.0.1:9000/file/f/

@@ -1,8 +1,11 @@
 package com.company.file.controller.admin;
 
+import com.company.server.dto.FileDto;
 import com.company.server.dto.ResponseDto;
+import com.company.server.service.FileService;
 import com.company.server.util.UuidUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +29,9 @@ public class UploadController {
     @Value("${file.path}")
     private String FILE_PATH;
 
+    @Autowired
+    private FileService fileService;
+
     @PostMapping("/upload")
     public ResponseDto upload(@RequestParam MultipartFile file) throws IOException {
         log.info("上传文件开始：{}", file);
@@ -35,14 +41,26 @@ public class UploadController {
         // 保存文件到本地
         String fileName = file.getOriginalFilename();
         String key = UuidUtil.getShortUuid();
+        String suffix = fileName.substring(fileName.lastIndexOf(".") + 1).toLowerCase();
+        String path = "teacher/" + key + "." + suffix;
+
         // 需要提前创建
-        String fullPath = FILE_PATH + "teacher/" + key + "-" + fileName;
+        String fullPath = FILE_PATH + path;
         File dest = new File(fullPath);
         file.transferTo(dest);
         log.info(dest.getAbsolutePath());
 
+        log.info("保存文件记录开始");
+        FileDto fileDto = new FileDto();
+        fileDto.setPath(path);
+        fileDto.setName(fileName);
+        fileDto.setSize(Math.toIntExact(file.getSize()));
+        fileDto.setSuffix(suffix);
+        fileDto.setUse("");
+        fileService.save(fileDto);
+
         ResponseDto responseDto = new ResponseDto();
-        responseDto.setContent(FILE_DOMAIN + "f/teacher/" + key + "-" + fileName);
+        responseDto.setContent(FILE_DOMAIN + path);
         return responseDto;
     }
 
