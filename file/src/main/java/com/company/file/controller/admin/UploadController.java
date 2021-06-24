@@ -2,6 +2,7 @@ package com.company.file.controller.admin;
 
 import com.company.server.dto.FileDto;
 import com.company.server.dto.ResponseDto;
+import com.company.server.enums.FileUseEnum;
 import com.company.server.service.FileService;
 import com.company.server.util.UuidUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -33,18 +34,26 @@ public class UploadController {
     private FileService fileService;
 
     @PostMapping("/upload")
-    public ResponseDto upload(@RequestParam MultipartFile file) throws IOException {
-        log.info("上传文件开始：{}", file);
+    public ResponseDto upload(@RequestParam MultipartFile file, String use) throws IOException {
+        log.info("上传文件开始");
         log.info(file.getOriginalFilename());
         log.info(String.valueOf(file.getSize()));
 
         // 保存文件到本地
+        FileUseEnum userEnum = FileUseEnum.getByCode(use);
         String fileName = file.getOriginalFilename();
         String key = UuidUtil.getShortUuid();
         String suffix = fileName.substring(fileName.lastIndexOf(".") + 1).toLowerCase();
-        String path = "teacher/" + key + "." + suffix;
 
-        // 需要提前创建
+        // 如果文件夹不存在则创建
+        String dir = userEnum.name().toLowerCase();
+        File fullDir = new File(FILE_PATH + dir);
+        if (!fullDir.exists()) {
+            fullDir.mkdir();
+        }
+
+        // 需要提前创建 File.separator：目录间的间隔符
+        String path = dir + File.separator + key + "." + suffix;
         String fullPath = FILE_PATH + path;
         File dest = new File(fullPath);
         file.transferTo(dest);
@@ -56,7 +65,7 @@ public class UploadController {
         fileDto.setName(fileName);
         fileDto.setSize(Math.toIntExact(file.getSize()));
         fileDto.setSuffix(suffix);
-        fileDto.setUse("");
+        fileDto.setUse(use);
         fileService.save(fileDto);
 
         ResponseDto responseDto = new ResponseDto();

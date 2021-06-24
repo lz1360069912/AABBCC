@@ -86,6 +86,7 @@
                 <div class="col-sm-10">
                   <file
                       v-bind:suffixs="['jpg', 'jpeg', 'png']"
+                      v-bind:use="FILE_USE.TEACHER.key"
                       v-bind:input-id="'image-upload'"
                       v-bind:text="'上传头像'"
                       v-bind:after-upload="afterUpload"></file>
@@ -139,6 +140,7 @@ export default {
     return {
       teacher: {}, // 用于绑定form表单的数据
       teachers: [],
+      FILE_USE: FILE_USE
     }
   },
   mounted: function () {
