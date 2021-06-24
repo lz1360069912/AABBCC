@@ -235,7 +235,7 @@ export default {
     },
     afterUpload(resp) {
       let _this = this;
-      let image = resp.content;
+      let image = resp.content.path;
       _this.teacher.image = image;
 
       console.log("文件上传成功：", image);
