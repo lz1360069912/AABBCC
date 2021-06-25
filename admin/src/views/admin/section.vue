@@ -1,11 +1,11 @@
 <template>
   <div>
     <h4 class="lighter">
-      <router-link to="/business/course" class="ace-icon fa fa-hand-o-right fa-reply icon-only pink2">
+      <router-link to="/business/course" class="ace-icon fa fa-reply icon-only pink2">
         {{ course.name }}
       </router-link>
       ：
-      <router-link to="/business/chapter" class="ace-icon fa fa-hand-o-right fa-reply icon-only pink2">
+      <router-link to="/business/chapter" class="ace-icon fa fa-reply icon-only pink2">
         {{ chapter.name }}
       </router-link>
     </h4>

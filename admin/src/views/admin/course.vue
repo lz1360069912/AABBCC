@@ -59,7 +59,7 @@
                 <i class="ace-icon fa fa-book bigger-120"> 大章</i>
               </button>
               &nbsp;
-              <button v-on:click="editContent(course)" class="btn btn-white btn-xs btn-info btn-round">
+              <button v-on:click="toContent(course)" class="btn btn-white btn-xs btn-info btn-round">
                 <i class="ace-icon fa  fa-bookmark-o bigger-120"> 内容</i>
               </button>
               &nbsp;
@@ -186,35 +186,6 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
             <button v-on:click="save()" type="button" class="btn btn-primary">保存</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    <div id="course-content-modal" class="modal fade" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">内容编辑</h4>
-          </div>
-          <div class="modal-body">
-            <form class="form-horizontal">
-              <div class="form-group">
-                <div class="col-lg-12">
-                  {{ saveContentLabel }}
-                </div>
-              </div>
-              <div class="form-group">
-                <div class="col-lg-12">
-                  <div id="content"></div>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-            <button v-on:click="saveContent()" type="button" class="btn btn-primary">保存</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
@@ -449,66 +420,6 @@ export default {
         }
       })
     },
-    /**
-     * 编辑内容
-     * @param course
-     */
-    editContent(course) {
-      let _this = this;
-      let id = course.id;
-      _this.course = course;
-      $("#content").summernote({
-        focus: true,
-        height: 300
-      });
-      // 先清空历史文本
-      $("#content").summernote("code", "");
-      Loading.show();
-      _this.$ajax.get(process.env.VUE_APP_SERVER + "/business/admin/course/find-content/" + id).then((response) => {
-        _this.saveContentLabel = "";
-        Loading.hide();
-        let resp = response.data;
-        if (resp.success) {
-          // 调用modal方法时，增加backdrop:'static',则点击空白位置，模态框不会自动关闭
-          $("#course-content-modal").modal({backdrop: "static", keyboard: false});
-          if (resp.content) {
-            $("#content").summernote("code", resp.content.content);
-          }
-          // 定时自动保存
-          let saveContentInterval = setInterval(function () {
-            _this.saveContent();
-          }, 5000);
-          // hidden.bs.modal，关闭内容框时，清空自动保存任务
-          $("#course-content-modal").on("hide.bs.modal", function (e) {
-            clearInterval(saveContentInterval);
-          })
-        } else {
-          Toast.warning(resp.message);
-        }
-      });
-    },
-    /**
-     * 保存内容
-     */
-    saveContent() {
-      let _this = this;
-      // 把文本框中的html代码读取出来
-      let content = $("#content").summernote("code");
-      _this.$ajax.post(process.env.VUE_APP_SERVER + "/business/admin/course/save-content", {
-        id: _this.course.id,
-        content: content
-      }).then((response) => {
-        Loading.hide();
-        let resp = response.data;
-        if (resp.success) {
-          // Toast.success("内容保存成功");
-          let now = Tool.dateFormat("yyyy-MM-dd hh:mm:ss");
-          _this.saveContentLabel = "最后保存时间：" + now;
-        } else {
-          Toast.warning(resp.message);
-        }
-      });
-    },
     openSortModal(course) {
       let _this = this;
       _this.sort = {
@@ -555,7 +466,15 @@ export default {
       _this.course.image = image;
 
       console.log("文件上传成功：", image);
-    }
+    },
+    /**
+     * 点击【内容】
+     */
+    toContent(course) {
+      let _this = this;
+      SessionStorage.set(SESSION_KEY_COURSE, course);
+      _this.$router.push("/business/content");
+    },
   }
 }
 </script>
