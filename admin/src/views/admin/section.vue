@@ -88,7 +88,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-sm-2 control-label">视频</label>
+                <label for="video" class="col-sm-2 control-label">视频</label>
                 <div class="col-sm-10">
                   <file
                       v-bind:suffixs="['mp4']"
@@ -98,7 +98,7 @@
                       v-bind:after-upload="afterUpload"></file>
                   <div v-show="section.video" class="row">
                     <div class="col-md-9">
-                      <video v-bind:src="section.video" controls="controls"></video>
+                      <video v-bind:src="section.video" id="video" controls="controls"></video>
                     </div>
                   </div>
                 </div>
@@ -254,8 +254,15 @@ export default {
       let _this = this;
       let video = resp.content.path;
       _this.section.video = video;
-
-      console.log("文件上传成功：", video);
+      _this.getTime();
+    },
+    /**
+     * 获取时长
+     */
+    getTime() {
+      let _this = this;
+      let ele = document.getElementById("video");
+      _this.section.time = parseInt(ele.duration, 10);
     }
   }
 }
