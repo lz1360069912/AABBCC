@@ -46,6 +46,7 @@ public class SectionController {
         ValidatorUtil.length(sectionDto.getVideo(), "视频", 1, 200);
 
         ResponseDto responseDto = new ResponseDto();
+        log.error(sectionDto.getVideo());
         sectionService.save(sectionDto);
         responseDto.setContent(sectionDto);
         return responseDto;
