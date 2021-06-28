@@ -8,14 +8,10 @@ import com.company.server.util.UuidUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 
 @Slf4j
 @RequestMapping("/admin")
@@ -71,6 +67,39 @@ public class UploadController {
         ResponseDto responseDto = new ResponseDto();
         fileDto.setPath(FILE_DOMAIN + path);
         responseDto.setContent(fileDto);
+        return responseDto;
+    }
+
+    @GetMapping("/merge")
+    public ResponseDto merge() throws IOException {
+        File newFile = new File(FILE_PATH + "/course/test123.mp4");
+        FileOutputStream outputStream = new FileOutputStream(newFile, true); // 文件追加写入
+        FileInputStream fileInputStream = null; // 分片文件
+        byte[] byt = new byte[10 * 1024 * 1024];
+        int len;
+        try {
+            fileInputStream = new FileInputStream(new File(FILE_PATH + "/course/111.blob"));
+            while ((len = fileInputStream.read(byt)) != -1) {
+                outputStream.write(byt, 0, len);
+            }
+            fileInputStream = new FileInputStream(new File(FILE_PATH + "/course/222.blob"));
+            while ((len = fileInputStream.read(byt)) != -1) {
+                outputStream.write(byt, 0, len);
+            }
+        } catch (IOException e) {
+            log.error("分片合并异常", e);
+        } finally {
+            try {
+                if (fileInputStream != null) {
+                    fileInputStream.close();
+                }
+                outputStream.close();
+                log.info("IO流关闭");
+            } catch (Exception e) {
+                log.error("IO流关闭", e);
+            }
+        }
+        ResponseDto responseDto = new ResponseDto();
         return responseDto;
     }
 
