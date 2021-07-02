@@ -40,6 +40,11 @@ export default {
       let formData = new window.FormData();
       let file = _this.$refs.file.files[0];
 
+      // 生成文件标识，标识多次上传的是不是同一个文件
+      let key = hex_md5(file);
+      var key10 = parseInt(key, 16);
+      var key62 = Tool._10to62(key10);
+
       //判断文件格式
       let suffixs = _this.suffixs;
       let fileName = file.name;
@@ -75,6 +80,7 @@ export default {
       formData.append("name", fileName);
       formData.append("suffix", suffix);
       formData.append("size", size);
+      formData.append("key", key62);
 
       Loading.show();
       _this.$ajax.post(process.env.VUE_APP_SERVER + "/file/admin/upload", formData).then((response) => {

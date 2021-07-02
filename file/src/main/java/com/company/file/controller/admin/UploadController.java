@@ -4,14 +4,16 @@ import com.company.server.dto.FileDto;
 import com.company.server.dto.ResponseDto;
 import com.company.server.enums.FileUseEnum;
 import com.company.server.service.FileService;
-import com.company.server.util.UuidUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 @Slf4j
 @RequestMapping("/admin")
@@ -37,13 +39,13 @@ public class UploadController {
                               Integer size,
                               Integer shardIndex,
                               Integer shardSize,
-                              Integer shardTotal) throws IOException
+                              Integer shardTotal,
+                              String key) throws IOException
     {
         log.info("上传文件开始");
 
         // 保存文件到本地
         FileUseEnum userEnum = FileUseEnum.getByCode(use);
-        String key = UuidUtil.getShortUuid();
 
         // 如果文件夹不存在则创建
         String dir = userEnum.name().toLowerCase();
