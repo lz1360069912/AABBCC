@@ -4,6 +4,7 @@ import com.company.server.dto.FileDto;
 import com.company.server.dto.ResponseDto;
 import com.company.server.enums.FileUseEnum;
 import com.company.server.service.FileService;
+import com.company.server.util.Base64ToMultipartFile;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -32,17 +33,13 @@ public class UploadController {
     private FileService fileService;
 
     @PostMapping("/upload")
-    public ResponseDto upload(@RequestParam MultipartFile shard,
-                              String use,
-                              String name,
-                              String suffix,
-                              Integer size,
-                              Integer shardIndex,
-                              Integer shardSize,
-                              Integer shardTotal,
-                              String key) throws IOException
-    {
+    public ResponseDto upload(@RequestBody FileDto fileDto) throws IOException {
         log.info("上传文件开始");
+        String use = fileDto.getUse();
+        String key = fileDto.getKey();
+        String suffix = fileDto.getSuffix();
+        String shardBase64 = fileDto.getShard();
+        MultipartFile shard = Base64ToMultipartFile.base64ToMultipart(shardBase64);
 
         // 保存文件到本地
         FileUseEnum userEnum = FileUseEnum.getByCode(use);
@@ -62,16 +59,7 @@ public class UploadController {
         log.info(dest.getAbsolutePath());
 
         log.info("保存文件记录开始");
-        FileDto fileDto = new FileDto();
         fileDto.setPath(path);
-        fileDto.setName(name);
-        fileDto.setSize(size);
-        fileDto.setSuffix(suffix);
-        fileDto.setUse(use);
-        fileDto.setShardIndex(shardIndex);
-        fileDto.setShardSize(shardSize);
-        fileDto.setShardTotal(shardTotal);
-        fileDto.setKey(key);
         fileService.save(fileDto);
 
         ResponseDto responseDto = new ResponseDto();
