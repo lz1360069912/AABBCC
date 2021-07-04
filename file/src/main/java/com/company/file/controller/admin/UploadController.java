@@ -52,7 +52,6 @@ public class UploadController {
         }
 
         // 需要提前创建 File.separator：目录间的间隔符
-
         String path = new StringBuffer(dir).
                 append(File.separator).
                 append(key).append(".").
@@ -91,6 +90,7 @@ public class UploadController {
         FileInputStream fileInputStream = null; // 分片文件
         byte[] byt = new byte[10 * 1024 * 1024]; // 10MB
         int len;
+        log.info("分片合并开始");
         try {
             for (int i = 1; i < shardTotal + 1; i++) {
                 fileInputStream = new FileInputStream(new File(FILE_PATH + path + "." + i));
@@ -111,6 +111,19 @@ public class UploadController {
                 log.error("IO流关闭", e);
             }
         }
+        log.info("分片合并结束");
+
+
+        System.gc();
+        //删除分片
+        log.info("分片删除开始");
+        for (int i = 1; i < shardTotal + 1; i++) {
+            String filePath = FILE_PATH + path + "." + i;
+            File file = new File(filePath);
+            boolean result = file.delete();
+            log.info("删除{}，{}", filePath, result ? "成功" : "失败");
+        }
+        log.info("分片删除结束");
     }
 
     @RequestMapping("/test")
