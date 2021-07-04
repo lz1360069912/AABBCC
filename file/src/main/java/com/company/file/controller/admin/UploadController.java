@@ -127,9 +127,14 @@ public class UploadController {
         log.info("分片删除结束");
     }
 
-    @RequestMapping("/test")
-    public String test() {
-
-        return "responseDto";
+    @GetMapping("/check/{key}")
+    public ResponseDto check(@PathVariable String key) {
+        ResponseDto responseDto = new ResponseDto();
+        FileDto fileDto = fileService.findByKey(key);
+        if (fileDto != null) {
+            fileDto.setPath(FILE_DOMAIN + fileDto.getPath());
+        }
+        responseDto.setContent(fileDto);
+        return responseDto;
     }
 }

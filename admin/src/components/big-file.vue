@@ -78,11 +78,38 @@ export default {
         "key": key62
       };
 
-      _this.upload(param);
+      _this.check(param);
     },
-    selectFile() {
+    /**
+     * 检查文件状态，是否已上传过？传到第几个分片？
+     */
+    check(param) {
       let _this = this;
-      $("#" + _this.inputId + "-input").trigger("click");
+      _this.$ajax.get(process.env.VUE_APP_SERVER + '/file/admin/check/' + param.key).then((response) => {
+        let resp = response.data;
+        if (resp.success) {
+          let obj = resp.content;
+          if (!obj) {
+            param.shardIndex = 1;
+            console.log("没有找到文件记录，从分片1开始上传");
+            _this.upload(param);
+            Toast.success("文件上传成功");
+          } else if (obj.shardIndex === obj.shardTotal) {
+            // 已上传分片 = 分片总数，说明已全部上传完，不需要再上传
+            Toast.success("文件极速秒传成功！");
+            _this.afterUpload(resp);
+            $("#" + _this.inputId + "-input").val("");
+          } else {
+            param.shardIndex = obj.shardIndex + 1;
+            console.log("找到文件记录，从分片" + param.shardIndex + "开始上传");
+            _this.upload(param);
+            Toast.success("文件上传成功");
+          }
+        } else {
+          Toast.warning("文件上传失败");
+          $("#" + _this.inputId + "-input").val("");
+        }
+      })
     },
     upload(param) {
       let _this = this;
@@ -117,6 +144,10 @@ export default {
       let end = Math.min(file.size, start + shardSize); // 当前分片结束位置
       let fileShard = file.slice(start, end); // 从文件中截取当前的分片数据
       return fileShard;
+    },
+    selectFile() {
+      let _this = this;
+      $("#" + _this.inputId + "-input").trigger("click");
     }
   }
 }

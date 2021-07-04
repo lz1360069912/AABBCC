@@ -91,7 +91,7 @@
                 <label for="video" class="col-sm-2 control-label">视频</label>
                 <div class="col-sm-10">
                   <big-file
-                      v-bind:suffixs="['mp4']"
+                      v-bind:suffixs="['mp4','flv']"
                       v-bind:use="FILE_USE.COURSE.key"
                       v-bind:input-id="'video-upload'"
                       v-bind:text="'上传大视频'"
@@ -221,6 +221,7 @@ export default {
       }
       _this.section.courseId = _this.course.id;
       _this.section.chapterId = _this.chapter.id;
+      _this.getTime();
       Loading.show();
       _this.$ajax.post(process.env.VUE_APP_SERVER + "/business/admin/section/save", _this.section).then((response) => {
         Loading.hide();
