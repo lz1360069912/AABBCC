@@ -33,7 +33,7 @@ public class UploadController {
     private FileService fileService;
 
     @PostMapping("/upload")
-    public ResponseDto upload(@RequestBody FileDto fileDto) throws IOException {
+    public ResponseDto upload(@RequestBody FileDto fileDto) throws IOException, InterruptedException {
         log.info("上传文件开始");
         String use = fileDto.getUse();
         String key = fileDto.getKey();
@@ -81,7 +81,7 @@ public class UploadController {
         return responseDto;
     }
 
-    public void merge(FileDto fileDto) throws IOException {
+    public void merge(FileDto fileDto) throws IOException, InterruptedException {
         String path = fileDto.getPath();
         path = path.replace(FILE_DOMAIN, "");
         Integer shardTotal = fileDto.getShardTotal();
@@ -115,6 +115,7 @@ public class UploadController {
 
 
         System.gc();
+        Thread.sleep(500);
         //删除分片
         log.info("分片删除开始");
         for (int i = 1; i < shardTotal + 1; i++) {

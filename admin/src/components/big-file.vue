@@ -40,7 +40,7 @@ export default {
       let file = _this.$refs.file.files[0];
 
       // 生成文件标识，标识多次上传的是不是同一个文件
-      let key = hex_md5(file);
+      let key = hex_md5(file.name + file.size + file.type);
       var key10 = parseInt(key, 16);
       var key62 = Tool._10to62(key10);
 
@@ -96,9 +96,7 @@ export default {
         let base64 = e.target.result;
         param.shard = base64;
 
-        Loading.show();
         _this.$ajax.post(process.env.VUE_APP_SERVER + "/file/admin/upload", param).then((response) => {
-          Loading.hide();
           let resp = response.data;
           if (shardIndex < shardTotal) {
             // 上传下一个分片
