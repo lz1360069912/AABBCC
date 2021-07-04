@@ -22,5 +22,5 @@ eureka:
     prefer-ip-address: true # true访问路径可以显示IP地址
 
 file:
-  path: D:/file/imooc/course/
+  path: D:/file/imooc/
   domain: http://127.0.0.1:9000/file/f/
