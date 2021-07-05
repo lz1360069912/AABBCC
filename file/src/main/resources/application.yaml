@@ -24,3 +24,10 @@ eureka:
 file:
   path: D:/file/imooc/
   domain: http://127.0.0.1:9000/file/f/
+
+oss:
+  accessKeyId: LTAI5tS9EgMZGzb4UUAy3goM
+  accessKeySecret: AEfHvn9vMJjD8LLcF8LzhKEyaSekWw
+  endpoint: http://oss-cn-beijing.aliyuncs.com
+  domain: http://lz-mooc.oss-cn-beijing.aliyuncs.com/
+  bucket: lz-mooc

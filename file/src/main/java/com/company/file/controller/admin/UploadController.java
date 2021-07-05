@@ -29,6 +29,9 @@ public class UploadController {
     @Value("${file.path}")
     private String FILE_PATH;
 
+    @Value("${oss.domain}")
+    private String ossDomain;
+
     @Autowired
     private FileService fileService;
 
@@ -132,7 +135,7 @@ public class UploadController {
         ResponseDto responseDto = new ResponseDto();
         FileDto fileDto = fileService.findByKey(key);
         if (fileDto != null) {
-            fileDto.setPath(FILE_DOMAIN + fileDto.getPath());
+            fileDto.setPath(ossDomain + fileDto.getPath());
         }
         responseDto.setContent(fileDto);
         return responseDto;
