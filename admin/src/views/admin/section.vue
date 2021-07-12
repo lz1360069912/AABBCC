@@ -90,12 +90,12 @@
               <div class="form-group">
                 <label for="video" class="col-sm-2 control-label">视频</label>
                 <div class="col-sm-10">
-                  <big-file
+                  <vod
                       v-bind:suffixs="['mp4','flv']"
                       v-bind:use="FILE_USE.COURSE.key"
                       v-bind:input-id="'video-upload'"
-                      v-bind:text="'上传大视频'"
-                      v-bind:after-upload="afterUpload"></big-file>
+                      v-bind:text="'上传VOD'"
+                      v-bind:after-upload="afterUpload"></vod>
                   <div v-show="section.video" class="row">
                     <div class="col-md-9">
                       <video v-bind:src="section.video" id="video" controls="controls"></video>
@@ -151,9 +151,10 @@
 <script>
 import Pagination from "../../components/pagination";
 import BigFile from "../../components/big-file";
+import Vod from "../../components/vod";
 
 export default {
-  components: {Pagination, BigFile},
+  components: {Pagination, BigFile, Vod},
   name: "business-section",
   data: function () {
     return {
@@ -267,17 +268,18 @@ export default {
       let _this = this;
       let video = resp.content.path;
       _this.section.video = video;
-      setTimeout(() => {
-        _this.getTime();
-      }, 100);
+      _this.getTime();
     },
     /**
      * 获取时长
      */
     getTime() {
       let _this = this;
-      let ele = document.getElementById("video");
-      _this.section.time = parseInt(ele.duration, 10);
+      // 在js里对video赋值，vue会监听到值的变化，并渲染视频控件。如果还没渲染完，我们就去获取时长，这时就会得到NaN，所以需要加延时获取
+      setTimeout(function () {
+        let ele = document.getElementById("video");
+        _this.section.time = parseInt(ele.duration, 10);
+      }, 100);
     }
   }
 }
