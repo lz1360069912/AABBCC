@@ -4,9 +4,7 @@ import com.company.server.domain.Section;
 import com.company.server.domain.SectionExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
 
-@Repository
 public interface SectionMapper {
     long countByExample(SectionExample example);
 
