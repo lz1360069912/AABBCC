@@ -31,3 +31,8 @@ oss:
   endpoint: http://oss-cn-beijing.aliyuncs.com
   domain: http://lz-mooc.oss-cn-beijing.aliyuncs.com/
   bucket: lz-mooc
+
+vod:
+  accessKeyId: LTAI5tBmjyEkgjc9FdAWyYh7
+  accessKeySecret: S05f7OwIFxZUXUDBP7LzGMVaSuHata
+

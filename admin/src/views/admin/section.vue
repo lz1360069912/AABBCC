@@ -224,6 +224,9 @@ export default {
     save() {
       let _this = this;
 
+      // 获取到的可播放地址是有时效的，所以就算保存到数据库也会过期，以后会根据vod来播放
+      _this.section.video = "";
+
       // 保存校验
       if (1 != 1
           || !Validator.require(_this.section.title, "标题")
@@ -267,7 +270,9 @@ export default {
     afterUpload(resp) {
       let _this = this;
       let video = resp.content.path;
+      let vod = resp.content.vod;
       _this.section.video = video;
+      _this.section.vod = vod;
       _this.getTime();
     },
     /**
@@ -279,7 +284,7 @@ export default {
       setTimeout(function () {
         let ele = document.getElementById("video");
         _this.section.time = parseInt(ele.duration, 10);
-      }, 100);
+      }, 1000);
     }
   }
 }

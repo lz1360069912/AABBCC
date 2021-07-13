@@ -5,7 +5,7 @@
             v-bind:use="use"
             v-bind:after-upload="afterUpload"
             v-bind:shard-size="1000 * 1024 * 1024"
-            v-bind:url="'oss-append'"></big-file>
+            v-bind:url="'vod'"></big-file>
 </template>
 
 <script>
@@ -27,9 +27,6 @@ export default {
     },
     suffixs: {
       default: []
-    },
-    shardSize: {
-      default: 50 * 1024
     },
     url: {
       default: "oss-append"
