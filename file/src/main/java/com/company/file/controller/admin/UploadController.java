@@ -1,13 +1,18 @@
 package com.company.file.controller.admin;
 
+import com.alibaba.fastjson.JSON;
+import com.aliyuncs.DefaultAcsClient;
+import com.aliyuncs.vod.model.v20170321.GetMezzanineInfoResponse;
 import com.company.server.dto.FileDto;
 import com.company.server.dto.ResponseDto;
 import com.company.server.enums.FileUseEnum;
 import com.company.server.service.FileService;
 import com.company.server.util.Base64ToMultipartFile;
+import com.company.server.util.VodUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -31,6 +36,12 @@ public class UploadController {
 
     @Value("${oss.domain}")
     private String ossDomain;
+
+    @Value("${vod.accessKeyId}")
+    private String accessKeyId;
+
+    @Value("${vod.accessKeySecret}")
+    private String accessKeySecret;
 
     @Autowired
     private FileService fileService;
@@ -131,11 +142,20 @@ public class UploadController {
     }
 
     @GetMapping("/check/{key}")
-    public ResponseDto check(@PathVariable String key) {
+    public ResponseDto check(@PathVariable String key) throws Exception {
         ResponseDto responseDto = new ResponseDto();
         FileDto fileDto = fileService.findByKey(key);
+
         if (fileDto != null) {
-            fileDto.setPath(ossDomain + fileDto.getPath());
+            if (StringUtils.isEmpty(fileDto.getVod())) {
+                fileDto.setPath(ossDomain + fileDto.getPath());
+            } else {
+                DefaultAcsClient vodClient = VodUtil.initVodClient(accessKeyId, accessKeySecret);
+                GetMezzanineInfoResponse response = VodUtil.getMezzanineInfo(vodClient, fileDto.getVod());
+                System.out.println("获取视频信息, response : " + JSON.toJSONString(response));
+                String fileUrl = response.getMezzanine().getFileURL();
+                fileDto.setPath(fileUrl);
+            }
         }
         responseDto.setContent(fileDto);
         return responseDto;
