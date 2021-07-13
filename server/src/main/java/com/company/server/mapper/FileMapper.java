@@ -2,12 +2,9 @@ package com.company.server.mapper;
 
 import com.company.server.domain.File;
 import com.company.server.domain.FileExample;
-import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
-
 import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
-@Repository
 public interface FileMapper {
     long countByExample(FileExample example);
 

@@ -60,14 +60,10 @@ public class FileDto {
      * base64
      */
     private String shard;
-
-    public String getShard() {
-        return shard;
-    }
-
-    public void setShard(String shard) {
-        this.shard = shard;
-    }
+    /**
+     * vod|阿里云vod
+     */
+    private String vod;
 
     public String getId() {
         return id;
@@ -165,6 +161,21 @@ public class FileDto {
         this.key = key;
     }
 
+    public String getShard() {
+        return shard;
+    }
+
+    public void setShard(String shard) {
+        this.shard = shard;
+    }
+
+    public String getVod() {
+        return vod;
+    }
+
+    public void setVod(String vod) {
+        this.vod = vod;
+    }
 
     @Override
     public String toString() {
@@ -182,7 +193,9 @@ public class FileDto {
         sb.append(", shardTotal=").append(shardTotal);
         sb.append(", key='").append(key).append('\'');
         sb.append(", shard='").append(shard).append('\'');
+        sb.append(", vod='").append(vod).append('\'');
         sb.append('}');
         return sb.toString();
     }
+
 }
