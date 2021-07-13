@@ -29,7 +29,7 @@
       <tr>
         <th>id</th>
         <th>标题</th>
-        <th>视频</th>
+        <th>VOD</th>
         <th>时长</th>
         <th>收费</th>
         <th>顺序</th>
@@ -47,6 +47,9 @@
         <td>{{ section.sort }}</td>
         <td>
           <div class="btn-group">
+            <button v-on:click="play(section)" class="btn btn-white btn-xs btn-info btn-round">
+              播放
+            </button>
             <button v-on:click="edit(section)" class="btn btn-white btn-xs btn-info btn-round">
               编辑
             </button>&nbsp;
@@ -98,7 +101,7 @@
                       v-bind:after-upload="afterUpload"></vod>
                   <div v-show="section.video" class="row">
                     <div class="col-md-9">
-                      <player ref="player"></player>
+                      <player ref="player" v-bind:player-id="'form-player-div'"></player>
                       <video v-bind:src="section.video" id="video" controls="controls" class="hidden"></video>
                     </div>
                   </div>
@@ -145,6 +148,8 @@
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+
+    <modal-player ref="modalPlayer"></modal-player>
   </div>
 
 </template>
@@ -154,9 +159,10 @@ import Pagination from "../../components/pagination";
 import BigFile from "../../components/big-file";
 import Vod from "../../components/vod";
 import Player from "../../components/player";
+import ModalPlayer from "../../components/modal-player";
 
 export default {
-  components: {Player, Pagination, BigFile, Vod},
+  components: {ModalPlayer, Player, Pagination, BigFile, Vod},
   name: "business-section",
   data: function () {
     return {
@@ -288,6 +294,13 @@ export default {
         let ele = document.getElementById("video");
         _this.section.time = parseInt(ele.duration, 10);
       }, 1000);
+    },
+    /**
+     * 播放视频
+     */
+    play(section) {
+      let _this = this;
+      _this.$refs.modalPlayer.playVod(section.vod);
     }
   }
 }
