@@ -376,14 +376,11 @@
             <b class="arrow"></b>
 
             <ul class="submenu">
-              <li class="">
-                <a href="">
-                  <i class="menu-icon fa fa-caret-right"></i>
-                  用户管理
-                </a>
-
-                <b class="arrow"></b>
-              </li>
+              <li class="active" id="system-user-sidebar">
+              <router-link to="/system/user">
+                <i class="menu-icon fa fa-caret-right"></i>
+                分类管理
+              </router-link>
 
               <li class="">
                 <a href="">
