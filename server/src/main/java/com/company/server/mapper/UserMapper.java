@@ -2,9 +2,12 @@ package com.company.server.mapper;
 
 import com.company.server.domain.User;
 import com.company.server.domain.UserExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
+@Repository
 public interface UserMapper {
     long countByExample(UserExample example);
 

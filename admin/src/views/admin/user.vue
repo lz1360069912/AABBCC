@@ -58,7 +58,7 @@
               <div class="form-group">
                 <label for="loginName" class="col-sm-2 control-label">登陆名</label>
                 <div class="col-sm-10">
-                  <input v-model="user.loginName" type="text" class="form-control" id="loginName" placeholder="登陆名">
+                  <input v-model="user.loginName" v-bind:disabled="user.id" type="text" class="form-control" id="loginName" placeholder="登陆名">
                 </div>
               </div>
               <div class="form-group">
