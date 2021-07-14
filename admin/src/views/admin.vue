@@ -376,11 +376,11 @@
             <b class="arrow"></b>
 
             <ul class="submenu">
-              <li class="active" id="system-user-sidebar">
-              <router-link to="/system/user">
-                <i class="menu-icon fa fa-caret-right"></i>
-                分类管理
-              </router-link>
+              <li class="" id="system-user-sidebar">
+                <router-link to="/system/user">
+                  <i class="menu-icon fa fa-caret-right"></i>
+                  分类管理
+                </router-link>
 
               <li class="">
                 <a href="">
@@ -506,6 +506,8 @@ export default {
     $("body").attr("class", "no-skin");
     // sidebar激活样式方法二
     _this.activeSidebar(_this.$route.name.replace("/", "-") + "-sidebar");
+
+    $.getScript("/ace/assets/js/ace.min.js");
   },
   watch: {
     $route: {
