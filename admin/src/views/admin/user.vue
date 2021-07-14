@@ -58,7 +58,8 @@
               <div class="form-group">
                 <label for="loginName" class="col-sm-2 control-label">登陆名</label>
                 <div class="col-sm-10">
-                  <input v-model="user.loginName" v-bind:disabled="user.id" type="text" class="form-control" id="loginName" placeholder="登陆名">
+                  <input v-model="user.loginName" v-bind:disabled="user.id" type="text" class="form-control"
+                         id="loginName" placeholder="登陆名">
                 </div>
               </div>
               <div class="form-group">
@@ -156,6 +157,8 @@ export default {
       ) {
         return;
       }
+
+      _this.user.password = hex_md5(_this.user.password + KEY);
       Loading.show();
       _this.$ajax.post(process.env.VUE_APP_SERVER + "/system/admin/user/save", _this.user).then((response) => {
         Loading.hide();
