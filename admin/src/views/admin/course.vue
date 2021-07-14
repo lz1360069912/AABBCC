@@ -184,8 +184,14 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-            <button v-on:click="save()" type="button" class="btn btn-primary">保存</button>
+            <button type="button" class="btn btn-white btn-default btn-round" data-dismiss="modal">
+              <i class="ace-icon fa fa-times"></i>
+              取消
+            </button>
+            <button type="button" class="btn btn-white btn-info btn-round" v-on:click="save()">
+              <i class="ace-icon fa fa-plus blue"></i>
+              保存
+            </button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
@@ -215,8 +221,14 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-            <button v-on:click="updateSort()" type="button" class="btn btn-primary">保存</button>
+            <button type="button" class="btn btn-white btn-default btn-round" data-dismiss="modal">
+              <i class="ace-icon fa fa-times"></i>
+              取消
+            </button>
+            <button type="button" class="btn btn-white btn-info btn-round" v-on:click="updateSort()">
+              <i class="ace-icon fa fa-plus blue"></i>
+              保存
+            </button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
