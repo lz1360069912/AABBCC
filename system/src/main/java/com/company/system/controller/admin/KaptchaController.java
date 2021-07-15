@@ -1,6 +1,7 @@
 package com.company.system.controller.admin;
 
 import com.google.code.kaptcha.impl.DefaultKaptcha;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 
+@Slf4j
 @RestController
 @RequestMapping("/admin/kaptcha")
 public class KaptchaController {
@@ -33,6 +35,7 @@ public class KaptchaController {
             String createText = defaultKaptcha.createText();
 
             // 将生成的验证码放入会话缓存中，后续验证的时候用到
+            log.warn(request.getSession().getId());
             request.getSession().setAttribute(imageCodeToken, createText);
             // 使用验证码字符串生成验证码图片
             BufferedImage challenge = defaultKaptcha.createImage(createText);
