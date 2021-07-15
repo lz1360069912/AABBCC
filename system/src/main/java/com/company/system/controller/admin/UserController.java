@@ -1,8 +1,9 @@
 package com.company.system.controller.admin;
 
-import com.company.server.dto.UserDto;
+import com.company.server.dto.LoginUserDto;
 import com.company.server.dto.PageDto;
 import com.company.server.dto.ResponseDto;
+import com.company.server.dto.UserDto;
 import com.company.server.service.UserService;
 import com.company.server.util.ValidatorUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -80,6 +81,18 @@ public class UserController {
         ResponseDto responseDto = new ResponseDto();
         userService.savePassword(userDto);
         responseDto.setContent(userDto);
+        return responseDto;
+    }
+
+    /**
+     * 登录
+     */
+    @PostMapping("/login")
+    public ResponseDto login(@RequestBody UserDto userDto) {
+        userDto.setPassword(DigestUtils.md5DigestAsHex(userDto.getPassword().getBytes()));
+        ResponseDto responseDto = new ResponseDto();
+        LoginUserDto loginUserDto = userService.login(userDto);
+        responseDto.setContent(loginUserDto);
         return responseDto;
     }
 }
