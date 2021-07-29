@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Slf4j
 public class ControllerExceptionHandler {
 
-    //只要抛出的异常是ValidatorException，就会被拦截
+    //只要抛出的异常是BusinessException，就会被拦截
     @ExceptionHandler(value = BusinessException.class)
     @ResponseBody
     public ResponseDto businessExceptionHandler(BusinessException e) {

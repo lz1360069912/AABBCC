@@ -20,7 +20,7 @@ public class UserDto {
      */
     private String password;
     /**
-     * 验证码
+     * 用户输入的验证码
      */
     private String imageCode;
     /**

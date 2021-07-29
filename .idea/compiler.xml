@@ -24,7 +24,7 @@
       <module name="generator" target="7" />
       <module name="mooc" target="1.5" />
       <module name="server" target="7" />
-      <module name="system" target="1.5" />
+      <module name="system" target="6" />
     </bytecodeTargetLevel>
   </component>
 </project>
