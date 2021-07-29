@@ -15,6 +15,12 @@ axios.defaults.withCredentials = true;
  */
 axios.interceptors.request.use(function (config) {
     console.log("请求：", config);
+    let token = Tool.getLoginUser().token;
+    if (Tool.isNotEmpty(token)) {
+        // 可以用这种方法给所有请求加了统一的系统参数，比如在header里加上请求流水，请求时间等
+        config.headers.token = token;
+        console.log("请求headers增加token：", token);
+    }
     return config;
 }, error => {
 });
