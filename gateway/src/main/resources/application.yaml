@@ -5,6 +5,9 @@ server:
 spring:
   application:
     name: gateway-client
+  redis:
+    host: localhost
+    port: 6379
   cloud:
     #gateway配置
     gateway:
@@ -30,6 +33,7 @@ spring:
             - Path=/file/**
           filters:
             - LoginAdmin=true
+
 
 #eureka配置
 eureka:
