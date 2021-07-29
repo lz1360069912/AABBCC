@@ -16,14 +16,20 @@ spring:
           uri: lb://system-client  # 匹配后提供服务的路由地址 没有进行负载均衡
           predicates:
             - Path=/system/**
+          filters:
+            - LoginAdmin=true
         - id: business
           uri: lb://business-client #默认支持负载均衡，//后是注册到注册中心的名字
           predicates:
             - Path=/business/**
+          filters:
+            - LoginAdmin=true
         - id: file
           uri: lb://file-client #默认支持负载均衡，//后是注册到注册中心的名字
           predicates:
             - Path=/file/**
+          filters:
+            - LoginAdmin=true
 
 #eureka配置
 eureka:
