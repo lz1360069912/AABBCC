@@ -29,6 +29,26 @@ Object.keys(filter).forEach(key => {
     Vue.filter(key, filter[key])
 });
 
+// 路由登录拦截
+router.beforeEach((to, from, next) => {
+    // 要不要对meta.loginRequire属性做监控拦截
+    if (to.matched.some(function (item) {
+        // 如果meta.loginRequire为true，说明要进行登录拦截
+        return item.meta.loginRequire
+    })) {
+        let loginUser = Tool.getLoginUser();
+        if (Tool.isEmpty(loginUser)) {
+            // 如果loginUser为空，跳转登录页面
+            next('/login');
+        } else {
+            // 放行
+            next();
+        }
+    } else {
+        next();
+    }
+});
+
 new Vue({
     router,
     render: h => h(App),
