@@ -1,7 +1,12 @@
 package com.company.system.controller.admin;
 
-import com.company.server.dto.*;
+import com.alibaba.fastjson.JSON;
+import com.company.server.dto.LoginUserDto;
+import com.company.server.dto.PageDto;
+import com.company.server.dto.ResponseDto;
+import com.company.server.dto.UserDto;
 import com.company.server.service.UserService;
+import com.company.server.util.UuidUtil;
 import com.company.server.util.ValidatorUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +15,7 @@ import org.springframework.util.DigestUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping("/admin/user")
@@ -92,7 +97,7 @@ public class UserController {
      * 登录
      */
     @PostMapping("/login")
-    public ResponseDto login(@RequestBody UserDto userDto, HttpServletRequest request) {
+    public ResponseDto login(@RequestBody UserDto userDto) {
         userDto.setPassword(DigestUtils.md5DigestAsHex(userDto.getPassword().getBytes()));
         ResponseDto responseDto = new ResponseDto();
 
@@ -113,11 +118,18 @@ public class UserController {
             return responseDto;
         } else {
             // 验证通过后，移除验证码
-            request.getSession().removeAttribute(userDto.getImageCodeToken());
+            // request.getSession().removeAttribute(userDto.getImageCodeToken());
+            log.info("从redis中删除token：{}",userDto.getImageCodeToken());
+            redisTemplate.delete(userDto.getImageCodeToken());
         }
 
         LoginUserDto loginUserDto = userService.login(userDto);
-        request.getSession().setAttribute(Constants.LOGIN_USER, loginUserDto);
+        String token = UuidUtil.getShortUuid();
+        loginUserDto.setToken(token);
+        // request.getSession().setAttribute(Constants.LOGIN_USER, loginUserDto);
+        // 这里也可以直接保存loginUserDto对象，但是需要序列化。
+        // 如果是跨应用使用的，比如A应用存，B应用取，一般会把值转成JSON字符串
+        redisTemplate.opsForValue().set(token, JSON.toJSONString(loginUserDto), 3600, TimeUnit.SECONDS);
         responseDto.setContent(loginUserDto);
         return responseDto;
     }
@@ -125,10 +137,11 @@ public class UserController {
     /**
      * 退出登录
      */
-    @GetMapping("/logout")
-    public ResponseDto logout(HttpServletRequest request) {
+    @GetMapping("/logout/{token}")
+    public ResponseDto logout(@PathVariable String token) {
         ResponseDto responseDto = new ResponseDto();
-        request.getSession().removeAttribute(Constants.LOGIN_USER);
+        redisTemplate.delete(token);
+        log.info("从redis中删除token：{}",token);
         return responseDto;
     }
 }
