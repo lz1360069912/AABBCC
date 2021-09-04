@@ -1,12 +1,15 @@
 package com.company.system.controller.admin;
 
 import com.company.server.dto.PageDto;
+import com.company.server.dto.ResourceDto;
 import com.company.server.dto.ResponseDto;
 import com.company.server.service.ResourceService;
 import com.company.server.util.ValidatorUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/admin/resource")
@@ -54,6 +57,17 @@ public class ResourceController {
     public ResponseDto delete(@PathVariable String id) {
         ResponseDto responseDto = new ResponseDto();
         resourceService.delete(id);
+        return responseDto;
+    }
+
+    /**
+     * 资源树查询
+     */
+    @GetMapping("/load-tree")
+    public ResponseDto loadTree() {
+        ResponseDto responseDto = new ResponseDto();
+        List<ResourceDto> resourceDtoList = resourceService.loadTree();
+        responseDto.setContent(resourceDtoList);
         return responseDto;
     }
 }
