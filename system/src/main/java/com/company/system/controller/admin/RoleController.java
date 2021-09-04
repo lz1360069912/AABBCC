@@ -1,13 +1,15 @@
 package com.company.system.controller.admin;
 
-import com.company.server.dto.RoleDto;
 import com.company.server.dto.PageDto;
 import com.company.server.dto.ResponseDto;
+import com.company.server.dto.RoleDto;
 import com.company.server.service.RoleService;
 import com.company.server.util.ValidatorUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/admin/role")
@@ -73,6 +75,18 @@ public class RoleController {
         ResponseDto responseDto = new ResponseDto();
         roleService.saveResource(roleDto);
         responseDto.setContent(roleDto);
+        return responseDto;
+    }
+
+    /**
+     * 加载已关联的资源
+     */
+    @GetMapping("/list-resource/{roleId}")
+    public ResponseDto listResource(@PathVariable String roleId) {
+        log.info("加载资源开始");
+        ResponseDto responseDto = new ResponseDto<>();
+        List<String> resourceIdList = roleService.listResource(roleId);
+        responseDto.setContent(resourceIdList);
         return responseDto;
     }
 }
