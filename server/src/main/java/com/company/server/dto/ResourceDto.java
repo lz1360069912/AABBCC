@@ -1,6 +1,8 @@
 package com.company.server.dto;
 
 
+import java.util.List;
+
 public class ResourceDto {
 
     /**
@@ -23,6 +25,8 @@ public class ResourceDto {
      * 父id
      */
     private String parent;
+
+    private List<ResourceDto> children;
 
     public String getId() {
         return id;
@@ -59,6 +63,13 @@ public class ResourceDto {
         this.parent = parent;
     }
 
+    public List<ResourceDto> getChildren() {
+        return children;
+    }
+
+    public void setChildren(List<ResourceDto> children) {
+        this.children = children;
+    }
 
     @Override
     public String toString() {
