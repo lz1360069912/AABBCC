@@ -2,9 +2,12 @@ package com.company.server.mapper;
 
 import com.company.server.domain.Role;
 import com.company.server.domain.RoleExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
+@Repository
 public interface RoleMapper {
     long countByExample(RoleExample example);
 
