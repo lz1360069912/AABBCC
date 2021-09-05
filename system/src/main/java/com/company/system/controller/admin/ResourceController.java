@@ -22,6 +22,7 @@ public class ResourceController {
 
     /**
      * 列表查询
+     *
      * @param pageDto
      * @return
      */
@@ -35,13 +36,14 @@ public class ResourceController {
 
     /**
      * 保存，id有值时更新，无值时新增
+     *
      * @param
      * @return
      */
     @PostMapping("/save")
     public ResponseDto save(@RequestBody String jsonStr) {
         // 保存校验
-       ValidatorUtil.require(jsonStr,"资源");
+        ValidatorUtil.require(jsonStr, "资源");
         ResponseDto responseDto = new ResponseDto();
         resourceService.saveJson(jsonStr);
         return responseDto;
@@ -49,6 +51,7 @@ public class ResourceController {
 
     /**
      * 删除
+     *
      * @param id
      * @return
      */

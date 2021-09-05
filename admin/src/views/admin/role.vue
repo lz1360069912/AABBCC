@@ -31,6 +31,9 @@
         <td>{{ role.desc }}</td>
         <td>
           <div class="btn-group">
+            <button v-on:click="editUser(role)" class="btn btn-white btn-xs btn-info btn-round">
+              用户列表
+            </button>&nbsp;
             <button v-on:click="editResource(role)" class="btn btn-white btn-xs btn-info btn-round">
               权限列表
             </button>&nbsp;
@@ -71,8 +74,14 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-            <button v-on:click="save()" type="button" class="btn btn-primary">保存</button>
+            <button type="button" class="btn btn-white btn-default btn-round" data-dismiss="modal">
+              <i class="ace-icon fa fa-times"></i>
+              取消
+            </button>
+            <button type="button" class="btn btn-white btn-info btn-round" v-on:click="save()">
+              <i class="ace-icon fa fa-plus blue"></i>
+              保存
+            </button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
@@ -93,9 +102,64 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-white btn-default btn-round" data-dismiss="modal">
               <i class="ace-icon fa fa-times"></i>
-              关闭
+              取消
             </button>
             <button type="button" class="btn btn-white btn-info btn-round" v-on:click="saveResource()">
+              <i class="ace-icon fa fa-plus blue"></i>
+              保存
+            </button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- 角色用户关联配置 -->
+    <div id="user-modal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">角色用户关联配置</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <table id="user-table" class="table table-hover">
+                  <tbody>
+                  <tr v-for="user in users">
+                    <td>{{ user.loginName }}</td>
+                    <td class="text-right">
+                      <a v-on:click="addUser(user)" href="javascript:;" class="">
+                        <i class="ace-icon fa fa-arrow-circle-right blue"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-6">
+                <table id="role-user-table" class="table table-hover">
+                  <tbody>
+                  <tr v-for="user in roleUsers">
+                    <td>{{ user.loginName }}</td>
+                    <td class="text-right">
+                      <a v-on:click="deleteUser(user)" href="javascript:;" class="">
+                        <i class="ace-icon fa fa-trash blue"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white btn-default btn-round" data-dismiss="modal">
+              <i class="ace-icon fa fa-times"></i>
+              取消
+            </button>
+            <button type="button" class="btn btn-white btn-info btn-round" v-on:click="saveUser()">
               <i class="ace-icon fa fa-plus blue"></i>
               保存
             </button>
@@ -117,7 +181,9 @@ export default {
       role: {}, // 用于绑定form表单的数据
       roles: [],
       resources: [],
-      zTree: {}
+      zTree: {},
+      users: [],
+      roleUsers: []
     }
   },
   mounted: function () {
@@ -223,7 +289,7 @@ export default {
     loadResource() {
       let _this = this;
       Loading.show();
-      _this.$ajax.get(process.env.VUE_APP_SERVER + '/system/admin/resource/load-tree').then((res)=>{
+      _this.$ajax.get(process.env.VUE_APP_SERVER + '/system/admin/resource/load-tree').then((res) => {
         Loading.hide();
         let response = res.data;
         _this.resources = response.content;
@@ -273,7 +339,7 @@ export default {
       _this.$ajax.post(process.env.VUE_APP_SERVER + '/system/admin/role/save-resource', {
         id: _this.role.id,
         resourceIds: resourceIds
-      }).then((response)=>{
+      }).then((response) => {
         let resp = response.data;
         if (resp.success) {
           Toast.success("保存成功!");
@@ -288,7 +354,7 @@ export default {
      */
     listRoleResource() {
       let _this = this;
-      _this.$ajax.get(process.env.VUE_APP_SERVER + '/system/admin/role/list-resource/' + _this.role.id).then((response)=>{
+      _this.$ajax.get(process.env.VUE_APP_SERVER + '/system/admin/role/list-resource/' + _this.role.id).then((response) => {
         let resp = response.data;
         let resources = resp.content;
 
@@ -299,6 +365,34 @@ export default {
           _this.zTree.checkNode(node, true);
         }
       });
+    },
+
+    editUser(role) {
+      let _this = this;
+      _this.role = $.extend({}, role);
+      _this.listUser();
+      $("#user-modal").modal("show");
+    },
+
+    /**
+     * 加载用户
+     */
+    listUser() {
+      let _this = this;
+      Loading.show();
+      _this.$ajax.post(process.env.VUE_APP_SERVER + '/system/admin/user/list', {
+        page: 1,
+        size: 100
+      }).then((response) => {
+        let resp = response.data;
+        if (resp.success) {
+          Loading.hide();
+          _this.users = resp.content.list;
+          console.log(_this.users);
+        } else {
+          Toast.warning(resp.message);
+        }
+      })
     },
   }
 }
