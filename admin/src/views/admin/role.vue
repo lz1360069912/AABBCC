@@ -404,7 +404,7 @@ export default {
       // 如果当前要添加的用户在右边列表中已经有了，则不用再添加
       let users = _this.roleUsers;
       for (let i = 0; i < users.length; i++) {
-        if (user === users[i]) {
+        if (user.id === users[i].id) {
           return;
         }
       }
