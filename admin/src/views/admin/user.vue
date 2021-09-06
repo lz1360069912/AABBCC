@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>
-      <button v-on:click="add()" class="btn btn-white btn-default btn-round">
+      <button v-show="hasResource('010101')" v-on:click="add()" class="btn btn-white btn-default btn-round">
         <i class="ace-icon fa fa-edit"></i>
         新增
       </button>
@@ -33,13 +33,13 @@
         <td>{{ user.password }}</td>
         <td>
           <div class="btn-group">
-            <button v-on:click="editPassword(user)" class="btn btn-white btn-xs btn-info btn-round">
+            <button v-show="hasResource('010103')" v-on:click="editPassword(user)" class="btn btn-white btn-xs btn-info btn-round">
               修改密码
             </button>&nbsp;
-            <button v-on:click="edit(user)" class="btn btn-white btn-xs btn-info btn-round">
+            <button v-show="hasResource('010101')" v-on:click="edit(user)" class="btn btn-white btn-xs btn-info btn-round">
               编辑
             </button>&nbsp;
-            <button v-on:click="del(user.id)" class="btn btn-white btn-xs btn-warning btn-round">
+            <button v-show="hasResource('010102')" v-on:click="del(user.id)" class="btn btn-white btn-xs btn-warning btn-round">
               删除
             </button>
           </div>
@@ -150,6 +150,9 @@ export default {
     _this.list(1);
   },
   methods: {
+    hasResource: function (id) {
+      return Tool.hasResource(id);
+    },
     /**
      * 点击编辑
      * @param user
