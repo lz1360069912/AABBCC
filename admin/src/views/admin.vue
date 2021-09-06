@@ -520,12 +520,19 @@ export default {
     $.getScript("/ace/assets/js/ace.min.js");
 
     _this.loginUser = Tool.getLoginUser();
+
+    if (!_this.hasResourceRouter(_this.$route.name)) {
+      _this.$router.push("/login");
+    }
   },
   watch: {
     $route: {
       handler: function (val, oldVal) {
         console.log("--->页面跳转", val, oldVal);
         let _this = this;
+        if (!_this.hasResourceRouter(_this.$route.name)) {
+          _this.$router.push("/login");
+        }
         _this.$nextTick(function () {
           // sidebar激活样式方法二
           _this.activeSidebar(_this.$route.name.replace("/", "-") + "-sidebar");
@@ -534,6 +541,18 @@ export default {
     }
   },
   methods: {
+    hasResourceRouter: function (router) {
+      let _this = this;
+      let resources = Tool.getLoginUser().resources;
+      if (Tool.isEmpty(resources)) {
+        return false;
+      }
+      for (let i = 0; i < resources.length; i++) {
+        if (router === resources[i].page) {
+          return true;
+        }
+      }
+    },
     hasResource: function (id) {
       return Tool.hasResource(id);
     },
